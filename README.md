@@ -40,6 +40,9 @@ JSON result:
 <br/>
 The API also supports both GET and POST requests
 
+# Donate
+Monero (XMR): `41dGQr9EwZBfYBY3fibTtJZYfssfRuzJZDSVDeneoVcgckehK3BiLxAV4FvEVJiVqdiW996zvMxhFB8G8ot9nBFqQ84VkuC`
+
 # To do
 + Improve the quality of the CSS
 + Add more settings to config.php
