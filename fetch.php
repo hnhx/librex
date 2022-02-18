@@ -11,11 +11,11 @@
             $query_lower = strtolower($query);
 
             // Check for currency convesion
-            if (str_contains($query_lower, "to"))
+            if (strpos($query_lower, "to"))
                 convert_currency($query);
             
             // Check for definition 
-            else if (str_contains($query_lower, "mean"))
+            else if (strpos($query_lower, "mean"))
                 define_word($query);
         }
 
