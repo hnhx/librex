@@ -99,7 +99,7 @@ img { padding:15px; }
 
 .small-search-container { margin:2%; }  
 
-.result-container, #time {
+.result-container, #time, #special-result {
     margin-left:10%;
 }
 
@@ -120,6 +120,12 @@ img { padding:15px; }
 
 .result-container {
     margin-top:6px;
+}
+
+#special-result {
+    padding:10px;
+    border: 1px solid #bdc1c6;
+    width:500px;
 }
 
 .page-container {

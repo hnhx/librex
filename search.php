@@ -29,7 +29,7 @@
                         $query = $_REQUEST["q"];
                         echo "value=\"$query\"";
 
-                        $_SESSION["q"] = $query;
+                        $_SESSION["q"] = trim($query);
                         $_SESSION["p"] = $_REQUEST["p"];
                         $_SESSION["type"] = $_REQUEST["type"];
                     } 

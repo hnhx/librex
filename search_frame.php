@@ -29,9 +29,10 @@
             $end_time = number_format(microtime(true) - $start_time, 2, '.', '');
 
             echo "<p id=\"time\">Fetched the results in $end_time seconds</p>";
-
+            
             if ($_SESSION["type"] != "img") 
             {
+                special_search($query);
                 
                 foreach($results as $result)
                 {
@@ -78,6 +79,8 @@
             }
 
             require "session_destroy.php";
+
+            
         ?>
     </body>
 </html>
