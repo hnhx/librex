@@ -46,5 +46,4 @@ Monero (XMR): `41dGQr9EwZBfYBY3fibTtJZYfssfRuzJZDSVDeneoVcgckehK3BiLxAV4FvEVJiVq
 # To do
 + Improve the quality of the CSS
 + Add more settings to config.php
-+ Add special search features (e.g.: 10 usd to euro)
 + Add video results
