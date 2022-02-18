@@ -8,7 +8,7 @@
 <p align="center">A privacy respecting free as in freedom meta search engine for Google</p>
 
 # Online instances
-todo
++ [search.davidovski.xyz](https://search.davidovski.xyz/) :gb:
 
 # Features
 + Ad free
