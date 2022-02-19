@@ -1,4 +1,42 @@
 <?php
+        require("config.php");
+
+        $proxy_type = null;
+        if ($config_proxy != null)
+        {
+            switch($config_proxy_type)
+            {
+                case 1:
+                    $proxy_type = CURLPROXY_HTTP;
+                    break;
+                case 2:
+                    $proxy_type = CURLPROXY_SOCKS4;
+                    break;
+                case 3:
+                    $proxy_type = CURLPROXY_SOCKS4A;
+                    break;
+                case 4:
+                    $proxy_type = CURLPROXY_SOCKS5;
+                    break;
+                case 5:
+                    $proxy_type = CURLPROXY_SOCKS5_HOSTNAME;
+                    break;
+                default:
+                    $proxy_type = CURLPROXY_HTTP;
+                    break;
+            }
+        }
+
+        $curl_settings = array(
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_HEADER         => false,
+            CURLOPT_FOLLOWLOCATION => false,
+            CURLOPT_ENCODING       => "",
+            CURLOPT_USERAGENT      => $config_user_agent,
+            CURLOPT_SSL_VERIFYHOST => 0,
+            CURLOPT_VERBOSE        => 1
+        );
+
         function get_base_url($url)
         {
             $split_url = explode("/", $url);
@@ -21,6 +59,9 @@
 
         function convert_currency($query)
         {
+
+            global $curl_settings , $proxy_type , $config_proxy; 
+
             $split_query = explode(" ", $query);
 
             if (count($split_query) >= 4) 
@@ -33,7 +74,12 @@
                     $currency_to_convert = strtoupper($split_query[3]);
 
                     $ch = curl_init("https://cdn.moneyconvert.net/api/latest.json");
-                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                    if ($config_proxy != null)
+                    {
+                        curl_setopt($ch, CURLOPT_PROXY, $config_proxy);
+                        curl_setopt($ch, CURLOPT_PROXYTYPE, $proxy_type);
+                    }
+                    curl_setopt_array($ch, $curl_settings);
                     $response = curl_exec($ch);
                     $json_response = json_decode($response, true);
                     
@@ -56,6 +102,8 @@
 
         function define_word($query) 
         {
+            global $curl_settings , $proxy_type , $config_proxy; 
+            
             $split_query = explode(" ", $query);
             
             if (count($split_query) >= 2)
@@ -64,7 +112,12 @@
                 $word_to_define = $reversed_split_q[1];
 
                 $ch = curl_init("https://api.dictionaryapi.dev/api/v2/entries/en/$word_to_define");
-                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                if ($config_proxy != null)
+                {
+                    curl_setopt($ch, CURLOPT_PROXY, $config_proxy);
+                    curl_setopt($ch, CURLOPT_PROXYTYPE, $proxy_type);
+                }
+                curl_setopt_array($ch, $curl_settings);
                 $response = curl_exec($ch);
                 $json_response = json_decode($response, true);
 
@@ -82,30 +135,28 @@
 
         function fetch_results($query, $page, $get_images=false) 
         {
-            require("config.php");
+
+            global $curl_settings , $proxy_type , $config_proxy; 
+
+            require "config.php";
 
             $query_encoded =  urlencode($query);
 
             $google = "https://www.google.$config_google_domain/search?&q=$query_encoded&start=$page&hl=$config_google_language";
             if ($get_images)
                 $google .= "&tbm=isch";
-
+                
             $ch = curl_init($google);
 
-            curl_setopt_array($ch, [
-                CURLOPT_RETURNTRANSFER => true,
-                // CURLOPT_PROXYTYPE      => CURLPROXY_SOCKS5_HOSTNAME,
-                // CURLOPT_PROXY          => "127.0.0.1:9150",
-                CURLOPT_HEADER         => false,
-                CURLOPT_FOLLOWLOCATION => false,
-                CURLOPT_ENCODING       => "",
-                CURLOPT_USERAGENT      => $config_user_agent,
-                CURLOPT_SSL_VERIFYHOST => 0,
-                CURLOPT_VERBOSE        => 1,
-            ]);
+            if ($config_proxy != null)
+            {
+                curl_setopt($ch, CURLOPT_PROXY, $config_proxy);
+                curl_setopt($ch, CURLOPT_PROXYTYPE, $proxy_type);
+            }
+            curl_setopt_array($ch, $curl_settings);
 
             $response = curl_exec($ch);
-            
+
             $htmlDom = new DOMDocument;
             @$htmlDom->loadHTML($response);
             $xpath = new DOMXPath($htmlDom);
@@ -126,7 +177,12 @@
                         if (!empty($src) && !empty($alt)) 
                         {
                             $ch = curl_init($src);
-                            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                            if ($config_proxy != null)
+                            {
+                                curl_setopt($ch, CURLOPT_PROXY, $config_proxy);
+                                curl_setopt($ch, CURLOPT_PROXYTYPE, $proxy_type);
+                            }
+                            curl_setopt_array($ch, $curl_settings);
                             array_push($chs, $ch);
                             curl_multi_add_handle($mh, $ch);
                         }
