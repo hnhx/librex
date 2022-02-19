@@ -17,39 +17,31 @@
                 <?php
                     session_start();
 
-                    $valid_query = true;
+                    $query = trim($_REQUEST["q"]);
 
-                    if (!isset($_REQUEST["q"]))
-                        $valid_query = false;
-                    else if (1 > strlen($_REQUEST["q"]) || strlen($_REQUEST["q"]) > 256)
-                        $valid_query = false;
-                    
-                    if ($valid_query) 
-                    {
-                        $query = $_REQUEST["q"];
-                        echo "value=\"$query\"";
-
-                        $_SESSION["q"] = trim($query);
-                        $_SESSION["p"] = $_REQUEST["p"];
-                        $_SESSION["type"] = $_REQUEST["type"];
-                    } 
-                    else 
+                    if (1 > strlen($query) || strlen($query) > 256)
                     {
                         header("Location: /");
                         die();
-                    }
+                    } 
+ 
+                    echo "value=\"$query\"";
+
+                    $_SESSION["q"] = $query;
+                    $_SESSION["p"] = $_REQUEST["p"];
+                    $_SESSION["type"] = $_REQUEST["type"];
+
                 ?>
             >
             <br>
             <?php
-                if (isset($_REQUEST["type"]))
-                    if ($_REQUEST["type"] == "img")
-                        echo "<input type=\"hidden\" name=\"type\" value=\"img\"/>";
+                $type = $_REQUEST["type"];
+                echo "<input type=\"hidden\" name=\"type\" value=\"$type\"/>";
             ?>
             <button type="submit" style="display:none;"></button>
             <div class="result_change">
-                <button name="type" value="text">Text results</button>
-                <button name="type" value="img">Image results</button>
+                <button name="type" value="0">Text results</button>
+                <button name="type" value="1">Image results</button>
             </div>
             
         <hr>

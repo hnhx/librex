@@ -10,7 +10,7 @@ body {
     padding: 0;
 }
 
-hr { margin:30px 0px 30px 0px; }
+hr { margin: 30px 0px 30px 0px; }
 
 iframe {
     width: 100%;
@@ -103,6 +103,13 @@ img { padding:15px; }
     margin-left:10%;
 }
 
+.result-container {
+    max-width: 550px;
+    margin-top: 30px;
+}
+
+.result-container span { font-size: 15px; }
+
 .result-container a {
     font-size: 14px;
     color:#bdc1c6;
@@ -118,10 +125,6 @@ img { padding:15px; }
 
 .result-container h2:hover { text-decoration: underline; }
 
-.result-container {
-    margin-top:6px;
-}
-
 #special-result {
     padding:10px;
     border: 1px solid #bdc1c6;
@@ -129,7 +132,8 @@ img { padding:15px; }
 }
 
 .page-container {
-    margin-bottom:70px;
+    margin-top:50px;
+    margin-bottom:50px;
     margin-left:15%;
 }
 

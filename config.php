@@ -9,20 +9,31 @@
     $config_google_language = "en";
 
     /*
-        Format: "ip:port"
-        
-        For a TOR connection you would use these settings:
-        $config_proxy = "127.0.0.1:9050";
-        $config_proxy_type = 5;
-    */
-    $config_proxy = null;
+        To send requests trough a proxy uncomment CURLOPT_PROXY and CURLOPT_PROXYTYPE:
 
-    /* 
-        1 -> HTTP
-        2 -> SOCKS4
-        3 -> SOCKS4a (resolves URL hostname)
-        4 -> SOCKS5
-        5 -> SOCKS5 (resolves URL hostname)
+        CURLOPT_PROXYTYPE options:
+
+            CURLPROXY_HTTP
+            CURLPROXY_SOCKS4
+            CURLPROXY_SOCKS4A
+            CURLPROXY_SOCKS5
+            CURLPROXY_SOCKS5_HOSTNAME
+
+        As an example, for a TOR connection you would use these settings:
+        CURLOPT_PROXY => "127.0.0.1:9050",
+        CURLOPT_PROXYTYPE => CURLPROXY_SOCKS5,
+
+        !!! ONLY CHANGE THE OTHER OPTIONS IF YOU KNOW WHAT YOU ARE DOING !!!
     */
-    $config_proxy_type = 1;
+    $config_curl_settings = array(
+        // CURLOPT_PROXY => "ip:port",
+        // CURLOPT_PROXYTYPE => CURLPROXY_HTTP,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_HEADER         => false,
+        CURLOPT_FOLLOWLOCATION => false,
+        CURLOPT_ENCODING       => "",
+        CURLOPT_USERAGENT      => $config_user_agent,
+        CURLOPT_SSL_VERIFYHOST => 0,
+        CURLOPT_VERBOSE        => 1
+    );
 ?>

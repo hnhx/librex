@@ -8,7 +8,8 @@
     </head>
     <body>
         <?php
-            function print_next_pages($page, $button_val, $q) {
+            function print_next_pages($page, $button_val, $q) 
+            {
                 echo "<form id=\"page\" action=\"search.php\" target=\"_top\" method=\"post\">";
                 echo "<input type=\"hidden\" name=\"p\" value=\"" . $page . "\" />";
                 echo "<input type=\"hidden\" name=\"q\" value=\"$q\" />";
@@ -16,35 +17,42 @@
                 echo "</form>"; 
             }
 
+            ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+            
             session_start();
 
-            require("fetch.php");
+            require_once "google.php";
+            require_once "tools.php";
 
             $query = $_SESSION["q"];
             $page = (int) htmlspecialchars($_SESSION["p"]);
-            $search_type = $_SESSION["type"] == "img" ? true : false;
+            $type = (int) $_SESSION["type"];
 
             $start_time = microtime(true);
-            $results = fetch_results($query, $page, $search_type);
+            $results = get_google_results($query, $page, $type);
             $end_time = number_format(microtime(true) - $start_time, 2, '.', '');
 
             echo "<p id=\"time\">Fetched the results in $end_time seconds</p>";
             
-            if ($_SESSION["type"] != "img") 
+            if ($type == 0) // text search
             {
-                special_search($query);
+                check_for_special_search($query);
                 
                 foreach($results as $result)
                 {
                     $title = $result["title"];
                     $url = $result["url"];
                     $base_url = $result["base_url"];
+                    $description = $result["description"];
 
                     echo "<div class=\"result-container\">";
                     echo "<a href=\"$url\" target=\"_blank\">";
                     echo "$base_url";
                     echo "<h2>$title</h2>";
                     echo "</a>";
+                    echo "<span>$description</span>";
                     echo "</div>";
                 }
                 
@@ -56,7 +64,7 @@
                     print_next_pages($page - 10, "&lt;", $query);
                 }
                 
-                for ($i=$page / 10; $page / 10 + 10>$i; $i++)
+                for ($i=$page / 10; $page / 10 + 10 > $i; $i++)
                 {
                     $page_input = $i * 10;
                     $page_button = $i + 1;
@@ -68,19 +76,21 @@
 
                 echo "</div>";
             }
-            else
+            else if ($type == 1) // image search
             {
                 foreach($results as $result)
                 {
                     $src = $result["base64"];
                     $alt = $result["alt"];
-                    echo "<a href=\"data:image/jpeg;base64,$src\" target=\"_blank\"><img src=\"data:image/jpeg;base64,$src\"></a>";
+    
+                    echo "<a title=\"$alt\" href=\"data:image/jpeg;base64,$src\" target=\"_blank\">";
+                    echo "<img src=\"data:image/jpeg;base64,$src\">";
+                    echo "</a>";
                 }
             }
 
-            require "session_destroy.php";
+            better_session_destroy();
 
-            
         ?>
     </body>
 </html>
