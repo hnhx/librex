@@ -10,6 +10,15 @@
 # Online instances
 + [search.davidovski.xyz](https://search.davidovski.xyz/) :gb:
 
+If you wish to get your instance added create an issue with:
++ the URL of your instance
++ the country where your instance is being hosted
+
+Your request will be **rejected** if your instance:
++ contains JavaScript
++ contains ads
++ has been heavily modified
+
 # Features
 + Ad free
 + JavaScript free
