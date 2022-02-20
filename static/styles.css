@@ -198,7 +198,7 @@ img {
         margin-top:1px;
     }
 
-    .result-container h2:hover { 
+    .result-container h2:hover {
         text-decoration: underline; 
     }
 
@@ -215,7 +215,6 @@ img {
         margin-bottom:30px;
         
         max-height: 100vh;
-        max-width: 84%;
     }
 
 /* .image-result-container END */
