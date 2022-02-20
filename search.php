@@ -60,8 +60,8 @@
             require_once "tools.php";
             require_once "config.php";
 
-            $page = (int) htmlspecialchars($_REQUEST["p"]);
-            $type = (int) $_REQUEST["type"];
+            $page = isset($_REQUEST["p"]) ? (int) htmlspecialchars($_REQUEST["p"]) : 0;
+            $type = isset($_REQUEST["type"]) ? (int) $_REQUEST["type"] : 0;
 
             $start_time = microtime(true);
             $results = get_google_results($query, $page, $type);
