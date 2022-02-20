@@ -421,13 +421,15 @@ img {
             margin-left: auto;
             margin-right: auto;
             margin-bottom: 30px;
-
-            width: 50%;
         }
 
         #special-result {
             width: 80%;
         } 
+
+        .result-container {
+            width: 80%;
+        }
     }
 
 /* @media END */
