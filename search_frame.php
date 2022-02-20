@@ -16,10 +16,6 @@
                 echo "<button type=\"submit\">$button_val</button>";
                 echo "</form>"; 
             }
-
-            ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
             
             session_start();
 
@@ -78,6 +74,9 @@ error_reporting(E_ALL);
             }
             else if ($type == 1) // image search
             {
+
+                echo "<div class=\"image-result-container\">";
+
                 foreach($results as $result)
                 {
                     $src = $result["base64"];
@@ -87,6 +86,8 @@ error_reporting(E_ALL);
                     echo "<img src=\"data:image/jpeg;base64,$src\">";
                     echo "</a>";
                 }
+
+                echo "</div>";
             }
 
             better_session_destroy();

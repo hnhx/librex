@@ -39,7 +39,7 @@
                 echo "<input type=\"hidden\" name=\"type\" value=\"$type\"/>";
             ?>
             <button type="submit" style="display:none;"></button>
-            <div class="result_change">
+            <div class="result-change">
                 <button name="type" value="0">Text results</button>
                 <button name="type" value="1">Image results</button>
             </div>
