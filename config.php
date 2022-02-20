@@ -9,6 +9,14 @@
     $config_google_language = "en";
 
     /*
+        youtube.com results will be replaced with the given invidious instance
+        Get online invidious instances from here: https://docs.invidious.io/Invidious-Instances.md
+        
+        Set as null if you don't want to replace YouTube results
+    */
+    $config_replace_yt_with_invidious = "yewtu.be";
+
+    /*
         To send requests trough a proxy uncomment CURLOPT_PROXY and CURLOPT_PROXYTYPE:
 
         CURLOPT_PROXYTYPE options:

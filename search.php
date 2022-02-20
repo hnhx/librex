@@ -34,14 +34,19 @@
             ?>
             <button type="submit" style="display:none;"></button>
             <div class="result-change">
-                <button name="type" value="0">Text results</button>
-                <button name="type" value="1">Image results</button>
+                <button name="type" value="0"><img src="static/text_result.png" id="change-image" style="width:20px;">Text</button>
+                <button name="type" value="1"><img src="static/image_result.png" id="change-image">Images</button>
+                <button name="type" value="2"><img src="static/video_result.png" id="change-image" style="width:40px;">Videos</button>
             </div>
             
         <hr>
         </form>
 
         <?php
+            ini_set('display_errors', 1);
+            ini_set('display_startup_errors', 1);
+            error_reporting(E_ALL);
+
             function print_next_pages($page, $button_val, $q) 
             {
                 echo "<form id=\"page\" action=\"search.php\" target=\"_top\" method=\"post\" enctype=\"multipart/form-data\" autocomplete=\"off\">";
@@ -53,6 +58,7 @@
 
             require_once "google.php";
             require_once "tools.php";
+            require_once "config.php";
 
             $page = (int) htmlspecialchars($_REQUEST["p"]);
             $type = (int) $_REQUEST["type"];
@@ -63,6 +69,7 @@
 
             echo "<p id=\"time\">Fetched the results in $end_time seconds</p>";
             
+
             if ($type == 0) // text search
             {
                 check_for_special_search($query);
@@ -116,6 +123,33 @@
                     echo "<a title=\"$alt\" href=\"data:image/jpeg;base64,$src\" target=\"_blank\">";
                     echo "<img src=\"data:image/jpeg;base64,$src\" width=\"350\" height=\"200\">";
                     echo "</a>";
+                }
+
+                echo "</div>";
+            }
+            else if ($type == 2) // video search
+            {
+                echo "<div class=\"results-wrapper\">";
+
+                if ($config_replace_yt_with_invidious != null)
+                {
+                    echo "<p id=\"special-result\">";
+                    echo  "YouTube results got replaced with a privacy friendly Invidious instance.";
+                    echo "</p>";
+                }
+
+                foreach($results as $result)
+                {
+                    $title = $result["title"];
+                    $url = $result["url"];
+                    $base_url = $result["base_url"];
+
+                    echo "<div class=\"result-container\">";
+                    echo "<a href=\"$url\">";
+                    echo "$base_url";
+                    echo "<h2>$title</h2>";
+                    echo "</a>";
+                    echo "</div>";
                 }
 
                 echo "</div>";
