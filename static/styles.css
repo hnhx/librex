@@ -17,7 +17,6 @@ iframe {
 }
 
 img { 
-  
     border: 1px solid #5f6368;
 } 
 
@@ -30,7 +29,7 @@ img {
         display: flex;
         flex-direction: column;
 
-        margin-left:auto;
+        margin-left: auto;
         margin-right: auto;
         margin-top:12%;
 
@@ -315,15 +314,16 @@ img {
     @media only screen and (min-width:900px) {
         .search-button-wrapper {
             flex-direction: row;
-            justify-content: space-around;
         }
 
         .search-button-wrapper button { 
-            width: auto; 
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .search-container input { 
-            width: 100%; 
+            width: auto; 
         }
 
         .small-search-container input {
