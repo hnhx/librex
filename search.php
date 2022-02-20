@@ -43,10 +43,6 @@
         </form>
 
         <?php
-            ini_set('display_errors', 1);
-            ini_set('display_startup_errors', 1);
-            error_reporting(E_ALL);
-
             function print_next_pages($page, $button_val, $q) 
             {
                 echo "<form id=\"page\" action=\"search.php\" target=\"_top\" method=\"post\" enctype=\"multipart/form-data\" autocomplete=\"off\">";
