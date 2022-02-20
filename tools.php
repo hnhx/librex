@@ -6,21 +6,6 @@
         return $base_url;
     }
 
-    function better_session_destroy()
-    {
-        $_SESSION = array();
-
-        if (ini_get("session.use_cookies")) {
-            $params = session_get_cookie_params();
-            setcookie(session_name(), '', time() - 42000,
-                $params["path"], $params["domain"],
-                $params["secure"], $params["httponly"]
-            );
-        }
-    
-        session_destroy();
-    }
-
     function check_for_special_search($query)
     {
         $query_lower = strtolower($query);
