@@ -6,6 +6,7 @@
         <meta http-equiv="Content-type" content="application/xhtml+xml;charset=utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta name="description" content="A privacy respecting meta search engine."/>
+        <meta name="referrer" content="no-referrer">
         <link rel="stylesheet" type="text/css" href="static/styles.css"/>
         <link title="LibreX search" type="application/opensearchdescription+xml" href="/opensearch.xml?method=POST" rel="search"/>
         <link rel="shortcut icon" href="static/librex.png" />
@@ -43,31 +44,24 @@
         </form>
 
         <?php
-            function print_next_pages($page, $button_val, $q) 
+
+            require_once "google.php";
+            require_once "config.php";
+            require_once "tools.php";
+
+            function print_next_page_button($page, $button_val, $q, $type) 
             {
                 echo "<form id=\"page\" action=\"search.php\" target=\"_top\" method=\"post\" enctype=\"multipart/form-data\" autocomplete=\"off\">";
                 echo "<input type=\"hidden\" name=\"p\" value=\"" . $page . "\" />";
                 echo "<input type=\"hidden\" name=\"q\" value=\"$q\" />";
+                echo "<input type=\"hidden\" name=\"type\" value=\"$type\" />";
                 echo "<button type=\"submit\">$button_val</button>";
                 echo "</form>"; 
             }
 
-            require_once "google.php";
-            require_once "tools.php";
-            require_once "config.php";
-
-            $page = isset($_REQUEST["p"]) ? (int) htmlspecialchars($_REQUEST["p"]) : 0;
-            $type = isset($_REQUEST["type"]) ? (int) $_REQUEST["type"] : 0;
-
-            $start_time = microtime(true);
-            $results = get_google_results($query, $page, $type);
-            $end_time = number_format(microtime(true) - $start_time, 2, '.', '');
-
-            echo "<p id=\"time\">Fetched the results in $end_time seconds</p>";
-            
-
-            if ($type == 0) // text search
+            function print_text_results($results) 
             {
+                global $query;
                 check_for_special_search($query);
                 
                 foreach($results as $result)
@@ -85,68 +79,86 @@
                     echo "<span>$description</span>";
                     echo "</div>";
                 }
-                
-                echo "<div class=\"page-container\">";
-
-                if ($page != 0) 
-                {
-                    print_next_pages(0, "&lt;&lt;", $query);
-                    print_next_pages($page - 10, "&lt;", $query);
-                }
-                
-                for ($i=$page / 10; $page / 10 + 10 > $i; $i++)
-                {
-                    $page_input = $i * 10;
-                    $page_button = $i + 1;
-                    
-                    print_next_pages($page_input, $page_button, $query);
-                }
-
-                print_next_pages($page + 10, "&gt;", $query);
-
-                echo "</div>";
             }
-            else if ($type == 1) // image search
-            {
 
+            function print_image_results($results)
+            {
                 echo "<div class=\"image-result-container\">";
 
-                foreach($results as $result)
-                {
-                    $src = $result["base64"];
-                    $alt = $result["alt"];
-    
-                    echo "<a title=\"$alt\" href=\"data:image/jpeg;base64,$src\" target=\"_blank\">";
-                    echo "<img src=\"data:image/jpeg;base64,$src\" width=\"350\" height=\"200\">";
-                    echo "</a>";
-                }
+                    foreach($results as $result)
+                    {
+                        $src = $result["base64"];
+                        $alt = $result["alt"];
+        
+                        echo "<a title=\"$alt\" href=\"data:image/jpeg;base64,$src\" target=\"_blank\">";
+                        echo "<img src=\"data:image/jpeg;base64,$src\" width=\"350\" height=\"200\">";
+                        echo "</a>";
+                    }
 
-                echo "</div>";
-            }
-            else if ($type == 2) // video search
-            {
-                echo "<div class=\"results-wrapper\">";
-
-                if ($config_replace_yt_with_invidious != null)
-                {
-                    echo "<p id=\"special-result\">";
-                    echo  "YouTube results got replaced with a privacy friendly Invidious instance.";
-                    echo "</p>";
-                }
-
-                foreach($results as $result)
-                {
-                    $title = $result["title"];
-                    $url = $result["url"];
-                    $base_url = $result["base_url"];
-
-                    echo "<div class=\"result-container\">";
-                    echo "<a href=\"$url\">";
-                    echo "$base_url";
-                    echo "<h2>$title</h2>";
-                    echo "</a>";
                     echo "</div>";
-                }
+            }
+
+            function print_video_results($results)
+            {
+                    foreach($results as $result)
+                    {
+                        $title = $result["title"];
+                        $url = $result["url"];
+                        $base_url = $result["base_url"];
+
+                        echo "<div class=\"result-container\">";
+                        echo "<a href=\"$url\">";
+                        echo "$base_url";
+                        echo "<h2>$title</h2>";
+                        echo "</a>";
+                        echo "</div>";
+                    }
+            }
+
+            $page = isset($_REQUEST["p"]) ? (int) $_REQUEST["p"] : 0;
+            $type = isset($_REQUEST["type"]) ? (int) $_REQUEST["type"] : 0;
+
+            $start_time = microtime(true);
+            $results = get_google_results($query, $page, $type);
+            $end_time = number_format(microtime(true) - $start_time, 2, '.', '');
+
+            echo "<p id=\"time\">Fetched the results in $end_time seconds</p>";
+            
+            switch ($type)
+            {
+                case 0:
+                    print_text_results($results);
+                    break;
+                case 1:
+                    print_image_results($results);
+                    break;
+                case 2:
+                    print_video_results($results);
+                    break;
+                default:
+                    print_text_results($results);
+                    break;
+            }
+
+            if ($type != 1 )
+            {
+                echo "<div class=\"page-container\">";
+
+                    if ($page != 0) 
+                    {
+                        print_next_page_button(0, "&lt;&lt;", $query, $type); 
+                        print_next_page_button($page - 10, "&lt;", $query, $type);
+                    }
+                    
+                    for ($i=$page / 10; $page / 10 + 10 > $i; $i++)
+                    {
+                        $page_input = $i * 10;
+                        $page_button = $i + 1;
+                        
+                        print_next_page_button($page_input, $page_button, $query, $type);
+                    }
+
+                    print_next_page_button($page + 10, "&gt;", $query, $type);
 
                 echo "</div>";
             }

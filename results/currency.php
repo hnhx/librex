@@ -1,6 +1,4 @@
 <?php
-
-
     function currency_results($query)
     {
         require "config.php"; 

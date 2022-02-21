@@ -33,7 +33,7 @@
             array_push($results, 
                 array (
                     "base64" => $img_base64,
-                    "alt" => $alts[$i]
+                    "alt" => htmlspecialchars($alts[$i])
                 )
             );
         }

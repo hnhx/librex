@@ -9,5 +9,5 @@
 
     $results = get_google_results($query, $page, $type);
 
-    echo json_encode($results, true);
+    echo json_encode($results, JSON_PRETTY_PRINT);
 ?>

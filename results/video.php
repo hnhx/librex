@@ -27,9 +27,9 @@
             
             array_push($results, 
                 array (
-                    "title" => $title->textContent,
-                    "url" =>  $url,
-                    "base_url" => get_base_url($url)
+                    "title" => htmlspecialchars($title->textContent),
+                    "url" =>  htmlspecialchars($url),
+                    "base_url" => htmlspecialchars(get_base_url($url))
                 )
             );
         }
