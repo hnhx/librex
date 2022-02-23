@@ -202,6 +202,10 @@ button {
         text-decoration: underline; 
     }
 
+    .result-container a:visited h2 {
+        color: #bd93f9;
+    }
+
 /* .result-container END */
 
 
