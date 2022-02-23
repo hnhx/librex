@@ -9,7 +9,7 @@
 <p align="center">A privacy respecting free as in freedom meta search engine for Google</p>
 
 # Online instances
-+ [search.davidovski.xyz](https://search.davidovski.xyz/) :gb:
++ [search.davidovski.xyz](https://search.davidovski.xyz/) 🇬🇧
 
 If you wish to get your instance added create an issue with:
 + the URL of your instance
