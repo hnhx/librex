@@ -336,7 +336,23 @@ button {
     border: none;
 }
 
+#wiki-image {
+    border: none;
+    display: flex;
 
+    width: 50%;
+    max-height: 200px;
+
+    padding-bottom:10px;
+    
+}
+
+#wiki-link {
+    display: flex;
+    margin-top: 16px;
+    font-size:14px;
+    color:#bd93f9;
+}
 
 /* @media START */
 
@@ -427,6 +443,9 @@ button {
 
             margin-left: auto;
             margin-right: auto;
+
+            width: 98%;
+
             margin-bottom: 30px;
         }
 
@@ -440,6 +459,10 @@ button {
 
         #time {
             margin-top: 30px;
+        }
+
+        .page-container {
+            margin-bottom:130px;
         }
     }
 

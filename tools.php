@@ -10,18 +10,21 @@
     {
         $query_lower = strtolower($query);
 
-        // Check for currency convesion
         if (strpos($query_lower, "to"))
         {
             require_once "results/currency.php";
             currency_results($query);
         }
-           
-        // Check for definition 
         else if (strpos($query_lower, "mean"))
         {
             require_once "results/definition.php";
             definition_results($query);
+        }
+        else if (5 > count(explode(" ", $query))) // long queries usually wont return a wiki result thats why this check exists
+        {
+            require_once "results/wikipedia.php";
+            wikipedia_results($query_lower);
+            return;
         }
     }
 ?>

@@ -2,9 +2,9 @@
         function get_google_results($query, $page, $type=0) 
         {
             require "config.php";
-            require_once "results/image.php";
-            require_once "results/text.php";
-            require_once "results/video.php"; 
+            require_once "results/google/image.php";
+            require_once "results/google/text.php";
+            require_once "results/google/video.php"; 
 
             $query_encoded =  urlencode($query);
 
