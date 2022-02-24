@@ -20,7 +20,7 @@
             if (strpos($description, "may refer to"))
                 return;
 
-            echo "<p id=\"special-result\">";
+            echo "<p class=\"special-result-container\">";
 
             if (array_key_exists("thumbnail", $first_page))
             {
@@ -31,12 +31,12 @@
                 $base64_image = base64_encode($image_response);
 
                 echo "<a href=\"data:image/jpeg;base64,$base64_image\" target=\"_blank\">";
-                echo "<img src=\"data:image/jpeg;base64,$base64_image\" id=\"wiki-image\">";
+                echo "<img src=\"data:image/jpeg;base64,$base64_image\">";
                 echo "</a>";
             } 
 
             echo "$description";
-            echo "<a id=\"wiki-link\" href=\"https://en.wikipedia.org/wiki/$query\">";
+            echo "<a href=\"https://en.wikipedia.org/wiki/$query\">";
             echo "Wikipedia";
             echo "</a>";
 

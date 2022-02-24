@@ -8,6 +8,10 @@
     // Results will be in this language
     $config_google_language = "en";
 
+    // Maxmium size of the cache
+    $config_cache_size = 1024 * 1024 * 1024;
+
+
     /*
         youtube.com results will be replaced with the given invidious instance
         Get online invidious instances from here: https://docs.invidious.io/Invidious-Instances.md

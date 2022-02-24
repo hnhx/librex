@@ -14,6 +14,7 @@
         if ($page == 0)
             check_for_special_search($query);
         
+        echo "<div class=\"text-result-container\">";
         foreach($results as $result)
         {
             $title = $result["title"];
@@ -21,7 +22,7 @@
             $base_url = $result["base_url"];
             $description = $result["description"];
 
-            echo "<div class=\"result-container\">";
+            echo "<div class=\"text-result-wrapper\">";
             echo "<a href=\"$url\">";
             echo "$base_url";
             echo "<h2>$title</h2>";
@@ -29,6 +30,7 @@
             echo "<span>$description</span>";
             echo "</div>";
         }
+        echo "</div>";
     }
 
     function print_image_results($results)
@@ -45,24 +47,52 @@
                 echo "</a>";
             }
 
-            echo "</div>";
+        echo "</div>";
     }
 
     function print_video_results($results)
     {
+        echo "<div class=\"text-result-container\">";
+
             foreach($results as $result)
             {
                 $title = $result["title"];
                 $url = $result["url"];
                 $base_url = $result["base_url"];
 
-                echo "<div class=\"result-container\">";
+                echo "<div class=\"text-result-wrapper\">";
                 echo "<a href=\"$url\">";
                 echo "$base_url";
                 echo "<h2>$title</h2>";
                 echo "</a>";
                 echo "</div>";
             }
+
+        echo "</div>";
+    }
+
+    function print_bittorrent_results($results)
+    {
+        echo "<div class=\"text-result-container\">";
+
+            foreach($results as $result)
+            {
+                $hash = $result["hash"];
+                $name = $result["name"];
+                $seeders = $result["seeders"];
+                $leechers = $result["leechers"];
+                $magnet = $result["magnet"];
+
+                echo "<div class=\"text-result-wrapper\">";
+                echo "<a href=\"$magnet\">";
+                echo "$hash";
+                echo "<h2>$name</h2>";
+                echo "</a>";
+                echo "<span>SE: $seeders - LE: $leechers</span>";
+                echo "</div>";
+            }
+
+        echo "</div>";
     }
 
     function print_next_page_button($page, $button_val, $q, $type) 

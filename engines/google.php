@@ -1,5 +1,5 @@
 <?php
-        function get_google_results($query, $page, $type=0) 
+        function get_google_results($query, $page=0, $type=0) 
         {
             require "config.php";
             require_once "results/google/image.php";

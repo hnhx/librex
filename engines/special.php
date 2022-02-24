@@ -13,7 +13,7 @@
             require_once "results/special/definition.php";
             definition_results($query);
         }
-        else if (5 > count(explode(" ", $query))) // long queries usually wont return a wiki result thats why this check exists
+        else if (3 > count(explode(" ", $query))) // long queries usually wont return a wiki result thats why this check exists
         {
             require_once "results/special/wikipedia.php";
             wikipedia_results($query_lower);

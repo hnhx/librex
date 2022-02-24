@@ -12,9 +12,8 @@
         <link rel="shortcut icon" href="static/librex.png" />
     </head>
     <body>
-        <form class="small-search-container" method="post" enctype="multipart/form-data" autocomplete="off">
+        <form class="sub-search-container" method="post" enctype="multipart/form-data" autocomplete="off">
             <a href="/"><img id="logo" src="static/librex.png" alt="librex"></a>
-            <input type="hidden" name="p" value="0">
             <input type="text" name="q" 
                 <?php
                     $query = trim($_REQUEST["q"]);
@@ -34,10 +33,12 @@
                 echo "<input type=\"hidden\" name=\"type\" value=\"$type\"/>";
             ?>
             <button type="submit" style="display:none;"></button>
-            <div class="result-change">
-                <button name="type" value="0"><img src="static/text_result.png" id="change-image" style="width:20px;">Text</button>
-                <button name="type" value="1"><img src="static/image_result.png" id="change-image">Images</button>
-                <button name="type" value="2"><img src="static/video_result.png" id="change-image" style="width:40px;">Videos</button>
+            <input type="hidden" name="p" value="0">
+            <div class="sub-search-button-wrapper">
+                <button name="type" value="0"><img src="static/text_result.png">Text</button>
+                <button name="type" value="1"><img src="static/image_result.png">Images</button>
+                <button name="type" value="2"><img src="static/video_result.png">Videos</button>
+                <button name="type" value="3"><img src="static/torrent_result.png">Torrents</button>
             </div>
             
         <hr>
@@ -48,17 +49,18 @@
             require_once "engines/google.php";
             require_once "engines/special.php";
             require_once "misc/tools.php";
+            require_once "engines/bittorrent.php";
             require_once "config.php";
 
             $page = isset($_REQUEST["p"]) ? (int) $_REQUEST["p"] : 0;
             $type = isset($_REQUEST["type"]) ? (int) $_REQUEST["type"] : 0;
 
             $start_time = microtime(true);
-            $results = get_google_results($query, $page, $type);
+            $results = $type != 3 ? get_google_results($query, $page, $type) : get_bittorrent_results($query);
             $end_time = number_format(microtime(true) - $start_time, 2, '.', '');
 
             echo "<p id=\"time\">Fetched the results in $end_time seconds</p>";
-            
+               
             switch ($type)
             {
                 case 0:
@@ -70,14 +72,17 @@
                 case 2:
                     print_video_results($results);
                     break;
+                case 3:
+                    print_bittorrent_results($results);
+                    break;
                 default:
                     print_text_results($results);
                     break;
             }
 
-            if ($type != 1 )
+            if ($type != 1 && $type != 3 )
             {
-                echo "<div class=\"page-container\">";
+                echo "<div class=\"next-page-button-wrapper\">";
 
                     if ($page != 0) 
                     {
@@ -99,9 +104,9 @@
             }
         ?>
 
-        <div class="info-container">
+        <div class="footer-container">
             <a href="/">LibreX</a>
-            <a href="https://github.com/hnhx/librex/" target="_blank">Source code &amp; Other instances</a>
+            <a href="https://github.com/hnhx/librex/" target="_blank">Source &amp; Instance list</a>
             <a href="/api.php" target="_blank">API</a>
             <a href="/donate.xhtml" id="right">Donate ❤️</a>
         </div>

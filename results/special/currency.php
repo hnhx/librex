@@ -28,7 +28,7 @@
 
                     $conversion_result = ($currency_to_convert_response / $base_currency_response) * $amount_to_convert;
 
-                    echo "<p id=\"special-result\">";
+                    echo "<p class=\"special-result-container\">";
                     echo  "$amount_to_convert $base_currency = $conversion_result $currency_to_convert";
                     echo "</p>";
                 }                    

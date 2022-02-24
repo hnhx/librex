@@ -19,7 +19,7 @@
             {
                 $definition = $json_response[0]["meanings"][0]["definitions"][0]["definition"];
 
-                echo "<p id=\"special-result\">";
+                echo "<p class=\"special-result-container\">";
                 echo "$word_to_define meaning<br/>";
                 echo "<br/>" . $definition . "<br/>";
                 echo "</p>";
