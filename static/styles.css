@@ -340,11 +340,13 @@ button {
     border: none;
     display: flex;
 
-    width: 50%;
+    max-width: 50%;
     max-height: 200px;
 
     padding-bottom:10px;
     
+    margin-left:auto;
+    margin-right:auto;
 }
 
 #wiki-link {
@@ -420,7 +422,7 @@ button {
             margin-right: auto;
             margin-top: 30px;
 
-            width: 50%;
+            width: 80%;
         }
 
         .small-search-container a {

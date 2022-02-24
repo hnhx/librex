@@ -47,7 +47,29 @@
 
             require_once "google.php";
             require_once "config.php";
-            require_once "tools.php";
+
+            function check_for_special_search($query)
+            {
+                $query_lower = strtolower($query);
+
+                if (strpos($query_lower, "to"))
+                {
+                    require_once "results/special/currency.php";
+                    currency_results($query);
+                }
+                else if (strpos($query_lower, "mean"))
+                {
+                    require_once "results/special/definition.php";
+                    definition_results($query);
+                }
+                else if (5 > count(explode(" ", $query))) // long queries usually wont return a wiki result thats why this check exists
+                {
+                    require_once "results/special/wikipedia.php";
+                    wikipedia_results($query_lower);
+                    return;
+                }
+            }
+
 
             function print_next_page_button($page, $button_val, $q, $type) 
             {
@@ -61,8 +83,10 @@
 
             function print_text_results($results) 
             {
-                global $query;
-                check_for_special_search($query);
+                global $query , $page;
+
+                if ($page == 0)
+                    check_for_special_search($query);
                 
                 foreach($results as $result)
                 {
