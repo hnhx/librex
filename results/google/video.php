@@ -1,7 +1,7 @@
 <?php
     function video_results($xpath)
     {
-        require_once "tools.php";
+        require_once "misc/tools.php";
         require "config.php";
 
         $results = array();

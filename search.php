@@ -45,99 +45,10 @@
 
         <?php
 
-            require_once "google.php";
+            require_once "engines/google.php";
+            require_once "engines/special.php";
+            require_once "misc/tools.php";
             require_once "config.php";
-
-            function check_for_special_search($query)
-            {
-                $query_lower = strtolower($query);
-
-                if (strpos($query_lower, "to"))
-                {
-                    require_once "results/special/currency.php";
-                    currency_results($query);
-                }
-                else if (strpos($query_lower, "mean"))
-                {
-                    require_once "results/special/definition.php";
-                    definition_results($query);
-                }
-                else if (5 > count(explode(" ", $query))) // long queries usually wont return a wiki result thats why this check exists
-                {
-                    require_once "results/special/wikipedia.php";
-                    wikipedia_results($query_lower);
-                    return;
-                }
-            }
-
-
-            function print_next_page_button($page, $button_val, $q, $type) 
-            {
-                echo "<form id=\"page\" action=\"search.php\" target=\"_top\" method=\"post\" enctype=\"multipart/form-data\" autocomplete=\"off\">";
-                echo "<input type=\"hidden\" name=\"p\" value=\"" . $page . "\" />";
-                echo "<input type=\"hidden\" name=\"q\" value=\"$q\" />";
-                echo "<input type=\"hidden\" name=\"type\" value=\"$type\" />";
-                echo "<button type=\"submit\">$button_val</button>";
-                echo "</form>"; 
-            }
-
-            function print_text_results($results) 
-            {
-                global $query , $page;
-
-                if ($page == 0)
-                    check_for_special_search($query);
-                
-                foreach($results as $result)
-                {
-                    $title = $result["title"];
-                    $url = $result["url"];
-                    $base_url = $result["base_url"];
-                    $description = $result["description"];
-
-                    echo "<div class=\"result-container\">";
-                    echo "<a href=\"$url\">";
-                    echo "$base_url";
-                    echo "<h2>$title</h2>";
-                    echo "</a>";
-                    echo "<span>$description</span>";
-                    echo "</div>";
-                }
-            }
-
-            function print_image_results($results)
-            {
-                echo "<div class=\"image-result-container\">";
-
-                    foreach($results as $result)
-                    {
-                        $src = $result["base64"];
-                        $alt = $result["alt"];
-        
-                        echo "<a title=\"$alt\" href=\"data:image/jpeg;base64,$src\" target=\"_blank\">";
-                        echo "<img src=\"data:image/jpeg;base64,$src\" width=\"350\" height=\"200\">";
-                        echo "</a>";
-                    }
-
-                    echo "</div>";
-            }
-
-            function print_video_results($results)
-            {
-                    foreach($results as $result)
-                    {
-                        $title = $result["title"];
-                        $url = $result["url"];
-                        $base_url = $result["base_url"];
-
-                        echo "<div class=\"result-container\">";
-                        echo "<a href=\"$url\">";
-                        echo "$base_url";
-                        echo "<h2>$title</h2>";
-                        echo "</a>";
-                        echo "</div>";
-                    }
-            }
 
             $page = isset($_REQUEST["p"]) ? (int) $_REQUEST["p"] : 0;
             $type = isset($_REQUEST["type"]) ? (int) $_REQUEST["type"] : 0;
@@ -191,6 +102,7 @@
         <div class="info-container">
             <a href="/">LibreX</a>
             <a href="https://github.com/hnhx/librex/" target="_blank">Source code &amp; Other instances</a>
+            <a href="/api.php" target="_blank">API</a>
             <a href="/donate.xhtml" id="right">Donate ❤️</a>
         </div>
     </body>
