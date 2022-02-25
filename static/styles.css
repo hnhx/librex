@@ -120,6 +120,7 @@ a:hover, .text-result-wrapper h2:hover {
 
 .text-result-wrapper {
     max-width: 500px;
+    word-wrap: break-word;
     margin-top: 35px;
 }
 

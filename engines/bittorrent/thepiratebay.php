@@ -2,8 +2,8 @@
 
     function get_thepiratebay_results($query)
     {
-        require "config.php";
-        require "misc/tools.php";
+        require_once "config.php";
+        require_once "misc/tools.php";
 
         $query = urlencode($query);
 
@@ -16,49 +16,29 @@
         foreach ($json_response as $response)
         {
 
-            $hash = $response["info_hash"];
-            $name = $response["name"];
-            $seeders = $response["seeders"];
-            $leechers = $response["leechers"];
+            global $config_bittorent_trackers;
 
-            $magnet = "magnet:?xt=urn:btih:$hash&dn=$name";
+            $size = human_filesize($response["size"]);
+            $hash = $response["info_hash"]; 
+            $name = $response["name"];
+            $seeders = (int) $response["seeders"];
+            $leechers = (int) $response["leechers"];
+
+            $magnet = "magnet:?xt=urn:btih:$hash&dn=$name$config_bittorent_trackers";
 
             array_push($results, 
                 array (
-                    "hash" => $hash,
+                    "size" => $size,
                     "name" => $name,
                     "seeders" => $seeders,
                     "leechers" => $leechers,
-                    "magnet" => $magnet
+                    "magnet" => $magnet,
+                    "source" => "thepiratebay.org"
                 )
             );
         }
 
         return $results;
        
-    }
-
-    function print_thepiratebay_results($results)
-    {
-        echo "<div class=\"text-result-container\">";
-
-            foreach($results as $result)
-            {
-                $hash = $result["hash"];
-                $name = $result["name"];
-                $seeders = $result["seeders"];
-                $leechers = $result["leechers"];
-                $magnet = $result["magnet"];
-
-                echo "<div class=\"text-result-wrapper\">";
-                echo "<a href=\"$magnet\">";
-                echo "$hash";
-                echo "<h2>$name</h2>";
-                echo "</a>";
-                echo "<span>SE: $seeders - LE: $leechers</span>";
-                echo "</div>";
-            }
-
-        echo "</div>";
     }
 ?>

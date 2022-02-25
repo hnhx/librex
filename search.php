@@ -92,9 +92,10 @@
                         echo "<p class=\"text-result-container\">The host disabled this feature! :C</p>";
                     else
                     {
-                        require "engines/bittorrent/thepiratebay.php";
-                        $results = get_thepiratebay_results($query_encoded);
-                        print_thepiratebay_results($results);
+                        require "engines/bittorrent/merge.php";
+                        $results = get_merged_torrent_results($query_encoded);
+                        print_merged_torrent_results($results);
+                        break;
                     }
                     
                     break;
