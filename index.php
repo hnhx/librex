@@ -10,7 +10,7 @@
                 <input type="submit" style="display:none"/>
                 <div class="search-button-wrapper">
                     <button name="type" value="0" type="submit">Search with LibreX</button>
-                    <button name="type" value="1" type="submit">Search images with LibreX</button>
+                    <button name="type" value="3" type="submit">Search torrents with LibreX</button>
                 </div>
         </form>
 

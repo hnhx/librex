@@ -13,7 +13,8 @@
         $response = request($url);
         $json_response = json_decode($response, true);
 
-        if ($json_response["data"]["movie_count"] != 0)
+
+        if ($json_response["status"] == "ok" && $json_response["data"]["movie_count"] != 0)
         {
             foreach ($json_response["data"]["movies"] as $movie)
             {
