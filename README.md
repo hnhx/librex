@@ -1,8 +1,8 @@
 <h1 align="center">LibreX</h1>
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/49120638/154866133-b55bfd49-41bf-4cd7-8060-aafafb06f40a.png" width=500>
-  <img src="https://user-images.githubusercontent.com/49120638/154866199-e68719a8-8013-4367-86c3-f89c2d9b556d.png" width=500>
+  <img src="https://user-images.githubusercontent.com/49120638/155693689-d217d78d-42a7-4b35-b5f3-8b6eca1b8553.png" width=500>
+  <img src="https://user-images.githubusercontent.com/49120638/155693795-7a35e40c-4f02-499c-9711-586d6c1f9f42.png" width=500>
 </p>
 
 
