@@ -57,6 +57,8 @@ JSON result:
   + `name`: Name of the torrent
   + `seeders`: The amount of seeders
   + `leechers`: The amount of leechers
+  + `size`: The size of the files in human readable format
+  + `source`: Where the torrent was fetched from
   + `magnet`: The magnet link
 
 <br/>
