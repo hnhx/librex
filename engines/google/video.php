@@ -1,8 +1,12 @@
 <?php
-    function video_results($xpath)
+    function get_video_results($query, $page=0)
     {
-        require_once "misc/tools.php";
         require "config.php";
+        require "misc/tools.php";
+        
+        $url = "https://www.google.$config_google_domain/search?&q=$query&start=$page&hl=$config_google_language&tbm=vid";
+        $response = request($url);
+        $xpath = get_xpath($response);
 
         $results = array();
 
@@ -35,5 +39,26 @@
         }
 
         return $results;
+    }
+
+    function print_video_results($results)
+    {
+        echo "<div class=\"text-result-container\">";
+
+            foreach($results as $result)
+            {
+                $title = $result["title"];
+                $url = $result["url"];
+                $base_url = $result["base_url"];
+
+                echo "<div class=\"text-result-wrapper\">";
+                echo "<a href=\"$url\">";
+                echo "$base_url";
+                echo "<h2>$title</h2>";
+                echo "</a>";
+                echo "</div>";
+            }
+
+        echo "</div>";
     }
 ?>

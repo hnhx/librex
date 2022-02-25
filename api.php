@@ -1,6 +1,5 @@
 <?php
-    require "engines/google.php";
-    require "engines/bittorrent.php";
+    require "config.php";
 
     if (!isset($_REQUEST["q"]))
     {
@@ -8,11 +7,40 @@
         die();
     }
 
-    $query = $_REQUEST["q"];
+    $query_encoded = urlencode($_REQUEST["q"]);
     $page = isset($_REQUEST["p"]) ? (int) $_REQUEST["p"] : 0;
     $type = isset($_REQUEST["type"]) ? (int) $_REQUEST["type"] : 0;
 
-    $results = $type != 3 ? get_google_results($query, $page, $type) : get_bittorrent_results($query);
+    $results = array();
+
+    switch ($type)
+    {
+        case 0:
+            require "engines/google/text.php";
+            $results = get_text_results($query_encoded, $page);
+            break;
+        case 1:
+            require "engines/google/image.php";
+            $results = get_image_results($query_encoded);
+            break;
+        case 2:
+            require "engines/google/video.php";
+            $results = get_video_results($query_encoded, $page);
+            break;
+        case 3:
+            if ($config_disable_bittorent_search)
+                $results = array("error" => "disabled");
+            else
+            {
+                require "engines/bittorrent/thepiratebay.php";
+                $results = get_thepiratebay_results($query_encoded);
+            }       
+            break;
+        default:
+            require "engines/google/text.php";
+            $results = get_text_results($query_encoded, $page);
+            break;
+    }
 
     header('Content-Type: application/json');
     echo json_encode($results, JSON_PRETTY_PRINT);

@@ -1,9 +1,13 @@
 <?php
 
-    function text_results($xpath) 
+    function get_text_results($query, $page=0) 
     {
-        require_once "misc/tools.php";
         require "config.php";
+        require "misc/tools.php";
+
+        $url = "https://www.google.$config_google_domain/search?&q=$query&start=$page&hl=$config_google_language";
+        $response = request($url);
+        $xpath = get_xpath($response);
 
         $results = array();
 
@@ -40,5 +44,30 @@
         }
 
         return $results;
+    }
+
+    function print_text_results($results) 
+    {
+        global $query , $page;
+
+        //check_for_special_search($query);
+        
+        echo "<div class=\"text-result-container\">";
+        foreach($results as $result)
+        {
+            $title = $result["title"];
+            $url = $result["url"];
+            $base_url = $result["base_url"];
+            $description = $result["description"];
+
+            echo "<div class=\"text-result-wrapper\">";
+            echo "<a href=\"$url\">";
+            echo "$base_url";
+            echo "<h2>$title</h2>";
+            echo "</a>";
+            echo "<span>$description</span>";
+            echo "</div>";
+        }
+        echo "</div>";
     }
 ?>

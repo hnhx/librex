@@ -6,102 +6,33 @@
         return $base_url;
     }
 
-
-    function print_text_results($results) 
+    function get_xpath($response)
     {
-        global $query , $page;
+        $htmlDom = new DOMDocument;
+        @$htmlDom->loadHTML($response);
+        $xpath = new DOMXPath($htmlDom);
 
-        if ($page == 0)
-            check_for_special_search($query);
-        
-        echo "<div class=\"text-result-container\">";
-        foreach($results as $result)
-        {
-            $title = $result["title"];
-            $url = $result["url"];
-            $base_url = $result["base_url"];
-            $description = $result["description"];
-
-            echo "<div class=\"text-result-wrapper\">";
-            echo "<a href=\"$url\">";
-            echo "$base_url";
-            echo "<h2>$title</h2>";
-            echo "</a>";
-            echo "<span>$description</span>";
-            echo "</div>";
-        }
-        echo "</div>";
+        return $xpath;
     }
 
-    function print_image_results($results)
+    function request($url)
     {
-        echo "<div class=\"image-result-container\">";
+        require "config.php";
 
-            foreach($results as $result)
-            {
-                $src = $result["base64"];
-                $alt = $result["alt"];
+        $ch = curl_init($url);
+        curl_setopt_array($ch, $config_curl_settings);
+        $response = curl_exec($ch);
 
-                echo "<a title=\"$alt\" href=\"data:image/jpeg;base64,$src\" target=\"_blank\">";
-                echo "<img src=\"data:image/jpeg;base64,$src\" width=\"350\" height=\"200\">";
-                echo "</a>";
-            }
-
-        echo "</div>";
+        return $response;
     }
 
-    function print_video_results($results)
-    {
-        echo "<div class=\"text-result-container\">";
-
-            foreach($results as $result)
-            {
-                $title = $result["title"];
-                $url = $result["url"];
-                $base_url = $result["base_url"];
-
-                echo "<div class=\"text-result-wrapper\">";
-                echo "<a href=\"$url\">";
-                echo "$base_url";
-                echo "<h2>$title</h2>";
-                echo "</a>";
-                echo "</div>";
-            }
-
-        echo "</div>";
-    }
-
-    function print_bittorrent_results($results)
-    {
-        echo "<div class=\"text-result-container\">";
-
-            foreach($results as $result)
-            {
-                $hash = $result["hash"];
-                $name = $result["name"];
-                $seeders = $result["seeders"];
-                $leechers = $result["leechers"];
-                $magnet = $result["magnet"];
-
-                echo "<div class=\"text-result-wrapper\">";
-                echo "<a href=\"$magnet\">";
-                echo "$hash";
-                echo "<h2>$name</h2>";
-                echo "</a>";
-                echo "<span>SE: $seeders - LE: $leechers</span>";
-                echo "</div>";
-            }
-
-        echo "</div>";
-    }
-
-    function print_next_page_button($page, $button_val, $q, $type) 
+    function print_next_page_button($text, $page, $query, $type) 
     {
         echo "<form id=\"page\" action=\"search.php\" target=\"_top\" method=\"post\" enctype=\"multipart/form-data\" autocomplete=\"off\">";
         echo "<input type=\"hidden\" name=\"p\" value=\"" . $page . "\" />";
-        echo "<input type=\"hidden\" name=\"q\" value=\"$q\" />";
+        echo "<input type=\"hidden\" name=\"q\" value=\"$query\" />";
         echo "<input type=\"hidden\" name=\"type\" value=\"$type\" />";
-        echo "<button type=\"submit\">$button_val</button>";
+        echo "<button type=\"submit\">$text</button>";
         echo "</form>"; 
     }
 ?>

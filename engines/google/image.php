@@ -1,7 +1,12 @@
 <?php
-    function image_results($xpath) 
+    function get_image_results($query) 
     {
         require "config.php";
+        require "misc/tools.php";
+
+        $url = "https://www.google.$config_google_domain/search?&q=$query&hl=$config_google_language&tbm=isch";
+        $response = request($url);
+        $xpath = get_xpath($response);
 
         $mh = curl_multi_init();
         $chs = $alts = $results = array();
@@ -39,5 +44,22 @@
         }
 
         return $results;
+    }
+
+    function print_image_results($results)
+    {
+        echo "<div class=\"image-result-container\">";
+
+            foreach($results as $result)
+            {
+                $src = $result["base64"];
+                $alt = $result["alt"];
+
+                echo "<a title=\"$alt\" href=\"data:image/jpeg;base64,$src\" target=\"_blank\">";
+                echo "<img src=\"data:image/jpeg;base64,$src\" width=\"350\" height=\"200\">";
+                echo "</a>";
+            }
+
+        echo "</div>";
     }
 ?>

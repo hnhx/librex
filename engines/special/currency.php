@@ -1,7 +1,8 @@
 <?php
     function currency_results($query)
     {
-        require "config.php"; 
+        require "config.php";
+        require_once "misc/tools.php";
         
         $split_query = explode(" ", $query);
 
@@ -14,9 +15,8 @@
                 $base_currency = strtoupper($split_query[1]);
                 $currency_to_convert = strtoupper($split_query[3]);
 
-                $ch = curl_init("https://cdn.moneyconvert.net/api/latest.json");
-                curl_setopt_array($ch, $config_curl_settings);
-                $response = curl_exec($ch);
+                $url = "https://cdn.moneyconvert.net/api/latest.json";
+                $response = request($url);
                 $json_response = json_decode($response, true);
                 
                 $rates =  $json_response["rates"];

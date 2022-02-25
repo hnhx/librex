@@ -2,13 +2,12 @@
     function wikipedia_results($query) 
     {
         require "config.php";
+        require_once "misc/tools.php";
         
         $query_encoded = urlencode($query);
 
-        $ch = curl_init("https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cpageimages&exintro&explaintext&redirects=1&pithumbsize=500&titles=$query_encoded");
-        curl_setopt_array($ch, $config_curl_settings);
-        $response = curl_exec($ch);
-
+        $url = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cpageimages&exintro&explaintext&redirects=1&pithumbsize=500&titles=$query_encoded";
+        $response = request($url);
         $json_response = json_decode($response, true);
 
         $first_page = array_values($json_response["query"]["pages"])[0];
@@ -25,9 +24,8 @@
             if (array_key_exists("thumbnail", $first_page))
             {
                 $img_src = $first_page["thumbnail"]["source"];
-                $ch_image = curl_init($first_page["thumbnail"]["source"]);
-                curl_setopt_array($ch_image, $config_curl_settings);
-                $image_response = curl_exec($ch_image);
+                $url = $first_page["thumbnail"]["source"];
+                $image_response = request($url);
                 $base64_image = base64_encode($image_response);
 
                 echo "<a href=\"data:image/jpeg;base64,$base64_image\" target=\"_blank\">";

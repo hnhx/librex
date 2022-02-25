@@ -2,6 +2,7 @@
     function definition_results($query) 
     {
         require "config.php";
+        require_once "misc/tools.php";
         
         $split_query = explode(" ", $query);
         
@@ -10,9 +11,8 @@
             $reversed_split_q = array_reverse($split_query);
             $word_to_define = $reversed_split_q[1];
 
-            $ch = curl_init("https://api.dictionaryapi.dev/api/v2/entries/en/$word_to_define");
-            curl_setopt_array($ch, $config_curl_settings);
-            $response = curl_exec($ch);
+            $url = "https://api.dictionaryapi.dev/api/v2/entries/en/$word_to_define";
+            $response = request($url);
             $json_response = json_decode($response, true);
 
             if (!array_key_exists("title", $json_response))

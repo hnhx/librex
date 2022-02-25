@@ -8,9 +8,8 @@
     // Results will be in this language
     $config_google_language = "en";
 
-    // Maxmium size of the cache
-    $config_cache_size = 1024 * 1024 * 1024;
-
+    // Disable BitTorrent search
+    $config_disable_bittorent_search = false;
 
     /*
         youtube.com results will be replaced with the given invidious instance

@@ -38,7 +38,7 @@ All you need is a webserver (e.g.: nginx) and PHP, and you are good to go.
 
 # API
 Example API request: `.../api.php?q=gentoo&p=2&type=0` <br/>
-Where `q` is the keyword, `p` is the result page (the first page is `0`) and `type` is the search type (`0`=text, `1`=image, `2`=video)
+Where `q` is the keyword, `p` is the result page (the first page is `0`) and `type` is the search type (`0`=text, `1`=image, `2`=video, `3`=torrent)
 <br/><br/>
 JSON result:
 + In case of text search:
@@ -52,6 +52,12 @@ JSON result:
   + `title`: Title of the result video
   + `url`: Full URL of the video
   + `base_url`: The base URL of the result (e.g.: http://youtube.com/watch ->  http://youtube.com/)
++ In case of torrent search:
+  + `hash`: Hash of the torrent
+  + `name`: Name of the torrent
+  + `seeders`: The amount of seeders
+  + `leechers`: The amount of leechers
+  + `magnet`: The magnet link
 
 <br/>
 The API also supports both GET and POST requests
