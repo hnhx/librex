@@ -6,17 +6,18 @@
 </p>
 
 
-<p align="center">A privacy respecting free as in freedom meta search engine for Google</p>
+<p align="center">A privacy respecting free as in freedom meta search engine</p>
 
 # Online instances
 + [search.davidovski.xyz](https://search.davidovski.xyz/) 🇬🇧
 
-If you wish to get your instance added create an issue with:
+If you wish to get your instance added create an issue with the `new instance` label and this information:
 + the URL of your instance
 + the country where your instance is being hosted
 
 Your request will be **rejected** if your instance:
 + contains JavaScript
++ contains cookies
 + contains ads
 + has been heavily modified
 
@@ -24,11 +25,13 @@ Your request will be **rejected** if your instance:
 + Ad free
 + JavaScript free
 + Cookie free
++ Torrent results
++ Supports special queries (e.g.: 1 btc to usd , what does xyz mean etc.)
 + Tracking snippets from URLs are removed
 + Image results are converted to base64 to prevent clients from connecting to Google servers
 + Supports both POST and GET requests
 + YouTube results are converted into a privacy friendly Invidious instance
-+ Easy to use JSON API
++ Easy to use JSON API for developers
 + No 3rd party libs are used
 + Easy to setup
 
