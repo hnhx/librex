@@ -1,5 +1,5 @@
 <?php require "static/header.html"; ?>
-
+    <title>LibreX - Donate</title>
     </head>
     <body>
         <div class="donate-container">

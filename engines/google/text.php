@@ -1,15 +1,89 @@
 <?php
+     function check_for_special_search($query)
+     {
+         $query_lower = strtolower($query);
+         $split_query = explode(" ", $query);
+
+         if (strpos($query_lower, "to") && count($split_query) >= 4) // currency
+         {
+            $amount_to_convert = floatval($split_query[0]);   
+            if ($amount_to_convert != 0) 
+                return 1;
+         }
+         else if (strpos($query_lower, "mean") && count($split_query) >= 2) // definition
+             return 2;
+         else if (3 > count(explode(" ", $query))) // wikipedia
+             return 3;
+
+        return 0;
+     }
 
     function get_text_results($query, $page=0) 
     {
         require "config.php";
         require "misc/tools.php";
 
-        $url = "https://www.google.$config_google_domain/search?&q=$query&start=$page&hl=$config_google_language";
-        $response = request($url);
-        $xpath = get_xpath($response);
-
+        $mh = curl_multi_init();
+        $query_lower = strtolower($query);
+        $query_encoded = urlencode($query);
         $results = array();
+        
+        $url = "https://www.google.$config_google_domain/search?&q=$query_encoded&start=$page&hl=$config_google_language";
+        $google_ch = curl_init($url);
+        curl_setopt_array($google_ch, $config_curl_settings);
+        curl_multi_add_handle($mh, $google_ch);
+ 
+
+        $special_search = $page == 0 ? check_for_special_search($query) : 0;
+        $special_ch = null;
+        $url = null;
+        if ($special_search != 0)
+        {
+            switch ($special_search)
+            {
+                case 1:
+                    $url = "https://cdn.moneyconvert.net/api/latest.json";
+                    break;
+                case 2:
+                    $split_query = explode(" ", $query);
+                    $reversed_split_q = array_reverse($split_query);
+                    $word_to_define = $reversed_split_q[1];
+                    $url = "https://api.dictionaryapi.dev/api/v2/entries/en/$word_to_define";
+                    break;
+                case 3:
+                    $url = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&explaintext&redirects=1&titles=$query_encoded";
+                    break;
+            }
+
+            $special_ch = curl_init($url);
+            curl_setopt_array($special_ch, $config_curl_settings);
+            curl_multi_add_handle($mh, $special_ch);
+        }
+
+
+        $running = null;
+        do {
+            curl_multi_exec($mh, $running);
+        } while ($running);
+       
+
+        switch ($special_search)
+        {
+            case 1:
+                require "engines/special/currency.php";
+                currency_results($query, curl_multi_getcontent($special_ch));
+                break;
+            case 2:
+                require "engines/special/definition.php";
+                definition_results($query, curl_multi_getcontent($special_ch));
+                break;
+            case 3:
+                require "engines/special/wikipedia.php";
+                wikipedia_results($query, curl_multi_getcontent($special_ch));
+                break;
+        }
+
+        $xpath = get_xpath(curl_multi_getcontent($google_ch));
 
         foreach($xpath->query("//div[@id='search']//div[contains(@class, 'g')]") as $result)
         {
@@ -23,10 +97,8 @@
                     continue;
 
             $url = $url->textContent;
-            if ($config_replace_yt_with_invidious != null)
-            {
-                $url = str_replace("youtube.com", $config_replace_yt_with_invidious, $url);
-            }
+            if ($config_replace_yt_with_invidious != null && strpos($url, "youtube.com"))
+                $url = "https://" . $config_replace_yt_with_invidious . explode("youtube.com", $url)[1];
             
             $title = $xpath->evaluate(".//h3", $result)[0];
             $description = $xpath->evaluate(".//div[contains(@class, 'VwiC3b')]", $result)[0];
@@ -49,8 +121,6 @@
     function print_text_results($results) 
     {
         global $query , $page;
-
-        //check_for_special_search($query);
         
         echo "<div class=\"text-result-container\">";
         foreach($results as $result)

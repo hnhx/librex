@@ -1,18 +1,13 @@
 <?php
-    function definition_results($query) 
+    function definition_results($query, $response) 
     {
-        require "config.php";
-        require_once "misc/tools.php";
+            require "config.php";
+            require_once "misc/tools.php";
         
-        $split_query = explode(" ", $query);
-        
-        if (count($split_query) >= 2)
-        {
+            $split_query = explode(" ", $query);
             $reversed_split_q = array_reverse($split_query);
             $word_to_define = $reversed_split_q[1];
 
-            $url = "https://api.dictionaryapi.dev/api/v2/entries/en/$word_to_define";
-            $response = request($url);
             $json_response = json_decode($response, true);
 
             if (!array_key_exists("title", $json_response))
@@ -22,8 +17,9 @@
                 echo "<p class=\"special-result-container\">";
                 echo "$word_to_define meaning<br/>";
                 echo "<br/>" . $definition . "<br/>";
+                echo "<a href=\"https://dictionaryapi.dev/\" target=\"_blank\">dictionaryapi.dev</a>";
                 echo "</p>";
             }
-        }
+        
     }
 ?>

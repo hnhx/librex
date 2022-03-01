@@ -1,5 +1,6 @@
 <?php require "static/header.html"; ?>
 
+    <title>LibreX</title>
     </head>
     <body>
         <form class="search-container" action="search.php" method="post" enctype="multipart/form-data" autocomplete="off">

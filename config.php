@@ -1,5 +1,5 @@
 <?php
-    // This user agent will be used to access Google
+    // This user agent will be used when parsing the results
     $config_user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.81 Safari/537.36";
     
     // e.g.: fr -> https://google.fr/

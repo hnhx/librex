@@ -136,15 +136,6 @@ a:hover, .text-result-wrapper h2:hover {
     margin-top: 1px;
 }
 
-.special-result-container img {
-    display: flex;
-    max-width: 50%;
-    max-height: 200px;
-    padding-bottom:10px;
-    margin-left:auto;
-    margin-right:auto;
-} 
-
 .special-result-container a {
     display: flex;
     margin-top: 10px;
@@ -272,7 +263,6 @@ a:hover, .text-result-wrapper h2:hover {
         flex-direction: column;
         align-items: center;
     } 
-
 
     .special-result-container {
         max-width: 80%;

@@ -22,10 +22,8 @@
                     continue;
 
             $url = $url->textContent;
-            if ($config_replace_yt_with_invidious != null)
-            {
-                $url = str_replace("youtube.com", $config_replace_yt_with_invidious, $url);
-            }
+            if ($config_replace_yt_with_invidious != null && strpos($url, "youtube.com"))
+                $url = "https://" . $config_replace_yt_with_invidious . explode("youtube.com", $url)[1];
             
             $title = $xpath->evaluate(".//h3", $result)[0];
             

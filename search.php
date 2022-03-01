@@ -38,28 +38,6 @@
         <?php
             require "config.php";
 
-            function check_for_special_search($query)
-            {
-                $query_lower = strtolower($query);
-        
-                if (strpos($query_lower, "to"))
-                {
-                    require "engines/special/currency.php";
-                    currency_results($query);
-                }
-                else if (strpos($query_lower, "mean"))
-                {
-                    require "engines/special/definition.php";
-                    definition_results($query);
-                }
-                else if (3 > count(explode(" ", $query))) // long queries usually wont return a wiki result thats why this check exists
-                {
-                    require "engines/special/wikipedia.php";
-                    wikipedia_results($query_lower);
-                    return;
-                }
-            }
-
             $page = isset($_REQUEST["p"]) ? (int) $_REQUEST["p"] : 0;
             $type = isset($_REQUEST["type"]) ? (int) $_REQUEST["type"] : 0;
             
@@ -69,9 +47,7 @@
             {
                 case 0:
                     require "engines/google/text.php";
-                    $results = get_text_results($query_encoded, $page);
-                    if ($page == 0)
-                        check_for_special_search($query);
+                    $results = get_text_results($query, $page);
                     print_text_results($results);
                     break;
 
