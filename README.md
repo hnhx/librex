@@ -36,8 +36,15 @@ Your request will be **rejected** if your instance:
 + Easy to setup
 
 # Hosting
-Hosting LibreX should be easy since no 3rd party libs are used.<br/>
-All you need is a webserver (e.g.: nginx) and PHP, and you are good to go.
+Hosting LibreX should be easy since no 3rd party PHP libs are used.<br/><br/>
+If you want to host it just for yourself a PHP development server should be enough:
+```
+git clone https://github.com/hnhx/librex.git
+cd librex
+sudo php -S 127.0.0.1:80
+```
+<br/>
+If you want to host an online instance you should consider using a production web server (e.g.: nginx).
 
 # API
 Example API request: `.../api.php?q=gentoo&p=2&type=0` <br/>
