@@ -6,6 +6,25 @@
         return $base_url;
     }
 
+    function check_for_privacy_friendly_alternative($url)
+    {
+        require "config.php";
+
+        if ($config_replace_youtube_with_invidious != null && strpos($url, "youtube.com"))
+            $url = $config_replace_youtube_with_invidious . explode("youtube.com", $url)[1];
+        else if ($config_replace_instagram_with_bibliogram != null && strpos($url, "instagram.com"))
+        {
+            if (!strpos($url, "/p/"))
+                $config_replace_instagram_with_bibliogram .= "/u";
+
+            $url = $config_replace_instagram_with_bibliogram . explode("instagram.com", $url)[1];
+        }
+        else if ($config_replace_twitter_with_nitter != null && strpos($url, "twitter.com"))
+            $url = $config_replace_twitter_with_nitter . explode("twitter.com", $url)[1];
+
+        return $url;
+    }
+
     function get_xpath($response)
     {
         $htmlDom = new DOMDocument;

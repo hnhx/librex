@@ -18,7 +18,7 @@
         return 0;
      }
 
-    function get_text_results($query, $page=0) 
+    function get_text_results($query, $page=0, $api=false) 
     {
         require "config.php";
         require "misc/tools.php";
@@ -37,7 +37,7 @@
         $special_search = $page == 0 ? check_for_special_search($query) : 0;
         $special_ch = null;
         $url = null;
-        if ($special_search != 0)
+        if ($special_search != 0 && $api == false)
         {
             switch ($special_search)
             {
@@ -97,8 +97,7 @@
                     continue;
 
             $url = $url->textContent;
-            if ($config_replace_yt_with_invidious != null && strpos($url, "youtube.com"))
-                $url = "https://" . $config_replace_yt_with_invidious . explode("youtube.com", $url)[1];
+            $url = check_for_privacy_friendly_alternative($url);
             
             $title = $xpath->evaluate(".//h3", $result)[0];
             $description = $xpath->evaluate(".//div[contains(@class, 'VwiC3b')]", $result)[0];

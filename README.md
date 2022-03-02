@@ -30,7 +30,7 @@ Your request will be **rejected** if your instance:
 + Tracking snippets from URLs are removed
 + Image results are converted to base64 to prevent clients from connecting to Google servers
 + Supports both POST and GET requests
-+ YouTube results are converted into a privacy friendly Invidious instance
++ Popular social media sites (YouTube, Instagram, Twitter) are replaced with privacy friendly front-ends
 + Easy to use JSON API for developers
 + No 3rd party libs are used
 + Easy to setup

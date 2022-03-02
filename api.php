@@ -17,7 +17,7 @@
     {
         case 0:
             require "engines/google/text.php";
-            $results = get_text_results($query_encoded, $page);
+            $results = get_text_results($query_encoded, $page, true);
             break;
         case 1:
             require "engines/google/image.php";
