@@ -66,21 +66,23 @@
             curl_multi_exec($mh, $running);
         } while ($running);
        
-
-        switch ($special_search)
+        if ($special_search != 0 && $api == false)
         {
-            case 1:
-                require "engines/special/currency.php";
-                currency_results($query, curl_multi_getcontent($special_ch));
-                break;
-            case 2:
-                require "engines/special/definition.php";
-                definition_results($query, curl_multi_getcontent($special_ch));
-                break;
-            case 3:
-                require "engines/special/wikipedia.php";
-                wikipedia_results($query, curl_multi_getcontent($special_ch));
-                break;
+            switch ($special_search)
+            {
+                case 1:
+                    require "engines/special/currency.php";
+                    currency_results($query, curl_multi_getcontent($special_ch));
+                    break;
+                case 2:
+                    require "engines/special/definition.php";
+                    definition_results($query, curl_multi_getcontent($special_ch));
+                    break;
+                case 3:
+                    require "engines/special/wikipedia.php";
+                    wikipedia_results($query, curl_multi_getcontent($special_ch));
+                    break;
+            }
         }
 
         $xpath = get_xpath(curl_multi_getcontent($google_ch));
