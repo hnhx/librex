@@ -7,7 +7,8 @@
         die();
     }
 
-    $query_encoded = urlencode($_REQUEST["q"]);
+    $query = $_REQUEST["q"];
+    $query_encoded = urlencode($query);
     $page = isset($_REQUEST["p"]) ? (int) $_REQUEST["p"] : 0;
     $type = isset($_REQUEST["type"]) ? (int) $_REQUEST["type"] : 0;
 
@@ -17,7 +18,7 @@
     {
         case 0:
             require "engines/google/text.php";
-            $results = get_text_results($query_encoded, $page);
+            $results = get_text_results($query, $page);
             break;
         case 1:
             require "engines/google/image.php";

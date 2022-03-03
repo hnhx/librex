@@ -52,24 +52,28 @@ Where `q` is the keyword, `p` is the result page (the first page is `0`) and `ty
 <br/><br/>
 JSON result:
 + In case of text search:
-  + `title`: Title of the result site
-  + `url`: Full URL of the result
-  + `base_url`: The base URL of the result (e.g.: http://example.com/test.php ->  http://example.com/)
+  + If the query is a special query (e.g.: currency conversion, wikipedia result etc.):
+    + `special_response`:
+      + `response`
+      + `source`
+  + `title`
+  + `url`
+  + `base_url`: (e.g.: http://example.com/test.php ->  http://example.com/)
 + In case of image search:
-  + `base64`: The result image converted to base64 format
-  + `alt`: The description of the image
+  + `base64`: the result image converted to base64 format
+  + `alt`: the description of the image
 + In case of video search:
-  + `title`: Title of the result video
-  + `url`: Full URL of the video
-  + `base_url`: The base URL of the result (e.g.: http://youtube.com/watch ->  http://youtube.com/)
+  + `title`
+  + `url`
+  + `base_url`: (e.g.: http://youtube.com/watch ->  http://youtube.com/)
 + In case of torrent search:
-  + `hash`: Hash of the torrent
-  + `name`: Name of the torrent
-  + `seeders`: The amount of seeders
-  + `leechers`: The amount of leechers
-  + `size`: The size of the files in human readable format
-  + `source`: Where the torrent was fetched from
-  + `magnet`: The magnet link
+  + `hash`
+  + `name`
+  + `seeders`
+  + `leechers`
+  + `size`
+  + `source`
+  + `magnet`
 
 <br/>
 The API also supports both GET and POST requests
