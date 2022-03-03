@@ -34,7 +34,8 @@ Your request will be **rejected** if your instance:
 + Easy to setup
 
 # Hosting
-Hosting LibreX should be easy since no 3rd party PHP libs are used.<br/><br/>
+Hosting LibreX should be easy since no 3rd party PHP libs are used.<br/>
+All you need is PHP with the curl extension enabled.<br/><br/>
 If you want to host it just for yourself a PHP development server should be enough:
 ```
 git clone https://github.com/hnhx/librex.git
@@ -48,7 +49,7 @@ If you want to host an online instance you should consider using a production we
 Example API request: `.../api.php?q=gentoo&p=2&type=0` <br/><br/>
 `q` is the keyword<br/>`p` is the result page (the first page is `0`)<br/>`type` is the search type (`0`=text, `1`=image, `2`=video, `3`=torrent)
 <br/><br/>
-The API also supports both GET and POST requests
+The API also supports both POST and GET requests.
 
 # Donate
 Monero (XMR): `41dGQr9EwZBfYBY3fibTtJZYfssfRuzJZDSVDeneoVcgckehK3BiLxAV4FvEVJiVqdiW996zvMxhFB8G8ot9nBFqQ84VkuC`
