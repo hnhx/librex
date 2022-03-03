@@ -21,10 +21,14 @@
 
             $conversion_result = ($currency_to_convert_response / $base_currency_response) * $amount_to_convert;
 
-            echo "<p class=\"special-result-container\">";
-            echo  "$amount_to_convert $base_currency = $conversion_result $currency_to_convert";
-            echo "<a href=\"https://moneyconvert.net/\" target=\"_blank\">moneyconvert.net</a>";
-            echo "</p>";
+            $formatted_response = "$amount_to_convert $base_currency = $conversion_result $currency_to_convert";
+            $source = "https://moneyconvert.net/";
+            return array(
+                "special_response" => array(
+                    "response" => $formatted_response,
+                    "source" => $source
+                )
+            );
         }                    
     }
 ?>

@@ -14,11 +14,13 @@
             {
                 $definition = $json_response[0]["meanings"][0]["definitions"][0]["definition"];
 
-                echo "<p class=\"special-result-container\">";
-                echo "$word_to_define meaning<br/>";
-                echo "<br/>" . $definition . "<br/>";
-                echo "<a href=\"https://dictionaryapi.dev/\" target=\"_blank\">dictionaryapi.dev</a>";
-                echo "</p>";
+                $source = "https://en.wikipedia.org/wiki/$query";
+                return array(
+                    "special_response" => array(
+                        "response" => $definition,
+                        "source" => $source
+                    )
+                );
             }
         
     }

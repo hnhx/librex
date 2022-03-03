@@ -37,7 +37,7 @@
         $special_search = $page == 0 ? check_for_special_search($query) : 0;
         $special_ch = null;
         $url = null;
-        if ($special_search != 0 && $api == false)
+        if ($special_search != 0)
         {
             switch ($special_search)
             {
@@ -72,15 +72,15 @@
             {
                 case 1:
                     require "engines/special/currency.php";
-                    currency_results($query, curl_multi_getcontent($special_ch));
+                    array_push($results, currency_results($query, curl_multi_getcontent($special_ch)));
                     break;
                 case 2:
                     require "engines/special/definition.php";
-                    definition_results($query, curl_multi_getcontent($special_ch));
+                    array_push($results, definition_results($query, curl_multi_getcontent($special_ch)));
                     break;
                 case 3:
                     require "engines/special/wikipedia.php";
-                    wikipedia_results($query, curl_multi_getcontent($special_ch));
+                    array_push($results, wikipedia_results($query, curl_multi_getcontent($special_ch)));
                     break;
             }
         }
@@ -94,9 +94,13 @@
             if ($url == null)
                 continue;
 
-            if (!empty($results)) // filter duplicate results
-                if (end($results)["url"] == $url->textContent)
-                    continue;
+            if (!empty($results)) // filter duplicate results, ignore special result
+            {
+                if (!array_key_exists("special_response", end($results)))
+                    if (end($results)["url"] == $url->textContent)
+                        continue;
+            }
+               
 
             $url = $url->textContent;
             $url = check_for_privacy_friendly_alternative($url);
@@ -121,9 +125,22 @@
 
     function print_text_results($results) 
     {
-        global $query , $page;
-        
         echo "<div class=\"text-result-container\">";
+
+        $special = $results[0];
+        if (array_key_exists("special_response", $special))
+        {
+            $response = $special["special_response"]["response"];
+            $source = $special["special_response"]["source"];
+
+            echo "<p class=\"special-result-container\">";
+            echo $response;
+            echo "<a href=\"$source\" target=\"_blank\">$source</a>";
+            echo "</p>";
+
+            array_shift($results);
+        }
+
         foreach($results as $result)
         {
             $title = $result["title"];
@@ -139,6 +156,7 @@
             echo "<span>$description</span>";
             echo "</div>";
         }
+
         echo "</div>";
     }
 ?>

@@ -13,15 +13,14 @@
         if (!array_key_exists("missing", $first_page))
         {
             $description = substr($first_page["extract"], 0, 250) . "...";
-            
-            if (strpos($description, "may refer to"))
-                return;
 
-            echo "<p class=\"special-result-container\">";
-            echo "$description";
-            echo "<a href=\"https://en.wikipedia.org/wiki/$query\">wikipedia.org</a>";
-
-            echo "</p>";
+            $source = "https://en.wikipedia.org/wiki/$query";
+            return array(
+                "special_response" => array(
+                    "response" => $description,
+                    "source" => $source
+                )
+            );
         }
     }
 ?>
