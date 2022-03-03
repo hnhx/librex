@@ -22,11 +22,9 @@ Your request will be **rejected** if your instance:
 + has been heavily modified
 
 # Features
-+ Ad free
-+ JavaScript free
-+ Cookie free
-+ Torrent results
-+ Supports special queries (e.g.: 1 btc to usd , what does xyz mean etc.)
++ Ad / JavaScript / cookie free
++ Torrent results from popular torrent sites
++ Special queries (e.g.: 1 btc to usd , what does xyz mean etc.)
 + Tracking snippets from URLs are removed
 + Image results are converted to base64 to prevent clients from connecting to Google servers
 + Supports both POST and GET requests
@@ -47,35 +45,9 @@ sudo php -S 127.0.0.1:80
 If you want to host an online instance you should consider using a production web server (e.g.: nginx).
 
 # API
-Example API request: `.../api.php?q=gentoo&p=2&type=0` <br/>
-Where `q` is the keyword, `p` is the result page (the first page is `0`) and `type` is the search type (`0`=text, `1`=image, `2`=video, `3`=torrent)
+Example API request: `.../api.php?q=gentoo&p=2&type=0` <br/><br/>
+`q` is the keyword<br/>`p` is the result page (the first page is `0`)<br/>`type` is the search type (`0`=text, `1`=image, `2`=video, `3`=torrent)
 <br/><br/>
-JSON result:
-+ In case of text search:
-  + If the query is a special query (e.g.: currency conversion, wikipedia result etc.):
-    + `special_response`:
-      + `response`
-      + `source`
-  + `title`
-  + `url`
-  + `base_url`: (e.g.: http://example.com/test.php ->  http://example.com/)
-+ In case of image search:
-  + `base64`: the result image converted to base64 format
-  + `alt`: the description of the image
-+ In case of video search:
-  + `title`
-  + `url`
-  + `base_url`: (e.g.: http://youtube.com/watch ->  http://youtube.com/)
-+ In case of torrent search:
-  + `hash`
-  + `name`
-  + `seeders`
-  + `leechers`
-  + `size`
-  + `source`
-  + `magnet`
-
-<br/>
 The API also supports both GET and POST requests
 
 # Donate
