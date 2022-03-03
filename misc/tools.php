@@ -21,6 +21,8 @@
         }
         else if ($config_replace_twitter_with_nitter != null && strpos($url, "twitter.com"))
             $url = $config_replace_twitter_with_nitter . explode("twitter.com", $url)[1];
+        else if ($config_replace_reddit_with_libreddit != null && strpos($url, "reddit.com"))
+            $url = $config_replace_reddit_with_libreddit . explode("reddit.com", $url)[1];
 
         return $url;
     }

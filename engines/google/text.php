@@ -18,7 +18,7 @@
         return 0;
      }
 
-    function get_text_results($query, $page=0, $api=false) 
+    function get_text_results($query, $page=0) 
     {
         require "config.php";
         require "misc/tools.php";
@@ -66,23 +66,28 @@
             curl_multi_exec($mh, $running);
         } while ($running);
        
-        if ($special_search != 0 && $api == false)
+        if ($special_search != 0)
         {
+            $special_result = null;
+
             switch ($special_search)
             {
                 case 1:
                     require "engines/special/currency.php";
-                    array_push($results, currency_results($query, curl_multi_getcontent($special_ch)));
+                    $special_result = currency_results($query, curl_multi_getcontent($special_ch));
                     break;
                 case 2:
                     require "engines/special/definition.php";
-                    array_push($results, definition_results($query, curl_multi_getcontent($special_ch)));
+                    $special_result = definition_results($query, curl_multi_getcontent($special_ch));
                     break;
                 case 3:
                     require "engines/special/wikipedia.php";
-                    array_push($results, wikipedia_results($query, curl_multi_getcontent($special_ch)));
+                    $special_result = wikipedia_results($query, curl_multi_getcontent($special_ch));
                     break;
             }
+
+            if ($special_result != null)
+                array_push($results, $special_result);
         }
 
         $xpath = get_xpath(curl_multi_getcontent($google_ch));

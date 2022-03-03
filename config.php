@@ -17,12 +17,14 @@
         Online invidious instances: https://docs.invidious.io/Invidious-Instances.md
         Online bibliogram instances: https://git.sr.ht/~cadence/bibliogram-docs/tree/master/docs/Instances.md
         Online nitter instances: https://github.com/zedeus/nitter/wiki/Instances
+        Online libreddit instances: https://github.com/spikecodes/libreddit
         
         Set as null or 0 if you don't want to replace results
     */
     $config_replace_youtube_with_invidious = "https://yewtu.be";
     $config_replace_instagram_with_bibliogram = "https://bibliogram.pussthecat.org";
     $config_replace_twitter_with_nitter = "https://nitter.namazso.eu";
+    $config_replace_reddit_with_libreddit = "https://libreddit.dothq.co";
 
     /*
         To send requests trough a proxy uncomment CURLOPT_PROXY and CURLOPT_PROXYTYPE:
