@@ -1,5 +1,6 @@
 
 <?php require "static/header.html"; ?>
+
 <title> <?php echo $_REQUEST["q"]; ?> - LibreX</title>
 </head>
     <body>
@@ -40,26 +41,30 @@
 
             $page = isset($_REQUEST["p"]) ? (int) $_REQUEST["p"] : 0;
             $type = isset($_REQUEST["type"]) ? (int) $_REQUEST["type"] : 0;
-            
+        
             $query_encoded = urlencode($query);
 
+            $start_time = microtime(true);
             switch ($type)
             {
                 case 0:
                     require "engines/google/text.php";
                     $results = get_text_results($query, $page);
+                    print_elapsed_time($start_time);
                     print_text_results($results);
                     break;
 
                 case 1:
                     require "engines/google/image.php";
                     $results = get_image_results($query_encoded);
+                    print_elapsed_time($start_time);
                     print_image_results($results);
                     break;
 
                 case 2:
                     require "engines/google/video.php";
                     $results = get_video_results($query_encoded, $page);
+                    print_elapsed_time($start_time);
                     print_video_results($results);
                     break;
 
@@ -70,6 +75,7 @@
                     {
                         require "engines/bittorrent/merge.php";
                         $results = get_merged_torrent_results($query_encoded);
+                        print_elapsed_time($start_time);
                         print_merged_torrent_results($results);
                         break;
                     }
@@ -80,6 +86,7 @@
                     require "engines/google/text.php";
                     $results = get_text_results($query_encoded, $page);
                     print_text_results($results);
+                    print_elapsed_time($start_time);
                     break;
             }
 

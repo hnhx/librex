@@ -55,6 +55,19 @@
         return sprintf("%.{$dec}f ", $bytes / pow(1024, $factor)) . @$size[$factor];
     }
 
+    function remove_special($string) 
+    {
+        $string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.
+     
+        return preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
+     }
+
+    function print_elapsed_time($start_time)
+        {
+            $end_time = number_format(microtime(true) - $start_time, 2, '.', '');
+            echo "<p id=\"time\">Fetched the results in $end_time seconds</p>";
+        }
+
     function print_next_page_button($text, $page, $query, $type) 
     {
         echo "<form id=\"page\" action=\"search.php\" target=\"_top\" method=\"post\" enctype=\"multipart/form-data\" autocomplete=\"off\">";

@@ -1,11 +1,11 @@
 <?php
     // This user agent will be used when parsing the results
-    $config_user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.81 Safari/537.36";
+    $config_user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36";
     
     // e.g.: fr -> https://google.fr/
     $config_google_domain = "com";
 
-    // Results will be in this language
+    // Google results will be in this language
     $config_google_language = "en";
 
     $config_disable_bittorent_search = false;
@@ -19,8 +19,10 @@
         Online nitter instances: https://github.com/zedeus/nitter/wiki/Instances
         Online libreddit instances: https://github.com/spikecodes/libreddit
         
-        Set as null or 0 if you don't want to replace results
+        If you don't want to replace YouTube for an example but you want to replace everything else:
+        $config_replace_youtube_with_invidious = null;
     */
+    $config_disable_privacy_friendly_frontends = false; // setting this to true will disable all of them
     $config_replace_youtube_with_invidious = "https://yewtu.be";
     $config_replace_instagram_with_bibliogram = "https://bibliogram.pussthecat.org";
     $config_replace_twitter_with_nitter = "https://nitter.namazso.eu";
@@ -47,11 +49,14 @@
         // CURLOPT_PROXY => "ip:port",
         // CURLOPT_PROXYTYPE => CURLPROXY_HTTP,
         CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_HEADER         => false,
-        CURLOPT_FOLLOWLOCATION => false,
-        CURLOPT_ENCODING       => "",
-        CURLOPT_USERAGENT      => $config_user_agent,
+        CURLOPT_ENCODING => "",
+        CURLOPT_USERAGENT => $config_user_agent,
+        CURLOPT_IPRESOLVE => CURL_IPRESOLVE_V4,
+        CURLOPT_CUSTOMREQUEST => "GET",
         CURLOPT_SSL_VERIFYHOST => false,
-        CURLOPT_VERBOSE        => 1
+        CURLOPT_SSL_VERIFYPEER => false,
+        CURLOPT_SSL_VERIFYSTATUS => false,
+        CURLOPT_VERBOSE => false,
+        CURLOPT_TCP_FASTOPEN => true
     );
 ?>

@@ -3,10 +3,12 @@
     function get_merged_torrent_results($query)
     {
         require "engines/bittorrent/thepiratebay.php";
+        require "engines/bittorrent/rutor.php";
         require "engines/bittorrent/nyaa.php";
         require "engines/bittorrent/yts.php";
 
-        $results = array_merge(get_thepiratebay_results($query), 
+        $results = array_merge(get_thepiratebay_results($query),
+                               get_rutor_results($query),
                                get_nyaa_results($query),
                                get_yts_results($query));
 
