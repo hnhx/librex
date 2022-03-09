@@ -1,0 +1,16 @@
+:root {
+    --main-bg: #202124;
+    --main-fg: #e8eaed;
+
+    --alt-fg: #bd93f9;
+
+    --result-link-fg: #8ab4f8;
+    --result-fg: #999da2;
+
+    --button-bg: #303134;
+
+    --special-result-border: #bdc1c6;
+
+    --footer-fg: #999da2;
+    --footer-bg: #171717;
+}

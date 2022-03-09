@@ -1,4 +1,4 @@
-<?php require "static/header.html"; ?>
+<?php require "static/header.php"; ?>
 
     <title>LibreX</title>
     </head>

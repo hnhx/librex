@@ -1,5 +1,5 @@
 
-<?php require "static/header.html"; ?>
+<?php require "static/header.php"; ?>
 
 <title> <?php echo $_REQUEST["q"]; ?> - LibreX</title>
 </head>
@@ -21,7 +21,7 @@
             >
             <br>
             <?php
-                $type = $_REQUEST["type"];
+                $type = isset($_REQUEST["type"]) ? (int) $_REQUEST["type"] : 0;
                 echo "<input type=\"hidden\" name=\"type\" value=\"$type\"/>";
             ?>
             <button type="submit" style="display:none;"></button>
@@ -40,7 +40,6 @@
             require "config.php";
 
             $page = isset($_REQUEST["p"]) ? (int) $_REQUEST["p"] : 0;
-            $type = isset($_REQUEST["type"]) ? (int) $_REQUEST["type"] : 0;
         
             $query_encoded = urlencode($query);
 

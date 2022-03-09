@@ -20,13 +20,13 @@
         Online libreddit instances: https://github.com/spikecodes/libreddit
         
         If you don't want to replace YouTube for an example but you want to replace everything else:
-        $config_replace_youtube_with_invidious = null;
+        $config_replace_youtube_with_invidious = isset($_REQUEST["invidious"]) ? $_REQUEST["invidious"]  : null;
     */
     $config_disable_privacy_friendly_frontends = false; // setting this to true will disable all of them
-    $config_replace_youtube_with_invidious = "https://yewtu.be";
-    $config_replace_instagram_with_bibliogram = "https://bibliogram.pussthecat.org";
-    $config_replace_twitter_with_nitter = "https://nitter.namazso.eu";
-    $config_replace_reddit_with_libreddit = "https://libreddit.dothq.co";
+    $config_replace_youtube_with_invidious = isset($_REQUEST["invidious"]) ? $_REQUEST["invidious"]  : "https://yewtu.be";
+    $config_replace_instagram_with_bibliogram = isset($_REQUEST["bibliogram"]) ? $_REQUEST["bibliogram"]  : "https://bibliogram.pussthecat.org";
+    $config_replace_twitter_with_nitter = isset($_REQUEST["nitter"]) ? $_REQUEST["nitter"]  : "https://nitter.namazso.eu";
+    $config_replace_reddit_with_libreddit = isset($_REQUEST["libreddit"]) ? $_REQUEST["libreddit"]  : "https://libreddit.dothq.co";
 
     /*
         To send requests trough a proxy uncomment CURLOPT_PROXY and CURLOPT_PROXYTYPE:
