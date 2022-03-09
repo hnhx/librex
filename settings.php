@@ -57,7 +57,7 @@
                 if (!empty($_REQUEST["libreddit"]))
                     $url .= "&nitter=" . $_REQUEST["libreddit"];
 
-                echo "<a href=\"$url\"><p>";
+                echo "<a href=\"http://$url\" target=\"_blank\"><p>";
                 echo  $url;
                 echo "</p>";
             }
