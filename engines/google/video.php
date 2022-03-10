@@ -22,8 +22,7 @@
                     continue;
 
             $url = $url->textContent;
-            if (!$config_disable_privacy_friendly_frontends)
-                $url = check_for_privacy_friendly_alternative($url);
+            $url = check_for_privacy_friendly_alternative($url);
             
             $title = $xpath->evaluate(".//h3", $result)[0];
             

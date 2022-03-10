@@ -1,66 +1,99 @@
-<?php 
-    require "static/header.php";
-    require "config.php";
-?>
+    <?php require "static/header.php"; ?>
 
     <title>LibreX - Settings</title>
     </head>
-    <body class="settings-container">
-        <p>Since LibreX doesn't use any cookies for better user privacy, settings are passed trough query parameters.</p>
+    <body>
+        <div class="settings-container">
+            <h1>Settings</h1>
+            <form method="post" enctype="multipart/form-data" autocomplete="off">
+                <label for="theme">Theme:</label>
+                <select name="theme">
+                <?php
+                    
+                    $themes = "<option value=\"dark\">Dark</option>
+                    <option value=\"light\">Light</option>
+                    <option value=\"nord\">Nord</option>
+                    <option value=\"night_owl\">Night Owl</option>
+                    <option value=\"discord\">Discord</option>";
 
-        <form method="post" enctype="multipart/form-data" autocomplete="off">
-            <label for="theme">Theme:</label>
-            <select name="theme">
-                <option value="dark">Dark</option>
-                <option value="light">Light</option>
-                <option value="nord">Nord</option>
-                <option value="night_owl">Night Owl</option>
-                <option value="discord">Discord</option>
-            </select>
-            <br><br>
-            <p>Privacy friendly frontends</p>
-            <div class="instances-container">
-                <label for="invidious">Invidious:</label>
-                <input type="text" name="invidious">
+                    if (isset($_COOKIE["theme"]))
+                    {                  
+                        $cookie_theme = $_COOKIE["theme"];
+                        $themes = str_replace($cookie_theme . "\"", $cookie_theme . "\" selected", $themes);
+                    }
 
+                    echo $themes;
+                ?>
+                </select>
                 <br><br>
-                <label for="bibliogram">Bibliogram:</label>
-                <input type="text" name="bibliogram">
+                <h2>Privacy friendly frontends</h2>
+                <p>Replace popular sites with privacy friendly frontends</p>
+                <div class="instances-container">
+                    <a for="invidious" href="https://docs.invidious.io/Invidious-Instances/" target="_blank">Invidious</a>
+                    <input type="text" name="invidious" placeholder="e.g.: https://yewtu.be" value=
+                        <?php echo isset($_COOKIE["invidious"]) ? $_COOKIE["invidious"]  : "\"\""; ?>
+                    >
 
-                <br><br>
-                <label for="nitter">Nitter:</label>
-                <input type="text" name="nitter">
+                    <br><br>
+                    <a for="bibliogram" href="https://git.sr.ht/~cadence/bibliogram-docs/tree/master/docs/Instances.md" target="_blank">Bibliogram</a>
+                    <input type="text" name="bibliogram"  value=
+                        <?php echo isset($_COOKIE["bibliogram"]) ? $_COOKIE["bibliogram"]  : "\"\""; ?>
+                    >
 
-                <br><br>
-                <label for="libreddit">Libreddit:</label>
-                <input type="text" name="libreddit">
-            </div>
-            <br>
-            <button type="submit" name="save" value="1">Save</button>
-        </form>
+                    <br><br>
+                    <a for="nitter" href="https://github.com/zedeus/nitter/wiki/Instances" target="_blank">Nitter</a>
+                    <input type="text" name="nitter" value=
+                        <?php echo isset($_COOKIE["nitter"]) ? $_COOKIE["nitter"]  : "\"\""; ?>
+                    >
+
+                    <br><br>
+                    <a for="libreddit" href=" https://github.com/spikecodes/libreddit" target="_blank">Libreddit</a>
+                    <input type="text" name="libreddit" value=
+                        <?php echo isset($_COOKIE["libreddit"]) ? $_COOKIE["libreddit"]  : "\"\""; ?>
+                    >
+                </div>
+                <br>
+                <button type="submit" name="save" value="1">Save</button>
+                <button type="submit" name="reset" value="1">Reset</button>
+            </form>
 
 
-        <?php
-            if (isset($_REQUEST["save"]))
-            {
-                $url = $_SERVER["HTTP_HOST"] . "/search.php?q=test&theme=" . $_REQUEST["theme"];
+            <?php
+                if (isset($_REQUEST["save"]))
+                {
+                    if (!empty($_REQUEST["invidious"]))
+                        setcookie("invidious", $_REQUEST["invidious"]);
 
-                if (!empty($_REQUEST["invidious"]))
-                    $url .= "&invidious=" . $_REQUEST["invidious"];
+                    if (!empty($_REQUEST["bibliogram"]))
+                        setcookie("bibliogram", $_REQUEST["bibliogram"]);
 
-                if (!empty($_REQUEST["bibliogram"]))
-                    $url .= "&bibliogram=" . $_REQUEST["bibliogram"];
+                    if (!empty($_REQUEST["nitter"]))
+                        setcookie("nitter", $_REQUEST["nitter"]);
 
-                if (!empty($_REQUEST["nitter"]))
-                    $url .= "&nitter=" . $_REQUEST["nitter"];
+                    if (!empty($_REQUEST["libreddit"]))
+                        setcookie("libreddit", $_REQUEST["libreddit"]);
 
-                if (!empty($_REQUEST["libreddit"]))
-                    $url .= "&nitter=" . $_REQUEST["libreddit"];
+                    setcookie("theme", $_REQUEST["theme"]);
 
-                echo "<a href=\"http://$url\" target=\"_blank\"><p>";
-                echo  $url;
-                echo "</p>";
-            }
-        ?>
+                    header("Location: /settings.php");
+                    die();
+                }
+                else if (isset($_REQUEST["reset"]))
+                {
+                    if (isset($_SERVER['HTTP_COOKIE'])) {
+                        $cookies = explode(';', $_SERVER['HTTP_COOKIE']);
+                        foreach($cookies as $cookie) {
+                            $parts = explode('=', $cookie);
+                            $name = trim($parts[0]);
+                            setcookie($name, '', time()-1000);
+                            setcookie($name, '', time()-1000, '/');
+                        }
+
+                        header("Location: /settings.php");
+                        die();
+                    }
+                }
+            ?>
+        </div>
 
 <?php require "static/footer.html"; ?>

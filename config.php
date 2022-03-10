@@ -12,21 +12,20 @@
     $config_bittorent_trackers = "&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce";
 
     /*
-        These are privacy friendly front-ends for popular sites
+        These are privacy friendly front-ends for popular sites, these settings can be managed by end users as well for their session via cookies.
 
-        Online invidious instances: https://docs.invidious.io/Invidious-Instances.md
+        Online invidious instances: https://docs.invidious.io/Invidious-Instances/
         Online bibliogram instances: https://git.sr.ht/~cadence/bibliogram-docs/tree/master/docs/Instances.md
         Online nitter instances: https://github.com/zedeus/nitter/wiki/Instances
         Online libreddit instances: https://github.com/spikecodes/libreddit
         
-        If you don't want to replace YouTube for an example but you want to replace everything else:
-        $config_replace_youtube_with_invidious = isset($_REQUEST["invidious"]) ? $_REQUEST["invidious"]  : null;
+        If you don't want to replace YouTube for an example:
+        $config_replace_youtube_with_invidious = isset($_COOKIE["invidious"]) ? $_COOKIE["invidious"]  : null;
     */
-    $config_disable_privacy_friendly_frontends = false; // setting this to true will disable all of them
-    $config_replace_youtube_with_invidious = isset($_REQUEST["invidious"]) ? $_REQUEST["invidious"]  : "https://yewtu.be";
-    $config_replace_instagram_with_bibliogram = isset($_REQUEST["bibliogram"]) ? $_REQUEST["bibliogram"]  : "https://bibliogram.pussthecat.org";
-    $config_replace_twitter_with_nitter = isset($_REQUEST["nitter"]) ? $_REQUEST["nitter"]  : "https://nitter.namazso.eu";
-    $config_replace_reddit_with_libreddit = isset($_REQUEST["libreddit"]) ? $_REQUEST["libreddit"]  : "https://libreddit.dothq.co";
+    $config_replace_youtube_with_invidious = isset($_COOKIE["invidious"]) ? $_COOKIE["invidious"]  : "https://yewtu.be";
+    $config_replace_instagram_with_bibliogram = isset($_COOKIE["bibliogram"]) ? $_COOKIE["bibliogram"]  : "https://bibliogram.pussthecat.org";
+    $config_replace_twitter_with_nitter = isset($_COOKIE["nitter"]) ? $_COOKIE["nitter"]  : "https://nitter.namazso.eu";
+    $config_replace_reddit_with_libreddit = isset($_COOKIE["libreddit"]) ? $_COOKIE["libreddit"]  : "https://libreddit.dothq.co";
 
     /*
         To send requests trough a proxy uncomment CURLOPT_PROXY and CURLOPT_PROXYTYPE:

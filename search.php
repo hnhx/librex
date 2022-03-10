@@ -1,4 +1,3 @@
-
 <?php require "static/header.php"; ?>
 
 <title> <?php echo $_REQUEST["q"]; ?> - LibreX</title>

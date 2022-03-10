@@ -88,7 +88,8 @@ a:hover, .text-result-wrapper h2:hover {
     margin-left: 150px;
 }
 
-.search-button-wrapper button:hover { 
+.search-button-wrapper button:hover,
+.settings-container button:hover { 
     border: 1px solid #5f6368;
     cursor: pointer;
 }
@@ -107,11 +108,18 @@ a:hover, .text-result-wrapper h2:hover {
 }
 
 .settings-container {
-    margin-top: 10%;
     text-align: center;
-    margin-left: 25%;
-    margin-right: 25%;
     word-wrap: break-word;
+}
+
+.settings-container button {
+    margin-right:10px;
+    margin-left:10px;
+}
+
+.settings-container a {
+    color:inherit;
+    text-decoration: underline;
 }
 
 .instances-container input {

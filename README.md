@@ -22,7 +22,7 @@ Your request will be **rejected** if your instance:
 + has been heavily modified
 
 # Features
-+ Ad / JavaScript / cookie free
++ Ad & JavaScript free
 + Torrent results from popular torrent sites
 + Special queries (e.g.: 1 btc to usd , what does xyz mean etc.)
 + Tracking snippets from URLs are removed
