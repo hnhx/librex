@@ -10,7 +10,8 @@
                 <select name="theme">
                 <?php
                     
-                    $themes = "<option value=\"dark\">Dark</option>
+                    $themes = "<option value=\"auto\">Auto</option>
+                     <option value=\"dark\">Dark</option>
                     <option value=\"light\">Light</option>
                     <option value=\"nord\">Nord</option>
                     <option value=\"night_owl\">Night Owl</option>
