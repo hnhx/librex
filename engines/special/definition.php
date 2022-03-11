@@ -1,9 +1,6 @@
 <?php
     function definition_results($query, $response) 
-    {
-            require "config.php";
-            require_once "misc/tools.php";
-        
+    {        
             $split_query = explode(" ", $query);
             $reversed_split_q = array_reverse($split_query);
             $word_to_define = $reversed_split_q[1];

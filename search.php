@@ -1,4 +1,4 @@
-<?php require "static/header.php"; ?>
+<?php require "misc/header.php"; ?>
 
 <title> <?php echo $_REQUEST["q"]; ?> - LibreX</title>
 </head>
@@ -36,7 +36,8 @@
         </form>
 
         <?php
-            require "config.php";
+            $config = require "config.php";
+            require "misc/tools.php";
 
             $page = isset($_REQUEST["p"]) ? (int) $_REQUEST["p"] : 0;
         
@@ -67,7 +68,7 @@
                     break;
 
                 case 3:
-                    if ($config_disable_bittorent_search)
+                    if ($config->disable_bittorent_search)
                         echo "<p class=\"text-result-container\">The host disabled this feature! :C</p>";
                     else
                     {
@@ -108,4 +109,4 @@
             }
         ?>
 
-<?php require "static/footer.html"; ?>
+<?php require "misc/footer.php"; ?>

@@ -8,21 +8,21 @@
 
     function check_for_privacy_friendly_alternative($url)
     {
-        require "config.php";
+        $config = require "config.php";
 
-        if ($config_replace_youtube_with_invidious != null && strpos($url, "youtube.com"))
-            $url = $config_replace_youtube_with_invidious . explode("youtube.com", $url)[1];
-        else if ($config_replace_instagram_with_bibliogram != null && strpos($url, "instagram.com"))
+        if ($config->replace_youtube_with_invidious != null && strpos($url, "youtube.com"))
+            $url = $config->replace_youtube_with_invidious . explode("youtube.com", $url)[1];
+        else if ($config->replace_instagram_with_bibliogram != null && strpos($url, "instagram.com"))
         {
             if (!strpos($url, "/p/"))
-                $config_replace_instagram_with_bibliogram .= "/u";
+                $config->replace_instagram_with_bibliogram .= "/u";
 
-            $url = $config_replace_instagram_with_bibliogram . explode("instagram.com", $url)[1];
+            $url = $config->replace_instagram_with_bibliogram . explode("instagram.com", $url)[1];
         }
-        else if ($config_replace_twitter_with_nitter != null && strpos($url, "twitter.com"))
-            $url = $config_replace_twitter_with_nitter . explode("twitter.com", $url)[1];
-        else if ($config_replace_reddit_with_libreddit != null && strpos($url, "reddit.com"))
-            $url = $config_replace_reddit_with_libreddit . explode("reddit.com", $url)[1];
+        else if ($config->replace_twitter_with_nitter != null && strpos($url, "twitter.com"))
+            $url = $config->replace_twitter_with_nitter . explode("twitter.com", $url)[1];
+        else if ($config->replace_reddit_with_libreddit != null && strpos($url, "reddit.com"))
+            $url = $config->replace_reddit_with_libreddit . explode("reddit.com", $url)[1];
 
         return $url;
     }
@@ -38,10 +38,10 @@
 
     function request($url)
     {
-        require "config.php";
+        $config = require "config.php";
 
         $ch = curl_init($url);
-        curl_setopt_array($ch, $config_curl_settings);
+        curl_setopt_array($ch, $config->curl_settings);
         $response = curl_exec($ch);
 
         return $response;

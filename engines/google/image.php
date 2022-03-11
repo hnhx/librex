@@ -1,10 +1,9 @@
 <?php
     function get_image_results($query) 
     {
-        require "config.php";
-        require "misc/tools.php";
+        global $config;
 
-        $url = "https://www.google.$config_google_domain/search?&q=$query&hl=$config_google_language&tbm=isch";
+        $url = "https://www.google.$config->google_domain/search?&q=$query&hl=$config->google_language&tbm=isch";
         $response = request($url);
         $xpath = get_xpath($response);
 
@@ -19,7 +18,7 @@
                 if (!empty($alt)) 
                 {
                     $ch = curl_init($src);
-                    curl_setopt_array($ch, $config_curl_settings);
+                    curl_setopt_array($ch, $config->curl_settings);
                     array_push($chs, $ch);
                     curl_multi_add_handle($mh, $ch);
 

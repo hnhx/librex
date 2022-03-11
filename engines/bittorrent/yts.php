@@ -2,8 +2,7 @@
 
     function get_yts_results($query)
     {
-        require_once "config.php";
-        require_once "misc/tools.php";
+        global $config;
 
         $query = urlencode($query);
 
@@ -23,14 +22,13 @@
 
                     foreach ($movie["torrents"] as $torrent)
                     {
-                        global $config_bittorent_trackers;
 
                         $hash = $torrent["hash"];
                         $seeders = $torrent["seeds"];
                         $leechers = $torrent["peers"];
                         $size = $torrent["size"];
 
-                        $magnet = "magnet:?xt=urn:btih:$hash&dn=$name_encoded$config_bittorent_trackers";
+                        $magnet = "magnet:?xt=urn:btih:$hash&dn=$name_encoded$config->bittorent_trackers";
 
                         array_push($results, 
                         array (

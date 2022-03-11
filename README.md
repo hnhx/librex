@@ -17,7 +17,6 @@ If you wish to get your instance added create an issue with the `new instance` l
 
 Your request will be **rejected** if your instance:
 + contains JavaScript
-+ contains cookies
 + contains ads
 + has been heavily modified
 

@@ -1,5 +1,6 @@
 <?php
-    require "config.php";
+    $config = require "config.php";
+    require "misc/tools.php";
 
     if (!isset($_REQUEST["q"]))
     {
@@ -29,7 +30,7 @@
             $results = get_video_results($query_encoded, $page);
             break;
         case 3:
-            if ($config_disable_bittorent_search)
+            if ($config->disable_bittorent_search)
                 $results = array("error" => "disabled");
             else
             {

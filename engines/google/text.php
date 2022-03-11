@@ -20,17 +20,16 @@
 
     function get_text_results($query, $page=0) 
     {
-        require "config.php";
-        require "misc/tools.php";
+        global $config;
 
         $mh = curl_multi_init();
         $query_lower = strtolower($query);
         $query_encoded = urlencode($query);
         $results = array();
         
-        $url = "https://www.google.$config_google_domain/search?&q=$query_encoded&start=$page&hl=$config_google_language";
+        $url = "https://www.google.$config->google_domain/search?&q=$query_encoded&start=$page&hl=$config->google_language";
         $google_ch = curl_init($url);
-        curl_setopt_array($google_ch, $config_curl_settings);
+        curl_setopt_array($google_ch, $config->curl_settings);
         curl_multi_add_handle($mh, $google_ch);
  
 
@@ -56,7 +55,7 @@
             }
 
             $special_ch = curl_init($url);
-            curl_setopt_array($special_ch, $config_curl_settings);
+            curl_setopt_array($special_ch, $config->curl_settings);
             curl_multi_add_handle($mh, $special_ch);
         }
 

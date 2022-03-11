@@ -1,9 +1,6 @@
 <?php
     function currency_results($query, $response)
-    {
-        require "config.php";
-        require_once "misc/tools.php";
-        
+    { 
         $split_query = explode(" ", $query);
 
         $base_currency = strtoupper($split_query[1]);

@@ -1,9 +1,6 @@
 <?php
     function wikipedia_results($query, $response) 
     {
-        require "config.php";
-        require_once "misc/tools.php";
-        
         $query_encoded = urlencode($query);
 
         $json_response = json_decode($response, true);

@@ -1,4 +1,4 @@
-<?php require "static/header.php"; ?>
+<?php require "misc/header.php"; ?>
 
     <title>LibreX</title>
     </head>
@@ -15,4 +15,4 @@
                 </div>
         </form>
 
-<?php require "static/footer.html"; ?>
+<?php require "misc/footer.php"; ?>

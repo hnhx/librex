@@ -1,4 +1,4 @@
-    <?php require "static/header.php"; ?>
+<?php require "misc/header.php"; ?>
 
     <title>LibreX - Settings</title>
     </head>
@@ -97,4 +97,4 @@
             ?>
         </div>
 
-<?php require "static/footer.html"; ?>
+<?php require "misc/footer.php"; ?>

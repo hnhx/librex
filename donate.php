@@ -1,4 +1,5 @@
-<?php require "static/header.php"; ?>
+<?php require "misc/header.php"; ?>
+
     <title>LibreX - Donate</title>
     </head>
     <body>
@@ -10,4 +11,4 @@
                <img src="static/images/xmr.png" alt="xmr qr code"/>
         </div>
 
-<?php require "static/footer.html"; ?>
+<?php require "misc/footer.php"; ?>

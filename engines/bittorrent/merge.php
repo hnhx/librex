@@ -22,6 +22,8 @@
     {
         echo "<div class=\"text-result-container\">";
 
+        if (!empty($results)) 
+        {
             foreach($results as $result)
             {
                 $source = $result["source"];
@@ -41,6 +43,9 @@
                 echo "$size</span>";
                 echo "</div>";
             }
+        }
+        else
+            echo "<p>There are no results. Please try different keywords!</p>";
 
         echo "</div>";
     }
