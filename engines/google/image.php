@@ -55,7 +55,7 @@
                 $alt = $result["alt"];
 
                 echo "<a title=\"$alt\" href=\"data:image/jpeg;base64,$src\" target=\"_blank\">";
-                echo "<img src=\"data:image/jpeg;base64,$src\" width=\"350\" height=\"200\">";
+                echo "<img src=\"data:image/jpeg;base64,$src\" height=\"200\">";
                 echo "</a>";
             }
 

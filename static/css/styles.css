@@ -191,14 +191,21 @@ a:hover, .text-result-wrapper h2:hover {
 }
 
 .image-result-container {
-    margin-left:auto;
-    margin-right: auto;
-    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 1.5rem;
+    justify-items: center;
+    margin-left: 9%;
+    margin-right: 9%;
+    padding: 0;
+    margin-bottom:50px;
 }
 
 .image-result-container img {
-    margin: 10px;
     border: 1px solid var(--button-bg);
+    width: 350px;
+    height: 200px;
+    margin: 10px;
 }
 
 .donate-container {
@@ -309,9 +316,7 @@ a:hover, .text-result-wrapper h2:hover {
         margin-right:auto;
     }
 
-    .image-result-container img {
-        display:block;
-        margin-left:auto;
-        margin-right:auto;
+    .settings-container {
+        margin-bottom: 100px;
     }
 }

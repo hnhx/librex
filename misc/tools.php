@@ -8,7 +8,7 @@
 
     function check_for_privacy_friendly_alternative($url)
     {
-        $config = require "config.php";
+        global $config;
 
         if ($config->replace_youtube_with_invidious != null && strpos($url, "youtube.com"))
             $url = $config->replace_youtube_with_invidious . explode("youtube.com", $url)[1];
@@ -38,7 +38,7 @@
 
     function request($url)
     {
-        $config = require "config.php";
+        global $config;
 
         $ch = curl_init($url);
         curl_setopt_array($ch, $config->curl_settings);
