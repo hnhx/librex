@@ -1,6 +1,6 @@
 <?php
     return (object) array(
-    
+
         // e.g.: fr -> https://google.fr/
         "google_domain" => "com",
 
@@ -9,22 +9,6 @@
 
         "disable_bittorent_search" => false,
         "bittorent_trackers" => "&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
-
-        /*
-            These are privacy friendly front-ends for popular sites, these settings can be managed by end users as well for their session via cookies.
-
-            Online invidious instances: https://docs.invidious.io/Invidious-Instances/
-            Online bibliogram instances: https://git.sr.ht/~cadence/bibliogram-docs/tree/master/docs/Instances.md
-            Online nitter instances: https://github.com/zedeus/nitter/wiki/Instances
-            Online libreddit instances: https://github.com/spikecodes/libreddit
-            
-            If you don't want to replace YouTube for an example:
-            $replace_youtube_with_invidious = isset($_COOKIE["invidious"]) ? $_COOKIE["invidious"]  : null;
-        */
-        "replace_youtube_with_invidious" => isset($_COOKIE["invidious"]) ? $_COOKIE["invidious"]  : "https://yewtu.be",
-        "replace_instagram_with_bibliogram" => isset($_COOKIE["bibliogram"]) ? $_COOKIE["bibliogram"]  : "https://bibliogram.pussthecat.org",
-        "replace_twitter_with_nitter" => isset($_COOKIE["nitter"]) ? $_COOKIE["nitter"]  : "https://nitter.namazso.eu",
-        "replace_reddit_with_libreddit" => isset($_COOKIE["libreddit"]) ? $_COOKIE["libreddit"]  : "https://libreddit.dothq.co",
 
         /*
             To send requests trough a proxy uncomment CURLOPT_PROXY and CURLOPT_PROXYTYPE:
@@ -36,10 +20,6 @@
                 CURLPROXY_SOCKS4A
                 CURLPROXY_SOCKS5
                 CURLPROXY_SOCKS5_HOSTNAME
-
-            As an example, for a TOR connection you would use these settings:
-            CURLOPT_PROXY => "127.0.0.1:9050",
-            CURLOPT_PROXYTYPE => CURLPROXY_SOCKS5,
 
             !!! ONLY CHANGE THE OTHER OPTIONS IF YOU KNOW WHAT YOU ARE DOING !!!
         */
@@ -57,6 +37,6 @@
             CURLOPT_VERBOSE => false,
             CURLOPT_TCP_FASTOPEN => true
         )
-        
+
     );
 ?>

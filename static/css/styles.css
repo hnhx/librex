@@ -1,11 +1,11 @@
 html {
     color: var(--main-fg);
-    background-color: var(--main-bg); 
+    background-color: var(--main-bg);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
 
-input, 
+input,
 button {
     outline: none;
 }
@@ -22,6 +22,10 @@ p {
 a,
 .text-result-wrapper a:hover {
     text-decoration: none;
+}
+
+.text-result-wrapper a:visited h2 {
+  color: var(--alt-fg);
 }
 
 a:hover, .text-result-wrapper h2:hover {
@@ -41,7 +45,7 @@ a:hover, .text-result-wrapper h2:hover {
 .sub-search-container input {
     width: 500px;
     color: inherit;
-    background-color: inherit;  
+    background-color: inherit;
     padding: 10px;
     font-size: inherit;
     font-family: inherit;
@@ -49,9 +53,9 @@ a:hover, .text-result-wrapper h2:hover {
     border-radius: 25px;
 }
 
-.search-button-wrapper button, 
-.settings-container button, 
-.settings-container select {
+.search-button-wrapper button,
+.misc-container button,
+.misc-container select {
     color: inherit;
     background-color: var(--button-bg);
     font-size: 14px;
@@ -61,7 +65,7 @@ a:hover, .text-result-wrapper h2:hover {
 }
 
 .search-button-wrapper button {
-   
+
     margin: 30px 60px 0px 60px;
 }
 
@@ -89,7 +93,7 @@ a:hover, .text-result-wrapper h2:hover {
 }
 
 .search-button-wrapper button:hover,
-.settings-container button:hover { 
+.misc-container button:hover {
     border: 1px solid #5f6368;
     cursor: pointer;
 }
@@ -107,29 +111,42 @@ a:hover, .text-result-wrapper h2:hover {
     margin-right: 25px;
 }
 
-.settings-container {
+.misc-container {
     text-align: center;
     word-wrap: break-word;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.settings-container button {
+.misc-container div {
+    margin-bottom: 30px;
+}
+
+.misc-container button {
     margin-right:10px;
     margin-left:10px;
 }
 
-.settings-container a {
+.misc-container a {
     color:inherit;
     text-decoration: underline;
 }
 
+.instances-container div {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
 .instances-container input {
     color: inherit;
-    background-color: inherit;  
+    background-color: inherit;
     padding: 5px;
     font-size: inherit;
     font-family: inherit;
     border: 1px solid #5f6368;
     border-radius: 5px;
+    float: right;
 }
 
 .text-result-container,
@@ -183,7 +200,8 @@ a:hover, .text-result-wrapper h2:hover {
     border:none;
     background-color: inherit;
     color: var(--result-link-fg);
-    font-size: 18px;
+    font-size: 20px;
+    margin-right: 6px;
 }
 
 .next-page-button-wrapper #page {
@@ -208,25 +226,6 @@ a:hover, .text-result-wrapper h2:hover {
     margin: 10px;
 }
 
-.donate-container {
-    text-align: center;
-    word-wrap: break-word;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 8%;
-    border: 1px solid var(--main-fg);
-    max-width: 500px;
-    padding:0px 20px 20px 20px;
-}
-
-.donate-container img {
-    margin-top:10px;
-}
-
-.donate-container a {
-    color: var(--alt-fg);
-}
-
 .footer-container {
     position: fixed;
     left: 0;
@@ -246,7 +245,7 @@ a:hover, .text-result-wrapper h2:hover {
 }
 
 /* mobile view */
-@media only screen and (max-width: 900px) { 
+@media only screen and (max-width: 900px) {
     .search-container input {
         width: 80%;
     }
@@ -271,7 +270,7 @@ a:hover, .text-result-wrapper h2:hover {
         margin-left:auto;
         margin-right:auto;
         display: block;
-        
+
     }
 
     .sub-search-container input {
@@ -283,7 +282,7 @@ a:hover, .text-result-wrapper h2:hover {
         margin:0;
         padding:0;
         display: flex;
-        
+        align-items: baseline;
     }
 
     .sub-search-button-wrapper img {
@@ -296,27 +295,21 @@ a:hover, .text-result-wrapper h2:hover {
         margin-left:auto;
         margin-right:auto;
         padding:0;
-       
         display: flex;
         flex-direction: column;
         align-items: center;
-    } 
+    }
 
     .special-result-container {
         max-width: 80%;
     }
 
-    .donate-container {
-        max-width: 80%;
+    .misc-container {
+        margin-bottom: 200px;
+        width: 95%;
     }
 
-    .donate-container img {
-        display: block;
-        margin-left:auto;
-        margin-right:auto;
-    }
-
-    .settings-container {
-        margin-bottom: 100px;
+    .search-container h1 {
+      font-size: 55px;
     }
 }

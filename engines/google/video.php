@@ -2,7 +2,7 @@
     function get_video_results($query, $page=0)
     {
         global $config;
-        
+
         $url = "https://www.google.$config->google_domain/search?&q=$query&start=$page&hl=$config->google_language&tbm=vid";
         $response = request($url);
         $xpath = get_xpath($response);
@@ -15,17 +15,18 @@
 
             if ($url == null)
                 continue;
-            
+
             if (!empty($results)) // filter duplicate results
                 if (end($results)["url"] == $url->textContent)
                     continue;
 
             $url = $url->textContent;
-            $url = check_for_privacy_friendly_alternative($url);
-            
+            if (substr_count($_SERVER["HTTP_COOKIE"], " ") >= 1)
+              $url = check_for_privacy_friendly_alternative($url);
+
             $title = $xpath->evaluate(".//h3", $result)[0];
-            
-            array_push($results, 
+
+            array_push($results,
                 array (
                     "title" => htmlspecialchars($title->textContent),
                     "url" =>  htmlspecialchars($url),

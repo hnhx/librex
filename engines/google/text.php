@@ -6,8 +6,8 @@
 
          if (strpos($query_lower, "to") && count($split_query) >= 4) // currency
          {
-            $amount_to_convert = floatval($split_query[0]);   
-            if ($amount_to_convert != 0) 
+            $amount_to_convert = floatval($split_query[0]);
+            if ($amount_to_convert != 0)
                 return 1;
          }
          else if (strpos($query_lower, "mean") && count($split_query) >= 2) // definition
@@ -18,7 +18,7 @@
         return 0;
      }
 
-    function get_text_results($query, $page=0) 
+    function get_text_results($query, $page=0)
     {
         global $config;
 
@@ -26,12 +26,12 @@
         $query_lower = strtolower($query);
         $query_encoded = urlencode($query);
         $results = array();
-        
+
         $url = "https://www.google.$config->google_domain/search?&q=$query_encoded&start=$page&hl=$config->google_language";
         $google_ch = curl_init($url);
         curl_setopt_array($google_ch, $config->curl_settings);
         curl_multi_add_handle($mh, $google_ch);
- 
+
 
         $special_search = $page == 0 ? check_for_special_search($query) : 0;
         $special_ch = null;
@@ -64,7 +64,7 @@
         do {
             curl_multi_exec($mh, $running);
         } while ($running);
-       
+
         if ($special_search != 0)
         {
             $special_result = null;
@@ -104,21 +104,22 @@
                     if (end($results)["url"] == $url->textContent)
                         continue;
             }
-               
+
 
             $url = $url->textContent;
-            $url = check_for_privacy_friendly_alternative($url);
-            
+            if (substr_count($_SERVER["HTTP_COOKIE"], " ") >= 1)
+              $url = check_for_privacy_friendly_alternative($url);
+
             $title = $xpath->evaluate(".//h3", $result)[0];
             $description = $xpath->evaluate(".//div[contains(@class, 'VwiC3b')]", $result)[0];
 
-            array_push($results, 
+            array_push($results,
                 array (
                     "title" => htmlspecialchars($title->textContent),
                     "url" =>  htmlspecialchars($url),
                     "base_url" => htmlspecialchars(get_base_url($url)),
-                    "description" =>  $description == null ? 
-                                      "No description was provided for this site." : 
+                    "description" =>  $description == null ?
+                                      "No description was provided for this site." :
                                       htmlspecialchars($description->textContent)
                 )
             );
@@ -127,7 +128,7 @@
         return $results;
     }
 
-    function print_text_results($results) 
+    function print_text_results($results)
     {
         echo "<div class=\"text-result-container\">";
 
