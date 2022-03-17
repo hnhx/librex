@@ -71,19 +71,19 @@
                 if (isset($_REQUEST["save"]))
                 {
                     if (!empty($_REQUEST["invidious"]))
-                        setcookie("invidious", $_REQUEST["invidious"]);
+                        setcookie("invidious", $_REQUEST["invidious"], time() + (86400 * 90));
 
                     if (!empty($_REQUEST["bibliogram"]))
-                        setcookie("bibliogram", $_REQUEST["bibliogram"]);
+                        setcookie("bibliogram", $_REQUEST["bibliogram"], time() + (86400 * 90));
 
                     if (!empty($_REQUEST["nitter"]))
-                        setcookie("nitter", $_REQUEST["nitter"]);
+                        setcookie("nitter", $_REQUEST["nitter"], time() + (86400 * 90));
 
                     if (!empty($_REQUEST["libreddit"]))
-                        setcookie("libreddit", $_REQUEST["libreddit"]);
+                        setcookie("libreddit", $_REQUEST["libreddit"], time() + (86400 * 90));
 
 
-                    setcookie("theme", $_REQUEST["theme"]);
+                    setcookie("theme", $_REQUEST["theme"], time() + (86400 * 90));
 
                     header("Location: /settings.php");
                     die();
