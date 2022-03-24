@@ -6,21 +6,36 @@
         return $base_url;
     }
 
-    function check_for_privacy_friendly_alternative($url)
+    function check_for_privacy_friendly_alternative($url, $frontend, $tobereplaced)
     {
-        if (isset($_COOKIE["invidious"]) && strpos($url, "youtube.com"))
-            $url = $_COOKIE["invidious"] . explode("youtube.com", $url)[1];
-        else if (isset($_COOKIE["bibliogram"]) && strpos($url, "instagram.com"))
+        if (isset($_COOKIE[$frontend]) || isset($_REQUEST[$frontend]))
         {
-            if (!strpos($url, "/p/"))
-                $_COOKIE["bibliogram"] .= "/u";
+            $frontend = isset($_COOKIE[$frontend]) ? $_COOKIE[$frontend] : $_REQUEST[$frontend];
 
-            $url = $_COOKIE["bibliogram"] . explode("instagram.com", $url)[1];
+            if ($tobereplaced == "instagram.com") 
+            {
+                if (!strpos($url, "/p/"))
+                    $frontend .= "/u";
+            }
+           
+            $url =  $frontend . explode($tobereplaced, $url)[1];
+
+            return $url;
         }
-        else if (isset($_COOKIE["nitter"]) && strpos($url, "twitter.com"))
-            $url = $_COOKIE["nitter"] . explode("twitter.com", $url)[1];
-        else if (isset($_COOKIE["libreddit"]) && strpos($url, "reddit.com"))
-            $url = $_COOKIE["libreddit"] . explode("reddit.com", $url)[1];
+
+        return $url;
+    }
+
+    function privacy_friendly_alternative($url)
+    {
+       if (strpos($url, "youtube.com"))
+            $url = check_for_privacy_friendly_alternative($url, "invidious", "youtube.com");
+        else if (strpos($url, "instagram.com"))
+            $url = check_for_privacy_friendly_alternative($url, "bibliogram", "instagram.com");
+        else if (strpos($url, "twitter.com"))
+            $url = check_for_privacy_friendly_alternative($url, "nitter", "twitter.com");
+        else if (strpos($url, "reddit.com"))
+            $url = check_for_privacy_friendly_alternative($url, "libreddit", "reddit.com");
 
         return $url;
     }

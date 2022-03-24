@@ -1,6 +1,9 @@
 <?php
      function check_for_special_search($query)
      {
+        if (isset($_COOKIE["disable_special"]) || isset($_REQUEST["disable_special"]))
+            return 0;
+
          $query_lower = strtolower($query);
          $split_query = explode(" ", $query);
 
@@ -105,10 +108,9 @@
                         continue;
             }
 
-
             $url = $url->textContent;
-            if (substr_count($_SERVER["HTTP_COOKIE"], " ") >= 1)
-              $url = check_for_privacy_friendly_alternative($url);
+
+            $url = privacy_friendly_alternative($url);
 
             $title = $xpath->evaluate(".//h3", $result)[0];
             $description = $xpath->evaluate(".//div[contains(@class, 'VwiC3b')]", $result)[0];

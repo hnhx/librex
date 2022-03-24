@@ -21,8 +21,8 @@
                     continue;
 
             $url = $url->textContent;
-            if (substr_count($_SERVER["HTTP_COOKIE"], " ") >= 1)
-              $url = check_for_privacy_friendly_alternative($url);
+            
+            $url = privacy_friendly_alternative($url);
 
             $title = $xpath->evaluate(".//h3", $result)[0];
 
