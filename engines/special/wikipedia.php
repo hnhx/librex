@@ -12,12 +12,17 @@
             $description = substr($first_page["extract"], 0, 250) . "...";
 
             $source = "https://en.wikipedia.org/wiki/$query";
-            return array(
+            $response = array(
                 "special_response" => array(
                     "response" => $description,
                     "source" => $source
                 )
             );
+
+            if (array_key_exists("thumbnail",  $first_page))
+                 $response["special_response"]["image"] = $first_page["thumbnail"]["source"];
+
+            return $response;
         }
     }
 ?>

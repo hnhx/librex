@@ -53,7 +53,7 @@
                     $url = "https://api.dictionaryapi.dev/api/v2/entries/en/$word_to_define";
                     break;
                 case 3:
-                    $url = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&explaintext&redirects=1&titles=$query_encoded";
+                    $url = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cpageimages&exintro&explaintext&redirects=1&pithumbsize=500&titles=$query_encoded";
                     break;
             }
 
@@ -141,6 +141,8 @@
             $source = $special["special_response"]["source"];
 
             echo "<p class=\"special-result-container\">";
+            if (array_key_exists("image", $special["special_response"]))
+                echo "<img src=\"" . $special["special_response"]["image"] . "\">";
             echo $response;
             echo "<a href=\"$source\" target=\"_blank\">$source</a>";
             echo "</p>";

@@ -25,6 +25,7 @@ Your request will be **rejected** if your instance:
 + Torrent results from popular torrent sites
 + Special queries (e.g.: 1 btc to usd , what does xyz mean etc.)
 + Tracking snippets from URLs are removed
++ Multiple color themes
 + Image results are converted to base64 to prevent clients from connecting to Google servers
 + Supports both POST and GET requests
 + Popular social media sites (YouTube, Instagram, Twitter) are replaced with privacy friendly front-ends
@@ -51,4 +52,11 @@ Example API request: `.../api.php?q=gentoo&p=2&type=0` <br/><br/>
 The API also supports both POST and GET requests.
 
 # Donate
-Monero (XMR): `41dGQr9EwZBfYBY3fibTtJZYfssfRuzJZDSVDeneoVcgckehK3BiLxAV4FvEVJiVqdiW996zvMxhFB8G8ot9nBFqQ84VkuC`
+### Monero (XMR) 
+Address: `41dGQr9EwZBfYBY3fibTtJZYfssfRuzJZDSVDeneoVcgckehK3BiLxAV4FvEVJiVqdiW996zvMxhFB8G8ot9nBFqQ84VkuC`
+
+QR code:
+
+<p align="left">
+  <img src="https://user-images.githubusercontent.com/49120638/160815173-dea8b0ee-1b1c-4ead-868d-01313ec28350.png">
+</p>

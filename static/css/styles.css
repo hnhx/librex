@@ -191,6 +191,15 @@ a:hover, .text-result-wrapper h2:hover {
     font-size:14px;
 }
 
+.special-result-container img {
+    display: flex;
+    max-width: 60%;
+    max-height: 200px;
+    padding-bottom:10px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
 .next-page-button-wrapper {
     margin-top:-50px;
     margin-bottom:100px;
@@ -200,8 +209,8 @@ a:hover, .text-result-wrapper h2:hover {
     border:none;
     background-color: inherit;
     color: var(--result-link-fg);
-    font-size: 20px;
-    margin-right: 6px;
+    font-size: 18px;
+    margin-right: 8px;
 }
 
 .next-page-button-wrapper #page {
@@ -301,6 +310,10 @@ a:hover, .text-result-wrapper h2:hover {
     }
 
     .special-result-container {
+        max-width: 80%;
+    }
+
+    .special-result-container img {
         max-width: 80%;
     }
 

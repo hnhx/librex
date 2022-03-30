@@ -28,7 +28,7 @@
             // CURLOPT_PROXYTYPE => CURLPROXY_HTTP,
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
-            CURLOPT_USERAGENT => "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+            CURLOPT_USERAGENT => "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36",
             CURLOPT_IPRESOLVE => CURL_IPRESOLVE_V4,
             CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_SSL_VERIFYHOST => false,
