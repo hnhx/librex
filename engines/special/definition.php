@@ -11,7 +11,7 @@
             {
                 $definition = $json_response[0]["meanings"][0]["definitions"][0]["definition"];
 
-                $source = "https://en.wikipedia.org/wiki/$query";
+                $source = "https://dictionaryapi.dev";
                 return array(
                     "special_response" => array(
                         "response" => $definition,
