@@ -40,6 +40,7 @@ If you want to host it just for yourself a PHP development server should be enou
 ```
 git clone https://github.com/hnhx/librex.git
 cd librex
+cp config.sample.php config.php
 sudo php -S 127.0.0.1:80
 ```
 <br/>

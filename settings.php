@@ -21,7 +21,7 @@
                     better_setcookie("nitter");
                     better_setcookie("libreddit");
                     
-                    header("Location: /settings.php");
+                    header("Location: ./settings.php");
                     die();
                 }
                 else if (isset($_REQUEST["reset"]))
@@ -34,7 +34,7 @@
                             setcookie($name, "", time() - 1000);
                         }
 
-                        header("Location: /settings.php");
+                        header("Location: ./settings.php");
                         die();
                     }
                 }
