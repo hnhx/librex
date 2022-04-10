@@ -10,6 +10,7 @@
 
 # Online instances
 + [search.davidovski.xyz](https://search.davidovski.xyz/) 🇬🇧
++ + [librex.elpengu.com](https://librex.elpengu.com/) 🇬🇧
 
 If you wish to get your instance added create an issue with the `new instance` label and this information:
 + the URL of your instance
@@ -35,7 +36,7 @@ Your request will be **rejected** if your instance:
 
 # Hosting
 Hosting LibreX should be easy since no 3rd party PHP libs are used.<br/>
-All you need is PHP with the curl extension enabled.<br/><br/>
+All you need is PHP with the curl and dom extension enabled.<br/><br/>
 If you want to host it just for yourself a PHP development server should be enough:
 ```
 git clone https://github.com/hnhx/librex.git
