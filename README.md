@@ -9,6 +9,7 @@
 <p align="center">A privacy respecting free as in freedom meta search engine</p>
 
 # Online instances
++ [librex.paranoid.cf](https://librex.paranoid.cf/) 🇨🇭
 + [search.davidovski.xyz](https://search.davidovski.xyz/) 🇬🇧
 + [librex.elpengu.com](https://librex.elpengu.com/) 🇬🇧
 
