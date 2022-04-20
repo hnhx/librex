@@ -11,7 +11,7 @@
 # Online instances
 + [librex.paranoid.cf](https://librex.paranoid.cf/) 🇨🇭
 + [search.davidovski.xyz](https://search.davidovski.xyz/) 🇬🇧
-+ [librex.elpengu.com](https://librex.elpengu.com/) 🇬🇧
++ [librex.elpengu.com](https://librex.elpengu.com/) 🇫🇷
 
 If you wish to get your instance added create an issue with the `new instance` label and this information:
 + the URL of your instance
