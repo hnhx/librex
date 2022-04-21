@@ -1,12 +1,12 @@
 <h1 align="center">LibreX</h1>
 
 <p float="left">
-  <img src="https://user-images.githubusercontent.com/49120638/164421187-2730b9d5-d5b9-4606-b6b9-145b11cfdb55.png" width=450>
-  <img src="https://user-images.githubusercontent.com/49120638/164421606-3a315cca-d44a-4efe-863d-5771661e66e3.png" width=450>
+  <img src="https://user-images.githubusercontent.com/49120638/164421187-2730b9d5-d5b9-4606-b6b9-145b11cfdb55.png" width=430>
+  <img src="https://user-images.githubusercontent.com/49120638/164421606-3a315cca-d44a-4efe-863d-5771661e66e3.png" width=430>
 </p>
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/49120638/164422009-89fc8bab-6b36-4555-ada3-397a276bd2ce.png" width=450>  
+  <img src="https://user-images.githubusercontent.com/49120638/164422009-89fc8bab-6b36-4555-ada3-397a276bd2ce.png" width=430>  
 </p>
 
 <p align="center">A privacy respecting free as in freedom meta search engine</p>
