@@ -110,7 +110,7 @@
 
             $url = $url->textContent;
 
-            $url = privacy_friendly_alternative($url);
+            $url = check_for_privacy_frontend($url);
 
             $title = $xpath->evaluate(".//h3", $result)[0];
             $description = $xpath->evaluate(".//div[contains(@class, 'VwiC3b')]", $result)[0];
@@ -142,7 +142,7 @@
 
             echo "<p class=\"special-result-container\">";
             if (array_key_exists("image", $special["special_response"]))
-                echo "<img src=\"" . $special["special_response"]["image"] . "\">";
+                echo "<img src=\"data:image/jpeg;base64," . $special["special_response"]["image"] . "\">";
             echo $response;
             echo "<a href=\"$source\" target=\"_blank\">$source</a>";
             echo "</p>";

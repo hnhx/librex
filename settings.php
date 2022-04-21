@@ -1,6 +1,7 @@
 
-        <?php
+<?php
                 require "misc/header.php";
+                $config = require "config.php";
 
                 function better_setcookie($name)
                 {
@@ -20,8 +21,9 @@
                     better_setcookie("bibliogram");
                     better_setcookie("nitter");
                     better_setcookie("libreddit");
+                    better_setcookie("wikiless");
                     
-                    header("Location: /settings.php");
+                    header("Location: ./settings.php");
                     die();
                 }
                 else if (isset($_REQUEST["reset"]))
@@ -34,7 +36,7 @@
                             setcookie($name, "", time() - 1000);
                         }
 
-                        header("Location: /settings.php");
+                        header("Location: ./settings.php");
                         die();
                     }
                 }
@@ -75,33 +77,39 @@
                 </div>
                 <h2>Privacy friendly frontends</h2>
                 <p>For an example if you want to view YouTube without getting spied on, click on "Invidious", find the instance that is most suitable for you then paste it in (correct format: https://example.com)</p>
-                <div class="instances-container">
-
+                <div class="instances-container">   
                       <div>
-                        <a for="invidious" href="https://docs.invidious.io/Invidious-Instances/" target="_blank">Invidious</a>
-                        <input pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)" type="text" name="invidious" placeholder="Replace YouTube" value=
-                            <?php echo isset($_COOKIE["invidious"]) ? $_COOKIE["invidious"]  : "\"\""; ?>
+                        <a for="invidious" href="https://docs.invidious.io/instances/" target="_blank">Invidious</a>
+                        <input type="text" name="invidious" placeholder="Replace YouTube" value=
+                            <?php echo isset($_COOKIE["invidious"]) ? $_COOKIE["invidious"]  : "\"$config->invidious\""; ?>
                         >
                       </div>
 
                       <div>
                         <a for="bibliogram" href="https://git.sr.ht/~cadence/bibliogram-docs/tree/master/docs/Instances.md" target="_blank">Bibliogram</a>
-                        <input pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)" type="text" name="bibliogram" placeholder="Replace Instagram" value=
-                            <?php echo isset($_COOKIE["bibliogram"]) ? $_COOKIE["bibliogram"]  : "\"\""; ?>
+                        <input type="text" name="bibliogram" placeholder="Replace Instagram" value=
+                            <?php echo isset($_COOKIE["bibliogram"]) ? $_COOKIE["bibliogram"]  : "\"$config->bibliogram\""; ?>
                         >
                       </div>
 
                       <div>
                         <a for="nitter" href="https://github.com/zedeus/nitter/wiki/Instances" target="_blank">Nitter</a>
-                        <input pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)" type="text" name="nitter" placeholder="Replace Twitter" value=
-                            <?php echo isset($_COOKIE["nitter"]) ? $_COOKIE["nitter"]  : "\"\""; ?>
+                        <input type="text" name="nitter" placeholder="Replace Twitter" value=
+                            <?php echo isset($_COOKIE["nitter"]) ? $_COOKIE["nitter"]  : "\"$config->nitter\""; ?>
                         >
                       </div>
 
                       <div>
                         <a for="libreddit" href="https://github.com/spikecodes/libreddit" target="_blank">Libreddit</a>
-                        <input pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)" type="text" name="libreddit" placeholder="Replace Reddit" value=
-                            <?php echo isset($_COOKIE["libreddit"]) ? $_COOKIE["libreddit"]  : "\"\""; ?>
+                        <input type="text" name="libreddit" placeholder="Replace Reddit" value=
+                            <?php echo isset($_COOKIE["libreddit"]) ? $_COOKIE["libreddit"]  : "\"$config->libreddit\""; ?>
+                        >
+                      </div>
+
+                      <div>
+                        <a for="wikiless" href="https://codeberg.org/orenom/wikiless" target="_blank">Wikiless</a>
+                        <input type="text" name="wikiless" placeholder="Replace Wikipedia" value=
+                            <?php echo isset($_COOKIE["wikiless"]) ? $_COOKIE["wikiless"]  : "\"$config->wikiless\""; ?>
                         >
                       </div>
                 </div>

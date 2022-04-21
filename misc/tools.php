@@ -6,11 +6,18 @@
         return $base_url;
     }
 
-    function check_for_privacy_friendly_alternative($url, $frontend, $tobereplaced)
+    function try_replace_with_frontend($url, $frontend, $tobereplaced)
     {
-        if (isset($_COOKIE[$frontend]) || isset($_REQUEST[$frontend]))
+        $config = require "config.php";
+
+        if (isset($_COOKIE[$frontend]) || isset($_REQUEST[$frontend]) || !empty($config->$frontend))
         {
-            $frontend = isset($_COOKIE[$frontend]) ? $_COOKIE[$frontend] : $_REQUEST[$frontend];
+            if (isset($_COOKIE[$frontend]))
+                $frontend = $_COOKIE[$frontend];
+            else if (isset($_REQUEST[$frontend]))
+                $frontend = $_REQUEST[$frontend];
+            else if (!empty($config->$frontend))
+                $frontend = $config->$frontend;
 
             if ($tobereplaced == "instagram.com") 
             {
@@ -26,16 +33,18 @@
         return $url;
     }
 
-    function privacy_friendly_alternative($url)
+    function check_for_privacy_frontend($url)
     {
        if (strpos($url, "youtube.com"))
-            $url = check_for_privacy_friendly_alternative($url, "invidious", "youtube.com");
+            $url = try_replace_with_frontend($url, "invidious", "youtube.com");
         else if (strpos($url, "instagram.com"))
-            $url = check_for_privacy_friendly_alternative($url, "bibliogram", "instagram.com");
+            $url = try_replace_with_frontend($url, "bibliogram", "instagram.com");
         else if (strpos($url, "twitter.com"))
-            $url = check_for_privacy_friendly_alternative($url, "nitter", "twitter.com");
+            $url = try_replace_with_frontend($url, "nitter", "twitter.com");
         else if (strpos($url, "reddit.com"))
-            $url = check_for_privacy_friendly_alternative($url, "libreddit", "reddit.com");
+            $url = try_replace_with_frontend($url, "libreddit", "reddit.com");
+        else if (strpos($url, "wikipedia.org"))
+            $url = try_replace_with_frontend($url, "wikiless", "wikipedia.org");
 
         return $url;
     }

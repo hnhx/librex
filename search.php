@@ -4,14 +4,15 @@
 </head>
     <body>
         <form class="sub-search-container" method="post" enctype="multipart/form-data" autocomplete="off">
-            <a href="/"><img id="logo" src="static/images/librex.png" alt="librex"></a>
+            <a href="./"><img id="logo" src="static/images/librex.png" alt="librex"></a>
             <input type="text" name="q" 
                 <?php
                     $query = trim($_REQUEST["q"]);
+                    $query_encoded = urlencode($query);
 
                     if (1 > strlen($query) || strlen($query) > 256)
                     {
-                        header("Location: /");
+                        header("Location: ./");
                         die();
                     } 
  
@@ -31,7 +32,6 @@
                 <button name="type" value="2"><img src="static/images/video_result.png">Videos</button>
                 <button name="type" value="3"><img src="static/images/torrent_result.png">Torrents</button>
             </div>
-            
         <hr>
         </form>
 
@@ -41,8 +41,6 @@
 
             $page = isset($_REQUEST["p"]) ? (int) $_REQUEST["p"] : 0;
         
-            $query_encoded = urlencode($query);
-
             $start_time = microtime(true);
             switch ($type)
             {

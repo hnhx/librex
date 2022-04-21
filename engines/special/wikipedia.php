@@ -11,7 +11,7 @@
         {
             $description = substr($first_page["extract"], 0, 250) . "...";
 
-            $source = "https://en.wikipedia.org/wiki/$query";
+            $source = check_for_privacy_frontend("https://wikipedia.org/wiki/$query");
             $response = array(
                 "special_response" => array(
                     "response" => $description,
@@ -20,7 +20,12 @@
             );
 
             if (array_key_exists("thumbnail",  $first_page))
-                 $response["special_response"]["image"] = $first_page["thumbnail"]["source"];
+            {
+                $img_url = $first_page["thumbnail"]["source"];
+                $img_src = request($img_url);
+                $base64_src = base64_encode($img_src);
+                $response["special_response"]["image"] = $base64_src;
+            }
 
             return $response;
         }
