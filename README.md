@@ -1,10 +1,10 @@
 <h1 align="center">LibreX</h1>
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/49120638/155693689-d217d78d-42a7-4b35-b5f3-8b6eca1b8553.png" width=500>
-  <img src="https://user-images.githubusercontent.com/49120638/155693795-7a35e40c-4f02-499c-9711-586d6c1f9f42.png" width=500>
+  <img src="https://user-images.githubusercontent.com/49120638/164421187-2730b9d5-d5b9-4606-b6b9-145b11cfdb55.png" width=500>
+  <img src="https://user-images.githubusercontent.com/49120638/164421606-3a315cca-d44a-4efe-863d-5771661e66e3.png" width=500>
+  <img src="https://user-images.githubusercontent.com/49120638/164422009-89fc8bab-6b36-4555-ada3-397a276bd2ce.png" width=500>
 </p>
-
 
 <p align="center">A privacy respecting free as in freedom meta search engine</p>
 
@@ -25,12 +25,12 @@ Your request will be **rejected** if your instance:
 # Features
 + Ad & JavaScript free
 + Torrent results from popular torrent sites
-+ Special queries (e.g.: 1 btc to usd , what does xyz mean etc.)
++ Special queries (e.g.: 2.4 btc to usd)
 + Tracking snippets from URLs are removed
 + Multiple color themes
 + Image results are converted to base64 to prevent clients from connecting to Google servers
 + Supports both POST and GET requests
-+ Popular social media sites (YouTube, Instagram, Twitter) are replaced with privacy friendly front-ends
++ Popular social media sites (YouTube, Instagram, Twitter etc.) are replaced with privacy friendly front-ends
 + Easy to use JSON API for developers
 + No 3rd party libs are used
 + Easy to setup
