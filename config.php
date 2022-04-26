@@ -44,8 +44,7 @@
             CURLOPT_SSL_VERIFYHOST => false,
             CURLOPT_SSL_VERIFYPEER => false,
             CURLOPT_SSL_VERIFYSTATUS => false,
-            CURLOPT_VERBOSE => false,
-            CURLOPT_TCP_FASTOPEN => true
+            CURLOPT_VERBOSE => false
         )
 
     );
