@@ -1,15 +1,11 @@
 <?php
 
-    function get_thepiratebay_results($query)
+    $thepiratebay_url = "https://apibay.org/q.php?q=$query";
+
+    function get_thepiratebay_results($response)
     {
         global $config;
-
-        $query = urlencode($query);
-
         $results = array();
-
-        $url = "https://apibay.org/q.php?q=$query";
-        $response = request($url);
         $json_response = json_decode($response, true);
 
         foreach ($json_response as $response)

@@ -2,19 +2,62 @@
 
     function get_merged_torrent_results($query)
     {
+        global $config;
+
         require "engines/bittorrent/thepiratebay.php";
         require "engines/bittorrent/rutor.php";
         require "engines/bittorrent/nyaa.php";
         require "engines/bittorrent/yts.php";
 
-        $results = array_merge(get_thepiratebay_results($query),
-                               get_rutor_results($query),
-                               get_nyaa_results($query),
-                               get_yts_results($query));
+        $query = urlencode($query);
 
+        $torrent_urls = array(
+            $thepiratebay_url,
+            $rutor_url,
+            $nyaa_url,
+            $yts_url
+        );
+ 
+        $mh = curl_multi_init();
+        $chs = $results = array();
+
+        foreach ($torrent_urls as $url)
+        {
+            $ch = curl_init($url);
+            curl_setopt_array($ch, $config->curl_settings);
+            array_push($chs, $ch);
+            curl_multi_add_handle($mh, $ch);    
+        }
+
+        $running = null;
+        do {
+            curl_multi_exec($mh, $running);
+        } while ($running);
+
+        for ($i=0; count($chs)>$i; $i++)
+        {
+            $response = curl_multi_getcontent($chs[$i]);
+
+            switch ($i)
+            {
+                case 0:
+                    $results = array_merge($results, get_thepiratebay_results($response));
+                    break;
+                case 1:
+                    $results = array_merge($results, get_rutor_results($response));
+                    break;
+                case 2:
+                    $results = array_merge($results, get_nyaa_results($response));
+                    break;
+                case 3:
+                    $results = array_merge($results, get_yts_results($response));
+                    break;
+            }
+        }
+        
         $seeders = array_column($results, "seeders");
         array_multisort($seeders, SORT_DESC, $results);
-        
+
         return $results; 
     }
 

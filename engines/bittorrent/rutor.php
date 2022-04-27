@@ -1,12 +1,10 @@
 <?php
-    function get_rutor_results($query)
+    $rutor_url = "http://rutor.info/search/$query";
+
+    function get_rutor_results($response)
     {
         global $config;
-
-        $url = "http://rutor.info/search/$query";
-        $response = request($url);
         $xpath = get_xpath($response);
-
         $results = array();
 
 

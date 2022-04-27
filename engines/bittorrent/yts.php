@@ -1,17 +1,11 @@
 <?php
+    $yts_url = "https://yts.mx/api/v2/list_movies.json?query_term=$query";
 
-    function get_yts_results($query)
+    function get_yts_results($response)
     {
         global $config;
-
-        $query = urlencode($query);
-
         $results = array();
-
-        $url = "https://yts.mx/api/v2/list_movies.json?query_term=$query";
-        $response = request($url);
         $json_response = json_decode($response, true);
-
 
         if ($json_response["status"] == "ok" && $json_response["data"]["movie_count"] != 0)
         {

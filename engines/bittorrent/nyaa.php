@@ -1,12 +1,10 @@
 <?php
-    function get_nyaa_results($query)
+    $nyaa_url = "https://nyaa.si/?q=$query";
+
+    function get_nyaa_results($response)
     {
         global $config;
-
-        $url = "https://nyaa.si/?q=$query";
-        $response = request($url);
         $xpath = get_xpath($response);
-
         $results = array();
 
         foreach($xpath->query("//tbody/tr") as $result)
