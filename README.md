@@ -45,6 +45,10 @@ If you want to host it just for yourself a PHP development server should be enou
 ```
 git clone https://github.com/hnhx/librex.git
 cd librex
+mv config.php.example config.php
+sed -i 's/http:\/\/localhost/https:\/\/your.domain/g' opensearch.xml
+cp librex_updater.service /etc/systemd/system/ # edit the service file first
+systemctl enable --now librex_updater
 sudo php -S 127.0.0.1:80
 ```
 <br/>

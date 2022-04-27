@@ -1,5 +1,5 @@
 [Unit]
-Description=LibreX - A privacy respecting free as in freedom meta search enginei
+Description=LibreX - A privacy respecting free as in freedom meta search engine
 After=syslog.target
 After=network.target
 
