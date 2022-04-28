@@ -83,7 +83,7 @@ a:hover, .text-result-wrapper h2:hover {
     width: 600px;
 }
 
-.sub-search-container #logo {
+.sub-search-container .logo {
     vertical-align: middle;
     margin-right: 50px;
 }
@@ -213,7 +213,7 @@ a:hover, .text-result-wrapper h2:hover {
     margin-right: 8px;
 }
 
-.next-page-button-wrapper #page {
+.next-page-button-wrapper .page {
     display: inline;
 }
 
@@ -235,11 +235,19 @@ a:hover, .text-result-wrapper h2:hover {
     margin: 10px;
 }
 
+.git-container {
+    right: 0;
+}
+
+.git-container,
 .footer-container {
     position: fixed;
-    left: 0;
     bottom: 0;
+}
+
+.footer-container {
     width: 100vw;
+    left: 0;
     background-color: var(--footer-bg);
     padding-top: 15px;
     padding-bottom: 15px;
@@ -247,8 +255,16 @@ a:hover, .text-result-wrapper h2:hover {
     text-align: center;
 }
 
+.git-container a {
+    font-size: 10px;
+}
+
+.git-container a,
 .footer-container a {
     color: var(--footer-fg);
+}
+
+.footer-container a {
     margin-left: 15px;
     margin-right: 15px;
 }
@@ -265,6 +281,10 @@ a:hover, .text-result-wrapper h2:hover {
         width: 80%;
     }
 
+    .git-container {
+        display: none;
+    }
+
     .footer-container a {
         margin:10px;
     }
@@ -275,7 +295,7 @@ a:hover, .text-result-wrapper h2:hover {
         text-align: center;
     }
 
-    .sub-search-container #logo {
+    .sub-search-container .logo {
         margin-left:auto;
         margin-right:auto;
         display: block;

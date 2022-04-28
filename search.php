@@ -4,7 +4,7 @@
 </head>
     <body>
         <form class="sub-search-container" method="post" enctype="multipart/form-data" autocomplete="off">
-            <a href="./"><img id="logo" src="static/images/librex.png" alt="librex"></a>
+            <a href="./"><img class="logo" src="static/images/librex.png" alt="librex logo"></a>
             <input type="text" name="q" 
                 <?php
                     $query = trim($_REQUEST["q"]);
@@ -27,10 +27,10 @@
             <button type="submit" style="display:none;"></button>
             <input type="hidden" name="p" value="0">
             <div class="sub-search-button-wrapper">
-                <button name="type" value="0"><img src="static/images/text_result.png">Text</button>
-                <button name="type" value="1"><img src="static/images/image_result.png">Images</button>
-                <button name="type" value="2"><img src="static/images/video_result.png">Videos</button>
-                <button name="type" value="3"><img src="static/images/torrent_result.png">Torrents</button>
+                <button name="type" value="0"><img src="static/images/text_result.png" alt="text result" />Text</button>
+                <button name="type" value="1"><img src="static/images/image_result.png" alt="image result" />Images</button>
+                <button name="type" value="2"><img src="static/images/video_result.png" alt="video result" />Videos</button>
+                <button name="type" value="3"><img src="static/images/torrent_result.png" alt="torrent result" />Torrents</button>
             </div>
         <hr>
         </form>
