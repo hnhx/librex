@@ -8,6 +8,7 @@
         require "engines/bittorrent/rutor.php";
         require "engines/bittorrent/nyaa.php";
         require "engines/bittorrent/yts.php";
+        require "engines/bittorrent/torrentgalaxy.php";
 
         $query = urlencode($query);
 
@@ -15,7 +16,8 @@
             $thepiratebay_url,
             $rutor_url,
             $nyaa_url,
-            $yts_url
+            $yts_url,
+            $torrentgalaxy_url
         );
  
         $mh = curl_multi_init();
@@ -51,6 +53,9 @@
                     break;
                 case 3:
                     $results = array_merge($results, get_yts_results($response));
+                    break;
+                case 4:
+                    $results = array_merge($results, get_torrentgalaxy_results($response));
                     break;
             }
         }

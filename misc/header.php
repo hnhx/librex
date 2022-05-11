@@ -8,13 +8,10 @@
         <link rel="stylesheet" type="text/css" href="static/css/styles.css"/>
         <link title="LibreX search" type="application/opensearchdescription+xml" href="/opensearch.xml?method=POST" rel="search"/>
         <link rel="shortcut icon" href="static/images/librex.png" />
-
-        <link rel="stylesheet" type="text/css" href="
-        <?php
+        <link rel="stylesheet" type="text/css" href="<?php
                 echo "static/css/";
                 if (isset($_COOKIE["theme"]) || isset($_REQUEST["theme"]))
                     echo (isset($_COOKIE["theme"]) ? $_COOKIE["theme"] : $_REQUEST["theme"]) . ".css";
                 else
                 echo "dark.css";
-        ?>
-        "/>
+        ?>"/>

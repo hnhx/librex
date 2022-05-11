@@ -35,7 +35,7 @@
 
     function check_for_privacy_frontend($url)
     {
-       if (strpos($url, "youtube.com"))
+        if (strpos($url, "youtube.com"))
             $url = try_replace_with_frontend($url, "invidious", "youtube.com");
         else if (strpos($url, "instagram.com"))
             $url = try_replace_with_frontend($url, "bibliogram", "instagram.com");
@@ -43,6 +43,8 @@
             $url = try_replace_with_frontend($url, "nitter", "twitter.com");
         else if (strpos($url, "reddit.com"))
             $url = try_replace_with_frontend($url, "libreddit", "reddit.com");
+        else if (strpos($url, "tiktok.com"))
+            $url = try_replace_with_frontend($url, "proxitok", "tiktok.com");
         else if (strpos($url, "wikipedia.org"))
             $url = try_replace_with_frontend($url, "wikiless", "wikipedia.org");
 

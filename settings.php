@@ -21,6 +21,7 @@
                     better_setcookie("bibliogram");
                     better_setcookie("nitter");
                     better_setcookie("libreddit");
+                    better_setcookie("proxitok");
                     better_setcookie("wikiless");
                     
                     header("Location: ./settings.php");
@@ -70,10 +71,8 @@
                 </select>
                 </div>
                 <div>
-                    <label for="special">Disable special queries (e.g.: currency conversion)</label>
-                    <input type="checkbox" name="disable_special"
-                    <?php echo isset($_COOKIE["disable_special"]) ? "checked"  : "\"\""; ?>
-                    >
+                    <label>Disable special queries (e.g.: currency conversion)</label>
+                    <input type="checkbox" name="disable_special" <?php echo isset($_COOKIE["disable_special"]) ? "checked"  : ""; ?> >
                 </div>
                 <h2>Privacy friendly frontends</h2>
                 <p>For an example if you want to view YouTube without getting spied on, click on "Invidious", find the instance that is most suitable for you then paste it in (correct format: https://example.com)</p>
@@ -107,6 +106,13 @@
                       </div>
 
                       <div>
+                        <a for="proxitok" href="https://github.com/pablouser1/ProxiTok/wiki/Public-instances" target="_blank">ProxiTok</a>
+                        <input type="text" name="proxitok" placeholder="Replace TikTok" value=
+                            <?php echo isset($_COOKIE["proxitok"]) ? $_COOKIE["proxitok"]  : "\"$config->proxitok\""; ?>
+                        >
+                      </div>
+
+                      <div>
                         <a for="wikiless" href="https://codeberg.org/orenom/wikiless" target="_blank">Wikiless</a>
                         <input type="text" name="wikiless" placeholder="Replace Wikipedia" value=
                             <?php echo isset($_COOKIE["wikiless"]) ? $_COOKIE["wikiless"]  : "\"$config->wikiless\""; ?>
@@ -116,23 +122,6 @@
                 <div>
                   <button type="submit" name="save" value="1">Save</button>
                   <button type="submit" name="reset" value="1">Reset</button>
-                </div>
-                <div>
-                    <?php 
-                        if (!empty($_COOKIE))
-                        {
-                            echo "<p>If you use the Tor browser or just regularly delete cookies you can also set the settings as a query param:</p>";
-
-                            $url = "?";
-
-                            foreach ($_COOKIE as $key => $value)
-                                $url .= "&$key=$value";
-                            
-                            $url = substr_replace($url, "", 1, 1);
-
-                            echo $url;
-                        }
-                    ?>
                 </div>
             </form>
         </div>

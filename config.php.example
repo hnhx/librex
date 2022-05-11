@@ -18,6 +18,7 @@
         "bibliogram" => "",
         "nitter" => "",
         "libreddit" => "",
+        "proxitok" => "",
         "wikiless" => "",
 
         /*
@@ -38,12 +39,9 @@
             // CURLOPT_PROXYTYPE => CURLPROXY_HTTP,
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
-            CURLOPT_USERAGENT => "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36",
+            CURLOPT_USERAGENT => "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36",
             CURLOPT_IPRESOLVE => CURL_IPRESOLVE_V4,
             CURLOPT_CUSTOMREQUEST => "GET",
-            CURLOPT_SSL_VERIFYHOST => false,
-            CURLOPT_SSL_VERIFYPEER => false,
-            CURLOPT_SSL_VERIFYSTATUS => false,
             CURLOPT_VERBOSE => false
         )
 

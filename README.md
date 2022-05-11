@@ -1,29 +1,28 @@
 <h1 align="center">LibreX</h1>
 
 <p float="left">
-  <img src="https://user-images.githubusercontent.com/49120638/164421187-2730b9d5-d5b9-4606-b6b9-145b11cfdb55.png" width=400>
-  <img src="https://user-images.githubusercontent.com/49120638/164421606-3a315cca-d44a-4efe-863d-5771661e66e3.png" width=400>
-</p>
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/49120638/164422009-89fc8bab-6b36-4555-ada3-397a276bd2ce.png" width=400>  
+  <img src="https://user-images.githubusercontent.com/49120638/164421187-2730b9d5-d5b9-4606-b6b9-145b11cfdb55.png" width="400">
+  <img src="https://user-images.githubusercontent.com/49120638/164421606-3a315cca-d44a-4efe-863d-5771661e66e3.png" width="400">
 </p>
 
 <p align="center">A privacy respecting free as in freedom meta search engine</p>
 
 # Online instances
-+ [librex.paranoid.cf](https://librex.paranoid.cf/) 🇨🇭
-+ [search.davidovski.xyz](https://search.davidovski.xyz/) 🇬🇧
-+ [librex.elpengu.com](https://librex.elpengu.com/) 🇫🇷
+| URL | Country | TOR | I2P |
+|-|-|-|-|
+| [librex.beparanoid.de](https://librex.beparanoid.de/) | 🇨🇭 CH | [✅](http://librex.prnoid54e44a4bduq5due64jkk7wcnkxcp5kv3juncm7veptjcqudgyd.onion/) | [✅](http://fboseyskrqpi6yjiifvz4ryuoiswjezkqsfxfkm2vmbuhehbpr7q.b32.i2p/) |
+| [search.davidovski.xyz](https://search.davidovski.xyz/) | 🇬🇧 UK | ❌ | ❌ |
+| [librex.elpengu.com](https://librex.elpengu.com/) | 🇫🇷 FR | ❌ | ❌ |🇷
 
-If you wish to get your instance added create an issue with the `new instance` label and this information:
+
+<br>If you wish to get your instance added create an issue with the `new instance` label and this information:
 + the URL of your instance
 + the country where your instance is being hosted
 
 Your request will be **rejected** if your instance:
 + contains JavaScript
 + contains ads
-+ has been heavily modified
++ have cloudflare protection
 
 # Features
 + Ad & JavaScript free
@@ -39,20 +38,57 @@ Your request will be **rejected** if your instance:
 + Easy to setup
 
 # Hosting
-Hosting LibreX should be easy since no 3rd party PHP libs are used.<br/>
-All you need is PHP with the curl and dom extension enabled.<br/><br/>
-If you want to host it just for yourself a PHP development server should be enough:
+Install the packages:
+```
+sudo apt install php php-fpm php-dom php-curl nginx
+```
+
+Clone LibreX:
 ```
 git clone https://github.com/hnhx/librex.git
+```
+
+Make sure that the config and the opensearch file won't change when you do git pull:
+```
 cd librex
 mv config.php.example config.php
-sed -i 's/http:\/\/localhost/https:\/\/your.domain/g' opensearch.xml
-cp librex_updater.service /etc/systemd/system/ # edit the service file first
-systemctl enable --now librex_updater
-sudo php -S 127.0.0.1:80
+mv opensearch.xml.example opensearch.xml
 ```
-<br/>
-If you want to host an online instance you should consider using a production web server (e.g.: nginx).
+
+Change opensearch.xml to point to your domain:
+```
+sed -i 's/http:\/\/localhost/https:\/\/your.domain/g' opensearch.xml
+```
+
+To keep LibreX up to date enable the LibreX systemd service:
+```
+cp librex_updater.service /etc/systemd/system/
+systemctl enable --now librex_updater # edit the service file before you enable it
+```
+
+Example nginx config:
+```
+server {
+        listen 80;
+
+        server_name your.domain;
+
+        root /var/www/html/librex;
+        index index.php;
+
+        location ~ \.php$ {
+               include snippets/fastcgi-php.conf;
+               fastcgi_pass unix:/run/php/php7.4-fpm.sock;
+        }
+}
+```
+
+Start the php-fpm and the nginx systemd service
+```
+sudo systemctl enable --now php7.4-fpm nginx # replace the version if its needed
+```
+
+Now LibreX should be running!
 
 # API
 Example API request: `.../api.php?q=gentoo&p=2&type=0` <br/><br/>
@@ -61,11 +97,8 @@ Example API request: `.../api.php?q=gentoo&p=2&type=0` <br/><br/>
 The API also supports both POST and GET requests.
 
 # Donate
-### Monero (XMR) 
-Address: `41dGQr9EwZBfYBY3fibTtJZYfssfRuzJZDSVDeneoVcgckehK3BiLxAV4FvEVJiVqdiW996zvMxhFB8G8ot9nBFqQ84VkuC`
+### Bitcoin (BTC)
+```bc1qs43kh6tvhch02dtsp7x7hcrwj8fwe4rzy7lp0h```
 
-QR code:
-
-<p align="left">
-  <img src="https://user-images.githubusercontent.com/49120638/160815173-dea8b0ee-1b1c-4ead-868d-01313ec28350.png">
-</p>
+### Monero (XMR)
+```41dGQr9EwZBfYBY3fibTtJZYfssfRuzJZDSVDeneoVcgckehK3BiLxAV4FvEVJiVqdiW996zvMxhFB8G8ot9nBFqQ84VkuC```
