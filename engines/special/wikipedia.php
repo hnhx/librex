@@ -14,7 +14,7 @@
             $source = check_for_privacy_frontend("https://wikipedia.org/wiki/$query");
             $response = array(
                 "special_response" => array(
-                    "response" => $description,
+                    "response" => htmlspecialchars($description),
                     "source" => $source
                 )
             );

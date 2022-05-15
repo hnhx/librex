@@ -14,7 +14,7 @@
                 $source = "https://dictionaryapi.dev";
                 return array(
                     "special_response" => array(
-                        "response" => $definition,
+                        "response" => htmlspecialchars($definition),
                         "source" => $source
                     )
                 );

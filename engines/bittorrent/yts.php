@@ -26,11 +26,11 @@
 
                         array_push($results, 
                         array (
-                            "size" => $size,
-                            "name" => $name,
-                            "seeders" => $seeders,
-                            "leechers" => $leechers,
-                            "magnet" => $magnet,
+                            "size" => htmlspecialchars($size),
+                            "name" => htmlspecialchars($name),
+                            "seeders" => htmlspecialchars($seeders),
+                            "leechers" => htmlspecialchars($leechers),
+                            "magnet" => htmlspecialchars($magnet),
                             "source" => "yts.mx"
                         )
                     );

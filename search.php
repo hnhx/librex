@@ -7,7 +7,7 @@
             <a href="./"><img class="logo" src="static/images/librex.png" alt="librex logo"></a>
             <input type="text" name="q" 
                 <?php
-                    $query = trim($_REQUEST["q"]);
+                    $query = htmlspecialchars(trim($_REQUEST["q"]));
                     $query_encoded = urlencode($query);
 
                     if (1 > strlen($query) || strlen($query) > 256)

@@ -21,11 +21,11 @@
 
             array_push($results, 
                 array (
-                    "name" => $name,
+                    "name" => htmlspecialchars($name),
                     "seeders" => (int) remove_special($seeders),
                     "leechers" => (int) remove_special($leechers),
-                    "magnet" => $magnet,
-                    "size" => $size,
+                    "magnet" => htmlspecialchars($magnet),
+                    "size" => htmlspecialchars($size),
                     "source" => "rutor.info"
                 )
             );

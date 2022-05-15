@@ -11,7 +11,7 @@
         <link rel="stylesheet" type="text/css" href="<?php
                 echo "static/css/";
                 if (isset($_COOKIE["theme"]) || isset($_REQUEST["theme"]))
-                    echo (isset($_COOKIE["theme"]) ? $_COOKIE["theme"] : $_REQUEST["theme"]) . ".css";
+                    echo htmlspecialchars((isset($_COOKIE["theme"]) ? $_COOKIE["theme"] : $_REQUEST["theme"]) . ".css");
                 else
                 echo "dark.css";
         ?>"/>

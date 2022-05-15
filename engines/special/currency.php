@@ -22,7 +22,7 @@
             $source = "https://moneyconvert.net/";
             return array(
                 "special_response" => array(
-                    "response" => $formatted_response,
+                    "response" => htmlspecialchars($formatted_response),
                     "source" => $source
                 )
             );

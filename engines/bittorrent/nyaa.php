@@ -20,11 +20,11 @@
 
             array_push($results, 
                 array (
-                    "name" => $name,
+                    "name" => htmlspecialchars($name),
                     "seeders" => (int) $seeders,
                     "leechers" => (int) $leechers,
-                    "magnet" => $magnet,
-                    "size" => $size,
+                    "magnet" => htmlspecialchars($magnet),
+                    "size" => htmlspecialchars($size),
                     "source" => "nyaa.si"
                 )
             );

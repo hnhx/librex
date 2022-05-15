@@ -1,20 +1,36 @@
-
 <?php
-                require "misc/header.php";
                 $config = require "config.php";
-
+                
+                
+                if (isset($_REQUEST["save"]) || isset($_REQUEST["reset"]))
+                {
+                    if (isset($_SERVER["HTTP_COOKIE"])) 
+                    {
+                            $cookies = explode(";", $_SERVER["HTTP_COOKIE"]);
+                            foreach($cookies as $cookie) 
+                            {
+                                $parts = explode("=", $cookie);
+                                $name = trim($parts[0]);
+                                setcookie($name, "", time() - 1000);
+                            }
+                    }
+                    
+                } 
+                
                 function better_setcookie($name)
                 {
                     if (!empty($_REQUEST[$name]))
-                        setcookie($name, $_REQUEST[$name], time() + (86400 * 90));
-                    else if (isset($_COOKIE[$name]))
-                        setcookie($name, "", time() - 1000); 
+                    {
+                        setcookie($name, $_REQUEST[$name], time() + (86400 * 90), '/');
+                        $_COOKIE[$name] = $_REQUEST[$name];
+                    }
                 }
-
+                
                 if (isset($_REQUEST["save"]))
                 {
+                
                     better_setcookie("theme");
-
+                    
                     better_setcookie("disable_special");
 
                     better_setcookie("invidious");
@@ -23,25 +39,16 @@
                     better_setcookie("libreddit");
                     better_setcookie("proxitok");
                     better_setcookie("wikiless");
-                    
+                }
+               
+                if (isset($_REQUEST["save"]) || isset($_REQUEST["reset"]))
+                {
                     header("Location: ./settings.php");
                     die();
                 }
-                else if (isset($_REQUEST["reset"]))
-                {
-                    if (isset($_SERVER["HTTP_COOKIE"])) {
-                        $cookies = explode(";", $_SERVER["HTTP_COOKIE"]);
-                        foreach($cookies as $cookie) {
-                            $parts = explode("=", $cookie);
-                            $name = trim($parts[0]);
-                            setcookie($name, "", time() - 1000);
-                        }
-
-                        header("Location: ./settings.php");
-                        die();
-                    }
-                }
-            ?>
+                
+                require "misc/header.php";
+?>
 
     <title>LibreX - Settings</title>
     </head>
