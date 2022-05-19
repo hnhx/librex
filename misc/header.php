@@ -1,6 +1,7 @@
 <!DOCTYPE html >
 <html lang="en">
     <head>
+        <?php header("Content-Security-Policy: sandbox allow-forms allow-top-navigation; default-src 'self'; img-src 'self' data:;"); ?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta charset="UTF-8"/>
         <meta name="description" content="A privacy respecting meta search engine."/>

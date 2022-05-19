@@ -346,3 +346,19 @@ a:hover, .text-result-wrapper h2:hover {
       font-size: 55px;
     }
 }
+
+.hide {
+    display: none;
+}
+
+.X {
+    color: #bd93f9;
+}
+
+.seeders {
+    color: #50fa7b;
+}
+
+.leechers {
+    color: #ff79c6;
+}

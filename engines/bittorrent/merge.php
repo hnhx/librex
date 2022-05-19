@@ -86,8 +86,8 @@
                 echo "$source";
                 echo "<h2>$name</h2>";
                 echo "</a>";
-                echo "<span>SE: <span style=\"color:#50fa7b\">$seeders</span> - ";
-                echo "LE: <span style=\"color:#ff79c6\">$leechers</span> - ";
+                echo "<span>SE: <span class=\"seeders\">$seeders</span> - ";
+                echo "LE: <span class=\"leechers\">$leechers</span> - ";
                 echo "$size</span>";
                 echo "</div>";
             }
