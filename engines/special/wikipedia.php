@@ -15,7 +15,7 @@
             $response = array(
                 "special_response" => array(
                     "response" => htmlspecialchars($description),
-                    "source" => $source
+                    "source" => urlencode($source)
                 )
             );
 
