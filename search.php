@@ -24,7 +24,7 @@
                 $type = isset($_REQUEST["type"]) ? (int) $_REQUEST["type"] : 0;
                 echo "<input type=\"hidden\" name=\"type\" value=\"$type\"/>";
             ?>
-            <button type="submit" style="display:none;"></button>
+            <button type="submit" class="hide"></button>
             <input type="hidden" name="p" value="0">
             <div class="sub-search-button-wrapper">
                 <button name="type" value="0"><img src="static/images/text_result.png" alt="text result" />Text</button>
