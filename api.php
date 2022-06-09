@@ -4,7 +4,15 @@
 
     if (!isset($_REQUEST["q"]))
     {
-        echo "API usage: <a href=\"https://github.com/hnhx/librex/#api\">https://github.com/hnhx/librex/</a>";
+        echo "<p>Example API request: <a href=\"./api.php?q=gentoo&p=2&type=0\">./api.php?q=gentoo&p=2&type=0</a></p>
+        <br/>
+        <p>\"q\" is the keyword</p>
+        <p>\"p\" is the result page (the first page is 0)</p>
+        <p>\"type\" is the search type (0=text, 1=image, 2=video, 3=torrent)</p>
+        <br/>
+        <p>The results are going to be in JSON format.</p>
+        <p>The API supports both POST and GET requests.</p>";
+
         die();
     }
 
@@ -44,6 +52,6 @@
             break;
     }
 
-    header('Content-Type: application/json');
+    header("Content-Type: application/json");
     echo json_encode($results, JSON_PRETTY_PRINT);
 ?>

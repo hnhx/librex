@@ -8,21 +8,33 @@
         $xpath = get_xpath($response);
 
         $mh = curl_multi_init();
-        $chs = $alts = $results = array();
+        $chs = $results = array();
 
-        foreach($xpath->query("//img[@data-src]") as $image)
+        foreach($xpath->query("//div[@class='isv-r PNCib MSM1fd BUooTd']") as $result)
         {       
-                $alt = $image->getAttribute("alt");
-                $src = $image->getAttribute("data-src");
+                $image = $xpath->evaluate(".//img[@data-src]", $result)[0];
+                $url = $xpath->evaluate(".//a/@href", $result)[0]->textContent;
 
-                if (!empty($alt)) 
+                if (!empty($image))
                 {
-                    $ch = curl_init($src);
-                    curl_setopt_array($ch, $config->curl_settings);
-                    array_push($chs, $ch);
-                    curl_multi_add_handle($mh, $ch);
+                    $alt = $image->getAttribute("alt");
+                    $src = $image->getAttribute("data-src");
 
-                    array_push($alts, $alt);
+                    if (!empty($alt)) 
+                    {
+                        $ch = curl_init($src);
+                        curl_setopt_array($ch, $config->curl_settings);
+                        array_push($chs, $ch);
+                        curl_multi_add_handle($mh, $ch);
+
+                        array_push($results, 
+                            array (
+                                "base64" => "",
+                                "alt" => htmlspecialchars($alt),
+                                "url" => htmlspecialchars($url)
+                            )
+                        );
+                    }
                 }
         }
 
@@ -34,12 +46,7 @@
         for ($i=0; count($chs)>$i; $i++)
         {
             $img_base64 = base64_encode(curl_multi_getcontent($chs[$i]));
-            array_push($results, 
-                array (
-                    "base64" => $img_base64,
-                    "alt" => htmlspecialchars($alts[$i])
-                )
-            );
+            $results[$i]["base64"] = $img_base64;
         }
 
         return $results;
@@ -53,8 +60,9 @@
             {
                 $src = $result["base64"];
                 $alt = $result["alt"];
+                $url = $result["url"];
 
-                echo "<a title=\"$alt\" href=\"data:image/jpeg;base64,$src\" target=\"_blank\">";
+                echo "<a title=\"$alt\" href=\"$url\" target=\"_blank\">";
                 echo "<img src=\"data:image/jpeg;base64,$src\" height=\"200\">";
                 echo "</a>";
             }
