@@ -13,7 +13,9 @@
         foreach($xpath->query("//div[@class='isv-r PNCib MSM1fd BUooTd']") as $result)
         {       
                 $image = $xpath->evaluate(".//img[@data-src]", $result)[0];
+
                 $url = $xpath->evaluate(".//a/@href", $result)[0]->textContent;
+		$url = check_for_privacy_frontend($url);
 
                 if (!empty($image))
                 {
