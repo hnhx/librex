@@ -24,8 +24,11 @@ a,
     text-decoration: none;
 }
 
-.text-result-wrapper a:visited h2 {
-  color: var(--alt-fg);
+.text-result-wrapper a:visited h2,
+.special-result-container a,
+.sub-search-button-wrapper button
+{
+  color: #bd93f9;
 }
 
 a:hover, .text-result-wrapper h2:hover {
@@ -106,7 +109,6 @@ a:hover, .text-result-wrapper h2:hover {
 .sub-search-button-wrapper button {
     border: none;
     background-color: inherit;
-    color: var(--alt-fg);
     font-size: 18px;
     margin-right: 25px;
 }
@@ -187,7 +189,6 @@ a:hover, .text-result-wrapper h2:hover {
 .special-result-container a {
     display: flex;
     margin-top: 10px;
-    color: var(--alt-fg);
     font-size:14px;
 }
 
@@ -229,9 +230,7 @@ a:hover, .text-result-wrapper h2:hover {
 }
 
 .image-result-container img {
-    border: 1px solid var(--button-bg);
-    width: 350px;
-    height: 200px;
+    border: 2px solid var(--button-bg);
     margin: 10px;
 }
 
@@ -267,6 +266,22 @@ a:hover, .text-result-wrapper h2:hover {
 .footer-container a {
     margin-left: 15px;
     margin-right: 15px;
+}
+
+.hide {
+    display: none;
+}
+
+.X {
+    color: #bd93f9;
+}
+
+.seeders {
+    color: #50fa7b;
+}
+
+.leechers {
+    color: #ff79c6;
 }
 
 /* mobile view */
@@ -345,20 +360,4 @@ a:hover, .text-result-wrapper h2:hover {
     .search-container h1 {
       font-size: 55px;
     }
-}
-
-.hide {
-    display: none;
-}
-
-.X {
-    color: #bd93f9;
-}
-
-.seeders {
-    color: #50fa7b;
-}
-
-.leechers {
-    color: #ff79c6;
 }
