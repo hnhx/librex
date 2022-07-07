@@ -13,7 +13,7 @@
 | [librex.beparanoid.de](https://librex.beparanoid.de/) | 🇨🇭 CH | [✅](http://librex.prnoid54e44a4bduq5due64jkk7wcnkxcp5kv3juncm7veptjcqudgyd.onion/) | [✅](http://fboseyskrqpi6yjiifvz4ryuoiswjezkqsfxfkm2vmbuhehbpr7q.b32.i2p/) |
 | [search.davidovski.xyz](https://search.davidovski.xyz/) | 🇬🇧 UK | ❌ | ❌ |
 | [librex.elpengu.com](https://librex.elpengu.com/) | 🇫🇷 FR | ❌ | ❌ |
-| [72nlfo7o344ydn6rvct327ci...onion](http://72nlfo7o344ydn6rvct327cifhrafakk2ib5uh67i2lvwzidyxqyf3qd.onion/) | 🧅 ?? | [✅](http://72nlfo7o344ydn6rvct327cifhrafakk2ib5uh67i2lvwzidyxqyf3qd.onion/) | ❌ |
+| [librex.so2mpiyfo4cje7...onion ](http://librex.so2mpiyfo4cje7bof5v52y3cvjyo2haxpqfvut4sr6gj2ul4mddx2jid.onion/) | 🧅 ?? | [✅](http://librex.so2mpiyfo4cje7bof5v52y3cvjyo2haxpqfvut4sr6gj2ul4mddx2jid.onion /) | ❌ |
 
 
 <br>If you wish to get your instance added create an issue with the `new instance` label and this information:
