@@ -7,98 +7,31 @@
 
 <p align="center">A privacy respecting free as in freedom meta search engine</p>
 
-# Online instances
-| URL | Country | TOR | I2P |
+<br>
+
+### Instances
+
+| Clearnet | TOR | I2P | Country |
 |-|-|-|-|
-| [librex.beparanoid.de](https://librex.beparanoid.de/) | 🇨🇭 CH | [✅](http://librex.prnoid54e44a4bduq5due64jkk7wcnkxcp5kv3juncm7veptjcqudgyd.onion/) | [✅](http://fboseyskrqpi6yjiifvz4ryuoiswjezkqsfxfkm2vmbuhehbpr7q.b32.i2p/) |
-| [search.davidovski.xyz](https://search.davidovski.xyz/) | 🇬🇧 UK | ❌ | ❌ |
-| [librex.so2mpiyfo4cje7...onion ](http://librex.so2mpiyfo4cje7bof5v52y3cvjyo2haxpqfvut4sr6gj2ul4mddx2jid.onion/) | 🧅 ?? | [✅](http://librex.so2mpiyfo4cje7bof5v52y3cvjyo2haxpqfvut4sr6gj2ul4mddx2jid.onion/) | ❌ |
+|  [librex.beparanoid.de](https://librex.beparanoid.de/) | [✅](http://librex.prnoid54e44a4bduq5due64jkk7wcnkxcp5kv3juncm7veptjcqudgyd.onion/) | [✅](http://fboseyskrqpi6yjiifvz4ryuoiswjezkqsfxfkm2vmbuhehbpr7q.b32.i2p/) | 🇨🇭 CH |
+| [search.davidovski.xyz](https://search.davidovski.xyz/) | ❌ | ❌ |  🇬🇧 UK |
+| ❌ | [✅](http://librex.so2mpiyfo4cje7bof5v52y3cvjyo2haxpqfvut4sr6gj2ul4mddx2jid.onion/) | ❌ | ??? | 
 
+<br>
 
+### About LibreX
 
-<br>If you wish to get your instance added create an issue with the `new instance` label and this information:
-+ the URL of your instance
-+ the country where your instance is being hosted
+LibreX gives you results from Google, Qwant and popular torrent sites without spying on you.
+<br>
+<br>
+If you would like to learn more about LibreX check out the [Wiki](https://github.com/hnhx/librex/wiki).
 
-Your request will be **rejected** if your instance:
-+ contains JavaScript
-+ contains ads
-+ has cloudflare protection
+<br>
 
-# Features
-+ Ad & JavaScript free
-+ Torrent results from popular torrent sites
-+ Special queries (e.g.: 2.4 btc to usd)
-+ Tracking snippets from URLs are removed
-+ Multiple color themes
-+ Supports both POST and GET requests
-+ Popular social media sites (YouTube, Instagram, Twitter etc.) are replaced with privacy friendly front-ends
-+ Easy to use JSON API for developers
-+ No 3rd party libs are used
-+ Easy to setup
+### LibreX compared to other metasearch engines
 
-# Hosting
-Install the packages:
-```
-sudo apt install php php-fpm php-dom php-curl nginx
-```
-
-Clone LibreX:
-```
-git clone https://github.com/hnhx/librex.git
-```
-
-Make sure that the config and the opensearch file won't change when you do git pull:
-```
-cd librex
-mv config.php.example config.php
-mv opensearch.xml.example opensearch.xml
-```
-
-Change opensearch.xml to point to your domain:
-```
-sed -i 's/http:\/\/localhost/https:\/\/your.domain/g' opensearch.xml
-```
-
-To keep LibreX up to date enable the LibreX systemd service:
-```
-cp librex_updater.service /etc/systemd/system/
-systemctl enable --now librex_updater # edit the service file before you enable it
-```
-
-Example nginx config:
-```
-server {
-        listen 80;
-
-        server_name your.domain;
-
-        root /var/www/html/librex;
-        index index.php;
-
-        location ~ \.php$ {
-               include snippets/fastcgi-php.conf;
-               fastcgi_pass unix:/run/php/php7.4-fpm.sock;
-        }
-}
-```
-
-Start the php-fpm and the nginx systemd service
-```
-sudo systemctl enable --now php7.4-fpm nginx # replace the version if its needed
-```
-
-Now LibreX should be running!
-
-# API
-Example API request: `.../api.php?q=gentoo&p=2&type=0` <br/><br/>
-`q` is the keyword<br/>`p` is the result page (the first page is `0`)<br/>`type` is the search type (`0`=text, `1`=image, `2`=video, `3`=torrent)
-<br/><br/>
-The API also supports both POST and GET requests.
-
-# Donate
-### Bitcoin (BTC)
-```bc1qs43kh6tvhch02dtsp7x7hcrwj8fwe4rzy7lp0h```
-
-### Monero (XMR)
-```41dGQr9EwZBfYBY3fibTtJZYfssfRuzJZDSVDeneoVcgckehK3BiLxAV4FvEVJiVqdiW996zvMxhFB8G8ot9nBFqQ84VkuC```
+| Metasearch engine |  Works without JS | Privacy frontend redirect | Torrent results |
+|-|-|-|-|
+| LibreX | ✅ | ✅ | ✅ |
+| SearXNG | Only text results ❌ | ❌ | ✅ |
+| Whoogle | ✅ | ❌ | ❌ |
