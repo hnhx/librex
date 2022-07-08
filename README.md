@@ -12,7 +12,6 @@
 |-|-|-|-|
 | [librex.beparanoid.de](https://librex.beparanoid.de/) | 🇨🇭 CH | [✅](http://librex.prnoid54e44a4bduq5due64jkk7wcnkxcp5kv3juncm7veptjcqudgyd.onion/) | [✅](http://fboseyskrqpi6yjiifvz4ryuoiswjezkqsfxfkm2vmbuhehbpr7q.b32.i2p/) |
 | [search.davidovski.xyz](https://search.davidovski.xyz/) | 🇬🇧 UK | ❌ | ❌ |
-| [librex.elpengu.com](https://librex.elpengu.com/) | 🇫🇷 FR | ❌ | ❌ |
 | [librex.so2mpiyfo4cje7...onion ](http://librex.so2mpiyfo4cje7bof5v52y3cvjyo2haxpqfvut4sr6gj2ul4mddx2jid.onion/) | 🧅 ?? | [✅](http://librex.so2mpiyfo4cje7bof5v52y3cvjyo2haxpqfvut4sr6gj2ul4mddx2jid.onion/) | ❌ |
 
 
@@ -32,7 +31,6 @@ Your request will be **rejected** if your instance:
 + Special queries (e.g.: 2.4 btc to usd)
 + Tracking snippets from URLs are removed
 + Multiple color themes
-+ Image results are converted to base64 to prevent clients from connecting to Google servers
 + Supports both POST and GET requests
 + Popular social media sites (YouTube, Instagram, Twitter etc.) are replaced with privacy friendly front-ends
 + Easy to use JSON API for developers
