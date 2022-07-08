@@ -30,8 +30,8 @@
             $results = get_text_results($query, $page);
             break;
         case 1:
-            require "engines/google/image.php";
-            $results = get_image_results($query_encoded);
+            require "engines/qwant/image.php";
+            $results = get_image_results($query_encoded, $page);
             break;
         case 2:
             require "engines/google/video.php";

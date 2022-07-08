@@ -144,7 +144,7 @@
             if (array_key_exists("image", $special["special_response"]))
             {
                 $image_url = $special["special_response"]["image"];
-                echo "<img src=\"engines/google/image_proxy.php?url=$image_url\">";
+                echo "<img src=\"image_proxy.php?url=$image_url\">";
             }
             echo $response;
             echo "<a href=\"$source\" target=\"_blank\">$source</a>";

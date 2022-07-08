@@ -6,7 +6,7 @@
         return $base_url;
     }
 
-    function try_replace_with_frontend($url, $frontend, $tobereplaced)
+    function try_replace_with_frontend($url, $frontend, $original)
     {
         $config = require "config.php";
 
@@ -19,13 +19,13 @@
             else if (!empty($config->$frontend))
                 $frontend = $config->$frontend;
 
-            if ($tobereplaced == "instagram.com") 
+            if ($original == "instagram.com") 
             {
                 if (!strpos($url, "/p/"))
                     $frontend .= "/u";
             }
            
-            $url =  $frontend . explode($tobereplaced, $url)[1];
+            $url =  $frontend . explode($original, $url)[1];
 
             return $url;
         }
@@ -35,20 +35,56 @@
 
     function check_for_privacy_frontend($url)
     {
-        if (strpos($url, "youtube.com"))
-            $url = try_replace_with_frontend($url, "invidious", "youtube.com");
-        else if (strpos($url, "instagram.com"))
-            $url = try_replace_with_frontend($url, "bibliogram", "instagram.com");
-        else if (strpos($url, "twitter.com"))
-            $url = try_replace_with_frontend($url, "nitter", "twitter.com");
-        else if (strpos($url, "reddit.com"))
-            $url = try_replace_with_frontend($url, "libreddit", "reddit.com");
-        else if (strpos($url, "tiktok.com"))
-            $url = try_replace_with_frontend($url, "proxitok", "tiktok.com");
-        else if (strpos($url, "wikipedia.org"))
-            $url = try_replace_with_frontend($url, "wikiless", "wikipedia.org");
+        $frontends = array(
+            "youtube.com" => "invidious",
+            "instagram.com" => "bibliogram",
+            "twitter.com" => "nitter",
+            "reddit.com" => "libreddit",
+            "tiktok.com" => "proxitok",
+            "wikipedia.org" => "wikiless"
+        );
+
+        foreach($frontends as $original => $frontend)
+        {
+            if (strpos($url, $original))
+            {
+                $url = try_replace_with_frontend($url, $frontend, $original);
+                break;
+            }
+        }
 
         return $url;
+    }
+
+    function check_ddg_bang($query)
+    {
+
+        $bangs_json = file_get_contents("static/misc/ddg_bang.json"); 
+        $bangs = json_decode($bangs_json, true);
+        
+        $search_word = substr(explode(" ", $query)[0], 1);
+        $bang_url = null;
+
+        foreach($bangs as $bang)
+        {
+            if ($bang["t"] == $search_word)
+            {
+                $bang_url = $bang["u"];
+                break;
+            }
+        }
+
+        if ($bang_url)
+        {
+            $bang_query_array = explode("!" . $search_word, $query);
+            $bang_query = trim(implode("", $bang_query_array));
+
+            $request_url = str_replace("{{{s}}}", $bang_query, $bang_url);
+            $request_url = check_for_privacy_frontend($request_url);
+
+            header("Location: " . $request_url);
+            die();
+        }
     }
 
     function get_xpath($response)
