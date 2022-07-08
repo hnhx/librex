@@ -45,6 +45,8 @@
             switch ($type)
             {
                 case 0:
+                    if (substr($query, 0, 1) == "!")
+                        check_ddg_bang($query);
                     require "engines/google/text.php";
                     $results = get_text_results($query, $page);
                     print_elapsed_time($start_time);
@@ -52,8 +54,8 @@
                     break;
 
                 case 1:
-                    require "engines/google/image.php";
-                    $results = get_image_results($query_encoded);
+                    require "engines/qwant/image.php";
+                    $results = get_image_results($query_encoded, $page);
                     print_elapsed_time($start_time);
                     print_image_results($results);
                     break;
@@ -88,7 +90,7 @@
             }
 
 
-            if ($type == 0 || $type == 2 )
+            if ($type != 3)
             {
                 echo "<div class=\"next-page-button-wrapper\">";
 
