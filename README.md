@@ -33,7 +33,5 @@ If you would like to learn more about LibreX check out the [Wiki](https://github
 | Metasearch engine |  Works without JS | Privacy frontend redirect | Torrent results |
 |-|-|-|-|
 | LibreX | ✅ | ✅ | ✅ |
-| SearXNG | ✅ | ✅¹ | ✅ |
+| SearXNG | ✅ | ✅ Only host can set it | ✅ |
 | Whoogle | ✅ | ❌ | ❌ |
-
-1: You can define alternative domains using [hostname_replace](https://github.com/searxng/searxng/discussions/918).
