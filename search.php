@@ -3,7 +3,7 @@
 <title> <?php echo $_REQUEST["q"]; ?> - LibreX</title>
 </head>
     <body>
-        <form class="sub-search-container" method="post" enctype="multipart/form-data" autocomplete="off">
+        <form class="sub-search-container" method="get" autocomplete="off">
             <a href="./"><img class="logo" src="static/images/librex.png" alt="librex logo"></a>
             <input type="text" name="q" 
                 <?php
@@ -22,7 +22,7 @@
             <br>
             <?php
                 $type = isset($_REQUEST["type"]) ? (int) $_REQUEST["type"] : 0;
-                echo "<input type=\"hidden\" name=\"type\" value=\"$type\"/>";
+                echo "<button class=\"hide\" name=\"type\" value=\"$type\"/></button>";
             ?>
             <button type="submit" class="hide"></button>
             <input type="hidden" name="p" value="0">

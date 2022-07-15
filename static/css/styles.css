@@ -37,7 +37,7 @@ a:hover, .text-result-wrapper h2:hover {
 
 .search-container {
     text-align: center;
-    margin-top:15%;
+    margin-top: 230px;
 }
 
 .search-container h1 {
@@ -154,12 +154,12 @@ a:hover, .text-result-wrapper h2:hover {
 .text-result-container,
 #time,
 .next-page-button-wrapper {
-    margin-left:10%;
+    margin-left: 200px;
 }
 
 .text-result-container
 {
-    margin-bottom:100px;
+    margin-bottom: 100px;
 }
 
 .special-result-container {
@@ -359,5 +359,15 @@ a:hover, .text-result-wrapper h2:hover {
 
     .search-container h1 {
       font-size: 55px;
+    }
+
+    .search-container {
+        margin-top: 10%;
+    }
+
+    .text-result-container,
+    #time,
+    .next-page-button-wrapper {
+        margin-left: 40px;
     }
 }
