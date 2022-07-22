@@ -13,9 +13,10 @@
 
 | Clearnet | TOR | I2P | Country |
 |-|-|-|-|
-|  [librex.beparanoid.de](https://librex.beparanoid.de/) | [✅](http://librex.prnoid54e44a4bduq5due64jkk7wcnkxcp5kv3juncm7veptjcqudgyd.onion/) | [✅](http://fboseyskrqpi6yjiifvz4ryuoiswjezkqsfxfkm2vmbuhehbpr7q.b32.i2p/) | 🇨🇭 CH |
-| [search.davidovski.xyz](https://search.davidovski.xyz/) | ❌ | ❌ |  🇬🇧 UK |
-| [search.funami.tech](https://search.funami.tech/) | ❌ | ❌ |  🇰🇷 KR |
+| [librex.beparanoid.de](https://librex.beparanoid.de/) | [✅](http://librex.prnoid54e44a4bduq5due64jkk7wcnkxcp5kv3juncm7veptjcqudgyd.onion/) | [✅](http://fboseyskrqpi6yjiifvz4ryuoiswjezkqsfxfkm2vmbuhehbpr7q.b32.i2p/) | 🇨🇭 CH |
+| [search.davidovski.xyz](https://search.davidovski.xyz/) | ❌ | ❌ | 🇬🇧 UK |
+| [search.funami.tech](https://search.funami.tech/) | ❌ | ❌ | 🇰🇷 KR |
+| [librex.catalyst.sx](https://librex.catalyst.sx/) | ❌ | ❌ | 🇺🇸 US |
 | ❌ | [✅](http://librex.so2mpiyfo4cje7bof5v52y3cvjyo2haxpqfvut4sr6gj2ul4mddx2jid.onion/) | ❌ | ??? | 
 
 <br>
