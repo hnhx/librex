@@ -13,7 +13,8 @@
 
 | Clearnet | TOR | I2P | Country |
 |-|-|-|-|
-| [librex.beparanoid.de](https://librex.beparanoid.de/) | [✅](http://librex.prnoid54e44a4bduq5due64jkk7wcnkxcp5kv3juncm7veptjcqudgyd.onion/) | [✅](http://fboseyskrqpi6yjiifvz4ryuoiswjezkqsfxfkm2vmbuhehbpr7q.b32.i2p/) | 🇨🇭 CH |
+| [librex.beparanoid.de](https://librex.beparanoid.de/) | [✅](http://librex.prnoid54e44a4bduq5due64jkk7wcnkxcp5kv3juncm7veptjcqudgyd.onion/) | [✅](http://ljluyti43556bflsucfkhegelemo6guchmq4g7ebxuentomupxoa.b32.i2p/) | 🇭🇺 HU (OFFICIAL INSTANCE) |
+| [librex.extravi.dev](https://librex.extravi.dev/) | [✅](http://ncblhz7q4sfbf755bdbhebfzxcpypz7ewafgi4agatecojz7pln4i3id.onion/) | [✅](http://rra33hiaf6nmby7jfpqe2gqmng3jnzkvbu2n7jgce7vbhoyuhzya.b32.i2p/) | 🇩🇪 DE |
 | [search.davidovski.xyz](https://search.davidovski.xyz/) | ❌ | ❌ | 🇬🇧 UK |
 | [search.funami.tech](https://search.funami.tech/) | ❌ | ❌ | 🇰🇷 KR |
 | [librex.catalyst.sx](https://librex.catalyst.sx/) | ❌ | ❌ | 🇺🇸 US |
@@ -35,5 +36,5 @@ If you would like to learn more about LibreX check out the [Wiki](https://github
 | Metasearch engine |  Works without JS | Privacy frontend redirect | Torrent results |
 |-|-|-|-|
 | LibreX | ✅ | ✅ | ✅ |
-| SearXNG | ✅ | ✅ Only host can set it | ✅ |
-| Whoogle | ✅ | ❌ | ❌ |
+| SearXNG | ✅ | ❓ Only host can set it | ✅ |
+| Whoogle | ✅ | ❓ Only host can set it | ❌ |
