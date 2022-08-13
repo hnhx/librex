@@ -138,8 +138,8 @@ a:hover,
 .search-container input,
 .sub-search-container input {
     width: 500px;
-    color: #e8eaed;
-    background-color: #333333;
+    color: var(--search-container-text-color);
+    background-color: var(--search-container-background-color);
     padding: 10px;
     font-size: inherit;
     font-family: sans-serif;
@@ -170,7 +170,7 @@ a:hover,
 .sub-search-container hr {
     margin-top: 18px;
     margin-bottom: 18px;
-    color: #303134;
+    color: var(--hr-color);
     width: 1000%;
     margin-left: -500%;
 }
@@ -260,12 +260,11 @@ a:hover,
 
 .special-result-container {
     padding: 10px;
-    border: 1px solid #5f6368;
-    var(--special-result-border);
+    border: 1px solid var(--special-result-border);
     width: 500px;
     border-radius: 10px;
-    background: #282828;
-    color: #cccccc;
+    background: var(--special-text-background);
+    color: var(--special-text-color);
 }
 
 .text-result-wrapper {

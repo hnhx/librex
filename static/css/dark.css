@@ -7,7 +7,14 @@
 
     --button-bg: #303134;
 
-    --special-result-border: #bdc1c6;
+    --special-result-border: #5f6368;
+    --special-text-background: #282828;
+    --special-text-color: #cccccc;
+    
+    --search-container-text-color: #e8eaed; 
+    --search-container-background-color: #333333;
+    
+    --hr-color: #303134; 
 
     --footer-fg: #999da2;
     --footer-bg: #161616;
