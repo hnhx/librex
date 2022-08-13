@@ -167,14 +167,11 @@ a:hover,
 .sub-search-container {
     background-color: #161616;
     width: 100%;
+    border-bottom: 1px solid #303134;
 }
 
 .sub-search-container hr {
-    margin-top: 18px;
-    margin-bottom: 18px;
-    color: var(--hr-color);
-    width: 1000%;
-    margin-left: -500%;
+    opacity: 0;
 }
 
 .sub-search-container input {
