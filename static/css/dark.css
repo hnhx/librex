@@ -1,5 +1,5 @@
 :root {
-    --main-bg: #202124;
+    --main-bg: #1c1c1c;
     --main-fg: #e8eaed;
 
     --result-link-fg: #8ab4f8;
@@ -10,5 +10,5 @@
     --special-result-border: #bdc1c6;
 
     --footer-fg: #999da2;
-    --footer-bg: #171717;
+    --footer-bg: #161616;
 }

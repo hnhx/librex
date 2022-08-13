@@ -1,8 +1,99 @@
+@charset "UTF-8";
+
+/* nunito-sans-300 - latin */
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/nunito-sans-v12-latin-300.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('../fonts/nunito-sans-v12-latin-300.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/nunito-sans-v12-latin-300.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/nunito-sans-v12-latin-300.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/nunito-sans-v12-latin-300.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/nunito-sans-v12-latin-300.svg#NunitoSans') format('svg');
+    /* Legacy iOS */
+}
+
+/* nunito-sans-regular - latin */
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/nunito-sans-v12-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('../fonts/nunito-sans-v12-latin-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/nunito-sans-v12-latin-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/nunito-sans-v12-latin-regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/nunito-sans-v12-latin-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/nunito-sans-v12-latin-regular.svg#NunitoSans') format('svg');
+    /* Legacy iOS */
+}
+
+/* nunito-sans-700 - latin */
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/nunito-sans-v12-latin-700.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('../fonts/nunito-sans-v12-latin-700.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/nunito-sans-v12-latin-700.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/nunito-sans-v12-latin-700.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/nunito-sans-v12-latin-700.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/nunito-sans-v12-latin-700.svg#NunitoSans') format('svg');
+    /* Legacy iOS */
+}
+
+/* Material Icons Round */
+@font-face {
+    font-family: 'Material Icons Round';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/LDItaoyNOAY6Uewc665JcIzCKsKc_M9flwmP.woff2) format('woff2');
+}
+
+.material-icons-round {
+    font-family: 'Material Icons Round';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -moz-font-feature-settings: 'liga';
+    -moz-osx-font-smoothing: grayscale;
+}
+
 html {
     color: var(--main-fg);
     background-color: var(--main-bg);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
     font-size: 16px;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 input,
@@ -15,7 +106,7 @@ button {
 }
 
 p {
-    font-size:18px;
+    font-size: 18px;
     color: var(--result-fg);
 }
 
@@ -26,12 +117,12 @@ a,
 
 .text-result-wrapper a:visited h2,
 .special-result-container a,
-.sub-search-button-wrapper button
-{
-  color: #bd93f9;
+.sub-search-button-wrapper button {
+    color: #bd93f9;
 }
 
-a:hover, .text-result-wrapper h2:hover {
+a:hover,
+.text-result-wrapper h2:hover {
     text-decoration: underline;
 }
 
@@ -47,11 +138,11 @@ a:hover, .text-result-wrapper h2:hover {
 .search-container input,
 .sub-search-container input {
     width: 500px;
-    color: inherit;
-    background-color: inherit;
+    color: #e8eaed;
+    background-color: #333333;
     padding: 10px;
     font-size: inherit;
-    font-family: inherit;
+    font-family: sans-serif;
     border: 1px solid #5f6368;
     border-radius: 25px;
 }
@@ -77,22 +168,27 @@ a:hover, .text-result-wrapper h2:hover {
 }
 
 .sub-search-container hr {
-    margin-top: 35px;
-    margin-bottom: 35px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    color: #303134;
+    width: 1000%;
+    margin-left: -500%;
 }
 
 .sub-search-container input {
-    margin-bottom: 40px;
-    width: 600px;
+    margin-bottom: 20px;
+    width: 580px;
 }
 
 .sub-search-container .logo {
     vertical-align: middle;
-    margin-right: 50px;
+    margin-right: 21px;
+    width: 60px;
+    height: auto;
 }
 
 .sub-search-button-wrapper {
-    margin-left: 150px;
+    margin-left: 86px;
 }
 
 .search-button-wrapper button:hover,
@@ -101,16 +197,17 @@ a:hover, .text-result-wrapper h2:hover {
     cursor: pointer;
 }
 
-.sub-search-button-wrapper img {
+.sub-search-button-wrapper i {
     vertical-align: middle;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .sub-search-button-wrapper button {
     border: none;
     background-color: inherit;
-    font-size: 18px;
-    margin-right: 25px;
+    font-size: 14px;
+    margin-right: 14px;
+    font-weight: bold;
 }
 
 .misc-container {
@@ -126,18 +223,18 @@ a:hover, .text-result-wrapper h2:hover {
 }
 
 .misc-container button {
-    margin-right:10px;
-    margin-left:10px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .misc-container a {
-    color:inherit;
+    color: inherit;
     text-decoration: underline;
 }
 
 .instances-container div {
-  text-align: left;
-  margin-bottom: 25px;
+    text-align: left;
+    margin-bottom: 25px;
 }
 
 .instances-container input {
@@ -154,18 +251,21 @@ a:hover, .text-result-wrapper h2:hover {
 .text-result-container,
 #time,
 .next-page-button-wrapper {
-    margin-left: 200px;
+    margin-left: 116px;
 }
 
-.text-result-container
-{
+.text-result-container {
     margin-bottom: 100px;
 }
 
 .special-result-container {
     padding: 10px;
-    border: 1px solid var(--special-result-border);
+    border: 1px solid #5f6368;
+    var(--special-result-border);
     width: 500px;
+    border-radius: 10px;
+    background: #282828;
+    color: #cccccc;
 }
 
 .text-result-wrapper {
@@ -189,25 +289,25 @@ a:hover, .text-result-wrapper h2:hover {
 .special-result-container a {
     display: flex;
     margin-top: 10px;
-    font-size:14px;
+    font-size: 14px;
 }
 
 .special-result-container img {
     display: flex;
     max-width: 60%;
     max-height: 200px;
-    padding-bottom:10px;
-    margin-left:auto;
-    margin-right:auto;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .next-page-button-wrapper {
-    margin-top:-50px;
-    margin-bottom:100px;
+    margin-top: -50px;
+    margin-bottom: 100px;
 }
 
 .next-page-button-wrapper button {
-    border:none;
+    border: none;
     background-color: inherit;
     color: var(--result-link-fg);
     font-size: 18px;
@@ -226,7 +326,7 @@ a:hover, .text-result-wrapper h2:hover {
     margin-left: 9%;
     margin-right: 9%;
     padding: 0;
-    margin-bottom:50px;
+    margin-bottom: 50px;
 }
 
 .image-result-container img {
@@ -301,44 +401,44 @@ a:hover, .text-result-wrapper h2:hover {
     }
 
     .footer-container a {
-        margin:10px;
+        margin: 10px;
     }
 
     .sub-search-container {
-        margin-left:auto;
-        margin-right:auto;
+        margin-left: auto;
+        margin-right: auto;
         text-align: center;
     }
 
     .sub-search-container .logo {
-        margin-left:auto;
-        margin-right:auto;
+        margin-left: auto;
+        margin-right: auto;
         display: block;
 
     }
 
     .sub-search-container input {
         width: 80%;
-        margin-top:30px;
+        margin-top: 30px;
     }
 
     .sub-search-button-wrapper {
-        margin:0;
-        padding:0;
+        margin: 0;
+        padding: 0;
         display: flex;
         align-items: baseline;
     }
 
     .sub-search-button-wrapper img {
-        margin:0;
-        padding:0;
-        margin-bottom:20px;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 20px;
     }
 
     .sub-search-button-wrapper button {
-        margin-left:auto;
-        margin-right:auto;
-        padding:0;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -358,7 +458,7 @@ a:hover, .text-result-wrapper h2:hover {
     }
 
     .search-container h1 {
-      font-size: 55px;
+        font-size: 55px;
     }
 
     .search-container {
