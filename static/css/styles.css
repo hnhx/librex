@@ -94,6 +94,7 @@ html {
 
 body {
     overflow-x: hidden;
+    margin: 0;
 }
 
 input,
@@ -164,7 +165,10 @@ a:hover,
 }
 
 .sub-search-container {
-    margin: 2%;
+    background-color: #161616;
+    width: 100%;
+    margin: 0 auto;
+
 }
 
 .sub-search-container hr {
@@ -185,10 +189,11 @@ a:hover,
     margin-right: 21px;
     width: 60px;
     height: auto;
+    padding: 14px
 }
 
 .sub-search-button-wrapper {
-    margin-left: 86px;
+    margin-left: 118px;
 }
 
 .search-button-wrapper button:hover,
