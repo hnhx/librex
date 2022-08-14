@@ -72,7 +72,7 @@
     font-family: 'Material Icons Round';
     font-weight: normal;
     font-style: normal;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1;
     letter-spacing: normal;
     text-transform: none;
@@ -205,7 +205,6 @@ a:hover,
     background-color: inherit;
     font-size: 14px;
     margin-right: 14px;
-    font-weight: bold;
 }
 
 .misc-container {
