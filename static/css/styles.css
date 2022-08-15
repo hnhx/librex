@@ -158,7 +158,6 @@ a:hover, .text-result-wrapper h2:hover {
     font-size: 10px;
 }
 
-.text-result-container,
 #time,
 .next-page-button-wrapper {
     margin-left: 200px;
@@ -172,13 +171,12 @@ a:hover, .text-result-wrapper h2:hover {
 .special-result-container {
     padding: 10px;
     border: 1px solid var(--special-result-border);
-    width: 500px;
 }
 
 .text-result-wrapper {
-    max-width: 500px;
+    max-width: 600px;
     word-wrap: break-word;
-    margin-top: 35px;
+    margin: 17px auto;
 }
 
 .text-result-wrapper a {
@@ -292,7 +290,7 @@ a:hover, .text-result-wrapper h2:hover {
 }
 
 /* mobile view */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 800px) {
     .search-container input {
         width: 80%;
     }
@@ -350,6 +348,7 @@ a:hover, .text-result-wrapper h2:hover {
         display: flex;
         flex-direction: column;
         align-items: center;
+	font-size: smaller;
     }
 
     .special-result-container {
@@ -360,6 +359,10 @@ a:hover, .text-result-wrapper h2:hover {
         max-width: 80%;
     }
 
+    .text-result-wrapper {
+	width: 80%;
+    }
+    
     .misc-container {
         margin-bottom: 200px;
         width: 95%;
@@ -372,8 +375,7 @@ a:hover, .text-result-wrapper h2:hover {
     .search-container {
         margin-top: 10%;
     }
-
-    .text-result-container,
+    
     #time,
     .next-page-button-wrapper {
         margin-left: 40px;

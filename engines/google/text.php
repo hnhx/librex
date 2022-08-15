@@ -140,7 +140,7 @@
             $response = $special["special_response"]["response"];
             $source = $special["special_response"]["source"];
 
-            echo "<p class=\"special-result-container\">";
+            echo "<p class=\"special-result-container text-result-wrapper\">";
             if (array_key_exists("image", $special["special_response"]))
             {
                 $image_url = $special["special_response"]["image"];
