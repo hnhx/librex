@@ -190,9 +190,7 @@ a:hover,
 
 }
 
-.noDecoration,
-a:link,
-a:visited {
+.noDecoration {
     text-decoration: none;
     color: var(--main-fg);
 }
