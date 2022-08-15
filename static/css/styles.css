@@ -185,6 +185,10 @@ a:hover,
     padding: 14px
 }
 
+.logomobile {
+    display: none;
+}
+
 .sub-search-button-wrapper {
     margin-left: 118px;
 }
@@ -407,15 +411,22 @@ a:hover,
     }
 
     .sub-search-container .logo {
+        display: none;
+
+    }
+
+    .logomobile {
+        margin-top: 0px;
+        margin-bottom: 0px;
         margin-left: auto;
         margin-right: auto;
+        padding: 10px;
+        font-size: 28px;
         display: block;
-
     }
 
     .sub-search-container input {
         width: 80%;
-        margin-top: 30px;
     }
 
     .sub-search-button-wrapper {
