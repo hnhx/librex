@@ -485,6 +485,14 @@ a:hover,
         margin-top: 10%;
     }
 
+    p {
+        font-size: 16px;
+    }
+
+    html {
+        font-size: 14px;
+    }
+
     .text-result-container,
     #time,
     .next-page-button-wrapper {
