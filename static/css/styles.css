@@ -488,7 +488,7 @@ a:hover,
     .text-result-container,
     #time,
     .next-page-button-wrapper {
-        margin-left: 40px;
-        max-width: 80%;
+        margin-left: 20px;
+        max-width: 90%;
     }
 }
