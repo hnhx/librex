@@ -194,7 +194,7 @@ a:hover,
 a:link,
 a:visited {
     text-decoration: none;
-    color: white;
+    color: var(--main-fg);
 }
 
 .sub-search-button-wrapper {
