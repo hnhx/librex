@@ -68,17 +68,17 @@ a:hover, .text-result-wrapper h2:hover {
 }
 
 .search-button-wrapper button {
-
     margin: 30px 60px 0px 60px;
 }
 
 .sub-search-container {
     margin: 2%;
+    margin-bottom:0;
 }
 
 .sub-search-container hr {
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .sub-search-container input {
@@ -318,16 +318,16 @@ a:hover, .text-result-wrapper h2:hover {
     }
 
     .sub-search-container .logo {
-        margin-left:auto;
-        margin-right:auto;
-        display: block;
-
+        margin-left:0;
+        margin-right:10px;
+	width: 50px;
     }
 
+
     .sub-search-container input {
-        width: 80%;
-        margin-top:30px;
-	margin-bottom: 40px;
+        width: 60%;
+        margin-top:10px;
+	margin-bottom: 20px;
     }
 
     .sub-search-button-wrapper {
@@ -340,7 +340,8 @@ a:hover, .text-result-wrapper h2:hover {
     .sub-search-button-wrapper img {
         margin:0;
         padding:0;
-        margin-bottom:12px;
+	height:15px;
+        margin-bottom:5px;
     }
 
     .sub-search-button-wrapper button {
