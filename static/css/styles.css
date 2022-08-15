@@ -275,6 +275,7 @@ a:hover,
     border-radius: 8px;
     background: var(--special-text-background);
     color: var(--special-text-color);
+    margin-left: 116px;
 }
 
 .text-result-wrapper {
@@ -461,7 +462,10 @@ a:hover,
     }
 
     .special-result-container {
-        max-width: 80%;
+        max-width: 100%;
+        margin-left: 0px;
+        width: auto;
+        border-radius: 0px;
     }
 
     .special-result-container img {
@@ -485,5 +489,6 @@ a:hover,
     #time,
     .next-page-button-wrapper {
         margin-left: 40px;
+        max-width: 80%;
     }
 }
