@@ -271,7 +271,7 @@ a:visited {
     padding: 10px;
     border: 1px solid var(--special-result-border);
     width: 500px;
-    border-radius: 10px;
+    border-radius: 8px;
     background: var(--special-text-background);
     color: var(--special-text-color);
 }
