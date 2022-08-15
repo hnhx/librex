@@ -187,12 +187,15 @@ a:hover,
 
 .logomobile {
     display: none;
-
 }
 
 .noDecoration {
     text-decoration: none;
     color: var(--main-fg);
+}
+
+.noDecoration:hover {
+    text-decoration: none;
 }
 
 .sub-search-button-wrapper {
