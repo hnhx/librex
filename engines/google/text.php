@@ -132,8 +132,6 @@
 
     function print_text_results($results)
     {
-        echo "<div class=\"text-result-container\">";
-
         $special = $results[0];
         if (array_key_exists("special_response", $special))
         {
@@ -152,6 +150,8 @@
 
             array_shift($results);
         }
+        
+        echo "<div class=\"text-result-container\">";
 
         foreach($results as $result)
         {

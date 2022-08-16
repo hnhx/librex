@@ -1,14 +1,21 @@
 :root {
-    --main-bg: #202124;
+    --main-bg: #1c1c1c;
     --main-fg: #e8eaed;
 
     --result-link-fg: #8ab4f8;
     --result-fg: #999da2;
 
-    --button-bg: #303134;
+    --button-bg: #333333;
 
-    --special-result-border: #bdc1c6;
+    --special-result-border: opacity: 0;
+    --special-text-background: #282828;
+    --special-text-color: #cccccc;
+
+    --search-container-text-color: #e8eaed;
+    --search-container-background-color: #333333;
+
+    --search-form-background-color: #161616;
 
     --footer-fg: #999da2;
-    --footer-bg: #171717;
+    --footer-bg: #161616;
 }

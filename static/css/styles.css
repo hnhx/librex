@@ -5,6 +5,10 @@ html {
     font-size: 16px;
 }
 
+body {
+    margin: 0;
+}
+
 input,
 button {
     outline: none;
@@ -15,7 +19,7 @@ button {
 }
 
 p {
-    font-size:18px;
+    font-size: 18px;
     color: var(--result-fg);
 }
 
@@ -26,12 +30,12 @@ a,
 
 .text-result-wrapper a:visited h2,
 .special-result-container a,
-.sub-search-button-wrapper button
-{
-  color: #bd93f9;
+.sub-search-button-wrapper button {
+    color: #bd93f9;
 }
 
-a:hover, .text-result-wrapper h2:hover {
+a:hover,
+.text-result-wrapper h2:hover {
     text-decoration: underline;
 }
 
@@ -47,8 +51,8 @@ a:hover, .text-result-wrapper h2:hover {
 .search-container input,
 .sub-search-container input {
     width: 500px;
-    color: inherit;
-    background-color: inherit;
+    color: var(--search-container-text-color);
+    background-color: var(--search-container-background-color);
     padding: 10px;
     font-size: inherit;
     font-family: inherit;
@@ -73,26 +77,43 @@ a:hover, .text-result-wrapper h2:hover {
 }
 
 .sub-search-container {
-    margin: 2%;
+    background-color: var(--search-form-background-color);
+    width: 100%;
+    border-bottom: 1px solid #303134;
 }
 
 .sub-search-container hr {
-    margin-top: 35px;
-    margin-bottom: 35px;
+    opacity: 0;
 }
 
 .sub-search-container input {
-    margin-bottom: 40px;
-    width: 600px;
+    margin-bottom: 20px;
+    width: 580px;
 }
 
 .sub-search-container .logo {
     vertical-align: middle;
-    margin-right: 50px;
+    margin-right: 21px;
+    width: 60px;
+    height: auto;
+    padding: 14px
+}
+
+.logomobile {
+    display: none;
+}
+
+.noDecoration {
+    text-decoration: none;
+    color: var(--main-fg);
+}
+
+.noDecoration:hover {
+    text-decoration: none;
 }
 
 .sub-search-button-wrapper {
-    margin-left: 150px;
+    margin-left: 118px;
 }
 
 .search-button-wrapper button:hover,
@@ -101,16 +122,21 @@ a:hover, .text-result-wrapper h2:hover {
     cursor: pointer;
 }
 
-.sub-search-button-wrapper img {
+.sub-search-button-wrapper i {
     vertical-align: middle;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .sub-search-button-wrapper button {
     border: none;
     background-color: inherit;
-    font-size: 18px;
-    margin-right: 25px;
+    font-size: 14px;
+    margin-right: 14px;
+}
+
+.sub-search-button-wrapper img {
+    vertical-align: middle;
+    margin-right: 10px;
 }
 
 .misc-container {
@@ -126,18 +152,18 @@ a:hover, .text-result-wrapper h2:hover {
 }
 
 .misc-container button {
-    margin-right:10px;
-    margin-left:10px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .misc-container a {
-    color:inherit;
+    color: inherit;
     text-decoration: underline;
 }
 
 .instances-container div {
-  text-align: left;
-  margin-bottom: 25px;
+    text-align: left;
+    margin-bottom: 25px;
 }
 
 .instances-container input {
@@ -154,11 +180,10 @@ a:hover, .text-result-wrapper h2:hover {
 .text-result-container,
 #time,
 .next-page-button-wrapper {
-    margin-left: 200px;
+    margin-left: 116px;
 }
 
-.text-result-container
-{
+.text-result-container {
     margin-bottom: 100px;
 }
 
@@ -166,6 +191,10 @@ a:hover, .text-result-wrapper h2:hover {
     padding: 10px;
     border: 1px solid var(--special-result-border);
     width: 500px;
+    border-radius: 8px;
+    background: var(--special-text-background);
+    color: var(--special-text-color);
+    margin-left: 116px;
 }
 
 .text-result-wrapper {
@@ -189,25 +218,25 @@ a:hover, .text-result-wrapper h2:hover {
 .special-result-container a {
     display: flex;
     margin-top: 10px;
-    font-size:14px;
+    font-size: 14px;
 }
 
 .special-result-container img {
     display: flex;
     max-width: 60%;
     max-height: 200px;
-    padding-bottom:10px;
-    margin-left:auto;
-    margin-right:auto;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .next-page-button-wrapper {
-    margin-top:-50px;
-    margin-bottom:100px;
+    margin-top: -50px;
+    margin-bottom: 100px;
 }
 
 .next-page-button-wrapper button {
-    border:none;
+    border: none;
     background-color: inherit;
     color: var(--result-link-fg);
     font-size: 18px;
@@ -226,7 +255,7 @@ a:hover, .text-result-wrapper h2:hover {
     margin-left: 9%;
     margin-right: 9%;
     padding: 0;
-    margin-bottom:50px;
+    margin-bottom: 50px;
 }
 
 .image-result-container img {
@@ -301,51 +330,61 @@ a:hover, .text-result-wrapper h2:hover {
     }
 
     .footer-container a {
-        margin:10px;
+        margin: 10px;
     }
 
     .sub-search-container {
-        margin-left:auto;
-        margin-right:auto;
+        margin-left: auto;
+        margin-right: auto;
         text-align: center;
     }
 
     .sub-search-container .logo {
-        margin-left:auto;
-        margin-right:auto;
-        display: block;
+        display: none;
 
+    }
+
+    .logomobile {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+        font-size: 28px;
+        display: block;
     }
 
     .sub-search-container input {
         width: 80%;
-        margin-top:30px;
     }
 
     .sub-search-button-wrapper {
-        margin:0;
-        padding:0;
+        margin: 0;
+        padding: 0;
         display: flex;
         align-items: baseline;
     }
 
     .sub-search-button-wrapper img {
-        margin:0;
-        padding:0;
-        margin-bottom:20px;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 20px;
     }
 
     .sub-search-button-wrapper button {
-        margin-left:auto;
-        margin-right:auto;
-        padding:0;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     .special-result-container {
-        max-width: 80%;
+        max-width: 100%;
+        margin-left: 0px;
+        width: auto;
+        border-radius: 0px;
     }
 
     .special-result-container img {
@@ -358,16 +397,25 @@ a:hover, .text-result-wrapper h2:hover {
     }
 
     .search-container h1 {
-      font-size: 55px;
+        font-size: 55px;
     }
 
     .search-container {
         margin-top: 10%;
     }
 
+    p {
+        font-size: 16px;
+    }
+
+    html {
+        font-size: 14px;
+    }
+
     .text-result-container,
     #time,
     .next-page-button-wrapper {
-        margin-left: 40px;
+        margin-left: 20px;
+        max-width: 90%;
     }
 }
