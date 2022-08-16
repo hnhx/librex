@@ -18,6 +18,7 @@
 | [search.davidovski.xyz](https://search.davidovski.xyz/) | ❌ | ❌ | 🇬🇧 UK |
 | [search.funami.tech](https://search.funami.tech/) | ❌ | ❌ | 🇰🇷 KR |
 | [librex.catalyst.sx](https://librex.catalyst.sx/) | ❌ | ❌ | 🇺🇸 US |
+| [search.madreyk.xyz](https://search.madreyk.xyz/) | ❌ | ❌ | 🇩🇪 DE |
 | ❌ | [✅](http://librex.so2mpiyfo4cje7bof5v52y3cvjyo2haxpqfvut4sr6gj2ul4mddx2jid.onion/) | ❌ | ??? | 
 
 <br>
