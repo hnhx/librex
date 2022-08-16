@@ -190,13 +190,14 @@ a:hover,
 .special-result-container {
     padding: 10px;
     border: 1px solid var(--special-result-border);
-    width: 250px;
+    min-width: 250px;
+    max-width: 400px;
     border-radius: 8px;
     background: var(--special-text-background);
     color: var(--special-text-color);
-    /* margin-left: 118px; */
     position: absolute;
     float: right;
+    margin-right: 15px;
     margin-left: calc(500px + 109px + 50px);
 }
 
