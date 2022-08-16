@@ -28,7 +28,7 @@
 
                     array_push($results, 
                         array (
-                            "thumbnail" => $thumbnail,
+                            "thumbnail" => urldecode(htmlspecialchars($thumbnail)),
                             "alt" => htmlspecialchars($alt),
                             "url" => htmlspecialchars($real_url)
                         )
@@ -46,7 +46,7 @@
 
             foreach($results as $result)
             {
-                $thumbnail = $result["thumbnail"];
+                $thumbnail = urlencode($result["thumbnail"]);
                 $alt = $result["alt"];
                 $url = $result["url"];
 

@@ -41,7 +41,7 @@ a:hover,
 
 .search-container {
     text-align: center;
-    margin-top: 230px;
+    margin-top: 10%;
 }
 
 .search-container h1 {
@@ -130,7 +130,7 @@ a:hover,
 .sub-search-button-wrapper button {
     border: none;
     background-color: inherit;
-    font-size: 14px;
+    font-size: 15px;
     margin-right: 14px;
 }
 
@@ -314,7 +314,7 @@ a:hover,
 }
 
 /* mobile view */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 750px) {
     .search-container input {
         width: 80%;
     }
@@ -323,6 +323,19 @@ a:hover,
         display: table-row;
         margin: 30px 0px 0px 0px;
         width: 80%;
+    }
+
+    .image-result-container {
+        display:unset;
+        margin: 0;
+        padding: 0;
+    }
+
+    .image-result-container img {
+        margin: 0 5% 5% 5%;
+        padding: 0;
+        width: 90%;
+        border: none;
     }
 
     .git-container {
