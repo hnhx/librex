@@ -28,10 +28,10 @@
             <button type="submit" class="hide"></button>
             <input type="hidden" name="p" value="0">
             <div class="sub-search-button-wrapper">
-                <button name="type" value="0"><i class="material-icons-round">manage_search</i>General</button>
-                <button name="type" value="1"><i class="material-icons-round">image_search</i>Images</button>
-                <button name="type" value="2"><i class="material-icons-round">movie</i>Videos</button>
-                <button name="type" value="3"><i class="material-icons-round">share</i>Torrents</button>
+                <button name="type" value="0"><img src="static/images/text_result.png" alt="text result" />General</button>
+                <button name="type" value="1"><img src="static/images/image_result.png" alt="image result" />Images</button>
+                <button name="type" value="2"><img src="static/images/video_result.png" alt="video result" />Videos</button>
+                <button name="type" value="3"><img src="static/images/torrent_result.png" alt="torrent result" />Torrents</button>
             </div>
         <hr>
         </form>
