@@ -27,7 +27,7 @@ html {
     color: var(--main-fg);
     background-color: var(--main-bg);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 body {
@@ -44,7 +44,7 @@ button {
 }
 
 p {
-    font-size: 18px;
+    font-size: 17px;
     color: var(--result-fg);
 }
 
@@ -429,11 +429,11 @@ a:hover,
     }
 
     p {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     html {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .text-result-container,
