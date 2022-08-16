@@ -134,6 +134,11 @@ a:hover,
     margin-right: 14px;
 }
 
+.sub-search-button-wrapper img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
 .misc-container {
     text-align: center;
     word-wrap: break-word;
