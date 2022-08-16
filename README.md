@@ -32,6 +32,12 @@ If you would like to learn more about LibreX check out the [Wiki](https://github
 
 <br>
 
+### Mirror
+In case GitHub would remove LibreX, you can access the source code via this git mirror
+```
+git clone https://git.beparanoid.de/librex
+```
+
 ### LibreX compared to other metasearch engines
 
 | Metasearch engine |  Works without JS | Privacy frontend redirect | Torrent results |
