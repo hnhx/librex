@@ -1,7 +1,67 @@
+/* nunito-sans-300 - latin */
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/nunito-sans-v12-latin-300.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('../fonts/nunito-sans-v12-latin-300.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/nunito-sans-v12-latin-300.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/nunito-sans-v12-latin-300.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/nunito-sans-v12-latin-300.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/nunito-sans-v12-latin-300.svg#NunitoSans') format('svg');
+    /* Legacy iOS */
+}
+
+/* nunito-sans-regular - latin */
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/nunito-sans-v12-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('../fonts/nunito-sans-v12-latin-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/nunito-sans-v12-latin-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/nunito-sans-v12-latin-regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/nunito-sans-v12-latin-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/nunito-sans-v12-latin-regular.svg#NunitoSans') format('svg');
+    /* Legacy iOS */
+}
+
+/* nunito-sans-700 - latin */
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/nunito-sans-v12-latin-700.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('../fonts/nunito-sans-v12-latin-700.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/nunito-sans-v12-latin-700.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/nunito-sans-v12-latin-700.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/nunito-sans-v12-latin-700.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/nunito-sans-v12-latin-700.svg#NunitoSans') format('svg');
+    /* Legacy iOS */
+}
+
 html {
     color: var(--main-fg);
     background-color: var(--main-bg);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
 
@@ -55,7 +115,7 @@ a:hover,
     background-color: var(--search-container-background-color);
     padding: 10px;
     font-size: inherit;
-    font-family: inherit;
+    font-family: sans-serif;
     border: 1px solid #5f6368;
     border-radius: 25px;
 }
@@ -136,7 +196,8 @@ a:hover,
 
 .sub-search-button-wrapper img {
     vertical-align: middle;
-    margin-right: 10px;
+    margin-right: 5px;
+    width: 20px;
 }
 
 .misc-container {
@@ -183,6 +244,10 @@ a:hover,
     margin-left: 116px;
 }
 
+#time {
+    font-weight: 300;
+}
+
 .text-result-container {
     margin-bottom: 100px;
 }
@@ -199,6 +264,7 @@ a:hover,
     float: right;
     margin-right: 15px;
     margin-left: calc(500px + 109px + 50px);
+    font-weight: 300;
 }
 
 @media only screen and (max-width: 960px) {
@@ -207,6 +273,7 @@ a:hover,
         float: none;
         margin-left: 116px;
         width: 500px;
+        margin-right: 0px;
     }
 }
 
@@ -339,7 +406,7 @@ a:hover,
     }
 
     .image-result-container {
-        display:unset;
+        display: unset;
         margin: 0;
         padding: 0;
     }
@@ -394,7 +461,6 @@ a:hover,
     .sub-search-button-wrapper img {
         margin: 0;
         padding: 0;
-        margin-bottom: 20px;
     }
 
     .sub-search-button-wrapper button {
