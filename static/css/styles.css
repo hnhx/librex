@@ -115,7 +115,7 @@ a:hover,
     background-color: var(--search-container-background-color);
     padding: 10px;
     font-size: inherit;
-    font-family: inherit;
+    font-family: sans-serif;
     border: 1px solid #5f6368;
     border-radius: 25px;
 }
