@@ -243,6 +243,10 @@ a:hover,
     margin-left: 116px;
 }
 
+#time {
+    font-weight: 300;
+}
+
 .text-result-container {
     margin-bottom: 100px;
 }
@@ -259,6 +263,7 @@ a:hover,
     float: right;
     margin-right: 15px;
     margin-left: calc(500px + 109px + 50px);
+    font-weight: 300;
 }
 
 @media only screen and (max-width: 960px) {
