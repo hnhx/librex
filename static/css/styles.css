@@ -66,7 +66,7 @@ a:hover,
     color: inherit;
     background-color: var(--button-bg);
     font-size: 14px;
-    border: 1px solid var(--main-bg);
+    border: none;
     border-radius: 4px;
     padding: 13px 10px 13px 10px;
 }
@@ -191,25 +191,11 @@ a:hover,
 .special-result-container {
     padding: 10px;
     border: 1px solid var(--special-result-border);
-    min-width: 250px;
-    max-width: 400px;
+    width: 500px;
     border-radius: 8px;
     background: var(--special-text-background);
     color: var(--special-text-color);
-    position: absolute;
-    float: right;
-    margin-right: 15px;
-    margin-left: calc(500px + 109px + 50px);
-}
-
-@media only screen and (max-width: 960px) {
-    .special-result-container {
-        position: relative;
-        float: none;
-        margin-left: 116px;
-        width: 500px;
-        margin-right: 0px;
-    }
+    margin-left: 116px;
 }
 
 .text-result-wrapper {
