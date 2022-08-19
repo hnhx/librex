@@ -1,0 +1,14 @@
+:root {
+    --main-bg: #3B4252;
+    --main-fg: #E5E9F0;
+
+    --result-link-fg: #88C0D0;
+    --result-fg: #D8DEE9;
+
+    --button-bg: #4C566A;
+
+    --special-result-border: #D8DEE9;
+
+    --footer-fg: #D8DEE9;
+    --footer-bg: #2E3440;
+}
