@@ -316,7 +316,7 @@ a:hover,
 
 /* mobile view */
 @media only screen and (max-width: 750px) {
-        .footer-container {
+    .footer-container {
         position: relative;
     }
 
