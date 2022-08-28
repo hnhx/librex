@@ -19,7 +19,7 @@
 | [search.funami.tech](https://search.funami.tech/) | ❌ | ❌ | 🇰🇷 KR |
 | [librex.catalyst.sx](https://librex.catalyst.sx/) | ❌ | ❌ | 🇺🇸 US |
 | [search.madreyk.xyz](https://search.madreyk.xyz/) | ❌ | ❌ | 🇩🇪 DE |
-| ❌ | [✅](http://librex.so2mpiyfo4cje7bof5v52y3cvjyo2haxpqfvut4sr6gj2ul4mddx2jid.onion/) | ❌ | ??? | 
+| Tor Hidden Service | [✅](http://librex.so2mpiyfo4cje7bof5v52y3cvjyo2haxpqfvut4sr6gj2ul4mddx2jid.onion/) | ❌ | ??? | 
 
 <br>
 
@@ -43,5 +43,5 @@ git clone https://git.beparanoid.de/librex
 | Metasearch engine |  Works without JS | Privacy frontend redirect | Torrent results |
 |-|-|-|-|
 | LibreX | ✅ | ✅ | ✅ |
-| SearXNG | ✅ | ❓ Only host can set it | ✅ |
+| SearXNG | Depends on Host | ❓ Only host can set it | ✅ |
 | Whoogle | ✅ | ❓ Only host can set it | ❌ |
