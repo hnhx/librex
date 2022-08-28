@@ -11,7 +11,7 @@
 
 ### Instances
 
-| Clearnet | TOR | I2P | Country |
+| Domain | TOR | I2P | Country |
 |-|-|-|-|
 | [librex.beparanoid.de](https://librex.beparanoid.de/) | [✅](http://librex.2356uhnbpv5nk3bni5bv6jg2cd6lgj664kwx3lhyelstpttpyv4kk2qd.onion/) | ❌ | 🇭🇺 HU (OFFICIAL INSTANCE) |
 | [librex.extravi.dev](https://librex.extravi.dev/) | [✅](http://ncblhz7q4sfbf755bdbhebfzxcpypz7ewafgi4agatecojz7pln4i3id.onion/) | [✅](http://rra33hiaf6nmby7jfpqe2gqmng3jnzkvbu2n7jgce7vbhoyuhzya.b32.i2p/) | 🇩🇪 DE |
@@ -38,10 +38,11 @@ In case GitHub would remove LibreX, you can access the source code via this git 
 git clone https://git.beparanoid.de/librex
 ```
 
-### LibreX compared to other metasearch engines
+### LibreX compared to other privacy search engines
 
 | Metasearch engine |  Works without JS | Privacy frontend redirect | Torrent results |
 |-|-|-|-|
 | LibreX | ✅ | ✅ | ✅ |
 | SearXNG | Depends on Host | ❓ Only host can set it | ✅ |
 | Whoogle | ✅ | ❓ Only host can set it | ❌ |
+| DuckDuckGo | Lite only | ? | ❌ |
