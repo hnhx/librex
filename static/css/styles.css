@@ -149,18 +149,16 @@ a:hover,
 .sub-search-container input {
     margin-bottom: 20px;
     width: 580px;
-}
-
-.sub-search-container .logo {
-    vertical-align: middle;
-    margin-right: 21px;
-    width: 60px;
-    height: auto;
-    padding: 14px
+    position: relative;
+    left: 140px;
+    margin: 18px;
 }
 
 .logomobile {
-    display: none;
+    position: absolute;
+    margin-top: 0px;
+    top: 20px;
+    left: 20px;
 }
 
 .noDecoration {
@@ -173,7 +171,7 @@ a:hover,
 }
 
 .sub-search-button-wrapper {
-    margin-left: 118px;
+    margin-left: 165px;
 }
 
 .search-button-wrapper button:hover,
@@ -241,7 +239,7 @@ a:hover,
 .text-result-container,
 #time,
 .next-page-button-wrapper {
-    margin-left: 116px;
+    margin-left: 170px;
 }
 
 .text-result-container {
@@ -255,7 +253,7 @@ a:hover,
     border-radius: 8px;
     background: var(--special-text-background);
     color: var(--special-text-color);
-    margin-left: 790px;
+    margin-left: 840px;
     margin-top: 0px;
     position: absolute;
 }
@@ -270,7 +268,7 @@ a:hover,
         border-radius: 8px;
         background: var(--special-text-background);
         color: var(--special-text-color);
-        margin-left: 116px;
+        margin-left: 165px;
     }
 }
 
