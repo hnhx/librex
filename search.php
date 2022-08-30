@@ -31,6 +31,7 @@
                 <button name="type" value="1"><img src="static/images/image_result.png" alt="image result" />Images</button>
                 <button name="type" value="2"><img src="static/images/video_result.png" alt="video result" />Videos</button>
                 <button name="type" value="3"><img src="static/images/torrent_result.png" alt="torrent result" />Torrents</button>
+                <button name="type" value="4"><img src="static/images/torrent_result.png" alt="news result" />Torrents</button>
             </div>
         <hr>
         </form>
@@ -79,6 +80,13 @@
                         break;
                     }
 
+                    break;
+
+                case 4:
+                    require "engines/google/news.php";
+                    $results = get_video_results($query_encoded, $page);
+                    print_elapsed_time($start_time);
+                    print_video_results($results);
                     break;
 
                 default:
