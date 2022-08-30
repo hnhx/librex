@@ -350,7 +350,6 @@ a:hover,
     padding-bottom: 15px;
     border-top: 1px solid var(--border);
     text-align: center;
-    position: fixed;
 }
 
 .git-container a {
@@ -386,7 +385,7 @@ a:hover,
 /* mobile view */
 @media only screen and (max-width: 750px) {
     .footer-container {
-        position: relative;
+        position: fixed;
     }
 
     .search-container input {
