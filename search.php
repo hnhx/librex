@@ -82,7 +82,7 @@
 
                     break;
 
-                case 2:
+                case 4:
                     require "engines/google/news.php";
                     $results = get_news_results($query_encoded, $page);
                     print_elapsed_time($start_time);
