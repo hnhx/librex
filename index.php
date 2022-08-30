@@ -14,5 +14,6 @@
                     <button name="type" value="3" type="submit">Search torrents with LibreX</button>
                 </div>
         </form>
+        <style>.footer-container{position:fixed;}</style>
 
 <?php require "misc/footer.php"; ?>
