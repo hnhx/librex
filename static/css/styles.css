@@ -350,7 +350,6 @@ a:hover,
     padding-bottom: 15px;
     border-top: 1px solid var(--border);
     text-align: center;
-    position:fixed;
 }
 
 .git-container a {
