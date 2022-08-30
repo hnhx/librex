@@ -84,9 +84,9 @@
 
                 case 4:
                     require "engines/google/news.php";
-                    $results = get_video_results($query_encoded, $page);
+                    $results = get_news_results($query_encoded, $page);
                     print_elapsed_time($start_time);
-                    print_video_results($results);
+                    print_news_results($results);
                     break;
 
                 default:
