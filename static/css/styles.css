@@ -437,6 +437,8 @@ a:hover,
     }
 
     .logomobile {
+        position: relative;
+        float: none;
         margin-top: 0px;
         margin-bottom: 0px;
         margin-left: auto;
@@ -444,10 +446,16 @@ a:hover,
         padding: 10px;
         font-size: 28px;
         display: block;
+        margin-top: 0px;
+        top: 0px;
+        left: 0px;
     }
 
     .sub-search-container input {
         width: 80%;
+        position: relative;
+        left: 0px;
+        margin-top: 0px;
     }
 
     .sub-search-button-wrapper {
