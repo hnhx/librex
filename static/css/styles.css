@@ -1,7 +1,67 @@
+/* nunito-sans-300 - latin */
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/nunito-sans-v12-latin-300.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('../fonts/nunito-sans-v12-latin-300.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/nunito-sans-v12-latin-300.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/nunito-sans-v12-latin-300.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/nunito-sans-v12-latin-300.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/nunito-sans-v12-latin-300.svg#NunitoSans') format('svg');
+    /* Legacy iOS */
+}
+
+/* nunito-sans-regular - latin */
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/nunito-sans-v12-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('../fonts/nunito-sans-v12-latin-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/nunito-sans-v12-latin-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/nunito-sans-v12-latin-regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/nunito-sans-v12-latin-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/nunito-sans-v12-latin-regular.svg#NunitoSans') format('svg');
+    /* Legacy iOS */
+}
+
+/* nunito-sans-700 - latin */
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/nunito-sans-v12-latin-700.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('../fonts/nunito-sans-v12-latin-700.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/nunito-sans-v12-latin-700.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/nunito-sans-v12-latin-700.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/nunito-sans-v12-latin-700.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/nunito-sans-v12-latin-700.svg#NunitoSans') format('svg');
+    /* Legacy iOS */
+}
+
 html {
     color: var(--main-fg);
     background-color: var(--main-bg);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
 
@@ -56,7 +116,7 @@ a:hover,
     padding: 10px;
     font-size: inherit;
     font-family: sans-serif;
-    border: 1px solid #5f6368;
+    border: 1px solid var(--search-container-background-border);
     border-radius: 25px;
 }
 
@@ -66,7 +126,7 @@ a:hover,
     color: inherit;
     background-color: var(--button-bg);
     font-size: 14px;
-    border: none;
+    border: 1px solid var(--main-bg);
     border-radius: 4px;
     padding: 13px 10px 13px 10px;
 }
@@ -79,7 +139,7 @@ a:hover,
 .sub-search-container {
     background-color: var(--search-form-background-color);
     width: 100%;
-    border-bottom: 1px solid #303134;
+    border-bottom: 1px solid var(--border);
 }
 
 .sub-search-container hr {
@@ -89,18 +149,16 @@ a:hover,
 .sub-search-container input {
     margin-bottom: 20px;
     width: 580px;
-}
-
-.sub-search-container .logo {
-    vertical-align: middle;
-    margin-right: 21px;
-    width: 60px;
-    height: auto;
-    padding: 14px
+    position: relative;
+    left: 140px;
+    margin: 18px;
 }
 
 .logomobile {
-    display: none;
+    position: absolute;
+    margin-top: 0px;
+    top: 20px;
+    left: 20px;
 }
 
 .noDecoration {
@@ -113,7 +171,7 @@ a:hover,
 }
 
 .sub-search-button-wrapper {
-    margin-left: 118px;
+    margin-left: 165px;
 }
 
 .search-button-wrapper button:hover,
@@ -181,7 +239,7 @@ a:hover,
 .text-result-container,
 #time,
 .next-page-button-wrapper {
-    margin-left: 116px;
+    margin-left: 170px;
 }
 
 .text-result-container {
@@ -195,13 +253,23 @@ a:hover,
     border-radius: 8px;
     background: var(--special-text-background);
     color: var(--special-text-color);
-    margin-left: 116px;
+    margin-left: 840px;
+    margin-top: 0px;
+    position: absolute;
+}
+
+@media only screen and (max-width: 1320px) {
+    .special-result-container {
+        position: relative;
+        float: none;
+        margin-left: 165px;
+    }
 }
 
 .text-result-wrapper {
-    max-width: 500px;
+    max-width: 550px;
     word-wrap: break-word;
-    margin-top: 35px;
+    margin-top: 25px;
 }
 
 .text-result-wrapper a {
@@ -280,7 +348,7 @@ a:hover,
     background-color: var(--footer-bg);
     padding-top: 15px;
     padding-bottom: 15px;
-    border-top: 1px solid #303134;
+    border-top: 1px solid var(--border);
     text-align: center;
 }
 
@@ -316,6 +384,10 @@ a:hover,
 
 /* mobile view */
 @media only screen and (max-width: 750px) {
+    .footer-container {
+        position: relative;
+    }
+
     .search-container input {
         width: 80%;
     }
@@ -359,6 +431,8 @@ a:hover,
     }
 
     .logomobile {
+        position: relative;
+        float: none;
         margin-top: 0px;
         margin-bottom: 0px;
         margin-left: auto;
@@ -366,10 +440,16 @@ a:hover,
         padding: 10px;
         font-size: 28px;
         display: block;
+        margin-top: 0px;
+        top: 0px;
+        left: 0px;
     }
 
     .sub-search-container input {
         width: 80%;
+        position: relative;
+        left: 0px;
+        margin-top: 0px;
     }
 
     .sub-search-button-wrapper {
@@ -394,6 +474,8 @@ a:hover,
     }
 
     .special-result-container {
+        position: relative;
+        float: none;
         max-width: 100%;
         margin-left: 0px;
         width: auto;
@@ -423,6 +505,10 @@ a:hover,
 
     html {
         font-size: 14px;
+    }
+
+    .next-page-button-wrapper {
+        margin-bottom: 25px;
     }
 
     .text-result-container,

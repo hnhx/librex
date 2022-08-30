@@ -5,7 +5,6 @@
     <body>
         <form class="sub-search-container" method="get" autocomplete="off">
             <h1 class="logomobile"><a class="noDecoration" href="./">Libre<span class="X">X</span></a></h1>
-            <a href="./"><img class="logo" src="static/images/librex.png" alt="librex logo"></a>
             <input type="text" name="q"
                 <?php
                     $query = htmlspecialchars(trim($_REQUEST["q"]));
