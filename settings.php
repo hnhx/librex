@@ -65,7 +65,8 @@
                     <option value=\"auto\">Auto</option>
                     <option value=\"nord\">Nord</option>
                     <option value=\"night_owl\">Night Owl</option>
-                    <option value=\"discord\">Discord</option>";
+                    <option value=\"discord\">Discord</option>
+                    <option value=\"github_dark\">Github Dark</option>";
 
                     if (isset($_COOKIE["theme"]))
                     {
