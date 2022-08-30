@@ -246,10 +246,6 @@ a:hover,
 
 .text-result-container {
     margin-bottom: 100px;
-    background: var(--special-text-background);
-    border: 1px solid var(--special-result-border);
-    border-radius: 8px;
-    max-width: 600px;
 }
 
 .special-result-container {
@@ -267,7 +263,7 @@ a:hover,
 .text-result-wrapper {
     max-width: 550px;
     word-wrap: break-word;
-    padding: 15px;
+    margin-top: 25px;
 }
 
 .text-result-wrapper a {
@@ -496,8 +492,7 @@ a:hover,
     .text-result-container,
     #time,
     .next-page-button-wrapper {
-        margin-left: 10px;
-        max-width: 95%;
-        background: inherit;
+        margin-left: 20px;
+        max-width: 90%;
     }
 }
