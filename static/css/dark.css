@@ -13,8 +13,11 @@
 
     --search-container-text-color: #e8eaed;
     --search-container-background-color: #333333;
+    --search-container-background-border: #5f6368;
 
     --search-form-background-color: #161616;
+    
+    --border: #303134;
 
     --footer-fg: #999da2;
     --footer-bg: #161616;
