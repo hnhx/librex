@@ -116,7 +116,7 @@ a:hover,
     padding: 10px;
     font-size: inherit;
     font-family: sans-serif;
-    border: 1px solid #5f6368;
+    border: 1px solid var(--search-container-background-border);
     border-radius: 25px;
 }
 
