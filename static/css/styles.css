@@ -325,7 +325,7 @@ a:hover,
 /* mobile view */
 @media only screen and (max-width: 750px) {
     .footer-container {
-        position: fixed;
+        position: relative;
     }
 
     .search-container input {

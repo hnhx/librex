@@ -16,5 +16,6 @@
                <p>41dGQr9EwZBfYBY3fibTtJZYfssfRuzJZDSVDeneoVcgckehK3BiLxAV4FvEVJiVqdiW996zvMxhFB8G8ot9nBFqQ84VkuC</p>
                <img src="static/images/xmr.png" alt="xmr qr code" width="150" height="150"/>
         </div>
+        <style>.footer-container{position:fixed;}</style>
 
 <?php require "misc/footer.php"; ?>
