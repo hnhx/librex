@@ -139,7 +139,7 @@ a:hover,
 .sub-search-container {
     background-color: var(--search-form-background-color);
     width: 100%;
-    border-bottom: 1px solid #303134;
+    border-bottom: 1px solid var(--border);
 }
 
 .sub-search-container hr {
@@ -354,7 +354,7 @@ a:hover,
     background-color: var(--footer-bg);
     padding-top: 15px;
     padding-bottom: 15px;
-    border-top: 1px solid #303134;
+    border-top: 1px solid var(--border);
     text-align: center;
 }
 
