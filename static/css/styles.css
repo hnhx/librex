@@ -460,6 +460,8 @@ a:hover,
     }
 
     .special-result-container {
+        position: relative;
+        float: none;
         max-width: 100%;
         margin-left: 0px;
         width: auto;
@@ -494,7 +496,8 @@ a:hover,
     .text-result-container,
     #time,
     .next-page-button-wrapper {
-        margin-left: 20px;
-        max-width: 90%;
+        margin-left: 10px;
+        max-width: 95%;
+        background: inherit;
     }
 }
