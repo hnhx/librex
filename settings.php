@@ -61,6 +61,7 @@
                 <select name="theme">
                 <?php
                     $themes = "<option value=\"dark\">Dark</option>
+                    <option value=\"amoled\">AMOLED</option>
                     <option value=\"light\">Light</option>
                     <option value=\"auto\">Auto</option>
                     <option value=\"nord\">Nord</option>
