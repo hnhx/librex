@@ -186,6 +186,10 @@ a:hover,
 
 .text-result-container {
     margin-bottom: 100px;
+    background: var(--special-text-background);
+    border: 1px solid var(--special-result-border);
+    border-radius: 8px;
+    max-width: 550px;
 }
 
 .special-result-container {
@@ -195,13 +199,15 @@ a:hover,
     border-radius: 8px;
     background: var(--special-text-background);
     color: var(--special-text-color);
-    margin-left: 116px;
+    margin-left: 740px;
+    margin-top: 0px;
+    position: absolute;
 }
 
 .text-result-wrapper {
     max-width: 500px;
     word-wrap: break-word;
-    margin-top: 35px;
+    padding: 10px;
 }
 
 .text-result-wrapper a {
