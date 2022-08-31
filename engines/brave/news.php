@@ -11,7 +11,7 @@
 
         foreach($xpath->query("//div[@id='results']//div[contains(@class, 'snippet')]") as $result)
         {
-            $url = $xpath->evaluate(".//a/@href", $result)[0];
+            $url = $xpath->evaluate(".//a/@href", $result);
 
             if ($url == null)
                 continue;
@@ -24,8 +24,8 @@
             
             $url = check_for_privacy_frontend($url);
 
-            $title = $xpath->evaluate(".//span[contains(@class, 'snippet-title')]", $result)[0];
-            $description = $xpath->evaluate(".//p[contains(@class, 'snippet-description')]", $result)[0];
+            $title = $xpath->evaluate(".//span[contains(@class, 'snippet-title')]", $result);
+            $description = $xpath->evaluate(".//p[contains(@class, 'snippet-description')]", $result);
 
             array_push($results,
                 array (
