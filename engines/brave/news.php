@@ -24,7 +24,7 @@
             
             $url = check_for_privacy_frontend($url);
 
-            $title = $xpath->evaluate(".//h3", $result)[0];
+            $title = $xpath->evaluate(".//span", $result)[0];
 
             array_push($results,
                 array (
