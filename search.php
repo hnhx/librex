@@ -30,8 +30,8 @@
                 <button name="type" value="0"><img src="static/images/text_result.png" alt="text result" />General</button>
                 <button name="type" value="1"><img src="static/images/image_result.png" alt="image result" />Images</button>
                 <button name="type" value="2"><img src="static/images/video_result.png" alt="video result" />Videos</button>
-                <button name="type" value="3"><img src="static/images/torrent_result.png" alt="torrent result" />Torrents</button>
-                <button name="type" value="4"><img src="static/images/news_result.png" alt="news result" />News</button>
+                <button name="type" value="3"><img src="static/images/news_result.png" alt="news result" />News</button>
+                <button name="type" value="4"><img src="static/images/torrent_result.png" alt="torrent result" />Torrents</button>
             </div>
         <hr>
         </form>
@@ -69,6 +69,13 @@
                     break;
 
                 case 3:
+                    require "engines/brave/news.php";
+                    $results = get_news_results($query_encoded, $page);
+                    print_elapsed_time($start_time);
+                    print_news_results($results);
+                    break;
+
+                case 4:
                     if ($config->disable_bittorent_search)
                         echo "<p class=\"text-result-container\">The host disabled this feature! :C</p>";
                     else
@@ -80,13 +87,6 @@
                         break;
                     }
 
-                    break;
-
-                case 4:
-                    require "engines/brave/news.php";
-                    $results = get_news_results($query_encoded, $page);
-                    print_elapsed_time($start_time);
-                    print_news_results($results);
                     break;
 
                 default:
