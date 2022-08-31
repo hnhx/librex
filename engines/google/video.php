@@ -1,15 +1,15 @@
 <?php
-    function get_video_results($query, $page=0)
+    function get_video_results($query)
     {
         global $config;
 
-        $url = "https://www.google.$config->google_domain/search?&q=$query&start=$page&hl=$config->google_language&tbm=vid";
+        $url = "https://search.brave.com/videos?q=$query&source=web";
         $response = request($url);
         $xpath = get_xpath($response);
 
         $results = array();
 
-        foreach($xpath->query("//div[@id='search']//div[contains(@class, 'g')]") as $result)
+        foreach($xpath->query("//div[@id='results']//div[contains(@class, 'title')]") as $result)
         {
             $url = $xpath->evaluate(".//a/@href", $result)[0];
 
@@ -24,7 +24,8 @@
             
             $url = check_for_privacy_frontend($url);
 
-            $title = $xpath->evaluate(".//h3", $result)[0];
+            $title = $xpath->evaluate(".//div[contains(@class, 'title')]", $result)[0];
+            $thumbnail = $xpath->evaluate(".//div[contains(@class, 'img-bg')]", $result)[0];
 
             array_push($results,
                 array (
@@ -47,12 +48,14 @@
                 $title = $result["title"];
                 $url = $result["url"];
                 $base_url = $result["base_url"];
+                $description = $result["description"];
 
                 echo "<div class=\"text-result-wrapper\">";
                 echo "<a href=\"$url\">";
                 echo "$base_url";
                 echo "<h2>$title</h2>";
                 echo "</a>";
+                echo "<img src=\"image_proxy.php?url=$thumbnail\">";
                 echo "</div>";
             }
 
