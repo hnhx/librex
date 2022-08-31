@@ -1,14 +1,24 @@
 :root {
-    --main-bg: #fff;
+    --main-bg: #f2f4f7;
     --main-fg: #202124;
 
     --result-link-fg: #1a0dab;
     --result-fg: #70757a;
 
-    --button-bg: #f2f2f2;
+    --button-bg: #fff;
 
-    --special-result-border: #bdc1c6;
+    --special-result-border: opacity: 0;
+    --special-text-background: #fff;
+    --special-text-color: #202124;
 
-    --footer-fg: #70757a;
+    --search-container-text-color: #202124;
+    --search-container-background-color: #fff;
+    --search-container-background-border: #dadce0;
+
+    --search-form-background-color: #f9fafd;
+    
+    --border: #dadce0;
+
+    --footer-fg: #202124;
     --footer-bg: #f2f2f2;
 }

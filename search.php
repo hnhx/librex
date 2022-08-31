@@ -5,7 +5,6 @@
     <body>
         <form class="sub-search-container" method="get" autocomplete="off">
             <h1 class="logomobile"><a class="noDecoration" href="./">Libre<span class="X">X</span></a></h1>
-            <a href="./"><img class="logo" src="static/images/librex.png" alt="librex logo"></a>
             <input type="text" name="q"
                 <?php
                     $query = htmlspecialchars(trim($_REQUEST["q"]));
@@ -31,7 +30,8 @@
                 <button name="type" value="0"><img src="static/images/text_result.png" alt="text result" />General</button>
                 <button name="type" value="1"><img src="static/images/image_result.png" alt="image result" />Images</button>
                 <button name="type" value="2"><img src="static/images/video_result.png" alt="video result" />Videos</button>
-                <button name="type" value="3"><img src="static/images/torrent_result.png" alt="torrent result" />Torrents</button>
+                <button name="type" value="3"><img src="static/images/news_result.png" alt="news result" />News</button>
+                <button name="type" value="4"><img src="static/images/torrent_result.png" alt="torrent result" />Torrents</button>
             </div>
         <hr>
         </form>
@@ -69,6 +69,13 @@
                     break;
 
                 case 3:
+                    require "engines/brave/news.php";
+                    $results = get_news_results($query_encoded, $page);
+                    print_elapsed_time($start_time);
+                    print_news_results($results);
+                    break;
+
+                case 4:
                     if ($config->disable_bittorent_search)
                         echo "<p class=\"text-result-container\">The host disabled this feature! :C</p>";
                     else
@@ -91,7 +98,7 @@
             }
 
 
-            if ($type != 3)
+            if ($type != 3 && $type != 4)
             {
                 echo "<div class=\"next-page-button-wrapper\">";
 
