@@ -48,7 +48,7 @@
                 $title = $result["title"];
                 $url = $result["url"];
                 $base_url = $result["base_url"];
-                $description = $result["description"];
+                $thumbnail = urlencode($result["thumbnail"]);
 
                 echo "<div class=\"text-result-wrapper\">";
                 echo "<a href=\"$url\">";
