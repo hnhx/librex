@@ -9,7 +9,7 @@
 
         $results = array();
 
-        foreach($xpath->query("//div[@id='results']//div[contains(@class, 'section')]") as $result)
+        foreach($xpath->query("//div[@id='results']//div[contains(@class, 'card')]") as $result)
         {
             $url = $xpath->evaluate(".//a/@href", $result)[0];
 
