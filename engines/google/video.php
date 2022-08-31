@@ -25,7 +25,7 @@
             $url = check_for_privacy_frontend($url);
 
             $title = $xpath->evaluate(".//div[contains(@class, 'title')]", $result)[0];
-            $thumbnail = $xpath->evaluate(".//div[contains(@class, 'card-image')]", $result)[0];
+            $thumbnail = urlencode($image->getAttribute(".//div[contains(@class, 'card-image']"));
 
             array_push($results,
                 array (
