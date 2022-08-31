@@ -25,12 +25,16 @@
             $url = check_for_privacy_frontend($url);
 
             $title = $xpath->evaluate(".//span[contains(@class, 'snippet-title')]", $result)[0];
+            $description = $xpath->evaluate(".//p[contains(@class, 'snippet-description')]", $result)[0];
 
             array_push($results,
                 array (
                     "title" => htmlspecialchars($title->textContent),
                     "url" =>  htmlspecialchars($url),
                     "base_url" => htmlspecialchars(get_base_url($url))
+                    "description" =>  $description == null ?
+                                      "No description was provided for this site." :
+                                      htmlspecialchars($description->textContent)
                 )
             );
         }
@@ -47,12 +51,14 @@
                 $title = $result["title"];
                 $url = $result["url"];
                 $base_url = $result["base_url"];
+                $description = $result["description"];
 
                 echo "<div class=\"text-result-wrapper\">";
                 echo "<a href=\"$url\">";
                 echo "$base_url";
                 echo "<h2>$title</h2>";
                 echo "</a>";
+                echo "<span>$description</span>";
                 echo "</div>";
             }
 
