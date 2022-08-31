@@ -98,7 +98,7 @@
             }
 
 
-            if ($type != 3 || $type != 4)
+            if ($type != 3 or 4)
             {
                 echo "<div class=\"next-page-button-wrapper\">";
 
