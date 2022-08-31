@@ -476,10 +476,10 @@ a:hover,
     .special-result-container {
         position: relative;
         float: none;
-        max-width: 100%;
-        margin-left: 0px;
+        max-width: 90%;
+        margin-left: 10px;
         width: auto;
-        border-radius: 0px;
+        border-radius: 8px;
     }
 
     .special-result-container img {
