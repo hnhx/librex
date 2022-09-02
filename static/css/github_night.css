@@ -1,0 +1,25 @@
+:root {
+    --main-bg: #0d1117;
+    --main-fg: #f0f6fc;
+
+    --result-link-fg: #58a6ff;
+    --result-fg: #8b949e;
+
+    --button-bg: #1f242b;
+
+    --special-result-border: opacity: 0;
+    --special-text-background: #161b22;
+    --special-text-color: #f0f6fc;
+
+    --search-container-text-color: #f0f6fc;
+    --search-container-background-color: #1f242b;
+    --search-container-background-border: #303842;
+
+    --search-form-background-color: #161b22;
+    
+    --border: #303842;
+
+    --footer-fg: #8b949e;
+    --footer-bg: #161b22;
+    /* GitHub's Border Colours: #444c56 */
+}
