@@ -283,10 +283,6 @@ a:hover,
 }
 
 .footer-container {
-    position: fixed;
-}
-
-.footer-container {
     width: 100vw;
     left: 0;
     background-color: var(--footer-bg);
@@ -328,10 +324,6 @@ a:hover,
 
 /* mobile view */
 @media only screen and (max-width: 750px) {
-    .footer-container {
-        position: relative;
-    }
-
     .search-container input {
         width: 80%;
     }
