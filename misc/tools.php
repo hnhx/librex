@@ -19,12 +19,12 @@
             else if (!empty($config->$frontend))
                 $frontend = $config->$frontend;
 
-            if ($original == "instagram.com") 
+            if ($original == "instagram.com")
             {
                 if (!strpos($url, "/p/"))
                     $frontend .= "/u";
             }
-           
+
             $url =  $frontend . explode($original, $url)[1];
 
             return $url;
@@ -59,10 +59,14 @@
     function check_ddg_bang($query)
     {
 
-        $bangs_json = file_get_contents("static/misc/ddg_bang.json"); 
+        $bangs_json = file_get_contents("static/misc/ddg_bang.json");
         $bangs = json_decode($bangs_json, true);
+
+        if (substr($query, 0, 1) == "!")
+            $search_word = substr(explode(" ", $query)[0], 1);
+        else
+            $search_word = substr(end(explode(" ", $query)), 1);
         
-        $search_word = substr(explode(" ", $query)[0], 1);
         $bang_url = null;
 
         foreach($bangs as $bang)

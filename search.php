@@ -1,6 +1,10 @@
 <?php require "misc/header.php"; ?>
 
-<title> <?php echo $_REQUEST["q"]; ?> - LibreX</title>
+<title>
+<?php
+  $query = htmlspecialchars(trim($_REQUEST["q"]));
+  echo $query;
+?> - LibreX</title>
 </head>
     <body>
         <form class="sub-search-container" method="get" autocomplete="off">
@@ -8,7 +12,6 @@
             <a href="./"><img class="logo" src="static/images/librex.png" alt="librex logo"></a>
             <input type="text" name="q"
                 <?php
-                    $query = htmlspecialchars(trim($_REQUEST["q"]));
                     $query_encoded = urlencode($query);
 
                     if (1 > strlen($query) || strlen($query) > 256)
@@ -46,7 +49,7 @@
             switch ($type)
             {
                 case 0:
-                    if (substr($query, 0, 1) == "!")
+                    if (substr($query, 0, 1) == "!" || substr(end(explode(" ", $query)), 0, 1) == "!")
                         check_ddg_bang($query);
                     require "engines/google/text.php";
                     $results = get_text_results($query, $page);
@@ -62,8 +65,8 @@
                     break;
 
                 case 2:
-                    require "engines/google/video.php";
-                    $results = get_video_results($query_encoded, $page);
+                    require "engines/brave/video.php";
+                    $results = get_video_results($query_encoded);
                     print_elapsed_time($start_time);
                     print_video_results($results);
                     break;
@@ -91,7 +94,7 @@
             }
 
 
-            if ($type != 3)
+            if (2 > $type)
             {
                 echo "<div class=\"next-page-button-wrapper\">";
 

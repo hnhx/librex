@@ -19,13 +19,13 @@
 | [search.funami.tech](https://search.funami.tech/) | ❌ | ❌ | 🇰🇷 KR |
 | [librex.catalyst.sx](https://librex.catalyst.sx/) | ❌ | ❌ | 🇺🇸 US |
 | [search.madreyk.xyz](https://search.madreyk.xyz/) | ❌ | ❌ | 🇩🇪 DE |
-| ❌ | [✅](http://librex.so2mpiyfo4cje7bof5v52y3cvjyo2haxpqfvut4sr6gj2ul4mddx2jid.onion/) | ❌ | ??? | 
+| ❌ | [✅](http://librex.so2mpiyfo4cje7bof5v52y3cvjyo2haxpqfvut4sr6gj2ul4mddx2jid.onion/) | ❌ | ??? |
 
 <br>
 
 ### About LibreX
 
-LibreX gives you results from Google, Qwant and popular torrent sites without spying on you.
+LibreX gives you results from Google, Brave, Qwant and popular torrent sites without spying on you.
 <br>
 <br>
 If you would like to learn more about LibreX check out the [Wiki](https://github.com/hnhx/librex/wiki).
@@ -33,7 +33,7 @@ If you would like to learn more about LibreX check out the [Wiki](https://github
 <br>
 
 ### Mirror
-In case GitHub would remove LibreX, you can access the source code via this git mirror
+You can access the source code via this git mirror
 ```
 git clone https://git.beparanoid.de/librex
 ```
