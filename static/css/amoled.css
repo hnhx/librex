@@ -1,0 +1,24 @@
+:root {
+    --main-bg: #000000;
+    --main-fg: #F1F3F4;
+
+    --result-link-fg: #8AB4F8;
+    --result-fg: #BABCBE;
+
+    --button-bg: #141414;
+
+    --special-result-border: opacity: 0;
+    --special-text-background: #080808;
+    --special-text-color: #F1F3F4;
+
+    --search-container-text-color: #F1F3F4;
+    --search-container-background-color: #141414;
+    --search-container-background-border: #202124;
+
+    --search-form-background-color: #080808;
+
+    --border: #202124;
+
+    --footer-fg: #BABCBE;
+    --footer-bg: #080808;
+}
