@@ -8,7 +8,7 @@
     </head>
     <body>
         <div class="misc-container">
-              <h1>Donate</h1>
+              <h1>Donate to the developer</h1>
                <h3>Bitcoin (BTC):</h3>
                <p>bc1qs43kh6tvhch02dtsp7x7hcrwj8fwe4rzy7lp0h</p>
                <img src="static/images/btc.png" alt="btc qr code" width="150" height="150"/>

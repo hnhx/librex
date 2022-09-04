@@ -53,7 +53,7 @@
                 echo "<a href=\"$url\">";
                 echo "$base_url";
                 echo "<h2>$title</h2>";
-                echo "<img src=\"image_proxy.php?url=$thumbnail\">";
+                echo "<img class=\"video-img\" src=\"image_proxy.php?url=$thumbnail\">";
                 echo "<br>";
                 echo "<span>$date - $views</span>";
                 echo "</a>";
