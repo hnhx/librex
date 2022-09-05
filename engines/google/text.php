@@ -7,7 +7,9 @@
          $query_lower = strtolower($query);
          $split_query = explode(" ", $query);
 
-         if (strpos($query_lower, "to") && count($split_query) >= 4) // currency
+         if (preg_match('~^[0-9\,\.\s()+\-*\/]+$~', $query)) // calculator
+            return 4;
+         else if (strpos($query_lower, "to") && count($split_query) >= 4) // currency
          {
             $amount_to_convert = floatval($split_query[0]);
             if ($amount_to_convert != 0)
@@ -86,6 +88,10 @@
                     require "engines/special/wikipedia.php";
                     $special_result = wikipedia_results($query, curl_multi_getcontent($special_ch));
                     break;
+                case 4:
+                    require "engines/special/calculator.php";
+                    $special_result = calculator_results($query, curl_multi_getcontent($special_ch));
+                    break;
             }
 
             if ($special_result != null)
@@ -145,7 +151,10 @@
                 echo "<img src=\"image_proxy.php?url=$image_url\">";
             }
             echo $response;
-            echo "<a href=\"$source\" target=\"_blank\">$source</a>";
+            if ($source != "")
+            {
+                echo "<a href=\"$source\" target=\"_blank\">$source</a>";
+            }
             echo "</p>";
 
             array_shift($results);
