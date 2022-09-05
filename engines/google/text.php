@@ -90,7 +90,7 @@
                     break;
                 case 4:
                     require "engines/special/calculator.php";
-                    $special_result = calculator_results($query, curl_multi_getcontent($special_ch));
+                    $special_result = calculator_results($query);
                     break;
             }
 
