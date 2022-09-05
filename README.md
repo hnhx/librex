@@ -1,8 +1,8 @@
 <h1 align="center">LibreX</h1>
 
 <p float="left">
-  <img src="https://user-images.githubusercontent.com/49120638/164421187-2730b9d5-d5b9-4606-b6b9-145b11cfdb55.png" width="400">
-  <img src="https://user-images.githubusercontent.com/49120638/164421606-3a315cca-d44a-4efe-863d-5771661e66e3.png" width="400">
+  <img src="https://user-images.githubusercontent.com/49120638/188424011-f75eb4f6-72ad-4f9b-9344-d169076426e8.png" width="400">
+  <img src="https://user-images.githubusercontent.com/49120638/188424232-a60bdf68-09c1-47f1-affc-fa9deab38277.png" width="400">
 </p>
 
 <p align="center">A privacy respecting free as in freedom meta search engine</p>
@@ -29,15 +29,13 @@ LibreX gives you results from Google, Brave, Qwant and popular torrent sites wit
 <br>
 <br>
 If you would like to learn more about LibreX check out the [Wiki](https://github.com/hnhx/librex/wiki).
-
 <br>
-
 ### Mirror
+
 You can access the source code via this git mirror
 ```
 git clone https://git.beparanoid.de/librex
 ```
-
 ### LibreX compared to other metasearch engines
 
 | Metasearch engine |  Works without JS | Privacy frontend redirect | Torrent results |
