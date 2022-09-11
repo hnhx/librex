@@ -34,8 +34,8 @@
             $results = get_image_results($query_encoded, $page);
             break;
         case 2:
-            require "engines/google/video.php";
-            $results = get_video_results($query_encoded, $page);
+            require "engines/brave/video.php";
+            $results = get_video_results($query_encoded);
             break;
         case 3:
             if ($config->disable_bittorent_search)
