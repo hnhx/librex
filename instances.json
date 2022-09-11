@@ -37,6 +37,12 @@
               "country": "DE"
           },
           {
+              "clearnet": "https://search.pabloferreiro.es/",
+              "tor": null,
+              "i2p": null,
+              "country": "DE"
+          },
+          {
               "clearnet": null,
               "tor": "http://librex.so2mpiyfo4cje7bof5v52y3cvjyo2haxpqfvut4sr6gj2ul4mddx2jid.onion/",
               "i2p": null,
