@@ -51,6 +51,7 @@
                     if (substr($query, 0, 1) == "!" || substr(end(explode(" ", $query)), 0, 1) == "!")
                         check_ddg_bang($query);
                     require "engines/google/text.php";
+                    echo '<style>button[value*="0"] {color: var(--result-link-fg);}</style>"';
                     $results = get_text_results($query, $page);
                     print_elapsed_time($start_time);
                     print_text_results($results);
@@ -61,6 +62,7 @@
                     $results = get_image_results($query_encoded, $page);
                     print_elapsed_time($start_time);
                     print_image_results($results);
+                    echo '<style>button[value*="1"] {color: var(--result-link-fg);}</style>"';
                     break;
 
                 case 2:
@@ -68,6 +70,7 @@
                     $results = get_video_results($query_encoded);
                     print_elapsed_time($start_time);
                     print_video_results($results);
+                    echo '<style>button[value*="2"] {color: var(--result-link-fg);}</style>"';
                     break;
 
                 case 3:
@@ -81,7 +84,7 @@
                         print_merged_torrent_results($results);
                         break;
                     }
-
+                    echo '<style>button[value*="3"] {color: var(--result-link-fg);}</style>"';
                     break;
 
                 default:
@@ -91,7 +94,6 @@
                     print_elapsed_time($start_time);
                     break;
             }
-
 
             if (2 > $type)
             {
