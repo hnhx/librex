@@ -51,10 +51,10 @@
                     if (substr($query, 0, 1) == "!" || substr(end(explode(" ", $query)), 0, 1) == "!")
                         check_ddg_bang($query);
                     require "engines/google/text.php";
-                    echo '<style>button[value*="0"] {color: var(--result-link-fg);}</style>';
                     $results = get_text_results($query, $page);
                     print_elapsed_time($start_time);
                     print_text_results($results);
+                    echo '<style>button[value*="0"] {color: var(--result-link-fg);}</style>';
                     break;
 
                 case 1:
@@ -82,9 +82,10 @@
                         $results = get_merged_torrent_results($query_encoded);
                         print_elapsed_time($start_time);
                         print_merged_torrent_results($results);
+                        echo '<style>button[value*="3"] {color: var(--result-link-fg);}</style>';
                         break;
                     }
-                    echo '<style>button[value*="3"] {color: var(--result-link-fg);}</style>';
+
                     break;
 
                 default:
@@ -94,6 +95,7 @@
                     print_elapsed_time($start_time);
                     break;
             }
+
 
             if (2 > $type)
             {
