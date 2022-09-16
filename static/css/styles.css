@@ -97,7 +97,7 @@ a:hover,
 .logomobile {
     position: absolute;
     margin-top: 0px;
-    top: 20px;
+    top: 25px;
     left: 20px;
 }
 
@@ -209,7 +209,7 @@ a:hover,
 .text-result-wrapper {
     max-width: 550px;
     word-wrap: break-word;
-    margin-top: 25px;
+    margin-bottom: 35px;
 }
 
 .text-result-wrapper a {

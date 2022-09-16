@@ -21,5 +21,6 @@
 
     --footer-fg: #8b949e;
     --footer-bg: #161b22;
-    /* GitHub's Border Colours: #444c56 */
+
+    color-scheme: dark;
 }
