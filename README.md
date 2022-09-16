@@ -39,8 +39,8 @@ git clone https://git.beparanoid.de/librex
 ```
 ### LibreX compared to other metasearch engines
 
-| Metasearch engine |  Works without JS | Privacy frontend redirect | Torrent results |
-|-|-|-|-|
-| LibreX | ✅ | ✅ | ✅ |
-| SearXNG | ✅ | ❓ Only host can set it | ✅ |
-| Whoogle | ✅ | ❓ Only host can set it | ❌ |
+| Metasearch engine |  Works without JS | Privacy frontend redirect | Torrent results | API |
+|-|-|-|-|-|
+| LibreX | ✅ | ✅ | ✅ | ✅ |
+| SearXNG | ❓ Not user friendly | ❓ Only host can set it | ✅ | ✅ |
+| Whoogle | ✅ | ❓ Only host can set it | ❌ | ❌ |

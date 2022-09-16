@@ -15,30 +15,17 @@
                             }
                     }
                     
-                } 
-                
-                function better_setcookie($name)
-                {
-                    if (!empty($_REQUEST[$name]))
-                    {
-                        setcookie($name, $_REQUEST[$name], time() + (86400 * 90), '/');
-                        $_COOKIE[$name] = $_REQUEST[$name];
-                    }
-                }
-                
+                }        
+
                 if (isset($_REQUEST["save"]))
                 {
-                
-                    better_setcookie("theme");
-                    
-                    better_setcookie("disable_special");
-
-                    better_setcookie("invidious");
-                    better_setcookie("bibliogram");
-                    better_setcookie("nitter");
-                    better_setcookie("libreddit");
-                    better_setcookie("proxitok");
-                    better_setcookie("wikiless");
+                    foreach($_POST as $key=>$value){
+                        if (!empty($value))
+                        {
+                            setcookie($key, $value, time() + (86400 * 90), '/');
+                            $_COOKIE[$name] = $value;
+                        }
+                    }
                 }
                
                 if (isset($_REQUEST["save"]) || isset($_REQUEST["reset"]))
@@ -128,6 +115,10 @@
                             <?php echo isset($_COOKIE["wikiless"]) ? htmlspecialchars($_COOKIE["wikiless"])  : "\"$config->wikiless\""; ?>
                         >
                       </div>
+                </div>
+                <div>
+                    <label>Disable frontends</label>
+                    <input type="checkbox" name="disable_frontends" <?php echo isset($_COOKIE["disable_frontends"]) ? "checked"  : ""; ?> >
                 </div>
                 <div>
                   <button type="submit" name="save" value="1">Save</button>

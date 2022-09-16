@@ -11,7 +11,9 @@
     $base_url_main_split = explode(".", strrev($base_url));
     $base_url_main = strrev($base_url_main_split[1]) . "." . strrev($base_url_main_split[0]);
 
-    if ($base_url_main == "qwant.com" || $base_url_main == "wikimedia.org" || $base_url_main == "brave.com")
+    $allowed_domains = array("qwant.com", "wikimedia.org", "brave.com");
+
+    if (in_array($base_url_main, $allowed_domains))
     {
       $image = $url;
       $image_src = request($image);

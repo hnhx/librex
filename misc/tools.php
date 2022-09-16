@@ -25,6 +25,9 @@
                     $frontend .= "/u";
             }
 
+            if (empty(trim($frontend)))
+                return $url;
+
             $url =  $frontend . explode($original, $url)[1];
 
             return $url;
@@ -35,6 +38,9 @@
 
     function check_for_privacy_frontend($url)
     {
+        if (isset($_COOKIE["disable_frontends"]))
+            return $url;
+
         $frontends = array(
             "youtube.com" => "invidious",
             "instagram.com" => "bibliogram",

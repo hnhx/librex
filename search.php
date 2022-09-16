@@ -8,7 +8,7 @@
 </head>
     <body>
         <form class="sub-search-container" method="get" autocomplete="off">
-            <h1 class="logomobile"><a class="noDecoration" href="./">Libre<span class="X">X</span></a></h1>
+            <h1 class="logomobile"><a class="no-decoration" href="./">Libre<span class="X">X</span></a></h1>
             <input type="text" name="q"
                 <?php
                     $query_encoded = urlencode($query);
@@ -48,7 +48,9 @@
             switch ($type)
             {
                 case 0:
-                    if (substr($query, 0, 1) == "!" || substr(end(explode(" ", $query)), 0, 1) == "!")
+                    $query_parts = explode(" ", $query);
+                    $last_word_query = end($query_parts);
+                    if (substr($query, 0, 1) == "!" || substr($last_word_query, 0, 1) == "!")
                         check_ddg_bang($query);
                     require "engines/google/text.php";
                     $results = get_text_results($query, $page);
