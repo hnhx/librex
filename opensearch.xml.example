@@ -5,9 +5,6 @@
   <InputEncoding>UTF-8</InputEncoding>
   <LongName>LibreX search</LongName>
   <Url rel="results" type="text/html" method="get" template="http://localhost/search.php?q={searchTerms}" />
-
-  <Url rel="suggestions" type="application/x-suggestions+json" method="get" template="http://localhost/suggestions.php?q={searchTerms}" />
-
   <Url type="application/opensearchdescription+xml"
       rel="self"
       template="/opensearch.xml?method=POST" />
