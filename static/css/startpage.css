@@ -1,0 +1,26 @@
+:root {
+    --main-bg: #171b25;
+    --main-fg: #e8eaed;
+
+    --result-link-fg: #a7b1fc;
+    --result-fg: #ebecf7;
+
+    --button-bg: #0c0d0f;
+
+    --special-result-border: #3a445c;
+    --special-text-background: #1e222d;
+    --special-text-color: #e8eaed;
+
+    --search-container-text-color: #ebecf7;
+    --search-container-background-color: #2e3443;
+    --search-container-background-border: #2e3443;
+
+    --search-form-background-color: #0c0d0f;
+    
+    --border: #0c0d0f;
+
+    --footer-fg: #999da2;
+    --footer-bg: #0c0d0f;
+    
+    color-scheme: dark;
+}
