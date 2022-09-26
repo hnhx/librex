@@ -1,6 +1,6 @@
 <?php
 
-    $thepiratebay_url = "https://apibay.org/q.php?q=$query";
+    $thepiratebay_url = "https://apibay.org/q.php?q=" . urlencode($query);
 
     function get_thepiratebay_results($response)
     {
