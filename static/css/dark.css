@@ -1,19 +1,19 @@
 :root {
     --main-bg: #1c1c1c;
-    --main-fg: #e8eaed;
+    --main-fg: #F1F3F4;
 
-    --result-link-fg: #8ab4f8;
+    --result-link-fg: #8AB4F8;
     --result-fg: #999da2;
 
     --button-bg: #333333;
 
     --special-result-border: opacity: 0;
     --special-text-background: #282828;
-    --special-text-color: #cccccc;
+    --special-text-color: #F1F3F4;
 
-    --search-container-text-color: #e8eaed;
+    --search-container-text-color: #F1F3F4;
     --search-container-background-color: #333333;
-    --search-container-background-border: #5f6368;
+    --search-container-background-border: #3C4043;
 
     --search-form-background-color: #161616;
     
