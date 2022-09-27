@@ -16,11 +16,11 @@
 | [librex.beparanoid.de](https://librex.beparanoid.de/) | [✅](http://librex.2356uhnbpv5nk3bni5bv6jg2cd6lgj664kwx3lhyelstpttpyv4kk2qd.onion/) | ❌ | 🇭🇺 HU (OFFICIAL INSTANCE) |
 | [librex.extravi.dev](https://librex.extravi.dev/) | [✅](http://ncblhz7q4sfbf755bdbhebfzxcpypz7ewafgi4agatecojz7pln4i3id.onion/) | [✅](http://rra33hiaf6nmby7jfpqe2gqmng3jnzkvbu2n7jgce7vbhoyuhzya.b32.i2p/) | 🇩🇪 DE |
 | [search.davidovski.xyz](https://search.davidovski.xyz/) | ❌ | ❌ | 🇬🇧 UK |
+| [librex.kitscomputer.tk](https://librex.kitscomputer.tk/) | ❌ | ❌ | 🇺🇸 US |
 | [search.funami.tech](https://search.funami.tech/) | ❌ | ❌ | 🇰🇷 KR |
 | [librex.catalyst.sx](https://librex.catalyst.sx/) | ❌ | ❌ | 🇺🇸 US |
 | [search.madreyk.xyz](https://search.madreyk.xyz/) | ❌ | ❌ | 🇩🇪 DE |
 | [search.pabloferreiro.es](https://search.pabloferreiro.es/) | ❌ | ❌ | 🇩🇪 DE |
-| ❌ | [✅](http://librex.so2mpiyfo4cje7bof5v52y3cvjyo2haxpqfvut4sr6gj2ul4mddx2jid.onion/) | ❌ | ??? |
 
 <br>
 
