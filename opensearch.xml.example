@@ -4,10 +4,7 @@
   <Description>A meta search engine for Google.</Description>
   <InputEncoding>UTF-8</InputEncoding>
   <LongName>LibreX search</LongName>
-    <Url rel="results" type="text/html" method="post" template="http://localhost/search.php">
-        <Param name="q" value="{searchTerms}" />
-    </Url>
-
+  <Url rel="results" type="text/html" method="get" template="http://localhost/search.php?q={searchTerms}" />
   <Url type="application/opensearchdescription+xml"
       rel="self"
       template="/opensearch.xml?method=POST" />
