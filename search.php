@@ -35,7 +35,6 @@
                 <button name="type" value="2"><img src="static/images/video_result.png" alt="video result" />Videos</button>
                 <button name="type" value="3"><img src="static/images/torrent_result.png" alt="torrent result" />Torrents</button>
             </div>
-        <hr>
         </form>
 
         <?php
