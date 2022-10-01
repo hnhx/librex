@@ -21,6 +21,7 @@
 | [librex.catalyst.sx](https://librex.catalyst.sx/) | ❌ | ❌ | 🇺🇸 US |
 | [search.madreyk.xyz](https://search.madreyk.xyz/) | ❌ | ❌ | 🇩🇪 DE |
 | [search.pabloferreiro.es](https://search.pabloferreiro.es/) | ❌ | ❌ | 🇩🇪 DE |
+| [lx.vern.cc](https://lx.vern.cc/) | [✅](http://lx.vernccvbvyi5qhfzyqengccj7lkove6bjot2xhh5kajhwvidqafczrad.onion/) | [✅](http://vernziqfqvweijfaacmwazohgpdo2bt2ib2jlupt2pwwu27bhgxq.b32.i2p/) | 🇨🇦 CA |
 
 <br>
 
