@@ -2,7 +2,7 @@ html {
     color: var(--main-fg);
     background-color: var(--main-bg);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 body {
@@ -19,7 +19,7 @@ button {
 }
 
 p {
-    font-size: 18px;
+    font-size: 17px;
     color: var(--result-fg);
 }
 
@@ -54,7 +54,7 @@ a:hover,
     color: var(--search-container-text-color);
     background-color: var(--search-container-background-color);
     padding: 10px;
-    font-size: inherit;
+    font-size: 16px;
     font-family: sans-serif;
     border: 1px solid var(--search-container-background-border);
     border-radius: 25px;
@@ -99,6 +99,7 @@ a:hover,
     margin-top: 0px;
     top: 25px;
     left: 20px;
+    font-size: 32px;
 }
 
 .no-decoration {
@@ -112,6 +113,7 @@ a:hover,
 
 .sub-search-button-wrapper {
     margin-left: 165px;
+    margin-bottom: 16px;
 }
 
 .search-button-wrapper button:hover,
@@ -216,7 +218,7 @@ a:hover,
 }
 
 .text-result-wrapper h2 {
-    font-size: 20px;
+    font-size: 19px;
     color: var(--result-link-fg);
     padding-top: 5px;
     margin-top: 1px;
@@ -320,12 +322,31 @@ a:hover,
     color: #ff79c6;
 }
 
+@media only screen and (max-width: 1400px) {
+    .special-result-container {
+        min-width: 250px;
+        max-width: 400px;
+    }
+}
+
 @media only screen and (max-width: 1320px) {
     .special-result-container {
         position: relative;
         float: none;
         margin-left: 165px;
+        max-width: 100%;
     }
+}
+
+.featured {
+    padding: 10px;
+    border: 1px solid var(--special-result-border);
+    width: 500px;
+    border-radius: 8px;
+    background: var(--special-text-background);
+    color: var(--special-text-color);
+    margin-left: 165px;
+    margin-top: 0px;
 }
 
 /* mobile view */
@@ -400,6 +421,7 @@ a:hover,
         position: relative;
         left: 0px;
         margin-top: 0px;
+        font-size: 14px;
     }
 
     .sub-search-button-wrapper {
@@ -407,6 +429,7 @@ a:hover,
         padding: 0;
         display: flex;
         align-items: baseline;
+        margin-bottom: 16px;
     }
 
     .sub-search-button-wrapper img {
@@ -423,7 +446,8 @@ a:hover,
         align-items: center;
     }
 
-    .special-result-container {
+    .special-result-container,
+    .featured {
         position: relative;
         float: none;
         max-width: 90%;
