@@ -13,12 +13,6 @@
               "country": "DE"
           },
           {
-              "clearnet": "https://search.davidovski.xyz/",
-              "tor": null,
-              "i2p": null,
-              "country": "UK"
-          },
-          {
               "clearnet": "https://librex.kitscomputer.tk/",
               "tor": null,
               "i2p": null,
