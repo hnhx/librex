@@ -141,9 +141,16 @@
     function print_next_page_button($text, $page, $query, $type)
     {
         echo "<form class=\"page\" action=\"search.php\" target=\"_top\" method=\"get\" autocomplete=\"off\">";
+        foreach($_REQUEST as $key=>$value)
+        {
+            if ($key != "q" && $key != "p" && $key != "t")
+            {
+                echo "<input type=\"hidden\" name=\"$key\" value=\"$value\"/>";
+            }
+        }
         echo "<input type=\"hidden\" name=\"p\" value=\"" . $page . "\" />";
         echo "<input type=\"hidden\" name=\"q\" value=\"$query\" />";
-        echo "<input type=\"hidden\" name=\"type\" value=\"$type\" />";
+        echo "<input type=\"hidden\" name=\"t\" value=\"$type\" />";
         echo "<button type=\"submit\">$text</button>";
         echo "</form>";
     }

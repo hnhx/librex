@@ -12,5 +12,5 @@
                 if (isset($_COOKIE["theme"]) || isset($_REQUEST["theme"]))
                     echo htmlspecialchars((isset($_COOKIE["theme"]) ? $_COOKIE["theme"] : $_REQUEST["theme"]) . ".css");
                 else
-                echo "dark.css";
+                    echo "dark.css";
         ?>"/>
