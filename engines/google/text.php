@@ -14,9 +14,24 @@
                 return 1;
          }
          else if (strpos($query_lower, "mean") && count($split_query) >= 2) // definition
+         {
              return 2;
+         }
+         else if (strpos($query_lower, "my") !== false)
+         {
+            if (strpos($query_lower, "ip"))
+            {
+                return 4;
+            }
+            else if (strpos($query_lower, "user agent") || strpos($query_lower, "ua"))
+            {
+                return 5;
+            }
+         }
          else if (3 > count(explode(" ", $query))) // wikipedia
+         {
              return 3;
+         }     
 
         return 0;
      }
@@ -68,6 +83,7 @@
             curl_multi_exec($mh, $running);
         } while ($running);
 
+
         if ($special_search != 0)
         {
             $special_result = null;
@@ -85,6 +101,14 @@
                 case 3:
                     require "engines/special/wikipedia.php";
                     $special_result = wikipedia_results($query, curl_multi_getcontent($special_ch));
+                    break;
+                case 4:
+                    require "engines/special/ip.php";
+                    $special_result = ip_result();
+                    break;
+                case 5:
+                    require "engines/special/user_agent.php";
+                    $special_result = user_agent_result();
                     break;
             }
 
@@ -147,7 +171,8 @@
                 echo "<img src=\"image_proxy.php?url=$image_url\">";
             }
             echo $response;
-            echo "<a href=\"$source\" target=\"_blank\">$source</a>";
+            if ($source)
+                echo "<a href=\"$source\" target=\"_blank\">$source</a>";
             echo "</p>";
 
             array_shift($results);
