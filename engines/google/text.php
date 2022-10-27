@@ -178,9 +178,9 @@
             array_shift($results);
         }
 
-        if ($results[0]["featured"] != null) {
+        if ($special["featured"] != null) {
                 echo "<p class=\"featured\">";
-                $featured = $results[0]["featured"];
+                $featured = $special["featured"];
                 echo $featured;
                 echo "</p>";
         }
