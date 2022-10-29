@@ -31,6 +31,9 @@
                         echo "<input type=\"hidden\" name=\"$key\" value=\"$value\"/>";
                     }
                 }
+
+                $type = isset($_REQUEST["t"]) ? (int) $_REQUEST["t"] : 0;
+                echo "<button class=\"hide\" name=\"t\" value=\"$type\"/></button>";
             ?>
             <button type="submit" class="hide"></button>
             <input type="hidden" name="p" value="0">
@@ -47,7 +50,7 @@
             $config = require "config.php";
             require "misc/tools.php";
 
-            $type = isset($_REQUEST["t"]) ? (int) $_REQUEST["t"] : 0;
+
             $page = isset($_REQUEST["p"]) ? (int) $_REQUEST["p"] : 0;
 
             $start_time = microtime(true);

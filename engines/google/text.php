@@ -21,17 +21,25 @@
          {
             if (strpos($query_lower, "ip"))
             {
-                return 4;
+                return 3;
             }
             else if (strpos($query_lower, "user agent") || strpos($query_lower, "ua"))
             {
-                return 5;
+                return 4;
             }
+         }
+         else if (strpos($query_lower, "weather") !== false)
+         {
+                return 5;
+         }
+         else if (strpos($query_lower, "tor") !== false)
+         {
+                return 6;
          }
          else if (3 > count(explode(" ", $query))) // wikipedia
          {
-             return 3;
-         }     
+             return 7;
+         }
 
         return 0;
      }
@@ -67,7 +75,13 @@
                     $word_to_define = $reversed_split_q[1];
                     $url = "https://api.dictionaryapi.dev/api/v2/entries/en/$word_to_define";
                     break;
-                case 3:
+                case 5:
+                    $url = "https://wttr.in/@" . $_SERVER["REMOTE_ADDR"] . "?format=j1";
+                    break;
+                case 6:
+                    $url = "https://check.torproject.org/torbulkexitlist";
+                    break;
+                case 7:
                     $url = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cpageimages&exintro&explaintext&redirects=1&pithumbsize=500&titles=$query_encoded";
                     break;
             }
@@ -98,17 +112,26 @@
                     require "engines/special/definition.php";
                     $special_result = definition_results($query, curl_multi_getcontent($special_ch));
                     break;
+
                 case 3:
-                    require "engines/special/wikipedia.php";
-                    $special_result = wikipedia_results($query, curl_multi_getcontent($special_ch));
-                    break;
-                case 4:
                     require "engines/special/ip.php";
                     $special_result = ip_result();
                     break;
-                case 5:
+                case 4:
                     require "engines/special/user_agent.php";
                     $special_result = user_agent_result();
+                    break;
+                case 5:
+                    require "engines/special/weather.php";
+                    $special_result = weather_results(curl_multi_getcontent($special_ch));
+                    break;
+                case 6:
+                    require "engines/special/tor.php";
+                    $special_result = tor_result(curl_multi_getcontent($special_ch));
+                    break;
+                case 7:
+                    require "engines/special/wikipedia.php";
+                    $special_result = wikipedia_results($query, curl_multi_getcontent($special_ch));
                     break;
             }
 
@@ -175,7 +198,7 @@
 
             array_shift($results);
         }
-        
+
         echo "<div class=\"text-result-container\">";
 
         foreach($results as $result)
