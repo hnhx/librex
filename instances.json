@@ -47,6 +47,12 @@
               "tor": null,
               "i2p": null,
               "country": "NL"
+          },
+          {
+              "clearnet": "https://linxer.org/search/",
+              "tor": null,
+              "i2p": null,
+              "country": "RO"
           }
     ]
 }
