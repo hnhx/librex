@@ -11,7 +11,7 @@ $base_url = $split_url[2];
 $base_url_main_split = explode(".", strrev($base_url));
 $base_url_main = strrev($base_url_main_split[1]) . "." . strrev($base_url_main_split[0]);
 
-$allowed_domains = array("qwant.com", "wikimedia.org", "brave.com", "startpage.com", "startmail.com", "protonmail.com");
+$allowed_domains = array("qwant.com", "wikimedia.org", "brave.com", "startpage.com", "startmail.com", "protonmail.com", "proton.me");
 
 if (in_array($base_url_main, $allowed_domains)) {
     $image = $url;
