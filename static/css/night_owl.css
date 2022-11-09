@@ -7,17 +7,17 @@
 
     --button-bg: #122d42;
 
-    --special-result-border: opacity: 0;
+    --special-result-border: opacity 0;
     --special-text-background: #122d42;
     --special-text-color: #d6deeb;
 
     --search-container-text-color: #d6deeb;
     --search-container-background-color:  #535470;
-    --search-container-background-border: opacity: 0;
+    --search-container-background-border: opacity 0;
 
     --search-form-background-color: #122d42;
 
-    --border: opacity: 0;
+    --border: opacity 0;
 
     --footer-fg: #d6deeb;
     --footer-bg: #535470;
