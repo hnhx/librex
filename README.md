@@ -24,6 +24,7 @@
 | [search.pabloferreiro.es](https://search.pabloferreiro.es/) | ❌ | ❌ | 🇩🇪 DE |
 | [buscar.weblibre.org](https://buscar.weblibre.org/) | ❌ | ❌ | 🇨🇱 CL |
 | [search.ahwx.org](https://search.ahwx.org/) | ❌ | ❌ | 🇳🇱 NL |
+| [pufe.org](https://pufe.org/) | ❌ | ❌ | :new_zealand: NZ |
 
 <br>
 
