@@ -53,6 +53,12 @@
               "tor": null,
               "i2p": null,
               "country": "RO"
+          },
+          {
+              "clearnet": "https://pufe.org/",
+              "tor": null,
+              "i2p": null,
+              "country": "NZ"
           }
     ]
 }
