@@ -49,10 +49,10 @@
               "country": "NL"
           },
           {
-              "clearnet": "https://linxer.org/search/",
+              "clearnet": "https://linxer.org/",
               "tor": null,
               "i2p": null,
-              "country": "RO"
+              "country": "DYN"
           },
           {
               "clearnet": "https://pufe.org/",
