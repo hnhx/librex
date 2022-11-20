@@ -1,55 +1,9 @@
 <?php
-     function check_for_special_search($query)
-     {
-        if (isset($_COOKIE["disable_special"]) || isset($_REQUEST["disable_special"]))
-            return 0;
-
-         $query_lower = strtolower($query);
-         $split_query = explode(" ", $query);
-
-         if (strpos($query_lower, "to") && count($split_query) >= 4) // currency
-         {
-            $amount_to_convert = floatval($split_query[0]);
-            if ($amount_to_convert != 0)
-                return 1;
-         }
-         else if (strpos($query_lower, "mean") && count($split_query) >= 2) // definition
-         {
-             return 2;
-         }
-         else if (strpos($query_lower, "my") !== false)
-         {
-            if (strpos($query_lower, "ip"))
-            {
-                return 3;
-            }
-            else if (strpos($query_lower, "user agent") || strpos($query_lower, "ua"))
-            {
-                return 4;
-            }
-         }
-         else if (strpos($query_lower, "weather") !== false)
-         {
-                return 5;
-         }
-         else if (strpos($query_lower, "tor") !== false)
-         {
-                return 6;
-         }
-         else if (3 > count(explode(" ", $query))) // wikipedia
-         {
-             return 7;
-         }
-
-        return 0;
-     }
-
-    function get_text_results($query, $page=0)
+    function get_text_results($query, $page)
     {
         global $config;
 
         $mh = curl_multi_init();
-        $query_lower = strtolower($query);
         $query_encoded = urlencode($query);
         $results = array();
 
@@ -58,8 +12,7 @@
         curl_setopt_array($google_ch, $config->curl_settings);
         curl_multi_add_handle($mh, $google_ch);
 
-
-        $special_search = $page == 0 ? check_for_special_search($query) : 0;
+        $special_search = check_for_special_search($query);
         $special_ch = null;
         $url = null;
         if ($special_search != 0)
@@ -85,12 +38,14 @@
                     $url = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cpageimages&exintro&explaintext&redirects=1&pithumbsize=500&titles=$query_encoded";
                     break;
             }
-
-            $special_ch = curl_init($url);
-            curl_setopt_array($special_ch, $config->curl_settings);
-            curl_multi_add_handle($mh, $special_ch);
+            
+            if ($url != NULL)
+            {
+                $special_ch = curl_init($url);
+                curl_setopt_array($special_ch, $config->curl_settings);
+                curl_multi_add_handle($mh, $special_ch);
+            }
         }
-
 
         $running = null;
         do {

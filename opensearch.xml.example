@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
   <ShortName>LibreX</ShortName>
-  <Description>A meta search engine for Google.</Description>
+  <Description>A privacy respecting meta search engine.</Description>
   <InputEncoding>UTF-8</InputEncoding>
   <LongName>LibreX search</LongName>
   <Url rel="results" type="text/html" method="get" template="http://localhost/search.php?q={searchTerms}" />
