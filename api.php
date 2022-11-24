@@ -20,6 +20,7 @@
     $query_encoded = urlencode($query);
     $page = isset($_REQUEST["p"]) ? (int) $_REQUEST["p"] : 0;
     $type = isset($_REQUEST["t"]) ? (int) $_REQUEST["t"] : 0;
+    $time = isset($_REQUEST["tbs"]) ? $_REQUEST["tbs"] : "";
 
     $results = array();
 
@@ -27,7 +28,7 @@
     {
         case 0:
             require "engines/google/text.php";
-            $results = get_text_results($query, $page);
+            $results = get_text_results($query, $page, $time);
             break;
         case 1:
             require "engines/qwant/image.php";
@@ -57,7 +58,7 @@
             break;
         default:
             require "engines/google/text.php";
-            $results = get_text_results($query_encoded, $page);
+            $results = get_text_results($query_encoded, $page, $time);
             break;
     }
 

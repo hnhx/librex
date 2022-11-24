@@ -43,8 +43,31 @@
                 <button name="t" value="2"><img src="static/images/video_result.png" alt="video result" />Videos</button>
                 <button name="t" value="3"><img src="static/images/torrent_result.png" alt="torrent result" />Torrents</button>
                 <button name="t" value="4"><img src="static/images/hidden_service_result.png" alt="hidden service result" />Hidden services</button>
+                <select name="tbs" onchange="
+                    function updateQueryStringParameter(uri, key, value) {
+                        let re = new RegExp('([?&])' + key + '=.*?(&|$)', 'i');
+                        let separator = uri.indexOf('?') !== -1 ? '&' : '?';
+                        if (uri.match(re)) {
+                            return uri.replace(re, '$1' + key + '=' + value + '$2');
+                        } else {
+                            return uri + separator + key + '=' + value;
+                        }
+                    }
+                    window.location.href = updateQueryStringParameter(window.location.href, 'tbs', this.value);
+                ">
+                    <option value="a">Any time</option>
+                    <?php
+                    $arr = ["hour"=>"h", "day"=>"d", "week"=>"w", "month"=>"m", "year"=>"y"];
+                    foreach($arr as $key=>$value) {
+                        echo "<option value=\"".$value."\"";
+                        if (isset($_REQUEST["tbs"]) && $_REQUEST["tbs"] == $value)
+                            echo " selected=\"selected\"";
+                        echo ">"."Past ".$key."</option>";
+                    }
+                    ?>
+                </select>
             </div>
-        <hr>
+            <hr>
         </form>
 
         <?php
@@ -53,6 +76,7 @@
 
 
             $page = isset($_REQUEST["p"]) ? (int) $_REQUEST["p"] : 0;
+            $time = isset($_REQUEST["tbs"]) ? $_REQUEST["tbs"] : "";
 
             $start_time = microtime(true);
             switch ($type)
@@ -63,7 +87,7 @@
                     if (substr($query, 0, 1) == "!" || substr($last_word_query, 0, 1) == "!")
                         check_ddg_bang($query);
                     require "engines/google/text.php";
-                    $results = get_text_results($query, $page);
+                    $results = get_text_results($query, $page, $time);
                     print_elapsed_time($start_time);
                     print_text_results($results);
                     break;
@@ -108,7 +132,7 @@
 
                 default:
                     require "engines/google/text.php";
-                    $results = get_text_results($query_encoded, $page);
+                    $results = get_text_results($query_encoded, $page, $time);
                     print_text_results($results);
                     print_elapsed_time($start_time);
                     break;

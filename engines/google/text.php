@@ -1,5 +1,5 @@
 <?php
-    function get_text_results($query, $page)
+    function get_text_results($query, $page, $time)
     {
         global $config;
 
@@ -8,6 +8,9 @@
         $results = array();
 
         $url = "https://www.google.$config->google_domain/search?&q=$query_encoded&start=$page&hl=$config->google_language";
+        if ($time != "" && $time != "a") {
+            $url .= "&tbs=qdr:$time";
+        }
         $google_ch = curl_init($url);
         curl_setopt_array($google_ch, $config->curl_settings);
         curl_multi_add_handle($mh, $google_ch);
@@ -134,6 +137,11 @@
 
     function print_text_results($results)
     {
+
+        if ($results == null) {
+            echo "<div class=\"text-result-container\">no results found</div>";
+            die();
+        }
         $special = $results[0];
         if (array_key_exists("special_response", $special))
         {
@@ -162,7 +170,7 @@
             $url = $result["url"];
             $base_url = $result["base_url"];
             $description = $result["description"];
-
+            echo "\n";
             echo "<div class=\"text-result-wrapper\">";
             echo "<a href=\"$url\">";
             echo "$base_url";
@@ -170,6 +178,7 @@
             echo "</a>";
             echo "<span>$description</span>";
             echo "</div>";
+
         }
 
         echo "</div>";
