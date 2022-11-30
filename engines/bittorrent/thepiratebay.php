@@ -26,8 +26,8 @@
                 array (
                     "size" => htmlspecialchars($size),
                     "name" => htmlspecialchars($name),
-                    "seeders" => htmlspecialchars($seeders),
-                    "leechers" => htmlspecialchars($leechers),
+                    "seeders" => (int) htmlspecialchars($seeders),
+                    "leechers" => (int) htmlspecialchars($leechers),
                     "magnet" => htmlspecialchars($magnet),
                     "source" => "thepiratebay.org"
                 )
