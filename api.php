@@ -8,7 +8,7 @@
         <br/>
         <p>\"q\" is the keyword</p>
         <p>\"p\" is the result page (the first page is 0)</p>
-        <p>\"t\" is the search type (0=text, 1=image, 2=video, 3=torrent)</p>
+        <p>\"t\" is the search type (0=text, 1=image, 2=video, 3=torrent, 4=tor)</p>
         <br/>
         <p>The results are going to be in JSON format.</p>
         <p>The API supports both POST and GET requests.</p>";

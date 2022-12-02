@@ -119,6 +119,20 @@
                             <?php echo isset($_COOKIE["wikiless"]) ? htmlspecialchars($_COOKIE["wikiless"])  : "\"$config->wikiless\""; ?>
                         >
                       </div>
+
+                      <div>
+                        <a for="quetre" href="https://github.com/zyachel/quetre" target="_blank">Quetre</a>
+                        <input type="text" name="quetre" placeholder="Replace Quora" value=
+                            <?php echo isset($_COOKIE["quetre"]) ? htmlspecialchars($_COOKIE["quetre"])  : "\"$config->quetre\""; ?>
+                        >
+                      </div>
+
+                      <div>
+                        <a for="libremdb" href="https://github.com/zyachel/libremdb" target="_blank">Libremdb</a>
+                        <input type="text" name="libremdb" placeholder="Replace IMDb" value=
+                            <?php echo isset($_COOKIE["libremdb"]) ? htmlspecialchars($_COOKIE["libremdb"])  : "\"$config->libremdb\""; ?>
+                        >
+                      </div>
                 </div>
                 <div>
                     <label>Disable frontends</label>

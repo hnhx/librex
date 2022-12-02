@@ -23,9 +23,6 @@
 | [search.ahwx.org](https://search.ahwx.org/) | ❌ | ❌ | 🇳🇱 NL |
 | [pufe.org](https://pufe.org/) | ❌ | ❌ | :new_zealand: NZ |
 | [librex.kitscomputer.tk](https://librex.kitscomputer.tk/) | ❌ | ❌ | 🇺🇸 US |
-| [librex.smlan.dev](https://librex.smlan.dev/) | ❌ | ❌ | 🇭🇺 HU |
-| [linxer.org](https://linxer.org/search/) | ❌ | ❌ | 🏳️ DYN (FORK) |
-
 <br>
 
 ### About LibreX

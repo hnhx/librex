@@ -42,7 +42,7 @@
                 <button name="t" value="1"><img src="static/images/image_result.png" alt="image result" />Images</button>
                 <button name="t" value="2"><img src="static/images/video_result.png" alt="video result" />Videos</button>
                 <button name="t" value="3"><img src="static/images/torrent_result.png" alt="torrent result" />Torrents</button>
-                <button name="t" value="4"><img src="static/images/hidden_service_result.png" alt="hidden service result" />Hidden services</button>
+                <button name="t" value="4"><img src="static/images/tor_result.png" alt="tor result" />Tor</button>
             </div>
         <hr>
         </form>

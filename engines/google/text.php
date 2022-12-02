@@ -12,7 +12,7 @@
         curl_setopt_array($google_ch, $config->curl_settings);
         curl_multi_add_handle($mh, $google_ch);
 
-        $special_search = check_for_special_search($query);
+        $special_search = $page ? 0 : check_for_special_search($query);
         $special_ch = null;
         $url = null;
         if ($special_search != 0)

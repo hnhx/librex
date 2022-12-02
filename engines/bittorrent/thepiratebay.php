@@ -8,9 +8,13 @@
         $results = array();
         $json_response = json_decode($response, true);
 
+        if (empty($json_response))
+        {
+            return $results;
+        }
+
         foreach ($json_response as $response)
         {
-
             $size = human_filesize($response["size"]);
             $hash = $response["info_hash"]; 
             $name = $response["name"];

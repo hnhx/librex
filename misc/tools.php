@@ -47,7 +47,9 @@
             "twitter.com" => "nitter",
             "reddit.com" => "libreddit",
             "tiktok.com" => "proxitok",
-            "wikipedia.org" => "wikiless"
+            "wikipedia.org" => "wikiless",
+            "quora.com" => "quetre",
+            "imdb.com" => "libremdb"
         );
 
         foreach($frontends as $original => $frontend)

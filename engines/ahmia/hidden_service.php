@@ -17,7 +17,7 @@
 
             array_push($results,
                 array (
-                    "title" => htmlspecialchars($title),
+                    "title" => $title ? htmlspecialchars($title) : "No description provided",
                     "url" =>  htmlspecialchars($url),
                     "base_url" => htmlspecialchars(get_base_url($url)),
                     "description" => htmlspecialchars($description)

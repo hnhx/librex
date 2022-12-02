@@ -47,18 +47,6 @@
               "tor": null,
               "i2p": null,
               "country": "US"
-          },
-          {
-              "clearnet": "https://librex.smlan.dev/",
-              "tor": null,
-              "i2p": null,
-              "country": "HU"
-          },
-          {
-             "clearnet": "https://linxer.org/search/",
-             "tor": null,
-             "i2p": null,
-             "country": "DYN"
           }
     ]
 }
