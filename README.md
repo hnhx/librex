@@ -15,6 +15,7 @@
 |-|-|-|-|
 | [librex.beparanoid.de](https://librex.beparanoid.de/) | [✅](http://librex.2356uhnbpv5nk3bni5bv6jg2cd6lgj664kwx3lhyelstpttpyv4kk2qd.onion/) | ❌ | 🇭🇺 HU (OFFICIAL INSTANCE) |
 | [lx.vern.cc](https://lx.vern.cc/) | [✅](http://lx.vernccvbvyi5qhfzyqengccj7lkove6bjot2xhh5kajhwvidqafczrad.onion/) | [✅](http://vernziqfqvweijfaacmwazohgpdo2bt2ib2jlupt2pwwu27bhgxq.b32.i2p/) | 🇺🇸 US |
+| [librex.mikata.ru](https://librex.mikata.ru/) | [✅](http://f7ssz7l3biu4fugwctfpcx4txg5yq4gqhrt473ledsuc3ivtd3omniid.onion/) | ❌ | 🇺🇸 US |
 | [search.davidovski.xyz](https://search.davidovski.xyz/) | ❌ | ❌ | 🇬🇧 UK |
 | [search.funami.tech](https://search.funami.tech/) | ❌ | ❌ | 🇰🇷 KR |
 | [search.madreyk.xyz](https://search.madreyk.xyz/) | ❌ | ❌ | 🇩🇪 DE |
@@ -32,6 +33,7 @@ LibreX gives you results from Google, Brave, Qwant, Ahmia and popular torrent si
 <br>
 If you would like to learn more about LibreX check out the [Wiki](https://github.com/hnhx/librex/wiki).
 <br>
+
 ### Mirror
 
 You can access the source code via this git mirror
