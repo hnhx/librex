@@ -5,7 +5,7 @@
         <meta charset="UTF-8"/>
         <meta name="description" content="A privacy respecting meta search engine."/>
         <meta name="referrer" content="no-referrer"/>
-        <link rel="stylesheet" type="text/css" href="static/css/styles_min.css"/>
+        <link rel="stylesheet" type="text/css" href="static/css/styles.css"/>
         <link title="LibreX search" type="application/opensearchdescription+xml" href="/opensearch.xml?method=POST" rel="search"/>
         <link rel="stylesheet" type="text/css" href="<?php
                 echo "static/css/";
