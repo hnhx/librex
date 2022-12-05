@@ -77,62 +77,29 @@
                 <h2>Privacy friendly frontends</h2>
                 <p>For an example if you want to view YouTube without getting spied on, click on "Invidious", find the instance that is most suitable for you then paste it in (correct format: https://example.com)</p>
                 <div class="instances-container">   
+                      <?php
 
-                      <div>
-                        <a for="invidious" href="https://docs.invidious.io/instances/" target="_blank">Invidious</a>
-                        <input type="text" name="invidious" placeholder="Replace YouTube" value=
-                            <?php echo isset($_COOKIE["invidious"]) ? htmlspecialchars($_COOKIE["invidious"])  : "\"$config->invidious\""; ?>
-                        >
-                      </div>
-
-                      <div>
-                        <a for="bibliogram" href="https://git.sr.ht/~cadence/bibliogram-docs/tree/master/docs/Instances.md" target="_blank">Bibliogram</a>
-                        <input type="text" name="bibliogram" placeholder="Replace Instagram" value=
-                            <?php echo isset($_COOKIE["bibliogram"]) ? htmlspecialchars($_COOKIE["bibliogram"]) : "\"$config->bibliogram\""; ?>
-                        >
-                      </div>
-
-                      <div>
-                        <a for="nitter" href="https://github.com/zedeus/nitter/wiki/Instances" target="_blank">Nitter</a>
-                        <input type="text" name="nitter" placeholder="Replace Twitter" value=
-                            <?php echo isset($_COOKIE["nitter"]) ? htmlspecialchars($_COOKIE["nitter"])  : "\"$config->nitter\""; ?>
-                        >
-                      </div>
-
-                      <div>
-                        <a for="libreddit" href="https://github.com/spikecodes/libreddit" target="_blank">Libreddit</a>
-                        <input type="text" name="libreddit" placeholder="Replace Reddit" value=
-                            <?php echo isset($_COOKIE["libreddit"]) ? htmlspecialchars($_COOKIE["libreddit"])  : "\"$config->libreddit\""; ?>
-                        >
-                      </div>
-
-                      <div>
-                        <a for="proxitok" href="https://github.com/pablouser1/ProxiTok/wiki/Public-instances" target="_blank">ProxiTok</a>
-                        <input type="text" name="proxitok" placeholder="Replace TikTok" value=
-                            <?php echo isset($_COOKIE["proxitok"]) ? htmlspecialchars($_COOKIE["proxitok"])  : "\"$config->proxitok\""; ?>
-                        >
-                      </div>
-
-                      <div>
-                        <a for="wikiless" href="https://codeberg.org/orenom/wikiless" target="_blank">Wikiless</a>
-                        <input type="text" name="wikiless" placeholder="Replace Wikipedia" value=
-                            <?php echo isset($_COOKIE["wikiless"]) ? htmlspecialchars($_COOKIE["wikiless"])  : "\"$config->wikiless\""; ?>
-                        >
-                      </div>
-
-                      <div>
-                        <a for="quetre" href="https://github.com/zyachel/quetre" target="_blank">Quetre</a>
-                        <input type="text" name="quetre" placeholder="Replace Quora" value=
-                            <?php echo isset($_COOKIE["quetre"]) ? htmlspecialchars($_COOKIE["quetre"])  : "\"$config->quetre\""; ?>
-                        >
-                      </div>
-
-                      <div>
-                        <a for="libremdb" href="https://github.com/zyachel/libremdb" target="_blank">Libremdb</a>
-                        <input type="text" name="libremdb" placeholder="Replace IMDb" value=
-                            <?php echo isset($_COOKIE["libremdb"]) ? htmlspecialchars($_COOKIE["libremdb"])  : "\"$config->libremdb\""; ?>
-                        >
-                      </div>
+                            $frontends = array(
+                                "invidious" => array("https://docs.invidious.io/instances/", "YouTube"),
+                                "bibliogram" => array("https://git.sr.ht/~cadence/bibliogram-docs/tree/master/docs/Instances.md", "Instagram"),
+                                "nitter" => array("https://github.com/zedeus/nitter/wiki/Instances", "Twitter"),
+                                "libreddit" => array("https://github.com/spikecodes/libreddit", "Reddit"),
+                                "proxitok" => array("https://github.com/pablouser1/ProxiTok/wiki/Public-instances", "TikTok"),
+                                "wikiless" => array("https://codeberg.org/orenom/wikiless", "Wikipedia"),
+                                "quetre" => array("https://github.com/zyachel/quetre", "Quora"),
+                                "libremdb" => array("https://github.com/zyachel/libremdb", "IMDb")
+                            );
+                        
+                           foreach($frontends as $frontend => $info)
+                           {
+                                echo "<div>";
+                                echo "<a for=\"$frontend\" href=\"" . $info[0] . "\" target=\"_blank\">" . ucfirst($frontend) . "</a>";
+                                echo "<input type=\"text\" name=\"$frontend\" placeholder=\"Replace " . $info[1] . "\" value=";
+                                echo isset($_COOKIE["$frontend"]) ? htmlspecialchars($_COOKIE["$frontend"])  : json_decode(json_encode($config), true)[$frontend];
+                                echo ">";
+                                echo "</div>";
+                           }
+                      ?>
                 </div>
                 <div>
                     <label>Disable frontends</label>
