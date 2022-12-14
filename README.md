@@ -1,8 +1,8 @@
 <h1 align="center">LibreX</h1>
 
 <p float="left">
-  <img src="https://user-images.githubusercontent.com/49120638/188424011-f75eb4f6-72ad-4f9b-9344-d169076426e8.png" width="400">
-  <img src="https://user-images.githubusercontent.com/49120638/188424232-a60bdf68-09c1-47f1-affc-fa9deab38277.png" width="400">
+  <img src="https://user-images.githubusercontent.com/49120638/207549667-c731a4f2-b9b0-4385-96be-9c17a8bb2984.png" width="400">
+  <img src="https://user-images.githubusercontent.com/49120638/207550159-4fa639a5-24e6-42e0-9e58-f04e5d18e391.png" width="400">
 </p>
 
 <p align="center">A privacy respecting free as in freedom meta search engine</p>
@@ -26,12 +26,21 @@
 | [librex.kitscomputer.tk](https://librex.kitscomputer.tk/) | ❌ | ❌ | 🇺🇸 US |
 <br>
 
+### Thanks rms
+
+Huge thanks to Richard Stallman for using LibreX and featuring it on his [website](https://stallman.org/stallman-computing.html)!
+
+> However, the Librex proxies have worked around that problem. They enable me to access Google Search indirectly, and they work correctly through Tor with LibreJS enabled.
+
+<br>
+
 ### About LibreX
 
 LibreX gives you results from Google, Brave, Qwant, Ahmia and popular torrent sites without spying on you.
 <br>
 <br>
 If you would like to learn more about LibreX check out the [Wiki](https://github.com/hnhx/librex/wiki).
+<br>
 <br>
 
 ### Mirror
@@ -42,8 +51,8 @@ git clone https://git.beparanoid.de/librex
 ```
 ### LibreX compared to other metasearch engines
 
-| Metasearch engine |  Works without JS | Privacy frontend redirect | Torrent results | API |
-|-|-|-|-|-|
-| LibreX | ✅ | ✅ | ✅ | ✅ |
-| SearXNG | ❓ Not user friendly | ❓ Only host can set it | ✅ | ✅ |
-| Whoogle | ✅ | ❓ Only host can set it | ❌ | ❌ |
+| Name |  Works without JS | Privacy frontend redirect | Torrent results | API | No 3rd party libs used |
+|-|-|-|-|-|-|
+| LibreX | ✅ | ✅ | ✅ | ✅ | ✅ |
+| SearXNG | ❓ Not user friendly | ❓ Only host can set it | ✅ | ✅ | ❌ |
+| Whoogle | ✅ | ❓ Only host can set it | ❌ | ❌ | ❌ |

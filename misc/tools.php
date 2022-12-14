@@ -28,7 +28,19 @@
             if (empty(trim($frontend)))
                 return $url;
 
-            $url =  $frontend . explode($original, $url)[1];
+            if (strpos($url, "wikipedia.org") !== false)
+            {
+                $wiki_split = explode(".", $url);
+                if (count($wiki_split) > 1)
+                {
+                    $lang = explode("://", $wiki_split[0])[1];
+                    $url =  $frontend . explode($original, $url)[1] . "?lang=" . $lang;
+                }
+            }
+            else
+            {
+                $url =  $frontend . explode($original, $url)[1];
+            }
 
             return $url;
         }
