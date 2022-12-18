@@ -55,7 +55,7 @@
               "country": "NL"
           },
           {
-              "clearnet": "https://pufe.org/",
+              "clearnet": "https://librex.pufe.org/",
               "tor": null,
               "i2p": null,
               "country": "NZ"
