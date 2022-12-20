@@ -19,10 +19,10 @@
               "country": "US"
           },
           {
-            "clearnet": "https://librex.terryiscool160.xyz/",
-            "tor": "http://librex.n53wt4ivvfdfaqkwldgdzfsubszukie2an6auja6x2wp3e3oa7v2gqyd.onion/",
-            "i2p": null,
-            "country": "UK"
+              "clearnet": "https://librex.terryiscool160.xyz/",
+              "tor": "http://librex.n53wt4ivvfdfaqkwldgdzfsubszukie2an6auja6x2wp3e3oa7v2gqyd.onion/",
+              "i2p": null,
+              "country": "UK"
           },
           {
               "clearnet": "https://search.davidovski.xyz/",
