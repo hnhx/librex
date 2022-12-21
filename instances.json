@@ -12,6 +12,12 @@
               "i2p": "http://vernziqfqvweijfaacmwazohgpdo2bt2ib2jlupt2pwwu27bhgxq.b32.i2p/",
               "country": "US"
           },
+	  {
+ 	      "clearnet": "https://lx.sesu.cc/",
+	      "tor": "http://lx.swxoebbpeqiiixyhbuh3vbw53pdrmtbiaj2sqveol6kkn5rpapfi4aad.onion/",
+	      "i2p": "http://37bw4xelfgivsih5s4s5cozkxkhgoeqx5bjfjnrnmv5utdtk45sa.b32.i2p/",
+	      "country": "CL"
+	  },
           {
               "clearnet": "https://librex.mikata.ru/",
               "tor": "http://f7ssz7l3biu4fugwctfpcx4txg5yq4gqhrt473ledsuc3ivtd3omniid.onion/",
