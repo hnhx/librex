@@ -15,6 +15,7 @@
 |-|-|-|-|
 | [librex.beparanoid.de](https://librex.beparanoid.de/) | [✅](http://librex.2356uhnbpv5nk3bni5bv6jg2cd6lgj664kwx3lhyelstpttpyv4kk2qd.onion/) | ❌ | 🇭🇺 HU (OFFICIAL INSTANCE) |
 | [lx.vern.cc](https://lx.vern.cc/) | [✅](http://lx.vernccvbvyi5qhfzyqengccj7lkove6bjot2xhh5kajhwvidqafczrad.onion/) | [✅](http://vernziqfqvweijfaacmwazohgpdo2bt2ib2jlupt2pwwu27bhgxq.b32.i2p/) | 🇺🇸 US |
+| [lx.sesu.cc](https://lx.sesu.cc/) | [✅](http://http://lx.swxoebbpeqiiixyhbuh3vbw53pdrmtbiaj2sqveol6kkn5rpapfi4aad.onion/) | [✅](http://37bw4xelfgivsih5s4s5cozkxkhgoeqx5bjfjnrnmv5utdtk45sa.b32.i2p/) | 🇨 🇱  CL |
 | [librex.mikata.ru](https://librex.mikata.ru/) | [✅](http://f7ssz7l3biu4fugwctfpcx4txg5yq4gqhrt473ledsuc3ivtd3omniid.onion/) | ❌ | 🇺🇸 US |
 | [librex.terryiscool160.xyz](https://librex.terryiscool160.xyz/) | [✅](http://librex.n53wt4ivvfdfaqkwldgdzfsubszukie2an6auja6x2wp3e3oa7v2gqyd.onion/) | ❌ | 🇬🇧 UK |
 | [search.davidovski.xyz](https://search.davidovski.xyz/) | ❌ | ❌ | 🇬🇧 UK |
