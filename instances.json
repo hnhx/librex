@@ -14,7 +14,7 @@
           },
 	  {
  	      "clearnet": "https://lx.sesu.cc/",
-	      "tor": "http://http://lx.swxoebbpeqiiixyhbuh3vbw53pdrmtbiaj2sqveol6kkn5rpapfi4aad.onion/",
+	      "tor": "http://lx.swxoebbpeqiiixyhbuh3vbw53pdrmtbiaj2sqveol6kkn5rpapfi4aad.onion/",
 	      "i2p": "http://37bw4xelfgivsih5s4s5cozkxkhgoeqx5bjfjnrnmv5utdtk45sa.b32.i2p/",
 	      "country": "CL"
 	  },
