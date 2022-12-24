@@ -51,12 +51,15 @@
                 $thumbnail = $result["thumbnail"];
 
                 echo "<div class=\"text-result-wrapper\">";
-                echo "<a href=\"$url\">";
+                echo "<a class=\"video-link\" href=\"$url\">";
+                echo "<div class=\"video-thumbnail\">";
+                echo "<img class=\"video-img\" src=\"image_proxy.php?url=$thumbnail\">";
+                echo "</div>";
+                echo "<div class=\"video-properties\">";
                 echo "$base_url";
                 echo "<h2>$title</h2>";
-                echo "<img class=\"video-img\" src=\"image_proxy.php?url=$thumbnail\">";
-                echo "<br>";
                 echo "<span>$date - $views</span>";
+                echo "</div>";
                 echo "</a>";
                 echo "</div>";
             }

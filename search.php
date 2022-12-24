@@ -51,7 +51,7 @@
             $config = require "config.php";
             require "misc/tools.php";
 
-            echo "<div class=\"result-container\">";
+            echo "<div class=\"result-container\" data-type=\"$type\">";
 
             $page = isset($_REQUEST["p"]) ? (int) $_REQUEST["p"] : 0;
 
