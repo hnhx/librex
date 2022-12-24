@@ -51,6 +51,7 @@
             $config = require "config.php";
             require "misc/tools.php";
 
+            echo "<div class=\"result-container\">";
 
             $page = isset($_REQUEST["p"]) ? (int) $_REQUEST["p"] : 0;
 
@@ -64,22 +65,22 @@
                         check_ddg_bang($query);
                     require "engines/google/text.php";
                     $results = get_text_results($query, $page);
-                    print_elapsed_time($start_time);
                     print_text_results($results);
+                    print_elapsed_time($start_time);
                     break;
 
                 case 1:
                     require "engines/qwant/image.php";
                     $results = get_image_results($query_encoded, $page);
-                    print_elapsed_time($start_time);
                     print_image_results($results);
+                    print_elapsed_time($start_time);
                     break;
 
                 case 2:
                     require "engines/brave/video.php";
                     $results = get_video_results($query_encoded);
-                    print_elapsed_time($start_time);
                     print_video_results($results);
+                    print_elapsed_time($start_time);
                     break;
 
                 case 3:
@@ -89,8 +90,8 @@
                     {
                         require "engines/bittorrent/merge.php";
                         $results = get_merged_torrent_results($query_encoded);
-                        print_elapsed_time($start_time);
                         print_merged_torrent_results($results);
+                        print_elapsed_time($start_time);
                     }
                     break;
 
@@ -101,8 +102,8 @@
                     {
                         require "engines/ahmia/hidden_service.php";
                         $results = get_hidden_service_results($query_encoded);
-                        print_elapsed_time($start_time);
                         print_hidden_service_results($results);
+                        print_elapsed_time($start_time);
                     }
                     break;
 
@@ -130,8 +131,11 @@
 
                     print_next_page_button("&gt;", $page + 10, $query, $type);
 
-                echo "</div>";
+                echo "</div>"; # .next-page-button-wrapper
             }
+
+            echo "</div>"; # .result-container__inner (text.php->print_x_results)
+            echo "</div>"; # .result-container
         ?>
 
 <?php require "misc/footer.php"; ?>

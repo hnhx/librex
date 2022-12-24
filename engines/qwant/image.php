@@ -42,6 +42,7 @@
 
     function print_image_results($results)
     {
+        echo "<div class=\"result-container__inner\">";
         echo "<div class=\"image-result-container\">";
 
             foreach($results as $result)
