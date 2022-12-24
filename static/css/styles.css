@@ -1,3 +1,19 @@
+/* Layout variables */
+:root {
+    --footer-height: 51px;
+}
+
+/* Color variables */
+:root {
+    /*
+        TODO: Variables here were magic colors
+              found scattered around in the primary CSS.
+              Move them to in their respective themes
+              in the future :v
+    */
+    --element-border-focus: #5f6368;
+}
+
 html {
     color: var(--main-fg);
     background-color: var(--main-bg);
@@ -40,8 +56,18 @@ a:hover,
 }
 
 .search-container {
+    /*  Make the search container take up 100% of the screen height
+        And cooperate with the footer */
+    height: calc(100vh - var(--footer-height));
+
+    /* Flex properties for correct alignment */
+    display: flex;
+    flex-direction: column;
+    
+    /* Align text & items in the middle */
     text-align: center;
-    margin-top: 10%;
+    justify-content: center;
+    align-items: center;
 }
 
 .search-container h1 {
@@ -53,11 +79,26 @@ a:hover,
     width: 500px;
     color: var(--search-container-text-color);
     background-color: var(--search-container-background-color);
-    padding: 10px;
     font-size: inherit;
     font-family: sans-serif;
     border: 1px solid var(--search-container-background-border);
     border-radius: 25px;
+    
+    /* Give a wider padding on the X axis to look more appealing */
+    padding: 10px 16px;
+}
+
+/* Input focus style for accessibility */
+.search-container input:focus,
+.sub-search-container input:focus {
+    border: 1px solid var(--element-border-focus);
+}
+
+/*  Make sure that we can differentiate the placeholder
+    from real input */
+.search-container input::placeholder,
+.sub-search-container input::placeholder {
+    font-style: italic;
 }
 
 .search-button-wrapper button,
@@ -116,7 +157,7 @@ a:hover,
 
 .search-button-wrapper button:hover,
 .misc-container button:hover {
-    border: 1px solid #5f6368;
+    border: 1px solid var(--element-border-focus);
     cursor: pointer;
 }
 
@@ -172,7 +213,7 @@ a:hover,
     padding: 5px;
     font-size: inherit;
     font-family: inherit;
-    border: 1px solid #5f6368;
+    border: 1px solid var(--element-border-focus);
     border-radius: 5px;
     float: right;
 }
@@ -297,6 +338,7 @@ a[title] {
     padding-bottom: 15px;
     border-top: 1px solid var(--border);
     text-align: center;
+    max-height: var(--footer-height);
 }
 
 .git-container a {
