@@ -237,7 +237,7 @@ a:hover,
     box-sizing: border-box;
 }
 
-.result-container__inner {
+.result-container-inner {
     display: flex;
     flex-direction: column;
 }
@@ -285,13 +285,13 @@ a:hover,
     gap: 1.5rem;
 }
 
-.special-result-container__inner {
+.special-result-container-inner {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-.special-result-container__inner p {
+.special-result-container-inner p {
     font-size: 16px;
     margin: 0;
     color: var(--main-fg);

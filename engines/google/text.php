@@ -147,7 +147,7 @@
                 echo "<img src=\"image_proxy.php?url=$image_url\">";
             }
             
-            echo "<div class=\"special-result-container__inner\">";
+            echo "<div class=\"special-result-container-inner\">";
 
             if ($source)
                 echo "<a href=\"$source\" target=\"_blank\">$source</a>";
@@ -159,7 +159,7 @@
         }
 
         echo "</div>";
-        echo "<div class=\"result-container__inner\">";
+        echo "<div class=\"result-container-inner\">";
         echo "<div class=\"text-result-container\">";
 
         foreach($results as $result)

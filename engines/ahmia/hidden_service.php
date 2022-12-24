@@ -30,7 +30,7 @@
 
     function print_hidden_service_results($results)
     {
-        echo "<div class=\"result-container__inner\">";
+        echo "<div class=\"result-container-inner\">";
         echo "<div class=\"text-result-container\">";
 
         foreach($results as $result)

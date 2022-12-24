@@ -131,11 +131,11 @@
 
                     print_next_page_button("&gt;", $page + 10, $query, $type);
 
-                echo "</div>"; # .next-page-button-wrapper
+                echo "</div>"; // .next-page-button-wrapper
             }
 
-            echo "</div>"; # .result-container__inner (text.php->print_x_results)
-            echo "</div>"; # .result-container
+            echo "</div>"; // .result-container-inner (text.php->print_x_results)
+            echo "</div>"; // .result-container
         ?>
 
 <?php require "misc/footer.php"; ?>

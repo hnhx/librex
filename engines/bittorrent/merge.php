@@ -73,7 +73,7 @@
 
     function print_merged_torrent_results($results)
     {
-        echo "<div class=\"result-container__inner\">";
+        echo "<div class=\"result-container-inner\">";
         echo "<div class=\"text-result-container\">";
 
         if (!empty($results)) 
