@@ -51,8 +51,20 @@
                 $alt = $result["alt"];
                 $url = $result["url"];
 
+                $parsed_url = parse_url($url);
+                $host = $parsed_url['host'];
+
+                // Extract the domain name from the host
+                $url_trunc = preg_replace('/^www\./', '', $host);
+
                 echo "<a title=\"$alt\" href=\"$url\" target=\"_blank\">";
+                echo "<div class=\"image-wrapper\">";
                 echo "<img src=\"image_proxy.php?url=$thumbnail\">";
+                echo "</div>";
+                echo "<span class=\"image-properties\">";
+                echo "<span class=\"image-url\">$url_trunc</span>";
+                echo "<h4 class=\"image-title\">$alt</h4>";
+                echo "</span>";
                 echo "</a>";
             }
 
