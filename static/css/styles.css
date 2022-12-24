@@ -68,10 +68,16 @@ a:hover,
     text-align: center;
     justify-content: center;
     align-items: center;
+
+    /* Gap between elements */
+    gap: 1rem
 }
 
 .search-container h1 {
     font-size: 70px;
+
+    /* Remove unnecessary margin */
+    margin-bottom: 0;
 }
 
 .search-container input,
@@ -101,6 +107,14 @@ a:hover,
     font-style: italic;
 }
 
+/* Make the search button wrapper a flexbox */
+.search-button-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
 .search-button-wrapper button,
 .misc-container button,
 .misc-container select {
@@ -109,12 +123,7 @@ a:hover,
     font-size: 14px;
     border: 1px solid var(--main-bg);
     border-radius: 4px;
-    padding: 13px 10px 13px 10px;
-}
-
-.search-button-wrapper button {
-
-    margin: 30px 60px 0px 60px;
+    padding: 12px 10px;
 }
 
 .sub-search-container {
@@ -393,10 +402,12 @@ a[title] {
         width: 80%;
     }
 
+    .search-button-wrapper {
+        flex-direction: column;
+    }
+
     .search-button-wrapper button {
-        display: table-row;
-        margin: 30px 0px 0px 0px;
-        width: 80%;
+        width: 100%;
     }
 
     .image-result-container {
