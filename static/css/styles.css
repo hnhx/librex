@@ -1,3 +1,19 @@
+/* Layout variables */
+:root {
+    --footer-height: 51px;
+}
+
+/* Color variables */
+:root {
+    /*
+        TODO: Variables here were magic colors
+              found scattered around in the primary CSS.
+              Move them to in their respective themes
+              in the future :v
+    */
+    --element-border-focus: #5f6368;
+}
+
 html {
     color: var(--main-fg);
     background-color: var(--main-bg);
@@ -40,12 +56,28 @@ a:hover,
 }
 
 .search-container {
+    /*  Make the search container take up 100% of the screen height
+        And cooperate with the footer */
+    height: calc(100vh - var(--footer-height));
+
+    /* Flex properties for correct alignment */
+    display: flex;
+    flex-direction: column;
+    
+    /* Align text & items in the middle */
     text-align: center;
-    margin-top: 10%;
+    justify-content: center;
+    align-items: center;
+
+    /* Gap between elements */
+    gap: 1rem
 }
 
 .search-container h1 {
     font-size: 70px;
+
+    /* Remove unnecessary margin */
+    margin-bottom: 0;
 }
 
 .search-container input,
@@ -53,11 +85,34 @@ a:hover,
     width: 500px;
     color: var(--search-container-text-color);
     background-color: var(--search-container-background-color);
-    padding: 10px;
     font-size: inherit;
     font-family: sans-serif;
     border: 1px solid var(--search-container-background-border);
     border-radius: 25px;
+    
+    /* Give a wider padding on the X axis to look more appealing */
+    padding: 10px 16px;
+}
+
+/* Input focus style for accessibility */
+.search-container input:focus,
+.sub-search-container input:focus {
+    border: 1px solid var(--element-border-focus);
+}
+
+/*  Make sure that we can differentiate the placeholder
+    from real input */
+.search-container input::placeholder,
+.sub-search-container input::placeholder {
+    font-style: italic;
+}
+
+/* Make the search button wrapper a flexbox */
+.search-button-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
 }
 
 .search-button-wrapper button,
@@ -68,12 +123,7 @@ a:hover,
     font-size: 14px;
     border: 1px solid var(--main-bg);
     border-radius: 4px;
-    padding: 13px 10px 13px 10px;
-}
-
-.search-button-wrapper button {
-
-    margin: 30px 60px 0px 60px;
+    padding: 10px 16px;
 }
 
 .sub-search-container {
@@ -116,7 +166,7 @@ a:hover,
 
 .search-button-wrapper button:hover,
 .misc-container button:hover {
-    border: 1px solid #5f6368;
+    border: 1px solid var(--element-border-focus);
     cursor: pointer;
 }
 
@@ -172,37 +222,85 @@ a:hover,
     padding: 5px;
     font-size: inherit;
     font-family: inherit;
-    border: 1px solid #5f6368;
+    border: 1px solid var(--element-border-focus);
     border-radius: 5px;
     float: right;
 }
 
-.text-result-container,
-#time,
+.result-container {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;
+    width: fit-content;
+    padding: calc(var(--footer-height) + 2rem) 170px;
+    padding-top: 1rem;
+    box-sizing: border-box;
+}
+
+.result-container-inner {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Allow the video wrapper to be a bit bigger */
+.result-container[data-type="2"] .text-result-wrapper {
+    max-width: 700px;
+}
+
+#time {
+    font-size: 13px;
+    opacity: 0.65;
+    order: 0;
+}
+
+.image-result-container,
+.text-result-container {
+    order: 1;
+}
+
 .next-page-button-wrapper {
-    margin-left: 170px;
+    order: 2;
 }
 
 .text-result-container {
-    margin-bottom: 100px;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .special-result-container {
-    padding: 10px;
+    padding: 18px;
     border: 1px solid var(--special-result-border);
     width: 500px;
     border-radius: 8px;
     background: var(--special-text-background);
     color: var(--special-text-color);
-    margin-left: 840px;
-    margin-top: 0px;
-    position: absolute;
+    height: fit-content;
+    box-sizing: border-box;
+
+    /* New layout */
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
 }
+
+.special-result-container-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.special-result-container-inner p {
+    font-size: 16px;
+    margin: 0;
+    color: var(--main-fg);
+}
+
 
 .text-result-wrapper {
     max-width: 550px;
     word-wrap: break-word;
-    margin-bottom: 35px;
 }
 
 .text-result-wrapper a {
@@ -210,9 +308,12 @@ a:hover,
     color: var(--result-fg);
 }
 
-.video-img {
-    height: 115px;
+.video-thumbnail {
+    min-height: 96px;
+    max-height: 96px;
+    background-color: var(--search-container-background-color);
     border-radius: 12px;
+    aspect-ratio: 4 / 3;
 }
 
 .text-result-wrapper h2 {
@@ -220,33 +321,27 @@ a:hover,
     color: var(--result-link-fg);
     padding-top: 5px;
     margin-top: 1px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    width: fit-content;
 }
 
 .special-result-container a {
     display: flex;
-    margin-top: 10px;
     font-size: 14px;
 }
 
 .special-result-container img {
     display: flex;
     max-width: 60%;
-    max-height: 200px;
-    padding-bottom: 10px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.next-page-button-wrapper {
-    margin-top: -50px;
-    margin-bottom: 100px;
+    max-height: 64px;
 }
 
 .next-page-button-wrapper button {
     border: none;
     background-color: inherit;
     color: var(--result-link-fg);
-    font-size: 18px;
+    font-size: 16px;
     margin-right: 8px;
 }
 
@@ -259,15 +354,55 @@ a:hover,
     flex-wrap: wrap;
     grid-gap: 1.5rem;
     justify-items: center;
-    margin-left: 9%;
-    margin-right: 9%;
     padding: 0;
     margin-bottom: 50px;
 }
 
 a[title] {
     flex-grow: 1;
-    height: 12rem;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+}
+
+a[title] .image-wrapper {
+    min-height: 12rem;
+    width: 100%;
+    background-color: var(--search-container-background-color);
+    border-radius: 8px;
+}
+
+a[title] img {
+    max-height: 12rem;
+    border-radius: 8px;
+}
+
+a[title] .image-properties {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.image-properties .image-url {
+    font-size: 13px;
+    color: var(--result-fg);
+}
+
+.image-properties .image-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--result-link-fg);
+    width: fit-content;
+    margin: 0;
+
+    /* Trunc */
+    max-width: 300px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
 }
 
 .image-result-container img {
@@ -278,6 +413,18 @@ a[title] {
     vertical-align: bottom;
 }
 
+.video-link {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.video-link .video-img {
+    max-height: 96px;
+    background-color: var(--search-container-background-color);
+    border-radius: 8px;
+}
 
 .git-container {
     right: 0;
@@ -297,6 +444,7 @@ a[title] {
     padding-bottom: 15px;
     border-top: 1px solid var(--border);
     text-align: center;
+    max-height: var(--footer-height);
 }
 
 .git-container a {
@@ -329,11 +477,16 @@ a[title] {
     color: #ff79c6;
 }
 
-@media only screen and (max-width: 1320px) {
+@media only screen and (max-width: 1422px) {
+    /* Move the special result to the top of the page, under the #time element */
+    .result-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
     .special-result-container {
-        position: relative;
-        float: none;
-        margin-left: 165px;
+        max-width: 550px;
+        margin: 0;
     }
 }
 
@@ -351,10 +504,12 @@ a[title] {
         width: 80%;
     }
 
+    .search-button-wrapper {
+        flex-direction: column;
+    }
+
     .search-button-wrapper button {
-        display: table-row;
-        margin: 30px 0px 0px 0px;
-        width: 80%;
+        width: 100%;
     }
 
     .image-result-container {
@@ -436,7 +591,6 @@ a[title] {
         position: relative;
         float: none;
         max-width: 90%;
-        margin-left: 10px;
         width: auto;
     }
 
@@ -457,10 +611,21 @@ a[title] {
         margin-top: 10%;
     }
 
-    .text-result-container,
-    #time,
-    .next-page-button-wrapper {
-        margin-left: 20px;
-        max-width: 90%;
+    .special-result-container {
+        margin: 0;
+        max-width: 550px;
+
+        /* Make the layout a column */
+        flex-direction: column;
+    }
+
+    .special-result-container img {
+        max-width: 64px;
+    }
+
+    .result-container {
+        /* Remove the giant padding from the container */
+        padding: calc(var(--footer-height) + 2rem) 25px;
+        padding-top: 1rem;
     }
 }
