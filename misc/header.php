@@ -8,7 +8,7 @@
         <link rel="stylesheet" type="text/css" href="static/css/styles.css"/>
         <link title="LibreX search" type="application/opensearchdescription+xml" href="/opensearch.xml?method=POST" rel="search"/>
         <link rel="stylesheet" type="text/css" href="<?php
-                echo "static/css/themes/";
+                echo "static/css/";
                 if (isset($_COOKIE["theme"]) || isset($_REQUEST["theme"]))
                     echo htmlspecialchars((isset($_COOKIE["theme"]) ? $_COOKIE["theme"] : $_REQUEST["theme"]) . ".css");
                 else

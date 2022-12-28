@@ -5,7 +5,7 @@
     <body>
         <form class="search-container" action="search.php" method="get" autocomplete="off">
                 <h1>Libre<span class="X">X</span></h1>
-                <input placeholder="Search..." type="text" name="q" autofocus/>
+                <input type="text" name="q" autofocus/>
                 <input type="hidden" name="p" value="0"/>
                 <input type="hidden" name="t" value="0"/>
                 <input type="submit" class="hide"/>
