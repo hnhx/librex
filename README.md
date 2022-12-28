@@ -25,7 +25,7 @@
 | [buscar.weblibre.org](https://buscar.weblibre.org/) | ❌ | ❌ | 🇨🇱 CL |
 | [search.ahwx.org](https://search.ahwx.org/) | ❌ | ❌ | 🇳🇱 NL |
 | [librex.pufe.org](https://librex.pufe.org/) | ❌ | ❌ | :new_zealand: NZ |
-| [librex.kitscomputer.tk](https://librex.kitscomputer.tk/) | ❌ | ❌ | 🇺🇸 US |
+| [search.milivojevic.in.rs](https://search.milivojevic.in.rs/) | ❌ | ❌ | 🇳🇱 NL |
 <br>
 
 ### Thanks rms

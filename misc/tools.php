@@ -37,10 +37,20 @@
                     $url =  $frontend . explode($original, $url)[1] . "?lang=" . $lang;
                 }
             }
+            else if (strpos($url, "fandom.com") !== false)
+            {
+                $fandom_split = explode(".", $url);
+                if (count($fandom_split) > 1)
+                {
+                    $wiki_name = explode("://", $fandom_split[0])[1];
+                    $url =  $frontend . "/" . $wiki_name . explode($original, $url)[1];
+                }
+            }
             else
             {
                 $url =  $frontend . explode($original, $url)[1];
             }
+
 
             return $url;
         }
@@ -61,7 +71,8 @@
             "tiktok.com" => "proxitok",
             "wikipedia.org" => "wikiless",
             "quora.com" => "quetre",
-            "imdb.com" => "libremdb"
+            "imdb.com" => "libremdb",
+            "fandom.com" => "breezewiki"
         );
 
         foreach($frontends as $original => $frontend)
