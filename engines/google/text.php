@@ -140,26 +140,20 @@
             $response = $special["special_response"]["response"];
             $source = $special["special_response"]["source"];
 
-            echo "<div class=\"special-result-container\">";
+            echo "<p class=\"special-result-container\">";
             if (array_key_exists("image", $special["special_response"]))
             {
                 $image_url = $special["special_response"]["image"];
                 echo "<img src=\"image_proxy.php?url=$image_url\">";
             }
-            
-            echo "<div class=\"special-result-container-inner\">";
-
+            echo $response;
             if ($source)
                 echo "<a href=\"$source\" target=\"_blank\">$source</a>";
-            echo "<p>$response</p>";
-            
-            echo "</div>";
+            echo "</p>";
 
             array_shift($results);
         }
 
-        echo "</div>";
-        echo "<div class=\"result-container-inner\">";
         echo "<div class=\"text-result-container\">";
 
         foreach($results as $result)

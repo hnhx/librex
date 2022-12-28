@@ -38,7 +38,6 @@
 
     function print_video_results($results)
     {
-        echo "<div class=\"result-container-inner\">";
         echo "<div class=\"text-result-container\">";
 
             foreach($results as $result)
@@ -51,15 +50,12 @@
                 $thumbnail = $result["thumbnail"];
 
                 echo "<div class=\"text-result-wrapper\">";
-                echo "<a class=\"video-link\" href=\"$url\">";
-                echo "<div class=\"video-thumbnail\">";
-                echo "<img class=\"video-img\" src=\"image_proxy.php?url=$thumbnail\">";
-                echo "</div>";
-                echo "<div class=\"video-properties\">";
+                echo "<a href=\"$url\">";
                 echo "$base_url";
                 echo "<h2>$title</h2>";
+                echo "<img class=\"video-img\" src=\"image_proxy.php?url=$thumbnail\">";
+                echo "<br>";
                 echo "<span>$date - $views</span>";
-                echo "</div>";
                 echo "</a>";
                 echo "</div>";
             }
