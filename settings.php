@@ -1,21 +1,21 @@
 <?php
                 $config = require "config.php";
-                
-                
+
+
                 if (isset($_REQUEST["save"]) || isset($_REQUEST["reset"]))
                 {
-                    if (isset($_SERVER["HTTP_COOKIE"])) 
+                    if (isset($_SERVER["HTTP_COOKIE"]))
                     {
                             $cookies = explode(";", $_SERVER["HTTP_COOKIE"]);
-                            foreach($cookies as $cookie) 
+                            foreach($cookies as $cookie)
                             {
                                 $parts = explode("=", $cookie);
                                 $name = trim($parts[0]);
                                 setcookie($name, "", time() - 1000);
                             }
                     }
-                    
-                }        
+
+                }
 
                 if (isset($_REQUEST["save"]))
                 {
@@ -27,13 +27,13 @@
                         }
                     }
                 }
-               
+
                 if (isset($_REQUEST["save"]) || isset($_REQUEST["reset"]))
                 {
                     header("Location: ./settings.php");
                     die();
                 }
-                
+
                 require "misc/header.php";
 ?>
 
@@ -52,6 +52,7 @@
                     <option value=\"amoled\">AMOLED</option>
                     <option value=\"light\">Light</option>
                     <option value=\"auto\">Auto</option>
+					<option value=\"dracula\">Dracula</option>
                     <option value=\"nord\">Nord</option>
                     <option value=\"night_owl\">Night Owl</option>
                     <option value=\"discord\">Discord</option>
@@ -76,7 +77,7 @@
                 </div>
                 <h2>Privacy friendly frontends</h2>
                 <p>For an example if you want to view YouTube without getting spied on, click on "Invidious", find the instance that is most suitable for you then paste it in (correct format: https://example.com)</p>
-                <div class="instances-container">   
+                <div class="instances-container">
                       <?php
 
                             $frontends = array(
@@ -90,7 +91,7 @@
                                 "libremdb" => array("https://github.com/zyachel/libremdb", "IMDb"),
                                 "breezewiki" => array("https://gitdab.com/cadence/breezewiki", "Fandom")
                             );
-                        
+
                            foreach($frontends as $frontend => $info)
                            {
                                 echo "<div>";
