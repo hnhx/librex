@@ -44,7 +44,7 @@
             {
                 require "engines/bittorrent/merge.php";
                 $results = get_merged_torrent_results($query_encoded);
-            }       
+            }
             break;
         case 4:
             if ($config->disable_hidden_service_search)
@@ -53,7 +53,7 @@
             {
                 require "engines/ahmia/hidden_service.php";
                 $results = get_hidden_service_results($query_encoded);
-            }       
+            }
             break;
         default:
             require "engines/google/text.php";
