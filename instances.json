@@ -77,6 +77,12 @@
               "tor": null,
               "i2p": null,
               "country": "NL"
+          },
+          {
+              "clearnet": "https://librex.ratakor.com/",
+              "tor": null,
+              "i2p": null,
+              "country": "FR"
           }
     ]
 }
