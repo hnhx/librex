@@ -30,7 +30,8 @@ a,
 
 .text-result-wrapper a:visited h2,
 .special-result-container a,
-.sub-search-button-wrapper button {
+.sub-search-button-wrapper a,
+.sub-search-button-wrapper a:visited{
     color: #bd93f9;
 }
 
@@ -125,11 +126,13 @@ a:hover,
     margin-right: 5px;
 }
 
-.sub-search-button-wrapper button {
+.sub-search-button-wrapper a {
     border: none;
     background-color: inherit;
     font-size: 15px;
     margin-right: 14px;
+	cursor: pointer;
+	text-decoration: none;
 }
 
 .sub-search-button-wrapper img {
@@ -423,7 +426,7 @@ a[title] {
         padding: 0;
     }
 
-    .sub-search-button-wrapper button {
+    .sub-search-button-wrapper a {
         margin-left: auto;
         margin-right: auto;
         padding: 0;
