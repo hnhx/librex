@@ -39,19 +39,14 @@
             <input type="hidden" name="p" value="0">
             <div class="sub-search-button-wrapper">
                 <?php
-                    echo "<a href=\"/search.php?q=$query&p=0&t=0\"><img src=\"static/images/text_result.png\" alt=\"text result\" />General</a>";
-                    echo "<a href=\"/search.php?q=$query&p=0&t=1\"><img src=\"static/images/image_result.png\" alt=\"image result\" />Images</a>";
-                    echo "<a href=\"/search.php?q=$query&p=0&t=2\"><img src=\"static/images/video_result.png\" alt=\"video result\" />Videos</a>";
-                    echo "<a href=\"/search.php?q=$query&p=0&t=3\"><img src=\"static/images/torrent_result.png\" alt=\"torrent result\" />Torrents</a>";
-                    echo "<a href=\"/search.php?q=$query&p=0&t=4\"><img src=\"static/images/tor_result.png\" alt=\"tor result\" />Tor</a>";
-                          <?php
-                    echo "<a href=\"/search.php?q=$query&p=0&t=0\"><img src=\"static/images/text_result.png\" alt=\"text result\" />General</a>";
-                    echo "<a href=\"/search.php?q=$query&p=0&t=1\"><img src=\"static/images/image_result.png\" alt=\"image result\" />Images</a>";
-                    echo "<a href=\"/search.php?q=$query&p=0&t=2\"><img src=\"static/images/video_result.png\" alt=\"video result\" />Videos</a>";
-                    echo "<a href=\"/search.php?q=$query&p=0&t=3\"><img src=\"static/images/torrent_result.png\" alt=\"torrent result\" />Torrents</a>";
-                    echo "<a href=\"/search.php?q=$query&p=0&t=4\"><img src=\"static/images/tor_result.png\" alt=\"tor result\" />Tor</a>";
+                    echo "
+                        <a href=\"/search.php?q=$query&p=0&t=0\"><img src=\"static/images/text_result.png\" alt=\"text result\" />General</a>
+                        <a href=\"/search.php?q=$query&p=0&t=1\"><img src=\"static/images/image_result.png\" alt=\"image result\" />Images</a>
+                        <a href=\"/search.php?q=$query&p=0&t=2\"><img src=\"static/images/video_result.png\" alt=\"video result\" />Videos</a>
+                        <a href=\"/search.php?q=$query&p=0&t=3\"><img src=\"static/images/torrent_result.png\" alt=\"torrent result\" />Torrents</a>
+                        <a href=\"/search.php?q=$query&p=0&t=4\"><img src=\"static/images/tor_result.png\" alt=\"tor result\" />Tor</a>
+                    ";
                 ?>
-      ?>
             </div>
         <hr>
         </form>
