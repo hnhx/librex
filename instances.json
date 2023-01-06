@@ -83,6 +83,12 @@
               "tor": null,
               "i2p": null,
               "country": "FR"
+          },
+	  {
+              "clearnet": "https://search.tildevarsh.in/",
+              "tor": null,
+              "i2p": null,
+              "country": "IN"
           }
     ]
 }
