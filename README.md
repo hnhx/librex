@@ -27,6 +27,7 @@
 | [librex.pufe.org](https://librex.pufe.org/) | ❌ | ❌ | :new_zealand: NZ |
 | [search.milivojevic.in.rs](https://search.milivojevic.in.rs/) | ❌ | ❌ | 🇳🇱 NL |
 | [librex.ratakor.com](https://librex.ratakor.com/) | ❌ | ❌ | 🇫🇷 FR |
+| [search.tildevarsh.in](https://search.tildevarsh.in/) | ❌ | ❌ | 🇮🇳  IN |
 <br>
 
 ### Thanks rms
