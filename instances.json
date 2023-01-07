@@ -89,6 +89,12 @@
               "tor": null,
               "i2p": null,
               "country": "IN"
+              },
+          {
+              "clearnet": "https://librex.yogeshlamichhane.com.np/",
+              "tor": null,
+              "i2p": null,
+              "country": "GB"
           }
     ]
 }
