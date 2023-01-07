@@ -1,94 +1,99 @@
 {
-    "instances": [
-          {
-              "clearnet": "https://librex.beparanoid.de/",
-              "tor": "http://librex.2356uhnbpv5nk3bni5bv6jg2cd6lgj664kwx3lhyelstpttpyv4kk2qd.onion/",
-              "i2p": null,
-              "country": "HU"
-          },
-          {
-              "clearnet": "https://lx.vern.cc/",
-              "tor": "http://lx.vernccvbvyi5qhfzyqengccj7lkove6bjot2xhh5kajhwvidqafczrad.onion/",
-              "i2p": "http://vernziqfqvweijfaacmwazohgpdo2bt2ib2jlupt2pwwu27bhgxq.b32.i2p/",
-              "country": "US"
-          },
-	  {
- 	      "clearnet": "https://lx.sesu.cc/",
-	      "tor": "http://lx.swxoebbpeqiiixyhbuh3vbw53pdrmtbiaj2sqveol6kkn5rpapfi4aad.onion/",
-	      "i2p": "http://37bw4xelfgivsih5s4s5cozkxkhgoeqx5bjfjnrnmv5utdtk45sa.b32.i2p/",
-	      "country": "CL"
-	  },
-          {
-              "clearnet": "https://librex.mikata.ru/",
-              "tor": "http://f7ssz7l3biu4fugwctfpcx4txg5yq4gqhrt473ledsuc3ivtd3omniid.onion/",
-              "i2p": null,
-              "country": "US"
-          },
-          {
-              "clearnet": "https://librex.terryiscool160.xyz/",
-              "tor": "http://librex.n53wt4ivvfdfaqkwldgdzfsubszukie2an6auja6x2wp3e3oa7v2gqyd.onion/",
-              "i2p": null,
-              "country": "UK"
-          },
-          {
-              "clearnet": "https://search.davidovski.xyz/",
-              "tor": null,
-              "i2p": null,
-              "country": "UK"
-          },
-          {
-              "clearnet": "https://search.funami.tech/",
-              "tor": null,
-              "i2p": null,
-              "country": "KR"
-          },
-          {
-              "clearnet": "https://search.madreyk.xyz/",
-              "tor": null,
-              "i2p": null,
-              "country": "DE"
-          },
-          {
-              "clearnet": "https://search.pabloferreiro.es/",
-              "tor": null,
-              "i2p": null,
-              "country": "DE"
-          },
-          {
-              "clearnet": "https://buscar.weblibre.org/",
-              "tor": null,
-              "i2p": null,
-              "country": "CL"
-          },
-          {
-              "clearnet": "https://search.ahwx.org/",
-              "tor": null,
-              "i2p": null,
-              "country": "NL"
-          },
-          {
-              "clearnet": "https://librex.pufe.org/",
-              "tor": null,
-              "i2p": null,
-              "country": "NZ"
-          },
-          {
-              "clearnet": "https://search.milivojevic.in.rs/",
-              "tor": null,
-              "i2p": null,
-              "country": "NL"
-          },
-          {
-              "clearnet": "https://librex.ratakor.com/",
-              "tor": null,
-              "i2p": null,
-              "country": "FR"
-          },
-	  {
-              "clearnet": "https://search.tildevarsh.in/",
-              "tor": null,
-              "i2p": null,
-              "country": "IN"
-          }
+    "instances": [{
+            "clearnet": "https://librex.beparanoid.de/",
+            "tor": "http://librex.2356uhnbpv5nk3bni5bv6jg2cd6lgj664kwx3lhyelstpttpyv4kk2qd.onion/",
+            "i2p": null,
+            "country": "HU"
+        },
+        {
+            "clearnet": "https://lx.vern.cc/",
+            "tor": "http://lx.vernccvbvyi5qhfzyqengccj7lkove6bjot2xhh5kajhwvidqafczrad.onion/",
+            "i2p": "http://vernziqfqvweijfaacmwazohgpdo2bt2ib2jlupt2pwwu27bhgxq.b32.i2p/",
+            "country": "US"
+        },
+        {
+            "clearnet": "https://lx.sesu.cc/",
+            "tor": "http://lx.swxoebbpeqiiixyhbuh3vbw53pdrmtbiaj2sqveol6kkn5rpapfi4aad.onion/",
+            "i2p": "http://37bw4xelfgivsih5s4s5cozkxkhgoeqx5bjfjnrnmv5utdtk45sa.b32.i2p/",
+            "country": "CL"
+        },
+        {
+            "clearnet": "https://librex.mikata.ru/",
+            "tor": "http://f7ssz7l3biu4fugwctfpcx4txg5yq4gqhrt473ledsuc3ivtd3omniid.onion/",
+            "i2p": null,
+            "country": "US"
+        },
+        {
+            "clearnet": "https://librex.terryiscool160.xyz/",
+            "tor": "http://librex.n53wt4ivvfdfaqkwldgdzfsubszukie2an6auja6x2wp3e3oa7v2gqyd.onion/",
+            "i2p": null,
+            "country": "UK"
+        },
+        {
+            "clearnet": "https://search.davidovski.xyz/",
+            "tor": null,
+            "i2p": null,
+            "country": "UK"
+        },
+        {
+            "clearnet": "https://search.funami.tech/",
+            "tor": null,
+            "i2p": null,
+            "country": "KR"
+        },
+        {
+            "clearnet": "https://search.madreyk.xyz/",
+            "tor": null,
+            "i2p": null,
+            "country": "DE"
+        },
+        {
+            "clearnet": "https://search.pabloferreiro.es/",
+            "tor": null,
+            "i2p": null,
+            "country": "DE"
+        },
+        {
+            "clearnet": "https://buscar.weblibre.org/",
+            "tor": null,
+            "i2p": null,
+            "country": "CL"
+        },
+        {
+            "clearnet": "https://search.ahwx.org/",
+            "tor": null,
+            "i2p": null,
+            "country": "NL"
+        },
+        {
+            "clearnet": "https://librex.pufe.org/",
+            "tor": null,
+            "i2p": null,
+            "country": "NZ"
+        },
+        {
+            "clearnet": "https://search.milivojevic.in.rs/",
+            "tor": null,
+            "i2p": null,
+            "country": "NL"
+        },
+        {
+            "clearnet": "https://librex.ratakor.com/",
+            "tor": null,
+            "i2p": null,
+            "country": "FR"
+        },
+        {
+            "clearnet": "https://search.tildevarsh.in/",
+            "tor": null,
+            "i2p": null,
+            "country": "IN"
+        },
+        {
+            "clearnet": "https://librex.yogeshlamichhane.com.np/",
+            "tor": null,
+            "i2p": null,
+            "country": "GB"
+        }
     ]
 }
