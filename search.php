@@ -38,11 +38,15 @@
             <button type="submit" class="hide"></button>
             <input type="hidden" name="p" value="0">
             <div class="sub-search-button-wrapper">
-                <button name="t" value="0"><img src="static/images/text_result.png" alt="text result" />General</button>
-                <button name="t" value="1"><img src="static/images/image_result.png" alt="image result" />Images</button>
-                <button name="t" value="2"><img src="static/images/video_result.png" alt="video result" />Videos</button>
-                <button name="t" value="3"><img src="static/images/torrent_result.png" alt="torrent result" />Torrents</button>
-                <button name="t" value="4"><img src="static/images/tor_result.png" alt="tor result" />Tor</button>
+                <?php
+                    echo "
+                        <a href=\"/search.php?q=$query&p=0&t=0\"><img src=\"static/images/text_result.png\" alt=\"text result\" />General</a>
+                        <a href=\"/search.php?q=$query&p=0&t=1\"><img src=\"static/images/image_result.png\" alt=\"image result\" />Images</a>
+                        <a href=\"/search.php?q=$query&p=0&t=2\"><img src=\"static/images/video_result.png\" alt=\"video result\" />Videos</a>
+                        <a href=\"/search.php?q=$query&p=0&t=3\"><img src=\"static/images/torrent_result.png\" alt=\"torrent result\" />Torrents</a>
+                        <a href=\"/search.php?q=$query&p=0&t=4\"><img src=\"static/images/tor_result.png\" alt=\"tor result\" />Tor</a>
+                    ";
+                ?>
             </div>
         <hr>
         </form>
