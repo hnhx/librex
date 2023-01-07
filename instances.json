@@ -84,17 +84,24 @@
               "i2p": null,
               "country": "FR"
           },
-	  {
+          {
               "clearnet": "https://search.tildevarsh.in/",
               "tor": null,
               "i2p": null,
               "country": "IN"
           },
           {
-              "clearnet": "https://librex.myroware.eu/",
+              "clearnet": "https://librex.yogeshlamichhane.com.np/",
+              "tor": null,
+              "i2p": null,
+              "country": "GB"
+          },
+          {
+
+              "clearnet": "https://librex.myroware.eu",
               "tor": null,
               "i2p": null,
               "country": "DE"
-          }
+          },
     ]
 }

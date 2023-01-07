@@ -28,6 +28,7 @@
 | [search.milivojevic.in.rs](https://search.milivojevic.in.rs/) | ❌ | ❌ | 🇳🇱 NL |
 | [librex.ratakor.com](https://librex.ratakor.com/) | ❌ | ❌ | 🇫🇷 FR |
 | [search.tildevarsh.in](https://search.tildevarsh.in/) | ❌ | ❌ | 🇮🇳  IN |
+| [librex.yogeshlamichhane.com.np](https://librex.yogeshlamichhane.com.np/) | ❌ | ❌ | 🇬🇧 GB |
 | [https://librex.myroware.eu/](https://librex.myroware.eu/) | ❌ | ❌ | 🇩🇪 DE |
 <br>
 
