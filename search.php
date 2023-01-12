@@ -41,40 +41,44 @@
                 <?php
                     $config = require "config.php";
 
-                    $general = "<a href=\"/search.php?q=$query&p=0&t=0\"><img src=\"static/images/text_result.png\" alt=\"text result\" />General</a>";
-                    $images = "<a href=\"/search.php?q=$query&p=0&t=1\"><img src=\"static/images/image_result.png\" alt=\"image result\" />Images</a>";
-                    $videos = "<a href=\"/search.php?q=$query&p=0&t=2\"><img src=\"static/images/video_result.png\" alt=\"video result\" />Videos</a>";
-                    $torrents = "<a href=\"/search.php?q=$query&p=0&t=3\"><img src=\"static/images/torrent_result.png\" alt=\"torrent result\" />Torrents</a>";
-                    $tor = "<a href=\"/search.php?q=$query&p=0&t=4\"><img src=\"static/images/tor_result.png\" alt=\"tor result\" />Tor</a>";
+                    $general = "<a {} href=\"/search.php?q=$query&p=0&t=0\"><img src=\"static/images/text_result.png\" alt=\"text result\" />General</a>";
+                    $images = "<a {} href=\"/search.php?q=$query&p=0&t=1\"><img src=\"static/images/image_result.png\" alt=\"image result\" />Images</a>";
+                    $videos = "<a {} href=\"/search.php?q=$query&p=0&t=2\"><img src=\"static/images/video_result.png\" alt=\"video result\" />Videos</a>";
+                    $torrents = "<a {} href=\"/search.php?q=$query&p=0&t=3\"><img src=\"static/images/torrent_result.png\" alt=\"torrent result\" />Torrents</a>";
+                    $tor = "<a {} href=\"/search.php?q=$query&p=0&t=4\"><img src=\"static/images/tor_result.png\" alt=\"tor result\" />Tor</a>";
+
+                    // If the type == the number, add the class "active" to it.
 
                     switch ($type)
                     {
                         case 0:
-                            $general = "<a class=\"active\" href=\"/search.php?q=$query&p=0&t=0\"><img src=\"static/images/text_result.png\" alt=\"text result\" />General</a>";
+                            $general = str_replace("{}", "class=\"active\"", $general);
                             break;
                         case 1:
-                            $images = "<a class=\"active\" href=\"/search.php?q=$query&p=0&t=1\"><img src=\"static/images/image_result.png\" alt=\"image result\" />Images</a>";
+                            $images = str_replace("{}", "class=\"active\"", $images);
                             break;
                         case 2:
-                            $videos = "<a class=\"active\" href=\"/search.php?q=$query&p=0&t=2\"><img src=\"static/images/video_result.png\" alt=\"video result\" />Videos</a>";
+                            $videos = str_replace("{}", "class=\"active\"", $videosl);
                             break;
                         case 3:
-                            $torrents = "<a class=\"active\" href=\"/search.php?q=$query&p=0&t=3\"><img src=\"static/images/torrent_result.png\" alt=\"torrent result\" />Torrents</a>";
+                            $torrents = str_replace("{}", "class=\"active\"", $torrents);
                             break;
                         case 4:
-                            $tor = "<a class=\"active\" href=\"/search.php?q=$query&p=0&t=4\"><img src=\"static/images/tor_result.png\" alt=\"tor result\" />Tor</a>";
+                            $tor = str_replace("{}", "class=\"active\"", $tor);
                             break;
                         default:
-                            $general = "<a class=\"active\" href=\"/search.php?q=$query&p=0&t=0\"><img src=\"static/images/text_result.png\" alt=\"text result\" />General</a>";
+                            $general = str_replace("{}", "class=\"active\"", $general);
                     }
 
-                    echo "$general $images $videos";
+                    // None optional types
+                    // remove all leftover "{}"
+                    echo str_replace("{}", " ", "$general $images $videos");
 
                     if (!($config->disable_bittorent_search)) {
-                        echo $torrents;
+                        echo str_replace("{}", " ", $torrents);
                     }
                     if (!($config->disable_hidden_service_search)) {
-                        echo $tor;
+                        echo str_replace("{}", " ", $tor);
                     }
                 ?>
             </div>
