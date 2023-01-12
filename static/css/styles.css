@@ -141,6 +141,15 @@ a:hover,
     width: 20px;
 }
 
+.active {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #bd93f9 !important;
+}
+
+.sub-search-container hr {
+    margin: 3px;
+}
+
 .misc-container {
     text-align: center;
     word-wrap: break-word;
