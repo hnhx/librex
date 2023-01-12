@@ -39,20 +39,49 @@
             <input type="hidden" name="p" value="0">
             <div class="sub-search-button-wrapper">
                 <?php
-                    echo "
-                        <a href=\"/search.php?q=$query&p=0&t=0\"><img src=\"static/images/text_result.png\" alt=\"text result\" />General</a>
-                        <a href=\"/search.php?q=$query&p=0&t=1\"><img src=\"static/images/image_result.png\" alt=\"image result\" />Images</a>
-                        <a href=\"/search.php?q=$query&p=0&t=2\"><img src=\"static/images/video_result.png\" alt=\"video result\" />Videos</a>
-                        <a href=\"/search.php?q=$query&p=0&t=3\"><img src=\"static/images/torrent_result.png\" alt=\"torrent result\" />Torrents</a>
-                        <a href=\"/search.php?q=$query&p=0&t=4\"><img src=\"static/images/tor_result.png\" alt=\"tor result\" />Tor</a>
-                    ";
+                    $config = require "config.php";
+
+                    $general = "<a href=\"/search.php?q=$query&p=0&t=0\"><img src=\"static/images/text_result.png\" alt=\"text result\" />General</a>";
+                    $images = "<a href=\"/search.php?q=$query&p=0&t=1\"><img src=\"static/images/image_result.png\" alt=\"image result\" />Images</a>";
+                    $videos = "<a href=\"/search.php?q=$query&p=0&t=2\"><img src=\"static/images/video_result.png\" alt=\"video result\" />Videos</a>";
+                    $torrents = "<a href=\"/search.php?q=$query&p=0&t=3\"><img src=\"static/images/torrent_result.png\" alt=\"torrent result\" />Torrents</a>";
+                    $tor = "<a href=\"/search.php?q=$query&p=0&t=4\"><img src=\"static/images/tor_result.png\" alt=\"tor result\" />Tor</a>";
+
+                    switch ($type)
+                    {
+                        case 0:
+                            $general = "<a class=\"active\" href=\"/search.php?q=$query&p=0&t=0\"><img src=\"static/images/text_result.png\" alt=\"text result\" />General</a>";
+                            break;
+                        case 1:
+                            $images = "<a class=\"active\" href=\"/search.php?q=$query&p=0&t=1\"><img src=\"static/images/image_result.png\" alt=\"image result\" />Images</a>";
+                            break;
+                        case 2:
+                            $videos = "<a class=\"active\" href=\"/search.php?q=$query&p=0&t=2\"><img src=\"static/images/video_result.png\" alt=\"video result\" />Videos</a>";
+                            break;
+                        case 3:
+                            $torrents = "<a class=\"active\" href=\"/search.php?q=$query&p=0&t=3\"><img src=\"static/images/torrent_result.png\" alt=\"torrent result\" />Torrents</a>";
+                            break;
+                        case 4:
+                            $tor = "<a class=\"active\" href=\"/search.php?q=$query&p=0&t=4\"><img src=\"static/images/tor_result.png\" alt=\"tor result\" />Tor</a>";
+                            break;
+                        default:
+                            $general = "<a class=\"active\" href=\"/search.php?q=$query&p=0&t=0\"><img src=\"static/images/text_result.png\" alt=\"text result\" />General</a>";
+                    }
+
+                    echo "$general $images $videos";
+
+                    if (!($config->disable_bittorent_search)) {
+                        echo $torrents;
+                    }
+                    if (!($config->disable_hidden_service_search)) {
+                        echo $tor;
+                    }
                 ?>
             </div>
         <hr>
         </form>
 
         <?php
-            $config = require "config.php";
             require "misc/tools.php";
 
 
@@ -87,27 +116,17 @@
                     break;
 
                 case 3:
-                    if ($config->disable_bittorent_search)
-                        echo "<p class=\"text-result-container\">The host disabled this feature! :C</p>";
-                    else
-                    {
-                        require "engines/bittorrent/merge.php";
-                        $results = get_merged_torrent_results($query_encoded);
-                        print_elapsed_time($start_time);
-                        print_merged_torrent_results($results);
-                    }
+                    require "engines/bittorrent/merge.php";
+                    $results = get_merged_torrent_results($query_encoded);
+                    print_elapsed_time($start_time);
+                    print_merged_torrent_results($results);
                     break;
 
                 case 4:
-                    if ($config->disable_hidden_service_search)
-                        echo "<p class=\"text-result-container\">The host disabled this feature! :C</p>";
-                    else
-                    {
-                        require "engines/ahmia/hidden_service.php";
-                        $results = get_hidden_service_results($query_encoded);
-                        print_elapsed_time($start_time);
-                        print_hidden_service_results($results);
-                    }
+                    require "engines/ahmia/hidden_service.php";
+                    $results = get_hidden_service_results($query_encoded);
+                    print_elapsed_time($start_time);
+                    print_hidden_service_results($results);
                     break;
 
                 default:
