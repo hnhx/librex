@@ -18,6 +18,7 @@
         */
         "invidious" => "", // youtube
         "bibliogram" => "", // instagram
+        "rimgo" => "", // imgur
         "nitter" => "", // twitter
         "libreddit" => "", // reddit
         "proxitok" => "", // tiktok
