@@ -66,6 +66,7 @@
         $frontends = array(
             "youtube.com" => "invidious",
             "instagram.com" => "bibliogram",
+            "imgur.io" => "imgur.artemislena.eu",
             "twitter.com" => "nitter",
             "reddit.com" => "libreddit",
             "tiktok.com" => "proxitok",
