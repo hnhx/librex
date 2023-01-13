@@ -19,12 +19,6 @@
             else if (!empty($config->$frontend))
                 $frontend = $config->$frontend;
 
-            if ($original == "instagram.com")
-            {
-                if (!strpos($url, "/p/"))
-                    $frontend .= "/u";
-            }
-
             if (empty(trim($frontend)))
                 return $url;
 
@@ -65,7 +59,6 @@
 
         $frontends = array(
             "youtube.com" => "invidious",
-            "instagram.com" => "bibliogram",
             "twitter.com" => "nitter",
             "reddit.com" => "libreddit",
             "tiktok.com" => "proxitok",
@@ -148,7 +141,7 @@
             }
             else if (strpos($query_lower, "user agent") || strpos($query_lower, "ua"))
             {
-                return 4;
+                return 4; uhh
             }
          }
          else if (strpos($query_lower, "weather") !== false)
