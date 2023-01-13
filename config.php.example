@@ -19,6 +19,7 @@
         "invidious" => "", // youtube
         "bibliogram" => "", // instagram
         "nitter" => "", // twitter
+        "scribe" => "", // medium
         "libreddit" => "", // reddit
         "proxitok" => "", // tiktok
         "wikiless" => "", // wikipedia
