@@ -84,6 +84,7 @@
                                 "invidious" => array("https://docs.invidious.io/instances/", "YouTube"),
                                 "bibliogram" => array("https://git.sr.ht/~cadence/bibliogram-docs/tree/master/docs/Instances.md", "Instagram"),
                                 "nitter" => array("https://github.com/zedeus/nitter/wiki/Instances", "Twitter"),
+                                "scribe" => array("https://git.sr.ht/~edwardloveall/scribe/tree/main/docs/instances.md", "Medium),
                                 "libreddit" => array("https://github.com/spikecodes/libreddit", "Reddit"),
                                 "proxitok" => array("https://github.com/pablouser1/ProxiTok/wiki/Public-instances", "TikTok"),
                                 "wikiless" => array("https://codeberg.org/orenom/wikiless", "Wikipedia"),
