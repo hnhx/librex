@@ -19,6 +19,12 @@
             else if (!empty($config->$frontend))
                 $frontend = $config->$frontend;
 
+           if ($original == "instagram.com")
+            {
+                if (!strpos($url, "/p/"))
+                    $frontend .= "/u";
+            }
+
             if (empty(trim($frontend)))
                 return $url;
 
@@ -59,6 +65,7 @@
 
         $frontends = array(
             "youtube.com" => "invidious",
+            "instagram.com" => "bibliogram",
             "music.youtube.com" => "hyperpipe",
             "imgur.io" => "rimgo",
             "medium.com" => "scribe",
