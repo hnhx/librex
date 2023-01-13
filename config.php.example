@@ -17,7 +17,6 @@
             e.g.: "invidious" => "https://yewtu.be",
         */
         "invidious" => "", // youtube
-        "bibliogram" => "", // instagram
         "nitter" => "", // twitter
         "libreddit" => "", // reddit
         "proxitok" => "", // tiktok
