@@ -67,6 +67,7 @@
             "youtube.com" => "invidious",
             "instagram.com" => "bibliogram",
             "twitter.com" => "nitter",
+            "medium.com" => "scribe",
             "reddit.com" => "libreddit",
             "tiktok.com" => "proxitok",
             "wikipedia.org" => "wikiless",
