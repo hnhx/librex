@@ -63,7 +63,7 @@
             "imgur.io" => "rimgo",
             "medium.com" => "scribe",
             "github.com" => "gothub",
-            "odysee.com" => "hyperpipe",
+            "odysee.com" => "librarian",
             "twitter.com" => "nitter",
             "reddit.com" => "libreddit",
             "tiktok.com" => "proxitok",
