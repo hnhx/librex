@@ -64,7 +64,7 @@
             return $url;
 
         $frontends = array(
-            "youtube.com" => "invidious",
+            "youtube.com" => "piped",
             "instagram.com" => "bibliogram",
             "twitter.com" => "nitter",
             "reddit.com" => "libreddit",
