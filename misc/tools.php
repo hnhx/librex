@@ -65,6 +65,7 @@
 
         $frontends = array(
             "youtube.com" => "invidious",
+            "music.youtube.com" => "hyperpipe",
             "instagram.com" => "bibliogram",
             "twitter.com" => "nitter",
             "reddit.com" => "libreddit",
