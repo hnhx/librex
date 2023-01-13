@@ -82,6 +82,7 @@
 
                             $frontends = array(
                                 "invidious" => array("https://docs.invidious.io/instances/", "YouTube"),
+                                "bibliogram" => array("https://git.sr.ht/~cadence/bibliogram-docs/tree/master/docs/Instances.md", "Instagram"),
                                 "hyperpipe" => array("https://hyperpipe.codeberg.page", "YouTube Music"),
                                 "rimgo" => array("https://codeberg.org/video-prize-ranch/rimgo#instances", "Imgur"),
                                 "scribe" => array("https://git.sr.ht/~edwardloveall/scribe/tree/main/docs/instances.md", "Medium"),
