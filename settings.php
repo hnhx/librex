@@ -83,6 +83,7 @@
                             $frontends = array(
                                 "invidious" => array("https://docs.invidious.io/instances/", "YouTube"),
                                 "bibliogram" => array("https://git.sr.ht/~cadence/bibliogram-docs/tree/master/docs/Instances.md", "Instagram"),
+                                "rimgo" => array("https://codeberg.org/video-prize-ranch/rimgo#instances", "Imgur"),
                                 "nitter" => array("https://github.com/zedeus/nitter/wiki/Instances", "Twitter"),
                                 "libreddit" => array("https://github.com/spikecodes/libreddit", "Reddit"),
                                 "proxitok" => array("https://github.com/pablouser1/ProxiTok/wiki/Public-instances", "TikTok"),
