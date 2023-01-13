@@ -17,6 +17,7 @@
             e.g.: "invidious" => "https://yewtu.be",
         */
         "invidious" => "", // youtube
+        "bibliogram" => "", // instagram
         "hyperpipe" => "", // youtube music
         "rimgo" => "", // imgur
         "scribe" => "", // medium
