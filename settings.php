@@ -77,7 +77,7 @@
                 </div>
                 <h2>Privacy friendly frontends</h2>
                 <p>For an example if you want to view YouTube without getting spied on, click on "Invidious", find the instance that is most suitable for you then paste it in (correct format: https://example.com)</p>
-                <div class="instances-container">
+                <div class="settings-textbox-container">
                       <?php
 
                             $frontends = array(
@@ -97,7 +97,7 @@
                                 echo "<div>";
                                 echo "<a for=\"$frontend\" href=\"" . $info[0] . "\" target=\"_blank\">" . ucfirst($frontend) . "</a>";
                                 echo "<input type=\"text\" name=\"$frontend\" placeholder=\"Replace " . $info[1] . "\" value=";
-                                echo isset($_COOKIE["$frontend"]) ? htmlspecialchars($_COOKIE["$frontend"])  : json_decode(json_encode($config), true)[$frontend];
+                                echo isset($_COOKIE["$frontend"]) ? htmlspecialchars($_COOKIE["$frontend"]) : json_decode(json_encode($config), true)[$frontend];
                                 echo ">";
                                 echo "</div>";
                            }
@@ -106,6 +106,20 @@
                 <div>
                     <label>Disable frontends</label>
                     <input type="checkbox" name="disable_frontends" <?php echo isset($_COOKIE["disable_frontends"]) ? "checked"  : ""; ?> >
+                </div>
+                <h2>Google settings</h2>
+                <div class="settings-textbox-container">
+                    <div>
+                        <span>Google language</span>
+                        <?php
+                            echo "<input type=\"text\" name=\"google_language\" placeholder=\"E.g.: de\" value=\"";
+                            echo isset($_COOKIE["google_language"]) ? htmlspecialchars($_COOKIE["google_language"]) : $config->google_language;
+                        ?>">
+                    </div>
+                    <div>
+                        <label>Safe search</label>
+                        <input type="checkbox" name="safe_search" <?php echo isset($_COOKIE["safe_search"]) ? "checked"  : ""; ?> >
+                    </div>
                 </div>
                 <div>
                   <button type="submit" name="save" value="1">Save</button>

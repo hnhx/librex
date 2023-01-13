@@ -7,7 +7,16 @@
         $query_encoded = urlencode($query);
         $results = array();
 
-        $url = "https://www.google.$config->google_domain/search?&q=$query_encoded&start=$page&hl=$config->google_language";
+        $domain = $config->google_domain;
+        $language = isset($_COOKIE["google_language"]) ? htmlspecialchars($_COOKIE["google_language"]) : $config->google_language;
+        
+        $url = "https://www.google.$domain/search?&q=$query_encoded&start=$page&hl=$language&lr=lang_$language";
+
+        if (isset($_COOKIE["safe_search"]))
+        {
+            $url .= "&safe=medium";
+        }
+
         $google_ch = curl_init($url);
         curl_setopt_array($google_ch, $config->curl_settings);
         curl_multi_add_handle($mh, $google_ch);
