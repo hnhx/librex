@@ -1,4 +1,9 @@
-<?php require "misc/header.php"; ?>
+<?php 
+    require "misc/header.php";
+
+    $config = require "config.php";
+    require "misc/tools.php";
+?>
 
 <title>
 <?php
@@ -44,7 +49,14 @@
                     foreach ($categories as $category)
                     {
                         $category_index = array_search($category, $categories);
-                        echo "<a href=\"/search.php?q=" . $query . "&p=0&t=" . $category_index . "\"><img src=\"static/images/" . $category . "_result.png\" alt=\"" . $category . " result\" />" . ucfirst($category)  . "</a>";
+
+                        if (($config->disable_bittorent_search && $category_index == 3) ||
+                            ($config->disable_hidden_service_search && $category_index ==4))
+                        {
+                            continue;
+                        }
+
+                        echo "<a " . (($category_index == $type) ? "class=\"active\"" : "") . "href=\"/search.php?q=" . $query . "&p=0&t=" . $category_index . "\"><img src=\"static/images/" . $category . "_result.png\" alt=\"" . $category . " result\" />" . ucfirst($category)  . "</a>";
                     }
                 ?>
             </div>
@@ -52,9 +64,6 @@
         </form>
 
         <?php
-            $config = require "config.php";
-            require "misc/tools.php";
-
 
             $page = isset($_REQUEST["p"]) ? (int) $_REQUEST["p"] : 0;
 

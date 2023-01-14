@@ -35,6 +35,11 @@ a,
     color: #bd93f9;
 }
 
+.sub-search-button-wrapper .active {
+    border-bottom: 2px #bd93f9 solid;
+    padding-bottom: 6px;
+}
+
 a:hover,
 .text-result-wrapper h2:hover {
     text-decoration: underline;

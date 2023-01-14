@@ -28,7 +28,6 @@
 | [librex.pufe.org](https://librex.pufe.org/) | ❌ | ❌ | :new_zealand: NZ |
 | [librex.ratakor.com](https://librex.ratakor.com/) | ❌ | ❌ | 🇫🇷 FR |
 | [search.tildevarsh.in](https://search.tildevarsh.in/) | ❌ | ❌ | 🇮🇳  IN |
-| [librex.yogeshlamichhane.com.np](https://librex.yogeshlamichhane.com.np/) | ❌ | ❌ | 🇬🇧 GB |
 | [librex.myroware.eu](https://librex.myroware.eu/) | ❌ | ❌ | 🇩🇪 DE |
 <br>
 
