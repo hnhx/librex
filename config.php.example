@@ -20,11 +20,9 @@
         "bibliogram" => "", // instagram
         "hyperpipe" => "", // youtube music
         "rimgo" => "", // imgur
-        "pastebinp" => "", // pastebin
         "scribe" => "", // medium
         "librarian" => "", // odysee
         "gothub" => "", // github
-        "neuters" => "", // reuters
         "nitter" => "", // twitter
         "libreddit" => "", // reddit
         "proxitok" => "", // tiktok
