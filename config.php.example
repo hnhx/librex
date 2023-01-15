@@ -24,6 +24,7 @@
         "scribe" => "", // medium
         "librarian" => "", // odysee
         "gothub" => "", // github
+        "neuters" => "", // reuters
         "nitter" => "", // twitter
         "libreddit" => "", // reddit
         "proxitok" => "", // tiktok
