@@ -19,7 +19,7 @@
             else if (!empty($config->$frontend))
                 $frontend = $config->$frontend;
 
-            if ($original == "instagram.com")
+           if ($original == "instagram.com")
             {
                 if (!strpos($url, "/p/"))
                     $frontend .= "/u";
@@ -66,6 +66,10 @@
         $frontends = array(
             "youtube.com" => "invidious",
             "instagram.com" => "bibliogram",
+            "imgur.io" => "rimgo",
+            "medium.com" => "scribe",
+            "github.com" => "gothub",
+            "odysee.com" => "librarian",
             "twitter.com" => "nitter",
             "reddit.com" => "libreddit",
             "tiktok.com" => "proxitok",

@@ -18,6 +18,10 @@
         */
         "invidious" => "", // youtube
         "bibliogram" => "", // instagram
+        "rimgo" => "", // imgur
+        "scribe" => "", // medium
+        "librarian" => "", // odysee
+        "gothub" => "", // github
         "nitter" => "", // twitter
         "libreddit" => "", // reddit
         "proxitok" => "", // tiktok
