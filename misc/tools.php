@@ -68,6 +68,7 @@
             "instagram.com" => "bibliogram",
             "music.youtube.com" => "hyperpipe",
             "imgur.io" => "rimgo",
+            "pastebin.com" => "pastebinp",
             "medium.com" => "scribe",
             "github.com" => "gothub",
             "odysee.com" => "librarian",
