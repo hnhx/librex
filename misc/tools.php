@@ -73,6 +73,7 @@
             "github.com" => "gothub",
             "odysee.com" => "librarian",
             "twitter.com" => "nitter",
+            "reuters.com" => "neuters",
             "reddit.com" => "libreddit",
             "tiktok.com" => "proxitok",
             "wikipedia.org" => "wikiless",
