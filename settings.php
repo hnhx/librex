@@ -90,6 +90,7 @@
                                 "gothub" => array("https://codeberg.org/gothub/gothub/wiki/Instances", "GitHub"),
                                 "librarian" => array("https://codeberg.org/librarian/librarian#clearnet", "Odysee"),
                                 "nitter" => array("https://github.com/zedeus/nitter/wiki/Instances", "Twitter"),
+                                "neuters" => array("https://neuters.de", "Reuters"),
                                 "libreddit" => array("https://github.com/spikecodes/libreddit", "Reddit"),
                                 "proxitok" => array("https://github.com/pablouser1/ProxiTok/wiki/Public-instances", "TikTok"),
                                 "wikiless" => array("https://codeberg.org/orenom/wikiless", "Wikipedia"),
