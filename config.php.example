@@ -18,7 +18,6 @@
         */
         "invidious" => "", // youtube
         "bibliogram" => "", // instagram
-        "hyperpipe" => "", // youtube music
         "rimgo" => "", // imgur
         "scribe" => "", // medium
         "librarian" => "", // odysee
