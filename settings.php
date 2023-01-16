@@ -93,7 +93,8 @@
                                 "wikiless" => array("https://codeberg.org/orenom/wikiless", "Wikipedia"),
                                 "quetre" => array("https://github.com/zyachel/quetre", "Quora"),
                                 "libremdb" => array("https://github.com/zyachel/libremdb", "IMDb"),
-                                "breezewiki" => array("https://gitdab.com/cadence/breezewiki", "Fandom")
+                                "breezewiki" => array("https://gitdab.com/cadence/breezewiki", "Fandom"),
+                                "anonymousoverflow" => array("https://github.com/httpjamesm/AnonymousOverflow#clearnet-instances", "StackOverflow")
                             );
 
                            foreach($frontends as $frontend => $info)
