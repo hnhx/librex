@@ -76,7 +76,8 @@
             "wikipedia.org" => "wikiless",
             "quora.com" => "quetre",
             "imdb.com" => "libremdb",
-            "fandom.com" => "breezewiki"
+            "fandom.com" => "breezewiki",
+            "stackoverflow.com" => "anonymousoverflow"
         );
 
         foreach($frontends as $original => $frontend)

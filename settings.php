@@ -90,10 +90,11 @@
                                 "nitter" => array("https://github.com/zedeus/nitter/wiki/Instances", "Twitter"),
                                 "libreddit" => array("https://github.com/spikecodes/libreddit", "Reddit"),
                                 "proxitok" => array("https://github.com/pablouser1/ProxiTok/wiki/Public-instances", "TikTok"),
-                                "wikiless" => array("https://codeberg.org/orenom/wikiless", "Wikipedia"),
+                                "wikiless" => array("https://github.com/Metastem/wikiless#instances", "Wikipedia"),
                                 "quetre" => array("https://github.com/zyachel/quetre", "Quora"),
                                 "libremdb" => array("https://github.com/zyachel/libremdb", "IMDb"),
-                                "breezewiki" => array("https://gitdab.com/cadence/breezewiki", "Fandom")
+                                "breezewiki" => array("https://gitdab.com/cadence/breezewiki", "Fandom"),
+                                "anonymousoverflow" => array("https://github.com/httpjamesm/AnonymousOverflow#clearnet-instances", "StackOverflow")
                             );
 
                            foreach($frontends as $frontend => $info)

@@ -28,7 +28,8 @@
         "wikiless" => "", // wikipedia
         "quetre" => "", // quora
         "libremdb" => "", // imdb,
-        "breezewiki" => "", // fandom
+        "breezewiki" => "", // fandom,
+        "anonymousoverflow" => "", // stackoverflow
 
         /*
             To send requests trough a proxy uncomment CURLOPT_PROXY and CURLOPT_PROXYTYPE:
