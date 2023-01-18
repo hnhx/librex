@@ -5,7 +5,7 @@
   <img src="https://user-images.githubusercontent.com/49120638/207550159-4fa639a5-24e6-42e0-9e58-f04e5d18e391.png" width="400">
 </p>
 
-<p align="center">A privacy respecting free as in freedom meta search engine</p>
+<p align="center">Framework and javascript free privacy respecting meta search engine</p>
 
 <br>
 
@@ -29,6 +29,7 @@
 | [librex.ratakor.com](https://librex.ratakor.com/) | ❌ | ❌ | 🇫🇷 FR |
 | [search.tildevarsh.in](https://search.tildevarsh.in/) | ❌ | ❌ | 🇮🇳  IN |
 | [librex.myroware.eu](https://librex.myroware.eu/) | ❌ | ❌ | 🇩🇪 DE |
+| [search.mascotboi.xyz](https://search.mascotboi.xyz/) | ❌ | ❌ | 🇮🇳  IN |
 <br>
 
 ### Thanks rms
@@ -48,12 +49,7 @@ If you would like to learn more about LibreX check out the [Wiki](https://github
 <br>
 <br>
 
-### Mirror
 
-You can access the source code via this git mirror
-```
-git clone https://git.beparanoid.de/librex
-```
 ### LibreX compared to other metasearch engines
 
 | Name |  Works without JS | Privacy frontend redirect | Torrent results | API | No 3rd party libs used |

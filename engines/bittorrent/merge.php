@@ -10,6 +10,7 @@
         require "engines/bittorrent/yts.php";
         require "engines/bittorrent/torrentgalaxy.php";
         require "engines/bittorrent/1337x.php";
+        require "engines/bittorrent/sukebei.php";
 
         $query = urlencode($query);
 
@@ -19,7 +20,8 @@
             $nyaa_url,
             $yts_url,
             $torrentgalaxy_url,
-            $_1337x_url 
+            $_1337x_url,
+            $sukebei_url
         );
  
         $mh = curl_multi_init();
@@ -61,6 +63,9 @@
                     break;
                 case 5:
                     $results = array_merge($results, get_1337x_results($response));
+                    break;
+                case 6:
+                    $results = array_merge($results, get_sukebei_results($response));
                     break;
             }
         }
