@@ -30,6 +30,7 @@
 | [search.tildevarsh.in](https://search.tildevarsh.in/) | ❌ | ❌ | 🇮🇳  IN |
 | [librex.myroware.eu](https://librex.myroware.eu/) | ❌ | ❌ | 🇩🇪 DE |
 | [search.mascotboi.xyz](https://search.mascotboi.xyz/) | ❌ | ❌ | 🇮🇳  IN |
+| [librex.nekus.gay](https://librex.nekus.gay/) | [✅](http://5yblccekvswxl4n43bn5eg4pr7c4xygvu5lhhdb6ulzmislvahmhitad.onion/) | ❌ | 🇵🇱 PL |
 <br>
 
 ### Thanks rms
