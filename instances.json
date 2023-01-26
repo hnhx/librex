@@ -101,6 +101,12 @@
               "tor": null,
               "i2p": null,
               "country": "IN"
+          },
+          {
+              "clearnet": "https://librex.nekus.gay",
+              "tor": "http://5yblccekvswxl4n43bn5eg4pr7c4xygvu5lhhdb6ulzmislvahmhitad.onion",
+              "i2p": null,
+              "country": "PL"
           }
     ]
 }
