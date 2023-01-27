@@ -89,7 +89,7 @@
                     break;
 
                 case 2:
-                    require "engines/brave/video.php";
+                    require "engines/invidious/video.php";
                     $results = get_video_results($query_encoded);
                     print_elapsed_time($start_time);
                     print_video_results($results);

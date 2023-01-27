@@ -34,7 +34,7 @@
             $results = get_image_results($query_encoded, $page);
             break;
         case 2:
-            require "engines/brave/video.php";
+            require "engines/invidious/video.php";
             $results = get_video_results($query_encoded);
             break;
         case 3:

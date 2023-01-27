@@ -2,7 +2,7 @@
     "instances": [
           {
               "clearnet": "https://search.femboy.hu/",
-              "tor": "http://librex.2356uhnbpv5nk3bni5bv6jg2cd6lgj664kwx3lhyelstpttpyv4kk2qd.onion/",
+              "tor": "http://search.cepyxplublbyw2f4axy4pyztfbxmf63lrt2c7uwv6wl4iixz53czload.onion/",
               "i2p": null,
               "country": "HU"
           },
@@ -35,7 +35,7 @@
               "tor": "http://5yblccekvswxl4n43bn5eg4pr7c4xygvu5lhhdb6ulzmislvahmhitad.onion",
               "i2p": null,
               "country": "PL"
-          }
+          },
           {
               "clearnet": "https://search.davidovski.xyz/",
               "tor": null,

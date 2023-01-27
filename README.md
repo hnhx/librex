@@ -13,7 +13,7 @@
 
 | Clearnet | TOR | I2P | Country |
 |-|-|-|-|
-| [search.femboy.hu](https://search.femboy.hu/) | [✅](http://search.femboy2vec5mc3rdvecifqrwzpiaeoyfh4zodppxq4pc2tdvzhm4moqd.onion/) | ❌ | 🇭🇺 HU (OFFICIAL INSTANCE) |
+| [search.femboy.hu](https://search.femboy.hu/) | [✅](http://search.cepyxplublbyw2f4axy4pyztfbxmf63lrt2c7uwv6wl4iixz53czload.onion/) | ❌ | 🇭🇺 HU (OFFICIAL INSTANCE) |
 | [lx.vern.cc](https://lx.vern.cc/) | [✅](http://lx.vernccvbvyi5qhfzyqengccj7lkove6bjot2xhh5kajhwvidqafczrad.onion/) | [✅](http://vernziqfqvweijfaacmwazohgpdo2bt2ib2jlupt2pwwu27bhgxq.b32.i2p/) | 🇺🇸 US |
 | [lx.sesu.cc](https://lx.sesu.cc/) | [✅](http://lx.swxoebbpeqiiixyhbuh3vbw53pdrmtbiaj2sqveol6kkn5rpapfi4aad.onion/) | [✅](http://lqbchqljxiwl3bbjt4vqe76luovk5ly6khqhg7mt5qcqfn6e4sbq.b32.i2p/) |  🇨🇱 CL |
 | [librex.mikata.ru](https://librex.mikata.ru/) | [✅](http://f7ssz7l3biu4fugwctfpcx4txg5yq4gqhrt473ledsuc3ivtd3omniid.onion/) | ❌ | 🇺🇸 US |
@@ -43,7 +43,7 @@ Huge thanks to Richard Stallman for using LibreX and featuring it on his [websit
 
 ### About LibreX
 
-LibreX gives you results from Google, Brave, Qwant, Ahmia and popular torrent sites without spying on you.
+LibreX gives you results from Google, Qwant, Ahmia and popular torrent sites without spying on you.
 <br>
 <br>
 If you would like to learn more about LibreX check out the [Wiki](https://github.com/hnhx/librex/wiki).

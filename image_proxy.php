@@ -4,16 +4,11 @@
     require "misc/tools.php";
 
     $url = $_REQUEST["url"];
+    $requested_root_domain = get_root_domain($url);
 
-    $split_url = explode("/", $url);
-    $base_url = $split_url[2];
+    $allowed_domains = array("qwant.com", "wikimedia.org", get_root_domain($config->invidious_instance_for_video_results));
 
-    $base_url_main_split = explode(".", strrev($base_url));
-    $base_url_main = strrev($base_url_main_split[1]) . "." . strrev($base_url_main_split[0]);
-
-    $allowed_domains = array("qwant.com", "wikimedia.org", "brave.com");
-
-    if (in_array($base_url_main, $allowed_domains))
+    if (in_array($requested_root_domain, $allowed_domains))
     {
       $image = $url;
       $image_src = request($image);

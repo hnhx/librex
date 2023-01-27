@@ -15,8 +15,6 @@
                <h2>Monero (XMR):</h2>
                <p>41dGQr9EwZBfYBY3fibTtJZYfssfRuzJZDSVDeneoVcgckehK3BiLxAV4FvEVJiVqdiW996zvMxhFB8G8ot9nBFqQ84VkuC</p>
                <img src="static/images/xmr.png" alt="xmr qr code" width="150" height="150"/>
-               <h2>Liberapay</h2>
-               <a href="https://en.liberapay.com/hnhx/donate" target="_blank">liberapay.com/hnhx</a>
         </div>
 
 <?php require "misc/footer.php"; ?>

@@ -10,7 +10,12 @@
         $domain = $config->google_domain;
         $language = isset($_COOKIE["google_language"]) ? htmlspecialchars($_COOKIE["google_language"]) : $config->google_language;
         
-        $url = "https://www.google.$domain/search?&q=$query_encoded&start=$page&hl=$language&lr=lang_$language";
+        $url = "https://www.google.$domain/search?&q=$query_encoded&start=$page";
+
+        if (3 > strlen($language))
+        {
+            $url .= "&hl=$language&lr=lang_$language";
+        }
 
         if (isset($_COOKIE["safe_search"]))
         {
