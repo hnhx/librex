@@ -1,8 +1,8 @@
 <h1 align="center">LibreX</h1>
 
 <p float="left">
-  <img src="https://user-images.githubusercontent.com/49120638/207549667-c731a4f2-b9b0-4385-96be-9c17a8bb2984.png" width="400">
-  <img src="https://user-images.githubusercontent.com/49120638/207550159-4fa639a5-24e6-42e0-9e58-f04e5d18e391.png" width="400">
+  <img src="https://user-images.githubusercontent.com/49120638/215327189-76c54dec-8b19-4faf-8c39-29a61aa3b143.png" width="400">
+  <img src="https://user-images.githubusercontent.com/49120638/215327239-b2a1cb07-3773-4ae7-bb3b-738de2cc3161.png" width="400">
 </p>
 
 <p align="center">Framework and javascript free privacy respecting meta search engine</p>
@@ -44,7 +44,7 @@ Huge thanks to Richard Stallman for using LibreX and featuring it on his [websit
 
 ### About LibreX
 
-LibreX gives you results from Google, Qwant, Ahmia and popular torrent sites without spying on you.
+LibreX gives you results from Google, Qwant, Ahmia and popular torrent sites without spying on you. LibreX doesn't save any type of data about the user, there are no logs, no caches.
 <br>
 <br>
 If you would like to learn more about LibreX check out the [Wiki](https://github.com/hnhx/librex/wiki).
