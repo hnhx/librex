@@ -31,6 +31,7 @@
 | [search.tildevarsh.in](https://search.tildevarsh.in/) | ❌ | ❌ | 🇮🇳  IN |
 | [librex.myroware.eu](https://librex.myroware.eu/) | ❌ | ❌ | 🇩🇪 DE |
 | [search.mascotboi.xyz](https://search.mascotboi.xyz/) | ❌ | ❌ | 🇮🇳  IN |
+| [lx.drain.win](https://lx.drain.win/) | ❌ | ❌ | 🇸🇬 SG |
 <br>
 
 ### Thanks rms

@@ -107,6 +107,12 @@
               "tor": null,
               "i2p": null,
               "country": "IN"
+          },
+          {
+               "clearnet": "https://lx.drain.win",
+               "tor": null,
+               "i2p": null,
+               "country": "SG"
           }
     ]
 }
