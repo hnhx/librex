@@ -22,7 +22,6 @@
 | [librex.nekus.gay](https://librex.nekus.gay/) | [✅](http://5yblccekvswxl4n43bn5eg4pr7c4xygvu5lhhdb6ulzmislvahmhitad.onion/) | ❌ | 🇵🇱 PL |
 | [search.davidovski.xyz](https://search.davidovski.xyz/) | ❌ | ❌ | 🇬🇧 UK |
 | [search.funami.tech](https://search.funami.tech/) | ❌ | ❌ | 🇰🇷 KR |
-| [lx.drain.win](https://lx.drain.win/) | ❌ | ❌ | 🇸🇬 SG |
 | [search.madreyk.xyz](https://search.madreyk.xyz/) | ❌ | ❌ | 🇩🇪 DE |
 | [search.pabloferreiro.es](https://search.pabloferreiro.es/) | ❌ | ❌ | 🇩🇪 DE |
 | [buscar.weblibre.org](https://buscar.weblibre.org/) | ❌ | ❌ | 🇨🇱 CL |
@@ -32,6 +31,7 @@
 | [search.tildevarsh.in](https://search.tildevarsh.in/) | ❌ | ❌ | 🇮🇳  IN |
 | [librex.myroware.eu](https://librex.myroware.eu/) | ❌ | ❌ | 🇩🇪 DE |
 | [search.mascotboi.xyz](https://search.mascotboi.xyz/) | ❌ | ❌ | 🇮🇳  IN |
+| [lx.drain.win](https://lx.drain.win/) | ❌ | ❌ | 🇸🇬 SG |
 <br>
 
 ### Thanks rms
