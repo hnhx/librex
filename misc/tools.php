@@ -45,7 +45,7 @@
                 if (count($wiki_split) > 1)
                 {
                     $lang = explode("://", $wiki_split[0])[1];
-                    $url =  $frontend . explode($original, $url)[1] . "?lang=" . $lang;
+                    $url =  $frontend . explode($original, $url)[1] . "?lang=" . $lang . "&useskin=vector";
                 }
             }
             else if (strpos($url, "fandom.com") !== false)
