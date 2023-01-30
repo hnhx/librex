@@ -14,10 +14,6 @@
   "permissions": [
     "search"
   ],
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "{7b57f073-38cf-457a-98a2-c261e5b13a96}"
-    }
   },
     "chrome_settings_overrides": {
       "search_provider": {
