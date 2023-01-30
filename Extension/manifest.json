@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "Librex",
+  "version": "2.0.0",
+  "author": "Overplex.eth",
+  "icons": {
+    "16": "./icon16.png",
+    "24": "./icon24.png",
+    "32": "./icon32.png",
+    "48": "./icon48.png",
+    "96": "./icon96.png",
+    "128": "./icon128.png"
+  },
+  "permissions": [
+    "search"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{7b57f073-38cf-457a-98a2-c261e5b13a96}"
+    }
+  },
+    "chrome_settings_overrides": {
+      "search_provider": {
+        "name": "LibreX",
+        "keyword": "@lx",
+        "search_url": "http://search.cepyxplublbyw2f4axy4pyztfbxmf63lrt2c7uwv6wl4iixz53czload.onion/search.php?q={searchTerms}",
+        "favicon_url": "http://search.cepyxplublbyw2f4axy4pyztfbxmf63lrt2c7uwv6wl4iixz53czload.onion/favicon.ico",
+        "is_default": true
+      }
+    }
+}
