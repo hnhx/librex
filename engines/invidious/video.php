@@ -16,7 +16,7 @@
             if ($response["type"] == "video")
             {
                 $title = $response["title"];
-                $url = $instance_url . "/watch?v=" . $response["videoId"];
+                $url = "https://youtube.com/watch?v=" . $response["videoId"];
                 $url = check_for_privacy_frontend($url);
                 $uploader = $response["author"];
                 $views = $response["viewCount"];
