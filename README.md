@@ -32,6 +32,7 @@
 | [librex.myroware.eu](https://librex.myroware.eu/) | ❌ | ❌ | 🇩🇪 DE |
 | [search.mascotboi.xyz](https://search.mascotboi.xyz/) | ❌ | ❌ | 🇮🇳  IN |
 | [lx.drain.win](https://lx.drain.win/) | ❌ | ❌ | 🇸🇬 SG |
+| [librex.zzls.xyz](https://librex.zzls.xyz/) | [✅](http://librex.zzlsghu6mvvwyy75mvga6gaf4znbp3erk5xwfzedb4gg6qqh2j6rlvid.onion/) | [✅](http://7huurwog32tny663wkglrhozfoyqyqmsuxjbd7dtudccx44awjda.b32.i2p) | 🇨🇱   CL |
 <br>
 
 ### Thanks rms

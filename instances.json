@@ -113,6 +113,12 @@
                "tor": null,
                "i2p": null,
                "country": "SG"
+	  },
+	  {
+               "clearnet": "https://librex.zzls.xyz",
+               "tor": "http://librex.zzlsghu6mvvwyy75mvga6gaf4znbp3erk5xwfzedb4gg6qqh2j6rlvid.onion",
+               "i2p": "http://7huurwog32tny663wkglrhozfoyqyqmsuxjbd7dtudccx44awjda.b32.i2p",
+               "country": "CL"
           }
     ]
 }
