@@ -19,6 +19,12 @@
               "country": "CL"
           },
           {
+              "clearnet": "https://librex.zzls.xyz/",
+              "tor": "http://librex.zzlsghu6mvvwyy75mvga6gaf4znbp3erk5xwfzedb4gg6qqh2j6rlvid.onion",
+              "i2p": "http://7huurwog32tny663wkglrhozfoyqyqmsuxjbd7dtudccx44awjda.b32.i2p",
+              "country": "CL"
+          },
+          {
               "clearnet": "https://librex.mikata.ru/",
               "tor": "http://f7ssz7l3biu4fugwctfpcx4txg5yq4gqhrt473ledsuc3ivtd3omniid.onion/",
               "i2p": null,
@@ -113,12 +119,6 @@
                "tor": null,
                "i2p": null,
                "country": "SG"
-	  },
-	  {
-               "clearnet": "https://librex.zzls.xyz",
-               "tor": "http://librex.zzlsghu6mvvwyy75mvga6gaf4znbp3erk5xwfzedb4gg6qqh2j6rlvid.onion",
-               "i2p": "http://7huurwog32tny663wkglrhozfoyqyqmsuxjbd7dtudccx44awjda.b32.i2p",
-               "country": "CL"
-          }
+	  }
     ]
 }
