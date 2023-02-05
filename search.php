@@ -29,14 +29,6 @@
             >
             <br>
             <?php
-                foreach($_REQUEST as $key=>$value)
-                {
-                    if ($key != "q" && $key != "p" && $key != "t")
-                    {
-                        echo "<input type=\"hidden\" name=\"" . htmlspecialchars($key) . "\" value=\"" . htmlspecialchars($value) . "\"/>";
-                    }
-                }
-
                 $type = isset($_REQUEST["t"]) ? (int) $_REQUEST["t"] : 0;
                 echo "<button class=\"hide\" name=\"t\" value=\"$type\"/></button>";
             ?>
@@ -120,10 +112,14 @@
                     break;
 
                 default:
+                    $query_parts = explode(" ", $query);
+                    $last_word_query = end($query_parts);
+                    if (substr($query, 0, 1) == "!" || substr($last_word_query, 0, 1) == "!")
+                        check_ddg_bang($query);
                     require "engines/google/text.php";
-                    $results = get_text_results($query_encoded, $page);
-                    print_text_results($results);
+                    $results = get_text_results($query, $page);
                     print_elapsed_time($start_time);
+                    print_text_results($results);
                     break;
             }
 

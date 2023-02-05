@@ -49,12 +49,6 @@
               "country": "UK"
           },
           {
-              "clearnet": "https://search.funami.tech/",
-              "tor": null,
-              "i2p": null,
-              "country": "KR"
-          },
-          {
               "clearnet": "https://search.madreyk.xyz/",
               "tor": null,
               "i2p": null,
@@ -115,10 +109,10 @@
               "country": "IN"
           },
           {
-               "clearnet": "https://lx.drain.win",
-               "tor": null,
-               "i2p": null,
-               "country": "SG"
+              "clearnet": "https://lx.drain.win",
+              "tor": null,
+              "i2p": null,
+              "country": "SG"
 	  }
     ]
 }

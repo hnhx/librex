@@ -13,7 +13,7 @@
       $image = $url;
       $image_src = request($image);
 
-      header("Content-Type: image/jpeg");
+      header("Content-Type: image/png");
       echo $image_src;
     }
 ?>

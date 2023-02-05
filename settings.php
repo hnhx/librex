@@ -30,7 +30,7 @@
 
                 if (isset($_REQUEST["save"]) || isset($_REQUEST["reset"]))
                 {
-                    header("Location: ./settings.php");
+                    header("Location: ./");
                     die();
                 }
 

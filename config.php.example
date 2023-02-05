@@ -7,7 +7,7 @@
         // Google results will be in this language
         "google_language" => "en",
 
-        // If you have a local instance you can change this to http://localhost:3000
+        // You can use any Invidious instance here
         "invidious_instance_for_video_results" => "https://invidious.namazso.eu",
 
         "disable_bittorent_search" => false,
