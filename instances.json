@@ -31,12 +31,6 @@
               "country": "US"
           },
           {
-              "clearnet": "https://librex.terryiscool160.xyz/",
-              "tor": "http://librex.n53wt4ivvfdfaqkwldgdzfsubszukie2an6auja6x2wp3e3oa7v2gqyd.onion/",
-              "i2p": null,
-              "country": "UK"
-          },
-          {
               "clearnet": "https://librex.nekus.gay/",
               "tor": "http://5yblccekvswxl4n43bn5eg4pr7c4xygvu5lhhdb6ulzmislvahmhitad.onion/",
               "i2p": null,
@@ -101,12 +95,6 @@
               "tor": null,
               "i2p": null,
               "country": "DE"
-          },
-          {
-              "clearnet": "https://search.mascotboi.xyz/",
-              "tor": null,
-              "i2p": null,
-              "country": "IN"
           },
           {
               "clearnet": "https://lx.drain.win/",
