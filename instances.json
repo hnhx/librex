@@ -101,6 +101,12 @@
               "tor": null,
               "i2p": null,
               "country": "SG"
-	  }
+          },
+          {
+              "clearnet": "https://librex.bloatcat.tk/",
+              "tor": null,
+              "i2p": null,
+              "country": "IS"
+          }
     ]
 }

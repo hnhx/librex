@@ -30,6 +30,7 @@
 | [search.tildevarsh.in](https://search.tildevarsh.in/) | ❌ | ❌ | 🇮🇳  IN |
 | [librex.myroware.eu](https://librex.myroware.eu/) | ❌ | ❌ | 🇩🇪 DE |
 | [lx.drain.win](https://lx.drain.win/) | ❌ | ❌ | 🇸🇬 SG |
+| [librex.bloatcat.tk](https://librex.bloatcat.tk/) | ❌ | ❌ | 🇮🇸 IS |
 <br>
 
 ### Thanks rms
