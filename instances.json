@@ -107,6 +107,12 @@
               "tor": null,
               "i2p": null,
               "country": "IS"
+          },
+          {
+              "clearnet": "https://librex.retro-hax.net/",
+              "tor": null,
+              "i2p": null,
+              "country": "DE"
           }
     ]
 }

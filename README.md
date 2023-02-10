@@ -31,6 +31,7 @@
 | [librex.myroware.eu](https://librex.myroware.eu/) | ❌ | ❌ | 🇩🇪 DE |
 | [lx.drain.win](https://lx.drain.win/) | ❌ | ❌ | 🇸🇬 SG |
 | [librex.bloatcat.tk](https://librex.bloatcat.tk/) | ❌ | ❌ | 🇮🇸 IS |
+| [librex.retro-hax.net](https://librex.retro-hax.net/) | ❌ | ❌ | 🇩🇪 DE |
 <br>
 
 ### Thanks rms
