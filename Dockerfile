@@ -20,8 +20,55 @@ ARG DOCKER_SCRIPTS=".docker"
 # When building your image, make sure to set the 'TZ' environment variable to your desired time zone location, for example 'America/Sao_Paulo'
 # See more: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
 ENV TZ="America/New_York"
-ENV PATH="/docker/bin:$PATH"
-ENV OPENSEARCH_HOST="http://localhost:80"
+
+# Configure 'opensearch.xml' with Librex configuration metadata, such as the encoding and the host that stores the site
+# These configurations will replace the 'opensearch.xml' inside '.dockers/templates' for the best setup for your instance
+ENV OPEN_SEARCH_TITLE="LibreX"
+ENV OPEN_SEARCH_DESCRIPTION="Framework and javascript free privacy respecting meta search engine"
+ENV OPEN_SEARCH_ENCODING="UTF-8"
+ENV OPEN_SEARCH_LONG_NAME="LibreX Search"
+ENV OPEN_SEARCH_HOST="http://localhost:80"
+
+# Replace the 'config.php' script, which contains the most common search engine configurations, with these environment setups
+# These environment setups can be found in 'config.php', and the default configurations can be useful for most use cases
+ENV CONFIG_GOOGLE_DOMAIN=".com"
+ENV CONFIG_GOOGLE_LANGUAGUE="en"
+ENV CONFIG_INVIDIOUS_INSTANCE="invidious.namazso.eu"
+ENV CONFIG_HIDDEN_SERVICE_SEARCH=false
+ENV CONFIG_DISABLE_BITTORRENT_SEARCH=false
+ENV CONFIG_TRACKERS="&tr=http://nyaa.tracker.wf:7777/announce&tr=udp://open.stealth.si:80/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://exodus.desync.com:6969/announce&tr=udp://tracker.torrent.eu.org:451/announce"
+
+# Supported apps integration configuration. These empty spaces can be set up using free hosts as pointers
+# A particular example is using the "https://yewtu.be" or a self-hosted host to integrate the invidious app to librex
+ENV APP_INVIDIOUS=""
+ENV APP_BIBLIOGRAM=""
+ENV APP_RIMGO=""
+ENV APP_SCRIBE=""
+ENV APP_LIBRARIAN=""
+ENV APP_GOTHUB=""
+ENV APP_NITTER=""
+ENV APP_LIBREREDDIT=""
+ENV APP_PROXITOK=""
+ENV APP_WIKILESS=""
+ENV APP_QUETRE=""
+ENV APP_LIBREMDB=""
+ENV APP_BREEZEWIKI=""
+ENV APP_ANONYMOUS_OVERFLOW=""
+
+# GNU/Curl configurations. Leave 'CURLOPT_PROXY' blank whether you don't need to use a proxy for requests
+# Generally, a proxy is needed when your IP address is blocked by search engines in response to multiple requests within a short time frame. In these cases, it is recommended to use rotating proxies
+ENV CURLOPT_PROXY=""
+ENV CURLOPT_PROXYTYPE="CURLPROXY_HTTP"
+ENV CURLOPT_RETURNTRANSFER=true
+ENV CURLOPT_ENCODING=""
+ENV CURLOPT_USERAGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
+ENV CURLOPT_IPRESOLVE="CURL_IPRESOLVE_V4"
+ENV CURLOPT_CUSTOMREQUEST="GET"
+ENV CURLOPT_PROTOCOLS="CURLPROTO_HTTPS | CURLPROTO_HTTP"
+ENV CURLOPT_REDIR_PROTOCOLS="CURLPROTO_HTTPS | CURLPROTO_HTTP"
+ENV CURLOPT_MAXREDIRS=5
+ENV CURLOPT_TIMEOUT=18
+ENV CURLOPT_VERBOSE=false
 
 # Include docker scripts, docker images, and the 'GNU License' in the Librex container
 ADD "${DOCKER_SCRIPTS}/*" "/docker/scripts/"
