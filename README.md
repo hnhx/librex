@@ -31,6 +31,7 @@
 | [lx.drain.win](https://lx.drain.win/) | ❌ | ❌ | 🇸🇬 SG |
 | [librex.bloatcat.tk](https://librex.bloatcat.tk/) | ❌ | ❌ | 🇮🇸 IS |
 | [librex.retro-hax.net](https://librex.retro-hax.net/) | ❌ | ❌ | 🇩🇪 DE |
+| [search.funami.tech](https://search.funami.tech/) | ❌ | ❌ | 🇰🇷 KR |
 <br>
 
 ### Thanks rms
