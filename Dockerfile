@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 ARG VERSION="3.17"
-FROM alpine:${VERSION} AS builder
+FROM alpine:${VERSION} AS runner
 WORKDIR "/home/librex"
 
 # Docker metadata contains information about the maintainer, such as the name, repository, and support email
