@@ -73,17 +73,20 @@ ADD "." "."
 
 # Set permissions for script files as executable scripts inside 'docker/scripts' directory
 RUN   chmod u+x "scripts/entrypoint.sh" &&\
-      chmod u+x "scripts/build.sh"
+      chmod u+x "scripts/prepare.sh"
 
 # Add 'zip' package to generate a temporary compressed 'librex.zip' for best recursive copy between Docker images
 # Remove unnecessary folders and create a temporary folder that will contain the zip file created earlier
 # Compress Librex files, excluding the '.docker' folder containing scripts and the Dockerfile, using the previously downloaded zip package
 # Delete all files in the root directory, except for the '.docker' and 'tmp' folders, which are created exclusively to be handled by Docker
-RUN   apk update; apk add zip --no-cache &&\
-      rm -rf .git; mkdir -p "{tmp,templates}/zip" &&\
+RUN   apk update; apk add zip abuild-rootbld --no-cache &&\
+      rm -rf .git; mkdir -p "tmp/zip" &&\
       zip -r "tmp/zip/librex.zip" . -x "scripts/**\*" "Dockerfile\*" &&\
       find -maxdepth 1 ! -name "scripts" ! -name "tmp" ! -name "templates" ! -name "." -exec rm -rv {} \; &&\
-      apk del -r zip;
+      sh -c 'scripts/prepare.sh' && apk del -r zip abuild-rootbld
+
+RUN   docker build --no-cache -t 'nginx:latest' scripts/nginx/nginx.dockerfile &&\
+      docker build --no-cache -t 'php:latest' scripts/php/php.dockerfile
 
 # Configures the container to be run as an executable.
 ENTRYPOINT ["/bin/sh", "-c", "scripts/entrypoint.sh"]
