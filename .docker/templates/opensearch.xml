@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>${OPEN_SEARCH_TITLE}</ShortName>
+  <Description>${OPEN_SEARCH_DESCRIPTION}</Description>
+  <InputEncoding>${OPEN_SEARCH_ENCODING}</InputEncoding>
+  <LongName>${OPEN_SEARCH_LONG_NAME}</LongName>
+  <Url rel="results" type="text/html" method="get" template="${OPEN_SEARCH_HOST}/search.php?q={searchTerms}" />
+  <Url type="application/opensearchdescription+xml" rel="self" template="/opensearch.xml?method=GET" />
+</OpenSearchDescription>
