@@ -1,4 +1,4 @@
-FROM docker:20.10
+FROM docker:20.10-cli
 WORKDIR "/home/librex"
 
 # Docker metadata contains information about the maintainer, such as the name, repository, and support email
