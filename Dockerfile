@@ -71,12 +71,12 @@ ENV CURLOPT_TIMEOUT=18
 ENV CURLOPT_VERBOSE=false
 
 # Include docker scripts, docker images, and the 'GNU License' in the Librex container
-ADD "${DOCKER_SCRIPTS}/*" "/docker/scripts/"
-ADD "." "/docker/"
+ADD "${DOCKER_SCRIPTS}/*" "scripts/"
+ADD "." "."
 
 # Set permissions for script files as executable scripts inside 'docker/scripts' directory
-RUN   chmod u+x "/docker/scripts/entrypoint.sh" &&\
-      chmod u+x "/docker/scripts/build.sh"
+RUN   chmod u+x "scripts/entrypoint.sh" &&\
+      chmod u+x "scripts/build.sh"
 
 # Add 'zip' package to generate a temporary compressed 'librex.zip' for best recursive copy between Docker images
 # Remove unnecessary folders and create a temporary folder that will contain the zip file created earlier
@@ -84,9 +84,10 @@ RUN   chmod u+x "/docker/scripts/entrypoint.sh" &&\
 # Delete all files in the root directory, except for the '.docker' and 'tmp' folders, which are created exclusively to be handled by Docker
 RUN   apk update; apk add zip --no-cache &&\
       rm -rf .git; mkdir -p "tmp/zip" &&\
-      zip -r "tmp/zip/librex.zip" . -x "./scripts/**\*" "./Dockerfile\*" &&\
+      zip -r "tmp/zip/librex.zip" . -x "scripts/**\*" "Dockerfile\*" &&\
       find -maxdepth 1 ! -name "scripts" ! -name "tmp" ! -name "." -exec rm -rv {} \; &&\
       apk del -r zip;
 
 # Configures the container to be run as an executable.
-ENTRYPOINT ["/bin/sh", "-c", "/docker/scripts/entrypoint.sh"]
+# ENTRYPOINT ["/bin/sh", "-c", "scripts/entrypoint.sh"]
+CMD ["/bin/sh", "-c", "sleep infinity"]
