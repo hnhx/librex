@@ -1,7 +1,7 @@
-FROM docker:20.10
+# syntax=docker/dockerfile:1
+ARG VERSION="3.17"
+FROM alpine:${VERSION} AS builder
 WORKDIR "/home/librex"
-
-VOLUME [ "/var/run/docker.sock" ]
 
 # Docker metadata contains information about the maintainer, such as the name, repository, and support email
 # Please add any necessary information or correct any incorrect information
