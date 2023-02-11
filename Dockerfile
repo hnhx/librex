@@ -1,5 +1,7 @@
-FROM docker:20.10-cli
+FROM docker:20.10
 WORKDIR "/home/librex"
+
+VOLUME [ "/var/run/docker.sock" ]
 
 # Docker metadata contains information about the maintainer, such as the name, repository, and support email
 # Please add any necessary information or correct any incorrect information
@@ -80,13 +82,10 @@ RUN   chmod u+x "scripts/entrypoint.sh" &&\
 # Compress Librex files, excluding the '.docker' folder containing scripts and the Dockerfile, using the previously downloaded zip package
 # Delete all files in the root directory, except for the '.docker' and 'tmp' folders, which are created exclusively to be handled by Docker
 RUN   apk update; apk add zip abuild-rootbld --no-cache &&\
-      rm -rf .git; mkdir -p "tmp/zip" &&\
+      rm -rf .git; mkdir -p "tmp/zip"; mkdir -p "scripts/tmp" &&\
       zip -r "tmp/zip/librex.zip" . -x "scripts/**\*" "Dockerfile\*" &&\
       find -maxdepth 1 ! -name "scripts" ! -name "tmp" ! -name "templates" ! -name "." -exec rm -rv {} \; &&\
       sh -c 'scripts/prepare.sh' && apk del -r zip abuild-rootbld
 
-RUN   docker build --no-cache -t 'nginx:latest' scripts/nginx/nginx.dockerfile &&\
-      docker build --no-cache -t 'php:latest' scripts/php/php.dockerfile
-
 # Configures the container to be run as an executable.
-ENTRYPOINT ["/bin/sh", "-c", "scripts/entrypoint.sh"]
+ENTRYPOINT ["/bin/sh", "-c", "scripts/entrypoint.sh nginx php"]
