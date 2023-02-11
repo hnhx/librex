@@ -1,5 +1,5 @@
 FROM docker:20.10
-WORKDIR /home/librex
+WORKDIR "/home/librex"
 
 # Docker metadata contains information about the maintainer, such as the name, repository, and support email
 # Please add any necessary information or correct any incorrect information
@@ -24,5 +24,22 @@ ENV PATH="/docker/bin:$PATH"
 ENV OPENSEARCH_HOST="http://localhost:80"
 
 # Include docker scripts, docker images, and the 'GNU License' in the Librex container
-ADD "${DOCKER_SCRIPTS}/*" "/docker/"
-ADD "LICENSE" "/docker/LICENSE"
+ADD "${DOCKER_SCRIPTS}/*" "/docker/scripts/"
+ADD "." "/docker/"
+
+# Set permissions for script files as executable scripts inside 'docker/scripts' directory
+RUN   chmod u+x "/docker/scripts/entrypoint.sh" &&\
+      chmod u+x "/docker/scripts/build.sh"
+
+# Add 'zip' package to generate a temporary compressed 'librex.zip' for best recursive copy between Docker images
+# Remove unnecessary folders and create a temporary folder that will contain the zip file created earlier
+# Compress Librex files, excluding the '.docker' folder containing scripts and the Dockerfile, using the previously downloaded zip package
+# Delete all files in the root directory, except for the '.docker' and 'tmp' folders, which are created exclusively to be handled by Docker
+RUN   apk update; apk add zip --no-cache &&\
+      rm -rf .git; mkdir -p "tmp/zip" &&\
+      zip -r "tmp/zip/librex.zip" . -x "./scripts/**\*" "./Dockerfile\*" &&\
+      find -maxdepth 1 ! -name "scripts/" ! -name "tmp/" ! -name "./" -exec rm -rv {} \; &&\
+      apk del -r zip; apk cache clean;
+
+# Configures the container to be run as an executable.
+ENTRYPOINT ["/bin/sh", "-c", "/docker/scripts/entrypoint.sh"]
