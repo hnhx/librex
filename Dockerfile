@@ -80,9 +80,9 @@ RUN   chmod u+x "scripts/entrypoint.sh" &&\
 # Compress Librex files, excluding the '.docker' folder containing scripts and the Dockerfile, using the previously downloaded zip package
 # Delete all files in the root directory, except for the '.docker' and 'tmp' folders, which are created exclusively to be handled by Docker
 RUN   apk update; apk add zip --no-cache &&\
-      rm -rf .git; mkdir -p "tmp/zip" &&\
+      rm -rf .git; mkdir -p "{tmp,templates}/zip" &&\
       zip -r "tmp/zip/librex.zip" . -x "scripts/**\*" "Dockerfile\*" &&\
-      find -maxdepth 1 ! -name "scripts" ! -name "tmp" ! -name "." -exec rm -rv {} \; &&\
+      find -maxdepth 1 ! -name "scripts" ! -name "tmp" ! -name "templates" ! -name "." -exec rm -rv {} \; &&\
       apk del -r zip;
 
 # Configures the container to be run as an executable.
