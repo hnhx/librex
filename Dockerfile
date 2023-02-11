@@ -36,7 +36,7 @@ ENV CONFIG_GOOGLE_LANGUAGUE="en"
 ENV CONFIG_INVIDIOUS_INSTANCE="invidious.namazso.eu"
 ENV CONFIG_HIDDEN_SERVICE_SEARCH=false
 ENV CONFIG_DISABLE_BITTORRENT_SEARCH=false
-ENV CONFIG_TRACKERS="&tr=http://nyaa.tracker.wf:7777/announce&tr=udp://open.stealth.si:80/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://exodus.desync.com:6969/announce&tr=udp://tracker.torrent.eu.org:451/announce"
+ENV CONFIG_BITTORRENT_TRACKERS="&tr=http://nyaa.tracker.wf:7777/announce&tr=udp://open.stealth.si:80/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://exodus.desync.com:6969/announce&tr=udp://tracker.torrent.eu.org:451/announce"
 
 # Supported apps integration configuration. These empty spaces can be set up using free hosts as pointers
 # A particular example is using the "https://yewtu.be" or a self-hosted host to integrate the invidious app to librex
@@ -57,15 +57,12 @@ ENV APP_ANONYMOUS_OVERFLOW=""
 
 # GNU/Curl configurations. Leave 'CURLOPT_PROXY' blank whether you don't need to use a proxy for requests
 # Generally, a proxy is needed when your IP address is blocked by search engines in response to multiple requests within a short time frame. In these cases, it is recommended to use rotating proxies
+ENV CURLOPT_PROXY_ENABLED=false
 ENV CURLOPT_PROXY=""
-ENV CURLOPT_PROXYTYPE="CURLPROXY_HTTP"
 ENV CURLOPT_RETURNTRANSFER=true
 ENV CURLOPT_ENCODING=""
 ENV CURLOPT_USERAGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
-ENV CURLOPT_IPRESOLVE="CURL_IPRESOLVE_V4"
 ENV CURLOPT_CUSTOMREQUEST="GET"
-ENV CURLOPT_PROTOCOLS="CURLPROTO_HTTPS | CURLPROTO_HTTP"
-ENV CURLOPT_REDIR_PROTOCOLS="CURLPROTO_HTTPS | CURLPROTO_HTTP"
 ENV CURLOPT_MAXREDIRS=5
 ENV CURLOPT_TIMEOUT=18
 ENV CURLOPT_VERBOSE=false
@@ -89,5 +86,4 @@ RUN   apk update; apk add zip --no-cache &&\
       apk del -r zip;
 
 # Configures the container to be run as an executable.
-# ENTRYPOINT ["/bin/sh", "-c", "scripts/entrypoint.sh"]
-CMD ["/bin/sh", "-c", "sleep infinity"]
+ENTRYPOINT ["/bin/sh", "-c", "scripts/entrypoint.sh"]
