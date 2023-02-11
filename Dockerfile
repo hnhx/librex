@@ -88,4 +88,4 @@ RUN   apk update; apk add zip abuild-rootbld --no-cache &&\
       sh -c 'scripts/prepare.sh' && apk del -r zip abuild-rootbld
 
 # Configures the container to be run as an executable.
-ENTRYPOINT ["/bin/sh", "-c", "scripts/entrypoint.sh nginx php"]
+ENTRYPOINT ["/bin/sh", "-c", "scripts/entrypoint.sh --images=nginx/php"]
