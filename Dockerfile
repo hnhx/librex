@@ -38,8 +38,8 @@ RUN   chmod u+x "/docker/scripts/entrypoint.sh" &&\
 RUN   apk update; apk add zip --no-cache &&\
       rm -rf .git; mkdir -p "tmp/zip" &&\
       zip -r "tmp/zip/librex.zip" . -x "./scripts/**\*" "./Dockerfile\*" &&\
-      find -maxdepth 1 ! -name "scripts/" ! -name "tmp/" ! -name "./" -exec rm -rv {} \; &&\
-      apk del -r zip; apk cache clean;
+      find -maxdepth 1 ! -name "scripts" ! -name "tmp" ! -name "." -exec rm -rv {} \; &&\
+      apk del -r zip;
 
 # Configures the container to be run as an executable.
 ENTRYPOINT ["/bin/sh", "-c", "/docker/scripts/entrypoint.sh"]
