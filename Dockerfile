@@ -28,12 +28,12 @@ ENV TZ="America/New_York"
 ADD "." "/var/www/html"
 
 # Set permissions for script files as executable scripts inside 'docker/scripts' directory
-RUN   chmod u+x "${DOCKER_SCRIPTS}/php/prepare.sh" &&\
-      chmod u+x "${DOCKER_SCRIPTS}/server/prepare.sh" &&\
-      chmod u+x "${DOCKER_SCRIPTS}/entrypoint.sh" &&\
-      chmod u+x "${DOCKER_SCRIPTS}/attributes.sh"
+RUN chmod u+x "${DOCKER_SCRIPTS}/php/prepare.sh" &&\
+    chmod u+x "${DOCKER_SCRIPTS}/server/prepare.sh" &&\
+    chmod u+x "${DOCKER_SCRIPTS}/entrypoint.sh" &&\
+    chmod u+x "${DOCKER_SCRIPTS}/attributes.sh"
 
-RUN   apk add abuild-rootbld --no-cache
+RUN apk add gettext --no-cache
 
 # The following lines import all Dockerfiles from other folders so that they can be built together in the final build
 INCLUDE+ docker/php/php.dockerfile

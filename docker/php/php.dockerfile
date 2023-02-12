@@ -49,7 +49,7 @@ ENV CURLOPT_VERBOSE=false
 
 # Install PHP-FPM using Alpine's package manager, apk
 # Configure PHP-FPM to listen on a Unix socket instead of a TCP port, which is more secure and efficient
-RUN apk add php7 php7-fpm php7-dom php7-curl php7-json php7-xml --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing &&\
+RUN apk add php7 php7-fpm php7-dom php7-curl php7-json --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing &&\
     sed -i 's/^\s*listen = 127.0.0.1:9000/listen = \/run\/php7\/php-fpm7.sock/' ${WWW_CONFIG} &&\
     sed -i 's/^\s*;\s*listen.owner = nobody/listen.owner = nginx/' ${WWW_CONFIG} &&\
     sed -i 's/^\s*;\s*listen.group = nobody/listen.group = nginx/' ${WWW_CONFIG} &&\
