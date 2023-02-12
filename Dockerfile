@@ -10,6 +10,7 @@ LABEL name="LibreX" \
       description="Framework and javascript free privacy respecting meta search engine" \
       version="1.0" \
       vendor="Hnhx Femboy<femboy.hu>" \
+      maintainer="Hnhx Femboy<femboy.hu>, Junior L. Botelho<juniorbotelho.com.br>" \
       url="https://github.com/hnhx/librex" \
       usage="https://github.com/hnhx/librex/wiki" \
       authors="https://github.com/hnhx/librex/contributors"
