@@ -5,13 +5,13 @@ echo "[PREPARE] docker/server/prepare.sh'"
 # Load all environment variables from 'attributes.sh' using the command 'source /path/attributes.sh'
 source "docker/attributes.sh"
 
-# This condition creates the Unix socket if 'php-fpm8.sock' does not already exist.
+# This condition creates the Unix socket if 'php-fpm7.sock' does not already exist.
 # This fixes an issue where Nginx starts but does not serve content
-if [ ! -d "/run/php8" ] || [ ! -S "/run/php8/php-fpm8.sock" ]; then
-    mkdir "/run/php8"
-    touch "/run/php8/php-fpm8.sock"
-    chmod 0660 "/run/php8/php-fpm8.sock"
-    chown nginx:nginx "/run/php8/php-fpm8.sock"
+if [ ! -d "/run/php7" ] || [ ! -S "/run/php7/php-fpm7.sock" ]; then
+    mkdir "/run/php7"
+    touch "/run/php7/php-fpm7.sock"
+    chmod 0660 "/run/php7/php-fpm7.sock"
+    chown nginx:nginx "/run/php7/php-fpm7.sock"
 fi
 
 export OPEN_SEARCH_HOST_FOR_NGINX="$(echo "${OPEN_SEARCH_HOST}" | cut -d "/" -f 3 | cut -d ":" -f 1)"
