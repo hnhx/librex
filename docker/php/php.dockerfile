@@ -7,7 +7,7 @@ ENV OPEN_SEARCH_TITLE="LibreX"
 ENV OPEN_SEARCH_DESCRIPTION="Framework and javascript free privacy respecting meta search engine"
 ENV OPEN_SEARCH_ENCODING="UTF-8"
 ENV OPEN_SEARCH_LONG_NAME="LibreX Search"
-ENV OPEN_SEARCH_HOST="http://localhost:80"
+ENV OPEN_SEARCH_HOST="127.0.0.1"
 
 # Replace the 'config.php' script, which contains the most common search engine configurations, with these environment setups
 # These environment setups can be found in 'config.php', and the default configurations can be useful for most use cases
@@ -49,12 +49,10 @@ ENV CURLOPT_VERBOSE=false
 
 # Install PHP-FPM using Alpine's package manager, apk
 # Configure PHP-FPM to listen on a Unix socket instead of a TCP port, which is more secure and efficient
-RUN apk add php7 php7-fpm abuild-rootbld --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing &&\
+RUN apk add php7 php7-fpm php7-dom php7-curl php7-xml abuild-rootbld --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing &&\
     sed -i 's/^\s*listen = 127.0.0.1:9000/listen = \/run\/php-fpm\/php-fpm.sock/' ${WWW_CONFIG} &&\
     sed -i 's/^\s*;\s*listen.owner = nobody/listen.owner = nginx/' ${WWW_CONFIG} &&\
     sed -i 's/^\s*;\s*listen.group = nobody/listen.group = nginx/' ${WWW_CONFIG} &&\
     sed -i 's/^\s*;\s*listen.mode = 0660/listen.mode = 0660/' ${WWW_CONFIG}
-
-RUN echo $(pwd)
-
+    
 RUN docker/php/prepare.sh

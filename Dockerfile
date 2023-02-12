@@ -1,7 +1,7 @@
 # syntax = edrevo/dockerfile-plus
 ARG VERSION="3.17"
 FROM alpine:${VERSION} AS runner
-WORKDIR "/home/librex"
+WORKDIR "/var/www/html"
 
 # Docker metadata contains information about the maintainer, such as the name, repository, and support email
 # Please add any necessary information or correct any incorrect information
@@ -24,7 +24,7 @@ ARG DOCKER_SCRIPTS="docker"
 ENV TZ="America/New_York"
 
 # Include docker scripts, docker images, and the 'GNU License' in the Librex container
-ADD "." "/home/librex"
+ADD "." "/var/www/html"
 
 # Set permissions for script files as executable scripts inside 'docker/scripts' directory
 RUN   chmod u+x "${DOCKER_SCRIPTS}/php/prepare.sh" &&\

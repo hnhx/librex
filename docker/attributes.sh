@@ -7,6 +7,7 @@
 # If these locations do not already exist within the Docker container, they will be created
 export CONFIG_PHP_TEMPLATE="$(pwd)/config.php"
 export CONFIG_OPEN_SEARCH_TEMPLATE="$(pwd)/opensearch.xml"
+export CONFIG_NGINX_TEMPLATE="/etc/nginx/http.d/librex.conf"
 
 # Configure 'opensearch.xml' with Librex configuration metadata, such as the encoding and the host that stores the site
 # These configurations will replace the 'opensearch.xml' inside '.dockers/templates' for the best setup for your instance
@@ -14,7 +15,7 @@ export OPEN_SEARCH_TITLE=${OPEN_SEARCH_TITLE:-"LibreX"}
 export OPEN_SEARCH_DESCRIPTION=${OPEN_SEARCH_DESCRIPTION:-"Framework and javascript free privacy respecting meta search engine"}
 export OPEN_SEARCH_ENCODING=${OPEN_SEARCH_ENCODING:-"UTF-8"}
 export OPEN_SEARCH_LONG_NAME=${OPEN_SEARCH_LONG_NAME:-"LibreX Search"}
-export OPEN_SEARCH_HOST=${OPEN_SEARCH_HOST:-"http://localhost:80"}
+export OPEN_SEARCH_HOST=${OPEN_SEARCH_HOST:-"127.0.0.1"}
 
 # Replace the 'config.php' script, which contains the most common search engine configurations, with these environment setups
 # These environment setups can be found in 'config.php', and the default configurations can be useful for most use cases
