@@ -1,5 +1,5 @@
 # Set this argument during build time to indicate that the path is for php's www.conf
-ARG WWW_CONFIG="/etc/php7/php-fpm.d/www.conf"
+ARG WWW_CONFIG="/etc/php8/php-fpm.d/www.conf"
 
 # Configure 'opensearch.xml' with Librex configuration metadata, such as the encoding and the host that stores the site
 # These configurations will replace the 'opensearch.xml' inside '.dockers/templates' for the best setup for your instance
@@ -7,7 +7,7 @@ ENV OPEN_SEARCH_TITLE="LibreX"
 ENV OPEN_SEARCH_DESCRIPTION="Framework and javascript free privacy respecting meta search engine"
 ENV OPEN_SEARCH_ENCODING="UTF-8"
 ENV OPEN_SEARCH_LONG_NAME="LibreX Search"
-ENV OPEN_SEARCH_HOST="127.0.0.1"
+ENV OPEN_SEARCH_HOST="http://localhost:${NGINX_PORT}"
 
 # Replace the 'config.php' script, which contains the most common search engine configurations, with these environment setups
 # These environment setups can be found in 'config.php', and the default configurations can be useful for most use cases
@@ -49,10 +49,10 @@ ENV CURLOPT_VERBOSE=false
 
 # Install PHP-FPM using Alpine's package manager, apk
 # Configure PHP-FPM to listen on a Unix socket instead of a TCP port, which is more secure and efficient
-RUN apk add php7 php7-fpm php7-dom php7-curl php7-xml abuild-rootbld --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing &&\
-    sed -i 's/^\s*listen = 127.0.0.1:9000/listen = \/run\/php-fpm\/php-fpm.sock/' ${WWW_CONFIG} &&\
+RUN apk add php8 php8-fpm php8-dom php8-curl php8-xml --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing &&\
+    sed -i 's/^\s*listen = 127.0.0.1:9000/listen = \/run\/php8\/php-fpm8.sock/' ${WWW_CONFIG} &&\
     sed -i 's/^\s*;\s*listen.owner = nobody/listen.owner = nginx/' ${WWW_CONFIG} &&\
     sed -i 's/^\s*;\s*listen.group = nobody/listen.group = nginx/' ${WWW_CONFIG} &&\
     sed -i 's/^\s*;\s*listen.mode = 0660/listen.mode = 0660/' ${WWW_CONFIG}
     
-RUN docker/php/prepare.sh
+CMD [ "/bin/sh", "-c", "docker/php/prepare.sh" ]
