@@ -1,0 +1,1 @@
+RUN echo "Hello Nginx"

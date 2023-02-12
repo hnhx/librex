@@ -3,22 +3,18 @@
 # YOU DON'T NEED TO EDIT THIS FILE. IF YOU WANT TO SET CUSTOM ENVIRONMENT VARIABLES,
 # USE THE 'DOCKERFILE IMAGE' FROM ROOT DIRECTORY AND PASS THE ENVIRONMENT PARAMETERS
 
-# This variable changes the behavior of the image builder to remove the base image
-export DOCKER_BUILDKIT=1
-
 # These templates will be used to create configuration files that incorporate values from environment variables
 # If these locations do not already exist within the Docker container, they will be created
-export CONFIG_PHP_TEMPLATE="$(pwd)/scripts/tmp/config.php"
-export CONFIG_NGINX_TEMPLATE="$(pwd)/scripts/tmp/nginx.conf"
-export CONFIG_OPEN_SEARCH_TEMPLATE="$(pwd)/scripts/tmp/opensearch.xml"
+export CONFIG_PHP_TEMPLATE="$(pwd)/config.php"
+export CONFIG_OPEN_SEARCH_TEMPLATE="$(pwd)/opensearch.xml"
 
 # Configure 'opensearch.xml' with Librex configuration metadata, such as the encoding and the host that stores the site
 # These configurations will replace the 'opensearch.xml' inside '.dockers/templates' for the best setup for your instance
-export OPEN_SEARCH_TITLE="${OPEN_SEARCH_TITLE:-'LibreX'}"
-export OPEN_SEARCH_DESCRIPTION="${OPEN_SEARCH_DESCRIPTION:-'Framework and javascript free privacy respecting meta search engine'}"
-export OPEN_SEARCH_ENCODING="${OPEN_SEARCH_ENCODING:-'UTF-8'}"
-export OPEN_SEARCH_LONG_NAME="${OPEN_SEARCH_LONG_NAME:-'LibreX Search'}"
-export OPEN_SEARCH_HOST="${OPEN_SEARCH_HOST:-'http://localhost:80'}"
+export OPEN_SEARCH_TITLE=${OPEN_SEARCH_TITLE:-"LibreX"}
+export OPEN_SEARCH_DESCRIPTION=${OPEN_SEARCH_DESCRIPTION:-"Framework and javascript free privacy respecting meta search engine"}
+export OPEN_SEARCH_ENCODING=${OPEN_SEARCH_ENCODING:-"UTF-8"}
+export OPEN_SEARCH_LONG_NAME=${OPEN_SEARCH_LONG_NAME:-"LibreX Search"}
+export OPEN_SEARCH_HOST=${OPEN_SEARCH_HOST:-"http://localhost:80"}
 
 # Replace the 'config.php' script, which contains the most common search engine configurations, with these environment setups
 # These environment setups can be found in 'config.php', and the default configurations can be useful for most use cases
@@ -60,9 +56,3 @@ export CURLOPT_VERBOSE=${CURLOPT_VERBOSE:-false}
 
 # These shell functions will be available for use by any function calls
 function AwkTrim() { awk '{$1=$1};1'; }
-
-# The lines below will replace the environment variables in the templates with the corresponding variables listed above. To accomplish this, the GNU 'envsubst' package will be used
-# Although not recommended (if you do not know what you are doing), you still have the option to add new substitution file templates using any required environment variables
-[[ ! -s ${CONFIG_PHP_TEMPLATE} ]] && cat 'scripts/config.php' | envsubst | AwkTrim > ${CONFIG_PHP_TEMPLATE};
-[[ ! -s ${CONFIG_NGINX_TEMPLATE} ]] && cat 'scripts/nginx.conf' | envsubst | AwkTrim > ${CONFIG_NGINX_TEMPLATE};
-[[ ! -s ${CONFIG_OPEN_SEARCH_TEMPLATE} ]] && cat 'scripts/opensearch.xml' | envsubst | AwkTrim > ${CONFIG_OPEN_SEARCH_TEMPLATE};
