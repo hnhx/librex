@@ -1,18 +1,18 @@
 
 ### Introduction
 
-- [Running a Docker container](https://github.com/juniorbotelho/librex/tree/docker/docker#running-a-docker-container)
-  - [Running a Docker container through the Docker hub](https://github.com/juniorbotelho/librex/tree/docker/docker#running-a-docker-container-through-the-docker-hub)
-  - [Running a Docker container with composer](https://github.com/juniorbotelho/librex/tree/docker/docker#running-a-docker-container-with-composer)
-  - [Environment variables that can be set in the Docker container](https://github.com/juniorbotelho/librex/tree/docker/docker#environment-variables-that-can-be-set-in-the-docker-container)
-    - [OpenSearch](https://github.com/juniorbotelho/librex/tree/docker/docker#opensearch)
-    - [Search Configurations](https://github.com/juniorbotelho/librex/tree/docker/docker#search-config)
-    - [Applications](https://github.com/juniorbotelho/librex/tree/docker/docker#applications)
-    - [GNU/Curl](https://github.com/juniorbotelho/librex/tree/docker/docker#curl)
-- [Docker version issues](https://github.com/juniorbotelho/librex/tree/docker/docker#docker-version-issues)
-- [Building a docker image](https://github.com/juniorbotelho/librex/tree/docker/docker#building-a-docker-image)
-- [Support for different architectures](https://github.com/juniorbotelho/librex/tree/docker/docker#support-for-different-architectures)
-
+- [Introduction](#introduction)
+  - [Running a docker container](#running-a-docker-container)
+  - [Running a Docker container through the Docker hub](#running-a-docker-container-through-the-docker-hub)
+  - [Running a Docker container with composer](#running-a-docker-container-with-composer)
+  - [Environment variables that can be set in the Docker container](#environment-variables-that-can-be-set-in-the-docker-container)
+    - [OpenSearch](#opensearch)
+    - [Search Config](#search-config)
+    - [Applications](#applications)
+    - [Curl](#curl)
+- [Docker version issues](#docker-version-issues)
+- [Building a docker image](#building-a-docker-image)
+- [Support for different architectures](#support-for-different-architectures)
 
 ### Running a docker container
 
@@ -30,6 +30,8 @@ docker run -d --name librex \
     -p 8080:8080 \
     librex/librex:latest
 ```
+
+<br>
 
 ### Running a Docker container with composer
 
@@ -55,10 +57,13 @@ services:
     restart: unless-stopped
 ```
 
+<br>
 
 ### Environment variables that can be set in the Docker container
 
 This docker image was developed with high configurability in mind, so here is the list of environment variables that can be changed according to your use case, no matter how specific.
+
+<br>
 
 ### OpenSearch
 
@@ -70,6 +75,8 @@ This docker image was developed with high configurability in mind, so here is th
 | OPEN_SEARCH_LONG_NAME | "Librex Search" | string | [OpenSearch XML](https://developer.mozilla.org/en-US/docs/Web/OpenSearch) |
 | OPEN_SEARCH_HOST | "http://localhost:8080" | string | Host used to identify Librex on the network |
 
+<br>
+
 ### Search Config
 
 | Variables | Default | Examples | Description |
@@ -80,6 +87,8 @@ This docker image was developed with high configurability in mind, so here is th
 | CONFIG_HIDDEN_SERVICE_SEARCH | false | boolean | Defines whether safesearch will be enabled or disabled |
 | CONFIG_DISABLE_BITTORRENT_SEARCH | false | boolean | Defines whether bittorrent support will be enabled or disabled |
 | CONFIG_BITTORRENT_TRACKERS | "http://nyaa.tracker.wf:7777/announce" | string | Bittorrent trackers, see the complete example in the `config.php` file. |
+
+<br>
 
 ### Applications
 
@@ -100,6 +109,8 @@ This docker image was developed with high configurability in mind, so here is th
 | APP_BREEZEWIKI | "" | string | Integration with external self-hosted apps, configure the desired host. |
 | APP_ANONYMOUS_OVERFLOW | "" | string | Integration with external self-hosted apps, configure the desired host. |
 
+<br>
+
 ### Curl
 
 | Variables | Default | Examples | Description |
@@ -114,6 +125,8 @@ This docker image was developed with high configurability in mind, so here is th
 | CURLOPT_TIMEOUT | 18 | number | Sets the maximum time curl will wait for a response before timing out |
 | CURLOPT_VERBOSE | false | boolean | Specifies whether curl should display detailed information on stdout about the request and response when making requests. Setting to 'true' enables verbose mode |
 
+<br>
+
 ### Docker version issues
 
 If you are going to build your own docker image based on this repository, pay attention to your Docker version, because depending on how recent the installed version is, maybe you should use the `buildx` command instead of `build`.
@@ -122,6 +135,7 @@ Docker <= 20.10: `docker build`
 
 Docker > 20.10: `docker buildx build`
 
+<br>
 
 ### Building a docker image
 
@@ -147,6 +161,7 @@ cd librex/
 docker build -t librex:latest .
 ```
 
+<br>
 
 ### Support for different architectures
 
