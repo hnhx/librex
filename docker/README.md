@@ -5,6 +5,10 @@
   - [Running a Docker container through the Docker hub](https://github.com/juniorbotelho/librex/tree/docker/docker#running-a-docker-container-through-the-docker-hub)
   - [Running a Docker container with composer](https://github.com/juniorbotelho/librex/tree/docker/docker#running-a-docker-container-with-composer)
   - [Environment variables that can be set in the Docker container](https://github.com/juniorbotelho/librex/tree/docker/docker#environment-variables-that-can-be-set-in-the-docker-container)
+    - [OpenSearch](https://github.com/juniorbotelho/librex/tree/docker/docker#opensearch)
+    - [Search Configurations](https://github.com/juniorbotelho/librex/tree/docker/docker#search-config)
+    - [Applications](https://github.com/juniorbotelho/librex/tree/docker/docker#applications)
+    - [GNU/Curl](https://github.com/juniorbotelho/librex/tree/docker/docker#curl)
 - [Docker version issues](https://github.com/juniorbotelho/librex/tree/docker/docker#docker-version-issues)
 - [Building a docker image](https://github.com/juniorbotelho/librex/tree/docker/docker#building-a-docker-image)
 - [Support for different architectures](https://github.com/juniorbotelho/librex/tree/docker/docker#support-for-different-architectures)
@@ -56,6 +60,8 @@ services:
 
 This docker image was developed with high configurability in mind, so here is the list of environment variables that can be changed according to your use case, no matter how specific.
 
+### OpenSearch
+
 | Variables | Default | Examples | Description |
 |:----------|:-------------|:---------|:------|
 | OPEN_SEARCH_TITLE |  "LibreX" | string | [OpenSearch XML](https://developer.mozilla.org/en-US/docs/Web/OpenSearch) |
@@ -64,6 +70,7 @@ This docker image was developed with high configurability in mind, so here is th
 | OPEN_SEARCH_LONG_NAME | "Librex Search" | string | [OpenSearch XML](https://developer.mozilla.org/en-US/docs/Web/OpenSearch) |
 | OPEN_SEARCH_HOST | "http://localhost:8080" | string | Host used to identify Librex on the network |
 
+### Search Config
 
 | Variables | Default | Examples | Description |
 |:----------|:-------------|:---------|:------|
@@ -74,6 +81,7 @@ This docker image was developed with high configurability in mind, so here is th
 | CONFIG_DISABLE_BITTORRENT_SEARCH | false | boolean | Defines whether bittorrent support will be enabled or disabled |
 | CONFIG_BITTORRENT_TRACKERS | "http://nyaa.tracker.wf:7777/announce" | string | Bittorrent trackers, see the complete example in the `config.php` file. |
 
+### Applications
 
 | Variables | Default | Examples | Description |
 |:----------|:-------------|:---------|:------|
@@ -92,6 +100,7 @@ This docker image was developed with high configurability in mind, so here is th
 | APP_BREEZEWIKI | "" | string | Integration with external self-hosted apps, configure the desired host. |
 | APP_ANONYMOUS_OVERFLOW | "" | string | Integration with external self-hosted apps, configure the desired host. |
 
+### Curl
 
 | Variables | Default | Examples | Description |
 |:----------|:-------------|:---------|:------|
