@@ -108,11 +108,11 @@
               "i2p": null,
               "country": "DE"
           },
-		  {
-			  "clearnet": "https://search.funami.tech/",
-			  "tor": null,
-			  "i2p": null,
-			  "country": "KR"
-		  }
+          {
+              "clearnet": "https://search.funami.tech/",
+              "tor": null,
+              "i2p": null,
+              "country": "KR"
+          }
     ]
 }
