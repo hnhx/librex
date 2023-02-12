@@ -19,7 +19,6 @@
 | [librex.zzls.xyz](https://librex.zzls.xyz/) | [✅](http://librex.zzlsghu6mvvwyy75mvga6gaf4znbp3erk5xwfzedb4gg6qqh2j6rlvid.onion/) | [✅](http://7huurwog32tny663wkglrhozfoyqyqmsuxjbd7dtudccx44awjda.b32.i2p) | 🇨🇱 CL |
 | [librex.mikata.ru](https://librex.mikata.ru/) | [✅](http://f7ssz7l3biu4fugwctfpcx4txg5yq4gqhrt473ledsuc3ivtd3omniid.onion/) | ❌ | 🇺🇸 US |
 | [search.milivojevic.in.rs](https://search.milivojevic.in.rs/) | [✅](http://librex2xsek6qnh2i4yufuzqjumfdwtw7io7omgmimpzna6llqudqzyd.onion/) | ❌ | 🇳🇱 NL |
-| [librex.nekus.gay](https://librex.nekus.gay/) | [✅](http://5yblccekvswxl4n43bn5eg4pr7c4xygvu5lhhdb6ulzmislvahmhitad.onion/) | ❌ | 🇵🇱 PL |
 | [search.davidovski.xyz](https://search.davidovski.xyz/) | ❌ | ❌ | 🇬🇧 UK |
 | [search.madreyk.xyz](https://search.madreyk.xyz/) | ❌ | ❌ | 🇩🇪 DE |
 | [search.pabloferreiro.es](https://search.pabloferreiro.es/) | ❌ | ❌ | 🇩🇪 DE |
@@ -31,6 +30,8 @@
 | [librex.myroware.eu](https://librex.myroware.eu/) | ❌ | ❌ | 🇩🇪 DE |
 | [lx.drain.win](https://lx.drain.win/) | ❌ | ❌ | 🇸🇬 SG |
 | [librex.bloatcat.tk](https://librex.bloatcat.tk/) | ❌ | ❌ | 🇮🇸 IS |
+| [librex.retro-hax.net](https://librex.retro-hax.net/) | ❌ | ❌ | 🇩🇪 DE |
+| [search.funami.tech](https://search.funami.tech/) | ❌ | ❌ | 🇰🇷 KR |
 <br>
 
 ### Thanks rms
