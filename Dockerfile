@@ -36,10 +36,8 @@ RUN   chmod u+x "${DOCKER_SCRIPTS}/php/prepare.sh" &&\
 RUN   apk add openrc abuild-rootbld --no-cache
 
 # The following lines import all Dockerfiles from other folders so that they can be built together in the final build
-INCLUDE+ docker/php/php.dockerfile
 INCLUDE+ docker/server/nginx.dockerfile
-
-RUN   apk del -r abuild-rootbld
+INCLUDE+ docker/php/php.dockerfile
 
 EXPOSE ${NGINX_PORT}
 

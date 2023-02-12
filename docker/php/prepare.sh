@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo "[PREPARE] docker/server/prepare.sh'"
+
 # Load all environment variables from 'attributes.sh' using the command 'source /path/attributes.sh'
 source "docker/attributes.sh"
 
