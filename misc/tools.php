@@ -184,7 +184,7 @@
     function get_xpath($response)
     {
         $htmlDom = new DOMDocument;
-        $htmlDom->loadHTML($response);
+        @$htmlDom->loadHTML($response);
         $xpath = new DOMXPath($htmlDom);
 
         return $xpath;
