@@ -7,3 +7,11 @@ source "docker/attributes.sh"
 # Although not recommended (if you do not know what you are doing), you still have the option to add new substitution file templates using any required environment variables
 [[ ! -s ${CONFIG_PHP_TEMPLATE} ]] && cat 'docker/php/config.php' | envsubst | AwkTrim > ${CONFIG_PHP_TEMPLATE};
 [[ ! -s ${CONFIG_OPEN_SEARCH_TEMPLATE} ]] && cat 'docker/php/opensearch.xml' | envsubst | AwkTrim > ${CONFIG_OPEN_SEARCH_TEMPLATE};
+
+# If it is empty or proxy is not enabled, we are using sed to delete
+# any line that contains the string 'CURLOPT_PROXY' or 'CURLOPT_PROXYTYPE'
+# from the file 'config.php' defined on top of 'attributes.sh'
+if [[ -z "${CURLOPT_PROXY}" || "${CURLOPT_PROXY_ENABLED}" = false ]]; then
+    sed -i "/CURLOPT_PROXY/d" ${CONFIG_PHP_TEMPLATE};
+    sed -i "/CURLOPT_PROXYTYPE/d" ${CONFIG_PHP_TEMPLATE};
+fi
