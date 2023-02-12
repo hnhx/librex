@@ -33,11 +33,11 @@ RUN   chmod u+x "${DOCKER_SCRIPTS}/php/prepare.sh" &&\
       chmod u+x "${DOCKER_SCRIPTS}/entrypoint.sh" &&\
       chmod u+x "${DOCKER_SCRIPTS}/attributes.sh"
 
-RUN   apk add openrc abuild-rootbld --no-cache
+RUN   apk add abuild-rootbld --no-cache
 
 # The following lines import all Dockerfiles from other folders so that they can be built together in the final build
-INCLUDE+ docker/server/nginx.dockerfile
 INCLUDE+ docker/php/php.dockerfile
+INCLUDE+ docker/server/nginx.dockerfile
 
 EXPOSE ${NGINX_PORT}
 

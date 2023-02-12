@@ -6,14 +6,14 @@ ARG WWW_CONFIG="/etc/php7/php-fpm.d/www.conf"
 ENV OPEN_SEARCH_TITLE="LibreX"
 ENV OPEN_SEARCH_DESCRIPTION="Framework and javascript free privacy respecting meta search engine"
 ENV OPEN_SEARCH_ENCODING="UTF-8"
-ENV OPEN_SEARCH_LONG_NAME="LibreX Search"
-ENV OPEN_SEARCH_HOST="http://localhost:${NGINX_PORT}"
+ENV OPEN_SEARCH_LONG_NAME="LibreX search"
+ENV OPEN_SEARCH_HOST="http://127.0.0.1:${NGINX_PORT}"
 
 # Replace the 'config.php' script, which contains the most common search engine configurations, with these environment setups
 # These environment setups can be found in 'config.php', and the default configurations can be useful for most use cases
-ENV CONFIG_GOOGLE_DOMAIN=".com"
+ENV CONFIG_GOOGLE_DOMAIN="com"
 ENV CONFIG_GOOGLE_LANGUAGUE="en"
-ENV CONFIG_INVIDIOUS_INSTANCE="invidious.namazso.eu"
+ENV CONFIG_INVIDIOUS_INSTANCE="https://invidious.namazso.eu"
 ENV CONFIG_HIDDEN_SERVICE_SEARCH=false
 ENV CONFIG_DISABLE_BITTORRENT_SEARCH=false
 ENV CONFIG_BITTORRENT_TRACKERS="&tr=http://nyaa.tracker.wf:7777/announce&tr=udp://open.stealth.si:80/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://exodus.desync.com:6969/announce&tr=udp://tracker.torrent.eu.org:451/announce"
