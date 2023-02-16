@@ -23,7 +23,7 @@
                         if (!empty($value))
                         {
                             setcookie($key, $value, time() + (86400 * 90), '/');
-                            $_COOKIE[$name] = $value;
+                            $_COOKIE[$key] = $value;
                         }
                     }
                 }
