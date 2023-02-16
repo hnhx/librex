@@ -26,7 +26,7 @@ To run librex in a docker container, you can simply use the command:
 docker run -d --name librex \
     -e TZ="America/New_York" \
     -e CONFIG_GOOGLE_DOMAIN="com" \
-    -e CONFIG_GOOGLE_LANGUAGUE="en" \
+    -e CONFIG_GOOGLE_LANGUAGE="en" \
     -p 8080:8080 \
     librex/librex:latest
 ```
@@ -50,7 +50,7 @@ services:
       - VERSION=docker
       - TZ="America/New_York"
       - CONFIG_GOOGLE_DOMAIN="com"
-      - CONFIG_GOOGLE_LANGUAGUE="en"
+      - CONFIG_GOOGLE_LANGUAGE="en"
     volumes:
       - ./nginx_logs:/var/log/nginx
       - ./php_logs:/var/log/php7
@@ -82,7 +82,7 @@ This docker image was developed with high configurability in mind, so here is th
 | Variables | Default | Examples | Description |
 |:----------|:-------------|:---------|:------|
 | CONFIG_GOOGLE_DOMAIN |  "com" | "com", "com.br", "com.es" | Defines which Google domain the search will be done, change according to your country |
-| CONFIG_GOOGLE_LANGUAGUE | "en" | "pt", "es", "ru" | Defines the language in which searches will be done, see the list of supported languages [here](https://developers.google.com/custom-search/docs/ref_languages). |
+| CONFIG_GOOGLE_LANGUAGE | "en" | "pt", "es", "ru" | Defines the language in which searches will be done, see the list of supported languages [here](https://developers.google.com/custom-search/docs/ref_languages). |
 | CONFIG_INVIDIOUS_INSTANCE | "https://invidious.namazso.eu" | string | Defines the host that will be used to do video searches using invidious |
 | CONFIG_HIDDEN_SERVICE_SEARCH | false | boolean | Defines whether safesearch will be enabled or disabled |
 | CONFIG_DISABLE_BITTORRENT_SEARCH | false | boolean | Defines whether bittorrent support will be enabled or disabled |
@@ -148,7 +148,7 @@ docker build https://github.com/hnhx/librex.git -t librex:latest
 ```sh
 docker run -d --name librex \
     -e CONFIG_GOOGLE_DOMAIN="com" \
-    -e CONFIG_GOOGLE_LANGUAGUE="en" \
+    -e CONFIG_GOOGLE_LANGUAGE="en" \
     -p 8080:8080 \
     librex:latest
 ```

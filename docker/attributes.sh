@@ -20,7 +20,7 @@ export OPEN_SEARCH_HOST=${OPEN_SEARCH_HOST:-"127.0.0.1"}
 # Replace the 'config.php' script, which contains the most common search engine configurations, with these environment setups
 # These environment setups can be found in 'config.php', and the default configurations can be useful for most use cases
 export CONFIG_GOOGLE_DOMAIN=${CONFIG_GOOGLE_DOMAIN:-".com"}
-export CONFIG_GOOGLE_LANGUAGUE=${CONFIG_GOOGLE_LANGUAGUE:-"en"}
+export CONFIG_GOOGLE_LANGUAGE=${CONFIG_GOOGLE_LANGUAGE:-"en"}
 export CONFIG_INVIDIOUS_INSTANCE=${CONFIG_INVIDIOUS_INSTANCE:-"invidious.namazso.eu"}
 export CONFIG_HIDDEN_SERVICE_SEARCH=${CONFIG_HIDDEN_SERVICE_SEARCH:-false}
 export CONFIG_DISABLE_BITTORRENT_SEARCH=${CONFIG_DISABLE_BITTORRENT_SEARCH:-false}
