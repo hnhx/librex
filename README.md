@@ -42,45 +42,6 @@ Huge thanks to Richard Stallman for using LibreX and featuring it on his [websit
 
 <br>
 
-### Running a Docker container through the Docker hub
-
-To run librex in a docker container, you can simply use the command:
-
-```sh
-docker run -d --name librex \
-    -e TZ="America/New_York" \
-    -e CONFIG_GOOGLE_DOMAIN="com" \
-    -e CONFIG_GOOGLE_LANGUAGE="en" \
-    -p 8080:8080 \
-    librex/librex:latest
-```
-
-### Running a Docker container with composer
-
-```yml
-version: "2.1"
-services:
-  librex:
-    image: librex/librex:latest
-    container_name: librex
-    network_mode: bridge
-    ports:
-      - 8080:8080
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - VERSION=docker
-      - TZ="America/New_York"
-      - CONFIG_GOOGLE_DOMAIN="com"
-      - CONFIG_GOOGLE_LANGUAGE="en"
-    volumes:
-      - ./nginx_logs:/var/log/nginx
-      - ./php_logs:/var/log/php7
-    restart: unless-stopped
-```
-
-<br>
-
 ### About LibreX
 
 LibreX gives you results from Google, Qwant, Ahmia and popular torrent sites without spying on you.
