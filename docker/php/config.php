@@ -1,7 +1,7 @@
 <?php
     return (object) array(
         "google_domain" => "${CONFIG_GOOGLE_DOMAIN}",
-        "google_language" => "${CONFIG_GOOGLE_LANGUAGUE}",
+        "google_language" => "${CONFIG_GOOGLE_LANGUAGE}",
         "invidious_instance_for_video_results" => "${CONFIG_INVIDIOUS_INSTANCE}",
 
         "disable_bittorent_search" => ${CONFIG_DISABLE_BITTORRENT_SEARCH},

@@ -12,7 +12,7 @@ ENV OPEN_SEARCH_HOST="http://127.0.0.1:${NGINX_PORT}"
 # Replace the 'config.php' script, which contains the most common search engine configurations, with these environment setups
 # These environment setups can be found in 'config.php', and the default configurations can be useful for most use cases
 ENV CONFIG_GOOGLE_DOMAIN="com"
-ENV CONFIG_GOOGLE_LANGUAGUE="en"
+ENV CONFIG_GOOGLE_LANGUAGE="en"
 ENV CONFIG_INVIDIOUS_INSTANCE="https://invidious.namazso.eu"
 ENV CONFIG_HIDDEN_SERVICE_SEARCH=false
 ENV CONFIG_DISABLE_BITTORRENT_SEARCH=false

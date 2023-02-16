@@ -50,7 +50,7 @@ To run librex in a docker container, you can simply use the command:
 docker run -d --name librex \
     -e TZ="America/New_York" \
     -e CONFIG_GOOGLE_DOMAIN="com" \
-    -e CONFIG_GOOGLE_LANGUAGUE="en" \
+    -e CONFIG_GOOGLE_LANGUAGE="en" \
     -p 8080:8080 \
     librex/librex:latest
 ```
@@ -72,7 +72,7 @@ services:
       - VERSION=docker
       - TZ="America/New_York"
       - CONFIG_GOOGLE_DOMAIN="com"
-      - CONFIG_GOOGLE_LANGUAGUE="en"
+      - CONFIG_GOOGLE_LANGUAGE="en"
     volumes:
       - ./nginx_logs:/var/log/nginx
       - ./php_logs:/var/log/php7
