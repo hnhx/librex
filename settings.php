@@ -1,6 +1,7 @@
 <?php
                 $config = require "config.php";
 
+                $ok = true;
                 if (isset($_REQUEST["reset"]))
                 {
                     if (isset($_SERVER["HTTP_COOKIE"]))
@@ -22,10 +23,21 @@
                         if (!empty($value))
                         {
                             setcookie($key, $value, time() + (86400 * 90), '/');
+                            $_COOKIE[$key] = $value;
                         }
                         else
                         {
                             setcookie($key, "", time() - 1000);
+                            unset($_COOKIE[$key]);
+                        }
+                    }
+                    if (isset($_COOKIE["google_domain"]))
+                    {
+                        if (!in_array($_COOKIE["google_domain"], $config->google_allowed_domains))
+                        {
+                            unset($_COOKIE["google_domain"]);
+                            setcookie("google_domain", null, -1, '/');
+                            $ok = false;
                         }
                     }
                 }
@@ -99,6 +111,13 @@
                 <h2>Google settings</h2>
                 <div class="settings-textbox-container">
                     <div>
+                    <div>
+                        <span>Google Domain</span>
+                        <?php
+                            echo "<input type=\"text\" name=\"google_domain\" placeholder=\"E.g.: co.uk\" value=\"";
+                            echo isset($_COOKIE["google_domain"]) ? htmlspecialchars($_COOKIE["google_domain"]) : $config->google_domain;
+                        ?>">
+                        </div>
                         <span>Site language</span>
                         <?php
                             echo "<input type=\"text\" name=\"google_language_site\" placeholder=\"E.g.: en\" value=\"";
