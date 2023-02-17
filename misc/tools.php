@@ -1,6 +1,4 @@
 <?php
-    $config = require "config.php";
-
     function get_base_url($url)
     {
         $split_url = explode("/", $url);
