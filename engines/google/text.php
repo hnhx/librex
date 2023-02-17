@@ -28,8 +28,6 @@
             $url .= "&safe=medium";
         }
 
-        echo $url;
-
         $google_ch = curl_init($url);
         curl_setopt_array($google_ch, $config->curl_settings);
         curl_multi_add_handle($mh, $google_ch);
