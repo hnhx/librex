@@ -1,29 +1,31 @@
 <?php
                 $config = require "config.php";
 
-
-                if (isset($_REQUEST["save"]) || isset($_REQUEST["reset"]))
+                if (isset($_REQUEST["reset"]))
                 {
                     if (isset($_SERVER["HTTP_COOKIE"]))
                     {
-                            $cookies = explode(";", $_SERVER["HTTP_COOKIE"]);
-                            foreach($cookies as $cookie)
-                            {
-                                $parts = explode("=", $cookie);
-                                $name = trim($parts[0]);
-                                setcookie($name, "", time() - 1000);
-                            }
+                        $cookies = explode(";", $_SERVER["HTTP_COOKIE"]);
+                        foreach($cookies as $cookie)
+                        {
+                            $parts = explode("=", $cookie);
+                            $name = trim($parts[0]);
+                            setcookie($name, "", time() - 1000);
+                        }
                     }
-
                 }
 
                 if (isset($_REQUEST["save"]))
                 {
-                    foreach($_POST as $key=>$value){
+                    foreach($_POST as $key=>$value)
+                    {
                         if (!empty($value))
                         {
                             setcookie($key, $value, time() + (86400 * 90), '/');
-                            $_COOKIE[$key] = $value;
+                        }
+                        else
+                        {
+                            setcookie($key, "", time() - 1000);
                         }
                     }
                 }
@@ -79,30 +81,12 @@
                 <p>For an example if you want to view YouTube without getting spied on, click on "Invidious", find the instance that is most suitable for you then paste it in (correct format: https://example.com)</p>
                 <div class="settings-textbox-container">
                       <?php
-
-                            $frontends = array(
-                                "invidious" => array("https://docs.invidious.io/instances/", "YouTube"),
-                                "bibliogram" => array("https://git.sr.ht/~cadence/bibliogram-docs/tree/master/docs/Instances.md", "Instagram"),
-                                "rimgo" => array("https://codeberg.org/video-prize-ranch/rimgo#instances", "Imgur"),
-                                "scribe" => array("https://git.sr.ht/~edwardloveall/scribe/tree/main/docs/instances.md", "Medium"),
-                                "gothub" => array("https://codeberg.org/gothub/gothub/wiki/Instances", "GitHub"),
-                                "librarian" => array("https://codeberg.org/librarian/librarian#clearnet", "Odysee"),
-                                "nitter" => array("https://github.com/zedeus/nitter/wiki/Instances", "Twitter"),
-                                "libreddit" => array("https://github.com/spikecodes/libreddit", "Reddit"),
-                                "proxitok" => array("https://github.com/pablouser1/ProxiTok/wiki/Public-instances", "TikTok"),
-                                "wikiless" => array("https://github.com/Metastem/wikiless#instances", "Wikipedia"),
-                                "quetre" => array("https://github.com/zyachel/quetre", "Quora"),
-                                "libremdb" => array("https://github.com/zyachel/libremdb", "IMDb"),
-                                "breezewiki" => array("https://gitdab.com/cadence/breezewiki", "Fandom"),
-                                "anonymousoverflow" => array("https://github.com/httpjamesm/AnonymousOverflow#clearnet-instances", "StackOverflow")
-                            );
-
-                           foreach($frontends as $frontend => $info)
+                           foreach($config->frontends as $frontend => $data)
                            {
                                 echo "<div>";
-                                echo "<a for=\"$frontend\" href=\"" . $info[0] . "\" target=\"_blank\">" . ucfirst($frontend) . "</a>";
-                                echo "<input type=\"text\" name=\"$frontend\" placeholder=\"Replace " . $info[1] . "\" value=";
-                                echo isset($_COOKIE["$frontend"]) ? htmlspecialchars($_COOKIE["$frontend"]) : json_decode(json_encode($config), true)[$frontend];
+                                echo "<a for=\"$frontend\" href=\"" . $data["project_url"] . "\" target=\"_blank\">" . ucfirst($frontend) . "</a>";
+                                echo "<input type=\"text\" name=\"$frontend\" placeholder=\"Replace " .  $data["original_name"] . "\" value=";
+                                echo isset($_COOKIE["$frontend"]) ? htmlspecialchars($_COOKIE["$frontend"]) :  $data["instance_url"];
                                 echo ">";
                                 echo "</div>";
                            }
@@ -115,10 +99,17 @@
                 <h2>Google settings</h2>
                 <div class="settings-textbox-container">
                     <div>
-                        <span>Google language</span>
+                        <span>Site language</span>
                         <?php
-                            echo "<input type=\"text\" name=\"google_language\" placeholder=\"E.g.: de\" value=\"";
-                            echo isset($_COOKIE["google_language"]) ? htmlspecialchars($_COOKIE["google_language"]) : $config->google_language;
+                            echo "<input type=\"text\" name=\"google_language_site\" placeholder=\"E.g.: en\" value=\"";
+                            echo isset($_COOKIE["google_language_site"]) ? htmlspecialchars($_COOKIE["google_language_site"]) : $config->google_language_site;
+                        ?>">
+                    </div>
+                    <div>
+                        <span>Results language</span>
+                        <?php
+                            echo "<input type=\"text\" name=\"google_language_results\" placeholder=\"E.g.: de\" value=\"";
+                            echo isset($_COOKIE["google_language_results"]) ? htmlspecialchars($_COOKIE["google_language_results"]) : $config->google_language_results;
                         ?>">
                     </div>
                     <div>

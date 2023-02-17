@@ -1,4 +1,6 @@
 <?php
+    $config = require "config.php";
+
     function get_base_url($url)
     {
         $split_url = explode("/", $url);
@@ -19,14 +21,16 @@
 
     function try_replace_with_frontend($url, $frontend, $original)
     {
-        $config = require "config.php";
+        global $config;
+        $frontends = $config->frontends;
 
-        if (isset($_COOKIE[$frontend]) || !empty($config->$frontend))
+        if (isset($_COOKIE[$frontend]) || !empty($frontends[$frontend]["instance_url"]))
         {
+            
             if (isset($_COOKIE[$frontend]))
                 $frontend = $_COOKIE[$frontend];
-            else if (!empty($config->$frontend))
-                $frontend = $config->$frontend;
+            else if (!empty($frontends[$frontend]["instance_url"]))
+                $frontend = $frontends[$frontend]["instance_url"];
 
            if ($original == "instagram.com")
             {
@@ -69,28 +73,16 @@
 
     function check_for_privacy_frontend($url)
     {
+
+        global $config;
+
         if (isset($_COOKIE["disable_frontends"]))
             return $url;
 
-        $frontends = array(
-            "youtube.com" => "invidious",
-            "instagram.com" => "bibliogram",
-            "imgur.com" => "rimgo",
-            "medium.com" => "scribe",
-            "github.com" => "gothub",
-            "odysee.com" => "librarian",
-            "twitter.com" => "nitter",
-            "reddit.com" => "libreddit",
-            "tiktok.com" => "proxitok",
-            "wikipedia.org" => "wikiless",
-            "quora.com" => "quetre",
-            "imdb.com" => "libremdb",
-            "fandom.com" => "breezewiki",
-            "stackoverflow.com" => "anonymousoverflow"
-        );
-
-        foreach($frontends as $original => $frontend)
+        foreach($config->frontends as $frontend => $data)
         {
+            $original = $data["original_url"];
+
             if (strpos($url, $original))
             {
                 $url = try_replace_with_frontend($url, $frontend, $original);

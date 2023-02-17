@@ -8,19 +8,27 @@
         $results = array();
 
         $domain = $config->google_domain;
-        $language = isset($_COOKIE["google_language"]) ? htmlspecialchars($_COOKIE["google_language"]) : $config->google_language;
-        
+        $site_language = isset($_COOKIE["google_language_site"]) ? trim(htmlspecialchars($_COOKIE["google_language_site"])) : $config->google_language_site;
+        $results_language = isset($_COOKIE["google_language_results"]) ? trim(htmlspecialchars($_COOKIE["google_language_results"])) : $config->google_language_results;
+
         $url = "https://www.google.$domain/search?q=$query_encoded&start=$page";
 
-        if (3 > strlen($language))
+        if (3 > strlen($site_language) && 0 < strlen($site_language))
         {
-            $url .= "&hl=$language&lr=lang_$language";
+            $url .= "&hl=$site_language";
+        }
+
+        if (3 > strlen($results_language) && 0 < strlen($results_language))
+        {
+            $url .= "&lr=lang_$results_language";
         }
 
         if (isset($_COOKIE["safe_search"]))
         {
             $url .= "&safe=medium";
         }
+
+        echo $url;
 
         $google_ch = curl_init($url);
         curl_setopt_array($google_ch, $config->curl_settings);
