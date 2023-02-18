@@ -8,6 +8,7 @@
   - [Environment variables that can be set in the Docker container](#environment-variables-that-can-be-set-in-the-docker-container)
     - [OpenSearch](#opensearch)
     - [Search Config](#search-config)
+    - [Wikipedia](#wikipedia)
     - [Applications](#applications)
     - [Curl](#curl)
 - [Docker version issues](#docker-version-issues)
@@ -53,6 +54,7 @@ services:
       - TZ="America/New_York"
       - CONFIG_GOOGLE_DOMAIN="com"
       - CONFIG_GOOGLE_LANGUAGE="en"
+      - CONFIG_WIKIPEDIA_LANGUAGE="en"
     volumes:
       - ./nginx_logs:/var/log/nginx
       - ./php_logs:/var/log/php7
@@ -89,6 +91,14 @@ This docker image was developed with high configurability in mind, so here is th
 | CONFIG_HIDDEN_SERVICE_SEARCH | false | boolean | Defines whether safesearch will be enabled or disabled |
 | CONFIG_DISABLE_BITTORRENT_SEARCH | false | boolean | Defines whether bittorrent support will be enabled or disabled |
 | CONFIG_BITTORRENT_TRACKERS | "http://nyaa.tracker.wf:7777/announce" | string | Bittorrent trackers, see the complete example in the `config.php` file. |
+
+<br>
+
+### Wikipedia
+
+| Variables | Default | Examples | Description |
+|:----------|:-------------|:---------|:------|
+| CONFIG_WIKIPEDIA_LANGUAGE | "en" | "pt", "es", "hu" | Adds language support for Wikipedia results |
 
 <br>
 
