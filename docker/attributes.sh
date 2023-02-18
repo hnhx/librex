@@ -28,7 +28,7 @@ export CONFIG_BITTORRENT_TRACKERS=${CONFIG_BITTORRENT_TRACKERS:-"&tr=http://nyaa
 
 # The settings that will be used to handle Wikipedia results displayed on the libreX search page
 # the settings below can be edited via environment variables.
-export CONFIG_WIKIPEDIA_LANGUAGE=${CONFIG_WIKIPEDIA_LANGUAGE:-"en"}
+export CONFIG_WIKIPEDIA_LANGUAGE=${CONFIG_WIKIPEDIA_LANGUAGE:-${CONFIG_GOOGLE_LANGUAGE}}
 
 # Supported apps integration configuration. These empty spaces can be set up using free hosts as pointers
 # A particular example is using the "https://yewtu.be" or a self-hosted host to integrate the invidious app to librex
