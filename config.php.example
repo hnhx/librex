@@ -82,7 +82,7 @@
                 "instance_url" => "",
                 "project_url" => "https://github.com/Metastem/wikiless#instances", 
                 "original_name" => "Wikipedia",
-                "original_url" => "wikipedia.com"
+                "original_url" => "wikipedia.org"
             ),
             "quetre" => array(
                 "instance_url" => "",
