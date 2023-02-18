@@ -19,12 +19,16 @@ export OPEN_SEARCH_HOST=${OPEN_SEARCH_HOST:-"127.0.0.1"}
 
 # Replace the 'config.php' script, which contains the most common search engine configurations, with these environment setups
 # These environment setups can be found in 'config.php', and the default configurations can be useful for most use cases
-export CONFIG_GOOGLE_DOMAIN=${CONFIG_GOOGLE_DOMAIN:-".com"}
+export CONFIG_GOOGLE_DOMAIN=${CONFIG_GOOGLE_DOMAIN:-"com"}
 export CONFIG_GOOGLE_LANGUAGE=${CONFIG_GOOGLE_LANGUAGE:-"en"}
 export CONFIG_INVIDIOUS_INSTANCE=${CONFIG_INVIDIOUS_INSTANCE:-"invidious.namazso.eu"}
 export CONFIG_HIDDEN_SERVICE_SEARCH=${CONFIG_HIDDEN_SERVICE_SEARCH:-false}
 export CONFIG_DISABLE_BITTORRENT_SEARCH=${CONFIG_DISABLE_BITTORRENT_SEARCH:-false}
 export CONFIG_BITTORRENT_TRACKERS=${CONFIG_BITTORRENT_TRACKERS:-"&tr=http://nyaa.tracker.wf:7777/announce&tr=udp://open.stealth.si:80/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://exodus.desync.com:6969/announce&tr=udp://tracker.torrent.eu.org:451/announce"}
+
+# The settings that will be used to handle Wikipedia results displayed on the libreX search page
+# the settings below can be edited via environment variables.
+export CONFIG_WIKIPEDIA_LANGUAGE=${CONFIG_WIKIPEDIA_LANGUAGE:-"en"}
 
 # Supported apps integration configuration. These empty spaces can be set up using free hosts as pointers
 # A particular example is using the "https://yewtu.be" or a self-hosted host to integrate the invidious app to librex

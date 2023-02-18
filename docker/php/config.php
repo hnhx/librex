@@ -4,6 +4,8 @@
         "google_language" => "${CONFIG_GOOGLE_LANGUAGE}",
         "invidious_instance_for_video_results" => "${CONFIG_INVIDIOUS_INSTANCE}",
 
+        "wikipedia_language" => "${CONFIG_WIKIPEDIA_LANGUAGE}",
+
         "disable_bittorent_search" => ${CONFIG_DISABLE_BITTORRENT_SEARCH},
         "bittorent_trackers" => "${CONFIG_BITTORRENT_TRACKERS}",
         "disable_hidden_service_search" => ${CONFIG_HIDDEN_SERVICE_SEARCH},

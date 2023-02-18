@@ -8,6 +8,9 @@
         "google_language_site" => "",
         "google_language_results" => "",
 
+        // You can set a language for results in wikipedia
+        "wikipedia_language": "en",
+
         // You can use any Invidious instance here
         "invidious_instance_for_video_results" => "https://invidious.namazso.eu",
 
