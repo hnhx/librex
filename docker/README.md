@@ -23,12 +23,14 @@ Dockerized Librex is a way to provide users with yet another way to self-host th
 To run librex in a docker container, you can simply use the command:
 
 ```sh
-docker run -d --name librex \
-    -e TZ="America/New_York" \
-    -e CONFIG_GOOGLE_DOMAIN="com" \
-    -e CONFIG_GOOGLE_LANGUAGE="en" \
-    -p 8080:8080 \
-    librex/librex:latest
+docker run -d \
+  --name librex \
+  -e TZ="America/New_York" \
+  -e CONFIG_GOOGLE_DOMAIN="com" \
+  -e CONFIG_GOOGLE_LANGUAGE="en" \
+  -e CONFIG_WIKIPEDIA_LANGUAGE="en" \
+  -p 8080:8080 \
+  librex/librex:latest
 ```
 
 <br>
