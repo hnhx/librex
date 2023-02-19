@@ -1,6 +1,8 @@
 <?php
     function wikipedia_results($query, $response) 
     {
+        global $config;
+
         $query_encoded = urlencode($query);
 
         $json_response = json_decode($response, true);
@@ -10,8 +12,10 @@
         if (!array_key_exists("missing", $first_page))
         {
             $description = substr($first_page["extract"], 0, 250) . "...";
+            
+            $wikipedia_language = $config->wikipedia_language;
 
-            $source = check_for_privacy_frontend("https://en.wikipedia.org/wiki/$query");
+            $source = check_for_privacy_frontend("https://$wikipedia_language.wikipedia.org/wiki/$query");
             $response = array(
                 "special_response" => array(
                     "response" => htmlspecialchars($description),

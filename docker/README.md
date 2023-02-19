@@ -8,6 +8,7 @@
   - [Environment variables that can be set in the Docker container](#environment-variables-that-can-be-set-in-the-docker-container)
     - [OpenSearch](#opensearch)
     - [Search Config](#search-config)
+    - [Wikipedia](#wikipedia)
     - [Applications](#applications)
     - [Curl](#curl)
 - [Docker version issues](#docker-version-issues)
@@ -23,12 +24,14 @@ Dockerized Librex is a way to provide users with yet another way to self-host th
 To run librex in a docker container, you can simply use the command:
 
 ```sh
-docker run -d --name librex \
-    -e TZ="America/New_York" \
-    -e CONFIG_GOOGLE_DOMAIN="com" \
-    -e CONFIG_GOOGLE_LANGUAGE="en" \
-    -p 8080:8080 \
-    librex/librex:latest
+docker run -d \
+  --name librex \
+  -e TZ="America/New_York" \
+  -e CONFIG_GOOGLE_DOMAIN="com" \
+  -e CONFIG_GOOGLE_LANGUAGE="en" \
+  -e CONFIG_WIKIPEDIA_LANGUAGE="en" \
+  -p 8080:8080 \
+  librex/librex:latest
 ```
 
 <br>
@@ -51,6 +54,7 @@ services:
       - TZ="America/New_York"
       - CONFIG_GOOGLE_DOMAIN="com"
       - CONFIG_GOOGLE_LANGUAGE="en"
+      - CONFIG_WIKIPEDIA_LANGUAGE="en"
     volumes:
       - ./nginx_logs:/var/log/nginx
       - ./php_logs:/var/log/php7
@@ -87,6 +91,14 @@ This docker image was developed with high configurability in mind, so here is th
 | CONFIG_HIDDEN_SERVICE_SEARCH | false | boolean | Defines whether safesearch will be enabled or disabled |
 | CONFIG_DISABLE_BITTORRENT_SEARCH | false | boolean | Defines whether bittorrent support will be enabled or disabled |
 | CONFIG_BITTORRENT_TRACKERS | "http://nyaa.tracker.wf:7777/announce" | string | Bittorrent trackers, see the complete example in the `config.php` file. |
+
+<br>
+
+### Wikipedia
+
+| Variables | Default | Examples | Description |
+|:----------|:-------------|:---------|:------|
+| CONFIG_WIKIPEDIA_LANGUAGE | "en" | "pt", "es", "hu" | Adds language support for Wikipedia results |
 
 <br>
 
