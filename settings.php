@@ -77,6 +77,7 @@
                     <label>Disable special queries (e.g.: currency conversion)</label>
                     <input type="checkbox" name="disable_special" <?php echo isset($_COOKIE["disable_special"]) ? "checked"  : ""; ?> >
                 </div>
+
                 <h2>Privacy friendly frontends</h2>
                 <p>For an example if you want to view YouTube without getting spied on, click on "Invidious", find the instance that is most suitable for you then paste it in (correct format: https://example.com)</p>
                 <div class="settings-textbox-container">
@@ -96,6 +97,7 @@
                     <label>Disable frontends</label>
                     <input type="checkbox" name="disable_frontends" <?php echo isset($_COOKIE["disable_frontends"]) ? "checked"  : ""; ?> >
                 </div>
+
                 <h2>Google settings</h2>
                 <div class="settings-textbox-container">
                     <div>
@@ -117,6 +119,18 @@
                         <input type="checkbox" name="safe_search" <?php echo isset($_COOKIE["safe_search"]) ? "checked"  : ""; ?> >
                     </div>
                 </div>
+
+                <h2>Wikipedia settings</h2>
+                <div class="settings-textbox-container">
+                    <div>
+                        <span>Results language</span>
+                        <?php
+                            echo "<input type=\"text\" name=\"wikipedia_language\" placeholder=\"E.g.: en\" value=\"";
+                            echo isset($_COOKIE["wikipedia_language"]) ? htmlspecialchars($_COOKIE["wikipedia_language"]) : $config->wikipedia_language;
+                        ?>">
+                    </div>
+                </div>
+
                 <div>
                   <button type="submit" name="save" value="1">Save</button>
                   <button type="submit" name="reset" value="1">Reset</button>

@@ -12,8 +12,8 @@
         if (!array_key_exists("missing", $first_page))
         {
             $description = substr($first_page["extract"], 0, 250) . "...";
-            
-            $wikipedia_language = $config->wikipedia_language;
+
+            $wikipedia_language = isset($_COOKIE["wikipedia_language"]) ? trim(htmlspecialchars($_COOKIE["wikipedia_language"])) : $config->wikipedia_language;
 
             $source = check_for_privacy_frontend("https://$wikipedia_language.wikipedia.org/wiki/$query");
             $response = array(

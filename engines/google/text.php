@@ -55,7 +55,7 @@
                     $url = "https://check.torproject.org/torbulkexitlist";
                     break;
                 case 7:
-                    $wikipedia_language = $config->wikipedia_language;
+                    $wikipedia_language = isset($_COOKIE["wikipedia_language"]) ? trim(htmlspecialchars($_COOKIE["wikipedia_language"])) : $config->wikipedia_language;
                     $url = "https://$wikipedia_language.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cpageimages&exintro&explaintext&redirects=1&pithumbsize=500&titles=$query_encoded";
                     break;
             }
