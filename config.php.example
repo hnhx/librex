@@ -51,7 +51,7 @@
             ),
             "gothub" => array(
                 "instance_url" => "",
-                "project_url" => "https://codeberg.org/gothub/gothub/wiki/Instances", 
+                "project_url" => "https://codeberg.org/gothub/gothub#instances", 
                 "original_name" => "GitHub",
                 "original_url" => "github.com"
             ),
@@ -71,7 +71,7 @@
 
             "libreddit" => array(
                 "instance_url" => "",
-                "project_url" => "https://github.com/spikecodes/libreddit", 
+                "project_url" => "https://github.com/libreddit/libreddit-instances/blob/master/instances.md", 
                 "original_name" => "Reddit",
                 "original_url" => "reddit.com"
             ),
@@ -89,19 +89,19 @@
             ),
             "quetre" => array(
                 "instance_url" => "",
-                "project_url" => "https://github.com/zyachel/quetre", 
+                "project_url" => "https://github.com/zyachel/quetre#instances", 
                 "original_name" => "Quora",
                 "original_url" => "quora.com"
             ),
             "libremdb" => array(
                 "instance_url" => "",
-                "project_url" => "https://github.com/zyachel/libremdb", 
+                "project_url" => "https://github.com/zyachel/libremdb#instances", 
                 "original_name" => "IMDb",
                 "original_url" => "imdb.com"
             ),
             "breezewiki" => array(
                 "instance_url" => "",
-                "project_url" => "https://gitdab.com/cadence/breezewiki", 
+                "project_url" => "https://docs.breezewiki.com/Links.html", 
                 "original_name" => "Fandom",
                 "original_url" => "fandom.com"
             ),
