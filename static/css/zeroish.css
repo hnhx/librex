@@ -1,0 +1,47 @@
+:root {
+    --main-bg: #181B1D;
+    --main-fg: #E5E6E7;
+
+    --result-link-fg: #49AEAD;
+    --result-fg: #BABCBE;
+
+    --button-bg: #303134;
+
+    --special-result-border: #202124;
+    --special-text-background: #0a0b0d;
+    --special-text-color: #E5E6E7;
+
+    --search-container-text-color: #E5E6E7;
+    --search-container-background-color: #303134;
+    --search-container-background-border: #3C4043;
+
+    --search-form-background-color: #0a0b0d;
+
+    --border: #202124;
+
+    --footer-fg: #BABCBE;
+    --footer-bg: #080808;
+
+    color-scheme: dark;
+}
+
+.X {
+	color: #ee2425;
+}
+
+.text-result-wrapper a:visited h2,
+.special-result-container a,
+.sub-search-button-wrapper a,
+.sub-search-button-wrapper a:visited{
+	color: #ee2425;
+}
+
+.sub-search-button-wrapper .active {
+	border-bottom: #ee2425;
+}
+
+
+.sub-search-button-wrapper img {
+	filter: hue-rotate(88deg) saturate(500%) brightness(71%);
+}
+
