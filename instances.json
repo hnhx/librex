@@ -113,6 +113,12 @@
               "tor": null,
               "i2p": null,
               "country": "KR"
+          },
+          {
+              "clearnet": "https://search.zeroish.xyz/",
+              "tor": null,
+              "i2p": null,
+              "country": "US"
           }
     ]
 }

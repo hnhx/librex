@@ -32,6 +32,7 @@
 | [librex.bloatcat.tk](https://librex.bloatcat.tk/) | ❌ | ❌ | 🇮🇸 IS |
 | [librex.retro-hax.net](https://librex.retro-hax.net/) | ❌ | ❌ | 🇩🇪 DE |
 | [search.funami.tech](https://search.funami.tech/) | ❌ | ❌ | 🇰🇷 KR |
+| [search.zeroish.xyz](https://search.zeroish.xyz/) | ❌| ❌ | 🇺🇸 US |
 <br>
 
 ### Thanks rms
