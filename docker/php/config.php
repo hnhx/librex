@@ -1,10 +1,10 @@
 <?php
     return (object) array(
-        "google_domain" => "${CONFIG_GOOGLE_DOMAIN}",
-        "google_language" => "${CONFIG_GOOGLE_LANGUAGE}",
+        "google_domain" => ${CONFIG_GOOGLE_DOMAIN},
+        "google_language" => ${CONFIG_GOOGLE_LANGUAGE},
         "invidious_instance_for_video_results" => "${CONFIG_INVIDIOUS_INSTANCE}",
 
-        "wikipedia_language" => "${CONFIG_WIKIPEDIA_LANGUAGE}",
+        "wikipedia_language" => ${CONFIG_WIKIPEDIA_LANGUAGE},
 
         "disable_bittorent_search" => ${CONFIG_DISABLE_BITTORRENT_SEARCH},
         "bittorent_trackers" => "${CONFIG_BITTORRENT_TRACKERS}",
@@ -21,8 +21,8 @@
         "proxitok" => "${APP_PROXITOK}", // tiktok
         "wikiless" => "${APP_WIKILESS}", // wikipedia
         "quetre" => "${APP_QUETRE}", // quora
-        "libremdb" => "${APP_LIBREMDB}", // imdb,
-        "breezewiki" => "${APP_BREEZEWIKI}", // fandom,
+        "libremdb" => "${APP_LIBREMDB}", // imdb
+        "breezewiki" => "${APP_BREEZEWIKI}", // fandom
         "anonymousoverflow" => "${APP_ANONYMOUS_OVERFLOW}", // stackoverflow
 
         "curl_settings" => array(
