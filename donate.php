@@ -14,9 +14,9 @@
                <img src="static/images/btc.png" alt="btc qr code" width="150" height="150"/>
                <h2>Monero (XMR):</h2>
                <p>41dGQr9EwZBfYBY3fibTtJZYfssfRuzJZDSVDeneoVcgckehK3BiLxAV4FvEVJiVqdiW996zvMxhFB8G8ot9nBFqQ84VkuC</p>
+               <img src="static/images/xmr.png" alt="xmr qr code" width="150" height="150"/>
                <h2>tor project (DODGE):<h2>
                <p>DJwRnafcjDbzqWM5vsCphuyQuTc2QB3a8F<p>
-               <img src="static/images/xmr.png" alt="xmr qr code" width="150" height="150"/>
         </div>
 
 <?php require "misc/footer.php"; ?>
