@@ -7,6 +7,12 @@
               "country": "HU"
           },
           {
+              "clearnet": "https://moongazer07.zedekhost.com/search/",
+              "tor": null,
+              "i2p": null,
+              "country": "CA"
+          },
+          {
               "clearnet": "https://lx.vern.cc/",
               "tor": "http://lx.vernccvbvyi5qhfzyqengccj7lkove6bjot2xhh5kajhwvidqafczrad.onion/",
               "i2p": "http://vernziqfqvweijfaacmwazohgpdo2bt2ib2jlupt2pwwu27bhgxq.b32.i2p/",
