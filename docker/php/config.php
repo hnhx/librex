@@ -7,9 +7,9 @@
         "wikipedia_language" => "${CONFIG_WIKIPEDIA_LANGUAGE}",
         "invidious_instance_for_video_results" => "${CONFIG_INVIDIOUS_INSTANCE}",
 
-        "disable_bittorent_search" => "${CONFIG_DISABLE_BITTORRENT_SEARCH}",
+        "disable_bittorent_search" => ${CONFIG_DISABLE_BITTORRENT_SEARCH},
         "bittorent_trackers" => "${CONFIG_BITTORRENT_TRACKERS}",
-        "disable_hidden_service_search" => "${CONFIG_HIDDEN_SERVICE_SEARCH}",
+        "disable_hidden_service_search" => ${CONFIG_HIDDEN_SERVICE_SEARCH},
 
         "frontends" => array(
             "invidious" => array(
