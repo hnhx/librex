@@ -23,7 +23,7 @@
 | [search.madreyk.xyz](https://search.madreyk.xyz/) | ❌ | ❌ | 🇩🇪 DE |
 | [search.pabloferreiro.es](https://search.pabloferreiro.es/) | ❌ | ❌ | 🇩🇪 DE |
 | [buscar.weblibre.org](https://buscar.weblibre.org/) | ❌ | ❌ | 🇨🇱 CL |
-| [search.ahwx.org](https://search.ahwx.org/) | ❌ | ❌ | 🇳🇱 NL |
+| [search.ahwx.org](https://search.ahwx.org/) | [✅](http://fcnfg6avz45hqzwbneekq57u2mqbnwa7veyvjcc4dndqbatvkjlaj7yd.onion/) | ❌ | 🇳🇱 NL |
 | [librex.pufe.org](https://librex.pufe.org/) | ❌ | ❌ | :new_zealand: NZ |
 | [librex.ratakor.com](https://librex.ratakor.com/) | ❌ | ❌ | 🇫🇷 FR |
 | [search.tildevarsh.in](https://search.tildevarsh.in/) | ❌ | ❌ | 🇮🇳  IN |
