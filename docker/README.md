@@ -51,10 +51,10 @@ services:
       - PUID=1000
       - PGID=1000
       - VERSION=docker
-      - TZ="America/New_York"
-      - CONFIG_GOOGLE_DOMAIN="com"
-      - CONFIG_GOOGLE_LANGUAGE="en"
-      - CONFIG_WIKIPEDIA_LANGUAGE="en"
+      - TZ=America/New_York
+      - CONFIG_GOOGLE_DOMAIN=com
+      - CONFIG_GOOGLE_LANGUAGE=en
+      - CONFIG_WIKIPEDIA_LANGUAGE=en
     volumes:
       - ./nginx_logs:/var/log/nginx
       - ./php_logs:/var/log/php7
