@@ -1,0 +1,21 @@
+version: "2.1"
+services:
+  librex:
+    image: librex:latest
+    container_name: librex
+    network_mode: bridge
+    ports:
+      - 8080:8080
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - VERSION=docker
+      - TZ=America/New_York
+      - CONFIG_GOOGLE_DOMAIN=com
+      - CONFIG_GOOGLE_LANGUAGE_SITE=en
+      - CONFIG_GOOGLE_LANGUAGE_RESULTS=en
+      - CONFIG_WIKIPEDIA_LANGUAGE=en
+    volumes:
+      - ./nginx_logs:/var/log/nginx
+      - ./php_logs:/var/log/php7
+    restart: unless-stopped

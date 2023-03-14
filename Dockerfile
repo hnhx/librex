@@ -1,6 +1,6 @@
 # syntax = edrevo/dockerfile-plus
 ARG VERSION="3.17"
-FROM alpine:${VERSION} AS runner
+FROM alpine:${VERSION} AS librex
 WORKDIR "/var/www/html"
 
 # Docker metadata contains information about the maintainer, such as the name, repository, and support email

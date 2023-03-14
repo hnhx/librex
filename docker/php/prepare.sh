@@ -10,7 +10,7 @@ source "docker/attributes.sh"
 if [ ! -d "/run/php7" ] || [ ! -S "/run/php7/php-fpm7.sock" ]; then
     mkdir "/run/php7"
     touch "/run/php7/php-fpm7.sock"
-    chmod 0660 "/run/php7/php-fpm7.sock"
+    chmod 660 "/run/php7/php-fpm7.sock"
     chown nginx:nginx "/run/php7/php-fpm7.sock"
 fi
 
