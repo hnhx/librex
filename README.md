@@ -34,6 +34,7 @@
 | [librex.retro-hax.net](https://librex.retro-hax.net/) | ❌ | ❌ | 🇩🇪 DE |
 | [search.funami.tech](https://search.funami.tech/) | ❌ | ❌ | 🇰🇷 KR |
 | [search.zeroish.xyz](https://search.zeroish.xyz/) | ❌| ❌ | 🇺🇸 US |
+| [librex.baczek.me](https://librex.baczek.me/) | ❌| ❌ | 🇵🇱 PL |
 <br>
 
 ### Thanks rms
