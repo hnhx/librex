@@ -20,11 +20,11 @@
 | [librex.revvy.de](https://librex.revvy.de/) | [✅](http://librex.revvybrr6pvbx4n3j4475h4ghw4elqr4t5xo2vtd3gfpu2nrsnhh57id.onion/) | [✅](http://revekebotog64xrrammtsmjwtwlg3vqyzwdurzt2pu6botg4bejq.b32.i2p/) | 🇨🇦 CA |
 | [librex.mikata.ru](https://librex.mikata.ru/) | [✅](http://f7ssz7l3biu4fugwctfpcx4txg5yq4gqhrt473ledsuc3ivtd3omniid.onion/) | ❌ | 🇺🇸 US |
 | [search.milivojevic.in.rs](https://search.milivojevic.in.rs/) | [✅](http://librex2xsek6qnh2i4yufuzqjumfdwtw7io7omgmimpzna6llqudqzyd.onion/) | ❌ | 🇳🇱 NL |
+| [search.ahwx.org](https://search.ahwx.org/) | [✅](http://fcnfg6avz45hqzwbneekq57u2mqbnwa7veyvjcc4dndqbatvkjlaj7yd.onion/) | ❌ | 🇳🇱 NL |
 | [search.davidovski.xyz](https://search.davidovski.xyz/) | ❌ | ❌ | 🇬🇧 UK |
 | [search.madreyk.xyz](https://search.madreyk.xyz/) | ❌ | ❌ | 🇩🇪 DE |
 | [search.pabloferreiro.es](https://search.pabloferreiro.es/) | ❌ | ❌ | 🇩🇪 DE |
 | [buscar.weblibre.org](https://buscar.weblibre.org/) | ❌ | ❌ | 🇨🇱 CL |
-| [search.ahwx.org](https://search.ahwx.org/) | ❌ | ❌ | 🇳🇱 NL |
 | [librex.pufe.org](https://librex.pufe.org/) | ❌ | ❌ | :new_zealand: NZ |
 | [librex.ratakor.com](https://librex.ratakor.com/) | ❌ | ❌ | 🇫🇷 FR |
 | [search.tildevarsh.in](https://search.tildevarsh.in/) | ❌ | ❌ | 🇮🇳  IN |

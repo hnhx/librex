@@ -37,6 +37,12 @@
               "country": "US"
           },
           {
+              "clearnet": "https://search.ahwx.org/",
+              "tor": "http://fcnfg6avz45hqzwbneekq57u2mqbnwa7veyvjcc4dndqbatvkjlaj7yd.onion/",
+              "i2p": null,
+              "country": "NL"
+          },
+          {
               "clearnet": "https://search.davidovski.xyz/",
               "tor": null,
               "i2p": null,
@@ -59,12 +65,6 @@
               "tor": null,
               "i2p": null,
               "country": "CL"
-          },
-          {
-              "clearnet": "https://search.ahwx.org/",
-              "tor": null,
-              "i2p": null,
-              "country": "NL"
           },
           {
               "clearnet": "https://librex.pufe.org/",
