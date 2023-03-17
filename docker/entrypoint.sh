@@ -7,4 +7,6 @@ sh "docker/server/prepare.sh"
 
 /bin/sh -c /usr/sbin/php-fpm7
 
+touch /var/log/php7/error.log /var/log/nginx/access.log /var/log/nginx/error.log
+tail -f /var/log/php7/error.log /var/log/nginx/access.log /var/log/nginx/error.log &
 exec nginx -g "daemon off;"
