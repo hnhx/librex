@@ -125,6 +125,12 @@
               "tor": null,
               "i2p": null,
               "country": "US"
+          },
+          {
+              "clearnet": "https://librex.baczek.me/",
+              "tor": null,
+              "i2p": null,
+              "country": "PL"
           }
     ]
 }
