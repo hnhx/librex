@@ -25,6 +25,12 @@ ARG NGINX_PORT=8080
 # See more: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
 ENV TZ="America/New_York"
 
+RUN apk add gettext --no-cache
+
+# The following lines import all Dockerfiles from other folders so that they can be built together in the final build
+INCLUDE+ docker/php/php.dockerfile
+INCLUDE+ docker/server/nginx.dockerfile
+
 # Include docker scripts, docker images, and the 'GNU License' in the Librex container
 ADD "." "/var/www/html"
 
@@ -33,12 +39,6 @@ RUN chmod u+x "${DOCKER_SCRIPTS}/php/prepare.sh" &&\
     chmod u+x "${DOCKER_SCRIPTS}/server/prepare.sh" &&\
     chmod u+x "${DOCKER_SCRIPTS}/entrypoint.sh" &&\
     chmod u+x "${DOCKER_SCRIPTS}/attributes.sh"
-
-RUN apk add gettext --no-cache
-
-# The following lines import all Dockerfiles from other folders so that they can be built together in the final build
-INCLUDE+ docker/php/php.dockerfile
-INCLUDE+ docker/server/nginx.dockerfile
 
 EXPOSE ${NGINX_PORT}
 
