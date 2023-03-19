@@ -126,18 +126,15 @@
 
             if (2 > $type)
             {
+                if (isset($_COOKIE["number_of_results"]))
+                    $num = $_COOKIE["number_of_results"];
+                else
+                    $num = 10;
+
                 echo "<div class=\"next-page-button-wrapper\">";
 
-                    if ($page != 0)
-                    {
-                        print_next_page_button("&lt;&lt;", 0, $query, $type);
-                        print_next_page_button("&lt;", $page - 10, $query, $type);
-                    }
-
-                    for ($i=$page / 10; $page / 10 + 10 > $i; $i++)
-                        print_next_page_button($i + 1, $i * 10, $query, $type);
-
-                    print_next_page_button("&gt;", $page + 10, $query, $type);
+                    for ($i=0; 10 > $i; $i++)
+                        print_next_page_button($i + 1, $i * $num, $query, $type);
 
                 echo "</div>";
             }

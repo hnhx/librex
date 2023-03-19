@@ -77,6 +77,10 @@
                     <label>Disable special queries (e.g.: currency conversion)</label>
                     <input type="checkbox" name="disable_special" <?php echo isset($_COOKIE["disable_special"]) ? "checked"  : ""; ?> >
                 </div>
+                <div>
+                    <label>Number of results per page</label>
+                    <input type="number" name="number_of_results" value="<?php echo isset($_COOKIE["number_of_results"]) ? $_COOKIE["number_of_results"]  : 10; ?>" >
+                </div>
 
                 <h2>Privacy friendly frontends</h2>
                 <p>For an example if you want to view YouTube without getting spied on, click on "Invidious", find the instance that is most suitable for you then paste it in (correct format: https://example.com)</p>

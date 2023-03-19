@@ -7,11 +7,16 @@
         $query_encoded = urlencode($query);
         $results = array();
 
+        if (isset($_COOKIE["number_of_results"]))
+            $num = $_COOKIE["number_of_results"];
+        else
+            $num = 10;
+
         $domain = $config->google_domain;
         $site_language = isset($_COOKIE["google_language_site"]) ? trim(htmlspecialchars($_COOKIE["google_language_site"])) : $config->google_language_site;
         $results_language = isset($_COOKIE["google_language_results"]) ? trim(htmlspecialchars($_COOKIE["google_language_results"])) : $config->google_language_results;
 
-        $url = "https://www.google.$domain/search?q=$query_encoded&start=$page";
+        $url = "https://www.google.$domain/search?q=$query_encoded&start=$page&num=$num";
 
         if (3 > strlen($site_language) && 0 < strlen($site_language))
         {
