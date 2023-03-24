@@ -7,6 +7,7 @@
         // Google results will be in this language
         "google_language_site" => "",
         "google_language_results" => "",
+        "google_number_of_results" => 10,
 
         // You can set a language for results in wikipedia
         "wikipedia_language" => "en",
