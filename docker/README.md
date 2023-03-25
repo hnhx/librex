@@ -119,7 +119,6 @@ This docker image was developed with high configurability in mind, so here is th
 | APP_LIBREMDB | "" | string | Integration with external self-hosted apps, configure the desired host. |
 | APP_BREEZEWIKI | "" | string | Integration with external self-hosted apps, configure the desired host. |
 | APP_ANONYMOUS_OVERFLOW | "" | string | Integration with external self-hosted apps, configure the desired host. |
-| APP_SUDS | "" | string | Integration with external self-hosted apps, configure the desired host. |
 
 <br>
 
