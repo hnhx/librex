@@ -91,6 +91,12 @@
                 "project_url" => "https://github.com/httpjamesm/AnonymousOverflow#clearnet-instances",
                 "original_name" => "StackOverflow",
                 "original_url" => "stackoverflow.com"
+            ),
+            "suds" => array(
+                "instance_url" => "${APP_SUDS}",
+                "project_url" => "https://git.vern.cc/cobra/Suds/src/branch/main/instances.json",
+                "original_name" => "Snopes",
+                "original_url => "snopes.com"
             )
         ),
 
