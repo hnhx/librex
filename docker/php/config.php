@@ -95,7 +95,7 @@
             "suds" => array(
                 "instance_url" => "${APP_SUDS}",
                 "project_url" => "https://git.vern.cc/cobra/Suds/src/branch/main/instances.json",
-                "original_name" => "Suds",
+                "original_name" => "Snopes",
                 "original_url" => "snopes.com"
             )
 
