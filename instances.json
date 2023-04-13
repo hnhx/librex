@@ -119,6 +119,12 @@
               "tor": null,
               "i2p": null,
               "country": "DE"
+          },
+          {
+              "clearnet": "https://lx.benike.monster/",
+              "tor": null,
+              "i2p": null,
+              "country": "DE"
           }
     ]
 }
