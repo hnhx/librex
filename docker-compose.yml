@@ -1,7 +1,7 @@
 version: "2.1"
 services:
   librex:
-    image: librex:latest
+    image: librex/librex:latest
     container_name: librex
     network_mode: bridge
     ports:
