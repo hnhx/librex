@@ -33,6 +33,7 @@
 | [librex.baczek.me](https://librex.baczek.me/) | ❌| ❌ | 🇵🇱 PL |
 | [librex.yogeshlamichhane.com.np](https://librex.yogeshlamichhane.com.np/) | ❌| ❌ | 🇺🇸 US |
 | [search.spaceint.fr](https://search.spaceint.fr/) | ❌ | ❌ | 🇩🇪 DE |
+| [lx.benike.monster](https://lx.benike.monster/) | ❌ | ❌ | 🇩🇪 DE |
 <br>
 
 ### Thanks rms
