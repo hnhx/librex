@@ -22,7 +22,6 @@ ENV CONFIG_BITTORRENT_TRACKERS="&tr=http://nyaa.tracker.wf:7777/announce&tr=udp:
 # Supported apps integration configuration. These empty spaces can be set up using free hosts as pointers
 # A particular example is using the "https://yewtu.be" or a self-hosted host to integrate the invidious app to librex
 ENV APP_INVIDIOUS=""
-ENV APP_BIBLIOGRAM=""
 ENV APP_RIMGO=""
 ENV APP_SCRIBE=""
 ENV APP_LIBRARIAN=""
@@ -35,6 +34,7 @@ ENV APP_QUETRE=""
 ENV APP_LIBREMDB=""
 ENV APP_BREEZEWIKI=""
 ENV APP_ANONYMOUS_OVERFLOW=""
+ENV APP_SUDS=""
 
 # GNU/Curl configurations. Leave 'CURLOPT_PROXY' blank whether you don't need to use a proxy for requests
 # Generally, a proxy is needed when your IP address is blocked by search engines in response to multiple requests within a short time frame. In these cases, it is recommended to use rotating proxies

@@ -34,7 +34,6 @@ export CONFIG_WIKIPEDIA_LANGUAGE=${CONFIG_WIKIPEDIA_LANGUAGE:-${CONFIG_GOOGLE_LA
 # Supported apps integration configuration. These empty spaces can be set up using free hosts as pointers
 # A particular example is using the "https://yewtu.be" or a self-hosted host to integrate the invidious app to librex
 export APP_INVIDIOUS=${APP_INVIDIOUS:-""}
-export APP_BIBLIOGRAM=${APP_BIBLIOGRAM:-""}
 export APP_RIMGO=${APP_RIMGO:-""}
 export APP_SCRIBE=${APP_SCRIBE:-""}
 export APP_LIBRARIAN=${APP_LIBRARIAN:-""}
@@ -47,6 +46,7 @@ export APP_QUETRE=${APP_QUETRE:-""}
 export APP_LIBREMDB=${APP_LIBREMDB:-""}
 export APP_BREEZEWIKI=${APP_BREEZEWIKI:-""}
 export APP_ANONYMOUS_OVERFLOW=${APP_ANONYMOUS_OVERFLOW:-""}
+export APP_SUDS=${APP_SUDS:-""}
 
 # GNU/Curl configurations. Leave 'CURLOPT_PROXY' blank whether you don't need to use a proxy for requests
 # Generally, a proxy is needed when your IP address is blocked by search engines in response to multiple requests within a short time frame. In these cases, it is recommended to use rotating proxies

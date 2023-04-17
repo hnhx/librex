@@ -18,12 +18,6 @@
                 "original_name" => "YouTube",
                 "original_url" => "youtube.com"
             ),
-            "bibliogram" => array(
-                "instance_url" => "${APP_BIBLIOGRAM}",
-                "project_url" => "https://git.sr.ht/~cadence/bibliogram-docs/tree/master/docs/Instances.md",
-                "original_name" => "Instagram",
-                "original_url" => "instagram.com"
-            ),
             "rimgo" => array(
                 "instance_url" => "${APP_RIMGO}",
                 "project_url" => "https://codeberg.org/video-prize-ranch/rimgo#instances",
@@ -97,7 +91,14 @@
                 "project_url" => "https://github.com/httpjamesm/AnonymousOverflow#clearnet-instances",
                 "original_name" => "StackOverflow",
                 "original_url" => "stackoverflow.com"
+            ),
+            "suds" => array(
+                "instance_url" => "${APP_SUDS}",
+                "project_url" => "https://git.vern.cc/cobra/Suds/src/branch/main/instances.json",
+                "original_name" => "Snopes",
+                "original_url" => "snopes.com"
             )
+
         ),
 
         "curl_settings" => array(

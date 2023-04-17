@@ -30,12 +30,6 @@
             else if (!empty($frontends[$frontend]["instance_url"]))
                 $frontend = $frontends[$frontend]["instance_url"];
 
-           if ($original == "instagram.com")
-            {
-                if (!strpos($url, "/p/"))
-                    $frontend .= "/u";
-            }
-
             if (empty(trim($frontend)))
                 return $url;
 
