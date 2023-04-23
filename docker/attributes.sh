@@ -34,6 +34,7 @@ export CONFIG_WIKIPEDIA_LANGUAGE=${CONFIG_WIKIPEDIA_LANGUAGE:-${CONFIG_GOOGLE_LA
 # Supported apps integration configuration. These empty spaces can be set up using free hosts as pointers
 # A particular example is using the "https://yewtu.be" or a self-hosted host to integrate the invidious app to librex
 export APP_INVIDIOUS=${APP_INVIDIOUS:-""}
+export APP_PIPED=${APP_PIPED:-""}
 export APP_RIMGO=${APP_RIMGO:-""}
 export APP_SCRIBE=${APP_SCRIBE:-""}
 export APP_LIBRARIAN=${APP_LIBRARIAN:-""}

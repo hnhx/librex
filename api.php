@@ -38,6 +38,10 @@
             $results = get_video_results($query_encoded);
             break;
         case 3:
+            require "engines/piped/video.php";
+            $results = get_video_results($query_encoded);
+            break;
+        case 4:
             if ($config->disable_bittorent_search)
                 $results = array("error" => "disabled");
             else
@@ -46,7 +50,7 @@
                 $results = get_merged_torrent_results($query_encoded);
             }
             break;
-        case 4:
+        case 5:
             if ($config->disable_hidden_service_search)
                 $results = array("error" => "disabled");
             else

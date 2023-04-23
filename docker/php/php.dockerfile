@@ -22,6 +22,7 @@ ENV CONFIG_BITTORRENT_TRACKERS="&tr=http://nyaa.tracker.wf:7777/announce&tr=udp:
 # Supported apps integration configuration. These empty spaces can be set up using free hosts as pointers
 # A particular example is using the "https://yewtu.be" or a self-hosted host to integrate the invidious app to librex
 ENV APP_INVIDIOUS=""
+ENV APP_PIPED=""
 ENV APP_RIMGO=""
 ENV APP_SCRIBE=""
 ENV APP_LIBRARIAN=""

@@ -18,6 +18,12 @@
                 "original_name" => "YouTube",
                 "original_url" => "youtube.com"
             ),
+            "piped" => array(
+                "instance_url" => "${APP_PIPED}",
+                "project_url" => "https://github.com/TeamPiped/Piped/wiki/Instances", 
+                "original_name" => "YouTube",
+                "original_url" => "youtube.com"
+            ),
             "rimgo" => array(
                 "instance_url" => "${APP_RIMGO}",
                 "project_url" => "https://codeberg.org/video-prize-ranch/rimgo#instances",
