@@ -8,8 +8,8 @@
     --button-bg: #5E2750;
 
     --special-result-border: border 0;
-    --special-text-background: #1b1b18;
-    --special-text-color: #f2efd3;
+    --special-text-background: #333333;
+    --special-text-color: #FFFFFF;
 
     --search-container-text-color: #f2efd3;
     --search-container-background-color: #77216F;
@@ -21,4 +21,6 @@
 
     --footer-fg: #f2efd3;
     --footer-bg: #5E2750;
+
+    color-scheme: dark;
 }
