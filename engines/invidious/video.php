@@ -2,13 +2,11 @@
     function get_video_results($query)
     {
         global $config;
-
         $instance_url = $config->invidious_instance_for_video_results;
-
+        
         $url = "$instance_url/api/v1/search?q=$query";
         $response = request($url);
         $json_response = json_decode($response, true);
-
         $results = array();
 
         foreach ($json_response as $response)

@@ -7,15 +7,16 @@
         // Google results will be in this language
         "google_language_site" => "",
         "google_language_results" => "",
+        "google_number_of_results" => 10,
 
         // You can set a language for results in wikipedia
         "wikipedia_language" => "en",
 
         // You can use any Invidious instance here
-        "invidious_instance_for_video_results" => "https://invidious.namazso.eu",
+        "invidious_instance_for_video_results" => "https://invidious.snopyta.org",
 
         "disable_bittorent_search" => false,
-        "bittorent_trackers" => "&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
+        "bittorent_trackers" => "&tr=http://nyaa.tracker.wf:7777/announce&tr=udp://open.stealth.si:80/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://exodus.desync.com:6969/announce&tr=udp://tracker.torrent.eu.org:451/announce",
 
         "disable_hidden_service_search" => false,
 
@@ -30,12 +31,6 @@
                 "project_url" => "https://docs.invidious.io/instances/", 
                 "original_name" => "YouTube",
                 "original_url" => "youtube.com"
-            ),
-            "bibliogram" => array(
-                "instance_url" => "",
-                "project_url" => "https://git.sr.ht/~cadence/bibliogram-docs/tree/master/docs/Instances.md", 
-                "original_name" => "Instagram",
-                "original_url" => "instagram.com"
             ),
             "rimgo" => array(
                 "instance_url" => "",
@@ -110,6 +105,12 @@
                 "project_url" => "https://github.com/httpjamesm/AnonymousOverflow#clearnet-instances", 
                 "original_name" => "StackOverflow",
                 "original_url" => "stackoverflow.com"
+            ),
+            "suds" => array(
+                "instance_url" => "",
+                "project_url" => "https://git.vern.cc/cobra/Suds/src/branch/main/instances.json",
+                "original_name" => "Snopes",
+                "original_url" => "snopes.com"
             )
         ),
 
@@ -132,7 +133,7 @@
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_USERAGENT => "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
-            CURLOPT_IPRESOLVE => CURL_IPRESOLVE_V4,
+            CURLOPT_IPRESOLVE => CURL_IPRESOLVE_WHATEVER,
             CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_PROTOCOLS => CURLPROTO_HTTPS | CURLPROTO_HTTP,
             CURLOPT_REDIR_PROTOCOLS => CURLPROTO_HTTPS | CURLPROTO_HTTP,

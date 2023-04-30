@@ -30,12 +30,6 @@
             else if (!empty($frontends[$frontend]["instance_url"]))
                 $frontend = $frontends[$frontend]["instance_url"];
 
-           if ($original == "instagram.com")
-            {
-                if (!strpos($url, "/p/"))
-                    $frontend .= "/u";
-            }
-
             if (empty(trim($frontend)))
                 return $url;
 
@@ -45,7 +39,7 @@
                 if (count($wiki_split) > 1)
                 {
                     $lang = explode("://", $wiki_split[0])[1];
-                    $url =  $frontend . explode($original, $url)[1] . "?lang=" . $lang;
+                    $url =  $frontend . explode($original, $url)[1] . (strpos($url, "?") !== false ? "&" : "?")  . "lang=" . $lang;
                 }
             }
             else if (strpos($url, "fandom.com") !== false)

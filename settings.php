@@ -61,7 +61,8 @@
                     <option value=\"google\">Google Dark</option>
                     <option value=\"startpage\">Startpage Dark</option>
                     <option value=\"gruvbox\">Gruvbox</option>
-                    <option value=\"github_night\">GitHub Night</option>";
+                    <option value=\"github_night\">GitHub Night</option>
+                    <option value=\"catppuccin\">Catppucin</option>";
 
                     if (isset($_COOKIE["theme"]))
                     {
@@ -113,6 +114,10 @@
                             echo "<input type=\"text\" name=\"google_language_results\" placeholder=\"E.g.: de\" value=\"";
                             echo isset($_COOKIE["google_language_results"]) ? htmlspecialchars($_COOKIE["google_language_results"]) : $config->google_language_results;
                         ?>">
+                    </div>
+                    <div>
+                        <label>Number of results per page</label>
+                        <input type="number" name="google_number_of_results" value="<?php echo isset($_COOKIE["google_number_of_results"]) ? $_COOKIE["google_number_of_results"]  : $config->google_number_of_results; ?>" >
                     </div>
                     <div>
                         <label>Safe search</label>

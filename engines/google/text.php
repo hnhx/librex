@@ -10,23 +10,21 @@
         $domain = $config->google_domain;
         $site_language = isset($_COOKIE["google_language_site"]) ? trim(htmlspecialchars($_COOKIE["google_language_site"])) : $config->google_language_site;
         $results_language = isset($_COOKIE["google_language_results"]) ? trim(htmlspecialchars($_COOKIE["google_language_results"])) : $config->google_language_results;
+        $number_of_results = isset($_COOKIE["google_number_of_results"]) ? trim(htmlspecialchars($_COOKIE["google_number_of_results"])) : $config->google_number_of_results;
 
         $url = "https://www.google.$domain/search?q=$query_encoded&start=$page";
 
         if (3 > strlen($site_language) && 0 < strlen($site_language))
-        {
             $url .= "&hl=$site_language";
-        }
 
         if (3 > strlen($results_language) && 0 < strlen($results_language))
-        {
             $url .= "&lr=lang_$results_language";
-        }
+
+        if (3 > strlen($number_of_results) && 0 < strlen($number_of_results))
+            $url .= "&num=$number_of_results";
 
         if (isset($_COOKIE["safe_search"]))
-        {
             $url .= "&safe=medium";
-        }
 
         $google_ch = curl_init($url);
         curl_setopt_array($google_ch, $config->curl_settings);

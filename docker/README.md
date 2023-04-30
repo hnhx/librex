@@ -107,7 +107,6 @@ This docker image was developed with high configurability in mind, so here is th
 | Variables | Default | Examples | Description |
 |:----------|:-------------|:---------|:------|
 | APP_INVIDIOUS | "" | string | Integration with external self-hosted apps, configure the desired host. |
-| APP_BIBLIOGRAM | "" | string | Integration with external self-hosted apps, configure the desired host. |
 | APP_RIMGO | "" | string | Integration with external self-hosted apps, configure the desired host. |
 | APP_SCRIBE | "" | string | Integration with external self-hosted apps, configure the desired host. |
 | APP_LIBRARIAN | "" | string | Integration with external self-hosted apps, configure the desired host. |
@@ -120,6 +119,7 @@ This docker image was developed with high configurability in mind, so here is th
 | APP_LIBREMDB | "" | string | Integration with external self-hosted apps, configure the desired host. |
 | APP_BREEZEWIKI | "" | string | Integration with external self-hosted apps, configure the desired host. |
 | APP_ANONYMOUS_OVERFLOW | "" | string | Integration with external self-hosted apps, configure the desired host. |
+| APP_SUDS | "" | string | Integration with external self-hosted apps, configure the desired host. |
 
 <br>
 
