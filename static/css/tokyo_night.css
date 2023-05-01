@@ -1,0 +1,26 @@
+:root {
+    --main-bg: #24283b;
+    --main-fg: #cfc9c2;
+
+    --result-link-fg: #bb9af7;
+    --result-fg: #a2a08e;
+
+    --button-bg: #343b58;
+
+    --special-result-border: border 0;
+    --special-text-background: #1a1b26;
+    --special-text-color: #c0caf5;
+
+    --search-container-text-color: #f2efd3;
+    --search-container-background-color: #565f89;
+    --search-container-background-border: #bb9af7;
+
+    --search-form-background-color: #1a1b26;
+
+    --border: #565f89;
+
+    --footer-fg: #f2efd3;
+    --footer-bg: #1a1b26;
+
+    color-scheme: dark;
+}

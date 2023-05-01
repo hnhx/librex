@@ -62,7 +62,9 @@
                     <option value=\"startpage\">Startpage Dark</option>
                     <option value=\"gruvbox\">Gruvbox</option>
                     <option value=\"github_night\">GitHub Night</option>
-                    <option value=\"catppuccin\">Catppucin</option>";
+                    <option value=\"catppuccin\">Catppucin</option>
+                    <option value=\"ubuntu\">Ubuntu</option>
+                    <option value=\"tokyo_night\">Tokyo night</option>";
 
                     if (isset($_COOKIE["theme"]))
                     {
