@@ -13,7 +13,6 @@
 
 | Clearnet | TOR | I2P | Country |
 |-|-|-|-|
-| [lx.vern.cc](https://lx.vern.cc/) | [✅](http://lx.vernccvbvyi5qhfzyqengccj7lkove6bjot2xhh5kajhwvidqafczrad.onion/) | [✅](http://vernziqfqvweijfaacmwazohgpdo2bt2ib2jlupt2pwwu27bhgxq.b32.i2p/) | 🇺🇸 US |
 | [librex.zzls.xyz](https://librex.zzls.xyz/) | [✅](http://librex.zzlsghu6mvvwyy75mvga6gaf4znbp3erk5xwfzedb4gg6qqh2j6rlvid.onion/) | [✅](http://7huurwog32tny663wkglrhozfoyqyqmsuxjbd7dtudccx44awjda.b32.i2p) | 🇨🇱 CL |
 | [librex.revvy.de](https://librex.revvy.de/) | [✅](http://librex.revvybrr6pvbx4n3j4475h4ghw4elqr4t5xo2vtd3gfpu2nrsnhh57id.onion/) | [✅](http://revekebotog64xrrammtsmjwtwlg3vqyzwdurzt2pu6botg4bejq.b32.i2p/) | 🇨🇦 CA |
 | [librex.mikata.ru](https://librex.mikata.ru/) | [✅](http://f7ssz7l3biu4fugwctfpcx4txg5yq4gqhrt473ledsuc3ivtd3omniid.onion/) | ❌ | 🇺🇸 US |
