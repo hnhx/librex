@@ -1,12 +1,6 @@
 {
     "instances": [
           {
-              "clearnet": "https://lx.vern.cc/",
-              "tor": "http://lx.vernccvbvyi5qhfzyqengccj7lkove6bjot2xhh5kajhwvidqafczrad.onion/",
-              "i2p": "http://vernziqfqvweijfaacmwazohgpdo2bt2ib2jlupt2pwwu27bhgxq.b32.i2p/",
-              "country": "US"
-          },
-          {
               "clearnet": "https://librex.zzls.xyz/",
               "tor": "http://librex.zzlsghu6mvvwyy75mvga6gaf4znbp3erk5xwfzedb4gg6qqh2j6rlvid.onion/",
               "i2p": "http://7huurwog32tny663wkglrhozfoyqyqmsuxjbd7dtudccx44awjda.b32.i2p/",
