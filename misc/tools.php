@@ -51,6 +51,11 @@
                     $url =  $frontend . "/" . $wiki_name . explode($original, $url)[1];
                 }
             }
+            else if (strpos($url, "gist.github.com") !== false)
+            {
+                $gist_path = explode("gist.github.com", $url)[1];
+                $url = $frontend . "/gist" . $gist_path;
+            }
             else
             {
                 $url =  $frontend . explode($original, $url)[1];

@@ -97,8 +97,13 @@
                 "project_url" => "https://git.vern.cc/cobra/Suds/src/branch/main/instances.json",
                 "original_name" => "Snopes",
                 "original_url" => "snopes.com"
+            ),
+            "biblioreads" => array(
+                "instance_url" => "${APP_BIBLIOREADS}",
+                "project_url" => "https://github.com/nesaku/BiblioReads#instances",
+                "original_name" => "Goodreads",
+                "original_url" => "goodreads.com"
             )
-
         ),
 
         "curl_settings" => array(
