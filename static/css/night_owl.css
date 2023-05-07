@@ -12,7 +12,7 @@
     --special-text-color: #d6deeb;
 
     --search-container-text-color: #d6deeb;
-    --search-container-background-color:  #535470;
+    --search-container-background-color:  #223654;
     --search-container-background-border: opacity 0;
 
     --search-form-background-color: #122d42;
@@ -20,7 +20,9 @@
     --border: opacity 0;
 
     --footer-fg: #d6deeb;
-    --footer-bg: #535470;
+    --footer-bg: #042556;
+
+    --X: #334f7a;
 
     color-scheme: dark;
 }

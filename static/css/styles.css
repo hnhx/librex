@@ -326,7 +326,7 @@ a[title] {
 }
 
 .X {
-    color: #bd93f9;
+    color: var(--X, #bd93f9);
 }
 
 .seeders {
