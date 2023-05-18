@@ -13,6 +13,12 @@
               "country": "CA"
           },
           {
+              "clearnet": "https://s.dyox.in/",
+              "tor": "http://ddhigxwjz7elcl2erm7qzzukda4qmovoy4cepcueahggpwrpu24mi6qd.onion/",
+              "i2p": "http://s.dyoxin.i2p/",
+              "country": "IS"
+          },
+          {
               "clearnet": "https://librex.mikata.ru/",
               "tor": "http://f7ssz7l3biu4fugwctfpcx4txg5yq4gqhrt473ledsuc3ivtd3omniid.onion/",
               "i2p": null,
