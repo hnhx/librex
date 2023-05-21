@@ -19,6 +19,7 @@
 | [librex.mikata.ru](https://librex.mikata.ru/) | [✅](http://f7ssz7l3biu4fugwctfpcx4txg5yq4gqhrt473ledsuc3ivtd3omniid.onion/) | ❌ | 🇺🇸 US |
 | [search.milivojevic.in.rs](https://search.milivojevic.in.rs/) | [✅](http://librex2xsek6qnh2i4yufuzqjumfdwtw7io7omgmimpzna6llqudqzyd.onion/) | ❌ | 🇳🇱 NL |
 | [search.ahwx.org](https://search.ahwx.org/) | [✅](http://cosrpybbddzdfjquer3zfmb2h5avtacnctnbu4gucwocdb42s63gcqqd.onion/) | ❌ | 🇳🇱 NL |
+| [search.spaceint.fr](https://search.spaceint.fr/) | [✅](http://6d4nqt2rndvmhogpwrbqfvj2ur6e6nm2r6dzi7ny4wj6ai3j5hnvbhyd.onion/) | ❌ | 🇫🇷 FR |
 | [search.davidovski.xyz](https://search.davidovski.xyz/) | ❌ | ❌ | 🇬🇧 UK |
 | [search.madreyk.xyz](https://search.madreyk.xyz/) | ❌ | ❌ | 🇩🇪 DE |
 | [search.pabloferreiro.es](https://search.pabloferreiro.es/) | ❌ | ❌ | 🇩🇪 DE |
@@ -32,7 +33,6 @@
 | [search.zeroish.xyz](https://search.zeroish.xyz/) | ❌| ❌ | 🇺🇸 US |
 | [librex.baczek.me](https://librex.baczek.me/) | ❌| ❌ | 🇵🇱 PL |
 | [librex.yogeshlamichhane.com.np](https://librex.yogeshlamichhane.com.np/) | ❌| ❌ | 🇺🇸 US |
-| [search.spaceint.fr](https://search.spaceint.fr/) | ❌ | ❌ | 🇩🇪 DE |
 | [lx.benike.monster](https://lx.benike.monster/) | ❌ | ❌ | 🇩🇪 DE |
 <br>
 

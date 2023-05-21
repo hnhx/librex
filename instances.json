@@ -31,6 +31,12 @@
               "country": "NL"
           },
           {
+              "clearnet": "https://search.spaceint.fr/",
+              "tor": "http://6d4nqt2rndvmhogpwrbqfvj2ur6e6nm2r6dzi7ny4wj6ai3j5hnvbhyd.onion/",
+              "i2p": null,
+              "country": "FR"
+          },
+          {
               "clearnet": "https://search.davidovski.xyz/",
               "tor": null,
               "i2p": null,
@@ -113,12 +119,6 @@
               "tor": null,
               "i2p": null,
               "country": "US"
-          },
-          {
-              "clearnet": "https://search.spaceint.fr/",
-              "tor": null,
-              "i2p": null,
-              "country": "DE"
           },
           {
               "clearnet": "https://lx.benike.monster/",
