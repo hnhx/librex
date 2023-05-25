@@ -33,6 +33,7 @@
 | [librex.yogeshlamichhane.com.np](https://librex.yogeshlamichhane.com.np/) | ❌| ❌ | 🇺🇸 US |
 | [search.spaceint.fr](https://search.spaceint.fr/) | ❌ | ❌ | 🇩🇪 DE |
 | [lx.benike.monster](https://lx.benike.monster/) | ❌ | ❌ | 🇩🇪 DE |
+| [librex.nohost.network](https://librex.nohost.network/) | ❌ | ❌ | 🇲🇽 MX |
 <br>
 
 ### Thanks rms
