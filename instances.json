@@ -120,5 +120,11 @@
               "i2p": null,
               "country": "DE"
           }
+          {
+              "clearnet": "https://librex.nohost.network/",
+              "tor": null,
+              "i2p": null,
+              "country": "MX"
+          }
     ]
 }
