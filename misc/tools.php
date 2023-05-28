@@ -56,6 +56,12 @@
                 $gist_path = explode("gist.github.com", $url)[1];
                 $url = $frontend . "/gist" . $gist_path;
             }
+            else if (strpos($url, "stackexchange.com") !== false)
+            {
+                $se_domain = explode(".", explode("://", $url)[1])[0];
+                $se_path = explode("stackexchange.com", $url)[1];
+                $url = $frontend . "/exchange" . "/" . $se_domain . $se_path;
+            }
             else
             {
                 $url =  $frontend . explode($original, $url)[1];
@@ -83,6 +89,11 @@
             if (strpos($url, $original))
             {
                 $url = try_replace_with_frontend($url, $frontend, $original);
+                break;
+            }
+            else if (strpos($url, "stackexchange.com"))
+            {
+                $url = try_replace_with_frontend($url, "anonymousoverflow", "stackexchange.com");
                 break;
             }
         }
