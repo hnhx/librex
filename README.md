@@ -13,7 +13,7 @@
 
 | Clearnet | TOR | I2P | Country |
 |-|-|-|-|
-| [librex.zzls.xyz](https://librex.zzls.xyz/) | [✅](http://librex.zzlsghu6mvvwyy75mvga6gaf4znbp3erk5xwfzedb4gg6qqh2j6rlvid.onion/) | [✅](http://7huurwog32tny663wkglrhozfoyqyqmsuxjbd7dtudccx44awjda.b32.i2p) | 🇨🇱 CL |
+| [librex.zzls.xyz](https://librex.zzls.xyz/) | [✅](http://librex.zzlsghu6mvvwyy75mvga6gaf4znbp3erk5xwfzedb4gg6qqh2j6rlvid.onion/) | [✅](http://zzlsaymhcfla7vibo3a223bybeecu3bd5z6rmw2u4y76maqeu76q.b32.i2p) | 🇨🇱 CL |
 | [librex.me](https://librex.me/) | [✅](http://librex.revvybrr6pvbx4n3j4475h4ghw4elqr4t5xo2vtd3gfpu2nrsnhh57id.onion/) | [✅](http://revekebotog64xrrammtsmjwtwlg3vqyzwdurzt2pu6botg4bejq.b32.i2p/) | 🇨🇦 CA |
 | [librex.mikata.ru](https://librex.mikata.ru/) | [✅](http://f7ssz7l3biu4fugwctfpcx4txg5yq4gqhrt473ledsuc3ivtd3omniid.onion/) | ❌ | 🇺🇸 US |
 | [search.milivojevic.in.rs](https://search.milivojevic.in.rs/) | [✅](http://librex2xsek6qnh2i4yufuzqjumfdwtw7io7omgmimpzna6llqudqzyd.onion/) | ❌ | 🇳🇱 NL |
