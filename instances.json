@@ -19,12 +19,6 @@
               "country": "IS"
           },
           {
-              "clearnet": "https://librex.mikata.ru/",
-              "tor": "http://f7ssz7l3biu4fugwctfpcx4txg5yq4gqhrt473ledsuc3ivtd3omniid.onion/",
-              "i2p": null,
-              "country": "US"
-          },
-          {
               "clearnet": "https://search.ahwx.org/",
               "tor": "http://cosrpybbddzdfjquer3zfmb2h5avtacnctnbu4gucwocdb42s63gcqqd.onion/",
               "i2p": null,
@@ -53,12 +47,6 @@
               "tor": null,
               "i2p": null,
               "country": "NZ"
-          },
-          {
-              "clearnet": "https://search.milivojevic.in.rs/",
-              "tor": null,
-              "i2p": null,
-              "country": "NL"
           },
           {
               "clearnet": "https://librex.ratakor.com/",
