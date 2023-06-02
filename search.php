@@ -63,11 +63,13 @@
             switch ($type)
             {
                 case 0:
+					$engine=$config->preferred_engines->text;
+					$engine=$config->preferred_engines['text'];
                     $query_parts = explode(" ", $query);
                     $last_word_query = end($query_parts);
                     if (substr($query, 0, 1) == "!" || substr($last_word_query, 0, 1) == "!")
                         check_ddg_bang($query);
-                    require "engines/google/text.php";
+					require "engines/$engine/text.php";
                     $results = get_text_results($query, $page);
                     print_elapsed_time($start_time);
                     print_text_results($results);

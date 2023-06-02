@@ -119,6 +119,16 @@
                 "original_url" => "goodreads.com"
             )
         ),
+        
+
+        preferred_engines => array(
+            
+            /* replace with "text" => "duckduckgo" to use duckduckgo instead
+            * (recommended if being ratelimited */
+            "text" => "google"
+            // "text" => "duckduckgo"
+        ),
+
 
         /*
             To send requests trough a proxy uncomment CURLOPT_PROXY and CURLOPT_PROXYTYPE:
