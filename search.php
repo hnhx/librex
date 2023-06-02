@@ -63,7 +63,6 @@
             switch ($type)
             {
                 case 0:
-					$engine=$config->preferred_engines->text;
 					$engine=$config->preferred_engines['text'];
                     $query_parts = explode(" ", $query);
                     $last_word_query = end($query_parts);

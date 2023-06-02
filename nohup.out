@@ -1,0 +1,1218 @@
+[Fri Jun  2 05:35:53 2023] PHP 8.2.6 Development Server (http://127.0.0.1:8080) started
+[Fri Jun  2 05:36:00 2023] 127.0.0.1:40088 Accepted
+[Fri Jun  2 05:36:02 2023] PHP Fatal error:  Uncaught Error: Cannot use object of type DOMElement as array in /home/saadyah/projects/librex/engines/duckduckgo/text.php:122
+Stack trace:
+#0 /home/saadyah/projects/librex/search.php(72): get_text_results()
+#1 {main}
+  thrown in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 122
+[Fri Jun  2 05:36:02 2023] 127.0.0.1:40088 [500]: GET /search.php?q=a&t=0&p=0 - Uncaught Error: Cannot use object of type DOMElement as array in /home/saadyah/projects/librex/engines/duckduckgo/text.php:122
+Stack trace:
+#0 /home/saadyah/projects/librex/search.php(72): get_text_results()
+#1 {main}
+  thrown in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 122
+[Fri Jun  2 05:36:02 2023] 127.0.0.1:40088 Closing
+[Fri Jun  2 05:36:02 2023] 127.0.0.1:40104 Accepted
+[Fri Jun  2 05:36:02 2023] 127.0.0.1:40116 Accepted
+[Fri Jun  2 05:36:02 2023] 127.0.0.1:40104 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:36:02 2023] 127.0.0.1:40116 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:36:02 2023] 127.0.0.1:40104 Closing
+[Fri Jun  2 05:36:02 2023] 127.0.0.1:40116 Closing
+[Fri Jun  2 05:36:02 2023] 127.0.0.1:40130 Accepted
+[Fri Jun  2 05:36:02 2023] 127.0.0.1:40130 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:36:02 2023] 127.0.0.1:40130 Closing
+[Fri Jun  2 05:36:02 2023] 127.0.0.1:40134 Accepted
+[Fri Jun  2 05:36:02 2023] 127.0.0.1:40134 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:36:02 2023] 127.0.0.1:40136 Accepted
+[Fri Jun  2 05:36:02 2023] 127.0.0.1:40150 Accepted
+[Fri Jun  2 05:36:02 2023] 127.0.0.1:40164 Accepted
+[Fri Jun  2 05:36:02 2023] 127.0.0.1:40134 Closing
+[Fri Jun  2 05:36:02 2023] 127.0.0.1:40136 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:36:02 2023] 127.0.0.1:40150 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:36:02 2023] 127.0.0.1:40164 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:36:02 2023] 127.0.0.1:40136 Closing
+[Fri Jun  2 05:36:02 2023] 127.0.0.1:40150 Closing
+[Fri Jun  2 05:36:02 2023] 127.0.0.1:40164 Closing
+[Fri Jun  2 05:36:36 2023] 127.0.0.1:39282 Accepted
+[Fri Jun  2 05:36:38 2023] 127.0.0.1:39282 [200]: GET /search.php?q=a&t=0&p=0
+[Fri Jun  2 05:36:38 2023] 127.0.0.1:39282 Closing
+[Fri Jun  2 05:36:38 2023] 127.0.0.1:39296 Accepted
+[Fri Jun  2 05:36:38 2023] 127.0.0.1:39296 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:36:38 2023] 127.0.0.1:39312 Accepted
+[Fri Jun  2 05:36:38 2023] 127.0.0.1:39296 Closing
+[Fri Jun  2 05:36:38 2023] 127.0.0.1:39312 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:36:38 2023] 127.0.0.1:39312 Closing
+[Fri Jun  2 05:36:38 2023] 127.0.0.1:39322 Accepted
+[Fri Jun  2 05:36:38 2023] 127.0.0.1:39322 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:36:38 2023] 127.0.0.1:39322 Closing
+[Fri Jun  2 05:36:38 2023] 127.0.0.1:39338 Accepted
+[Fri Jun  2 05:36:38 2023] 127.0.0.1:39338 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:36:38 2023] 127.0.0.1:39352 Accepted
+[Fri Jun  2 05:36:38 2023] 127.0.0.1:39338 Closing
+[Fri Jun  2 05:36:38 2023] 127.0.0.1:39352 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:36:38 2023] 127.0.0.1:39364 Accepted
+[Fri Jun  2 05:36:38 2023] 127.0.0.1:39366 Accepted
+[Fri Jun  2 05:36:38 2023] 127.0.0.1:39364 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:36:38 2023] 127.0.0.1:39352 Closing
+[Fri Jun  2 05:36:38 2023] 127.0.0.1:39364 Closing
+[Fri Jun  2 05:36:38 2023] 127.0.0.1:39366 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:36:38 2023] 127.0.0.1:39366 Closing
+[Fri Jun  2 05:37:32 2023] 127.0.0.1:58776 Accepted
+[Fri Jun  2 05:37:33 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 134
+[Fri Jun  2 05:37:33 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 143
+[Fri Jun  2 05:37:33 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:37:33 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:37:33 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:37:33 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:37:33 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:37:33 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:37:33 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:37:33 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:37:33 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:37:33 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:37:33 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:37:33 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:37:33 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:37:33 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:37:33 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:37:33 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:37:33 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:37:33 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:37:33 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:37:33 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:37:33 2023] 127.0.0.1:58776 [200]: GET /search.php?q=a&t=0&p=0
+[Fri Jun  2 05:37:33 2023] 127.0.0.1:58776 Closing
+[Fri Jun  2 05:37:33 2023] 127.0.0.1:58786 Accepted
+[Fri Jun  2 05:37:33 2023] 127.0.0.1:58796 Accepted
+[Fri Jun  2 05:37:33 2023] 127.0.0.1:58786 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:37:33 2023] 127.0.0.1:58796 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:37:33 2023] 127.0.0.1:58786 Closing
+[Fri Jun  2 05:37:33 2023] 127.0.0.1:58796 Closing
+[Fri Jun  2 05:37:33 2023] 127.0.0.1:58808 Accepted
+[Fri Jun  2 05:37:33 2023] 127.0.0.1:58816 Accepted
+[Fri Jun  2 05:37:33 2023] 127.0.0.1:58808 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:37:33 2023] 127.0.0.1:58826 Accepted
+[Fri Jun  2 05:37:33 2023] 127.0.0.1:58816 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:37:33 2023] 127.0.0.1:58836 Accepted
+[Fri Jun  2 05:37:33 2023] 127.0.0.1:58826 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:37:33 2023] 127.0.0.1:58840 Accepted
+[Fri Jun  2 05:37:33 2023] 127.0.0.1:58808 Closing
+[Fri Jun  2 05:37:33 2023] 127.0.0.1:58836 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:37:33 2023] 127.0.0.1:58816 Closing
+[Fri Jun  2 05:37:33 2023] 127.0.0.1:58840 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:37:33 2023] 127.0.0.1:58826 Closing
+[Fri Jun  2 05:37:33 2023] 127.0.0.1:58836 Closing
+[Fri Jun  2 05:37:33 2023] 127.0.0.1:58840 Closing
+[Fri Jun  2 05:38:20 2023] 127.0.0.1:41378 Accepted
+[Fri Jun  2 05:38:21 2023] 127.0.0.1:41378 [200]: GET /search.php?q=a&t=0&p=0
+[Fri Jun  2 05:38:21 2023] 127.0.0.1:41378 Closing
+[Fri Jun  2 05:38:21 2023] 127.0.0.1:41380 Accepted
+[Fri Jun  2 05:38:21 2023] 127.0.0.1:41380 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:38:21 2023] 127.0.0.1:41380 Closing
+[Fri Jun  2 05:38:21 2023] 127.0.0.1:41390 Accepted
+[Fri Jun  2 05:38:21 2023] 127.0.0.1:41390 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:38:21 2023] 127.0.0.1:41390 Closing
+[Fri Jun  2 05:38:21 2023] 127.0.0.1:41396 Accepted
+[Fri Jun  2 05:38:21 2023] 127.0.0.1:41396 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:38:21 2023] 127.0.0.1:41396 Closing
+[Fri Jun  2 05:38:21 2023] 127.0.0.1:41406 Accepted
+[Fri Jun  2 05:38:21 2023] 127.0.0.1:41418 Accepted
+[Fri Jun  2 05:38:21 2023] 127.0.0.1:41406 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:38:21 2023] 127.0.0.1:41434 Accepted
+[Fri Jun  2 05:38:21 2023] 127.0.0.1:41406 Closing
+[Fri Jun  2 05:38:21 2023] 127.0.0.1:41418 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:38:21 2023] 127.0.0.1:41440 Accepted
+[Fri Jun  2 05:38:21 2023] 127.0.0.1:41418 Closing
+[Fri Jun  2 05:38:21 2023] 127.0.0.1:41434 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:38:21 2023] 127.0.0.1:41434 Closing
+[Fri Jun  2 05:38:21 2023] 127.0.0.1:41440 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:38:21 2023] 127.0.0.1:41440 Closing
+[Fri Jun  2 05:38:28 2023] 127.0.0.1:43020 Accepted
+[Fri Jun  2 05:38:30 2023] 127.0.0.1:43020 [200]: GET /search.php?q=a&t=0&p=0
+[Fri Jun  2 05:38:30 2023] 127.0.0.1:43020 Closing
+[Fri Jun  2 05:38:30 2023] 127.0.0.1:43022 Accepted
+[Fri Jun  2 05:38:30 2023] 127.0.0.1:43022 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:38:30 2023] 127.0.0.1:43036 Accepted
+[Fri Jun  2 05:38:30 2023] 127.0.0.1:43022 Closing
+[Fri Jun  2 05:38:30 2023] 127.0.0.1:43036 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:38:30 2023] 127.0.0.1:43036 Closing
+[Fri Jun  2 05:38:30 2023] 127.0.0.1:43040 Accepted
+[Fri Jun  2 05:38:30 2023] 127.0.0.1:43040 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:38:30 2023] 127.0.0.1:43040 Closing
+[Fri Jun  2 05:38:30 2023] 127.0.0.1:43046 Accepted
+[Fri Jun  2 05:38:30 2023] 127.0.0.1:43052 Accepted
+[Fri Jun  2 05:38:30 2023] 127.0.0.1:43046 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:38:30 2023] 127.0.0.1:43056 Accepted
+[Fri Jun  2 05:38:30 2023] 127.0.0.1:43052 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:38:30 2023] 127.0.0.1:43046 Closing
+[Fri Jun  2 05:38:30 2023] 127.0.0.1:43068 Accepted
+[Fri Jun  2 05:38:30 2023] 127.0.0.1:43052 Closing
+[Fri Jun  2 05:38:30 2023] 127.0.0.1:43056 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:38:30 2023] 127.0.0.1:43056 Closing
+[Fri Jun  2 05:38:30 2023] 127.0.0.1:43068 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:38:30 2023] 127.0.0.1:43068 Closing
+[Fri Jun  2 05:38:35 2023] 127.0.0.1:43072 Accepted
+[Fri Jun  2 05:38:36 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 134
+[Fri Jun  2 05:38:36 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 143
+[Fri Jun  2 05:38:36 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:38:36 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:36 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:36 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:36 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:36 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:36 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:36 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:36 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:36 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:36 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:36 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:36 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:36 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:36 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:36 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:36 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:36 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:36 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:36 2023] 127.0.0.1:43072 [200]: GET /search.php?q=a&t=0&p=0
+[Fri Jun  2 05:38:36 2023] 127.0.0.1:43072 Closing
+[Fri Jun  2 05:38:36 2023] 127.0.0.1:59328 Accepted
+[Fri Jun  2 05:38:36 2023] 127.0.0.1:59342 Accepted
+[Fri Jun  2 05:38:36 2023] 127.0.0.1:59328 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:38:36 2023] 127.0.0.1:59342 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:38:36 2023] 127.0.0.1:59328 Closing
+[Fri Jun  2 05:38:36 2023] 127.0.0.1:59342 Closing
+[Fri Jun  2 05:38:36 2023] 127.0.0.1:59354 Accepted
+[Fri Jun  2 05:38:36 2023] 127.0.0.1:59354 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:38:36 2023] 127.0.0.1:59364 Accepted
+[Fri Jun  2 05:38:36 2023] 127.0.0.1:59354 Closing
+[Fri Jun  2 05:38:36 2023] 127.0.0.1:59364 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:38:36 2023] 127.0.0.1:59368 Accepted
+[Fri Jun  2 05:38:36 2023] 127.0.0.1:59382 Accepted
+[Fri Jun  2 05:38:36 2023] 127.0.0.1:59368 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:38:36 2023] 127.0.0.1:59364 Closing
+[Fri Jun  2 05:38:36 2023] 127.0.0.1:59384 Accepted
+[Fri Jun  2 05:38:36 2023] 127.0.0.1:59382 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:38:36 2023] 127.0.0.1:59384 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:38:36 2023] 127.0.0.1:59368 Closing
+[Fri Jun  2 05:38:36 2023] 127.0.0.1:59382 Closing
+[Fri Jun  2 05:38:36 2023] 127.0.0.1:59384 Closing
+[Fri Jun  2 05:38:57 2023] 127.0.0.1:46136 Accepted
+[Fri Jun  2 05:38:59 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 134
+[Fri Jun  2 05:38:59 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 143
+[Fri Jun  2 05:38:59 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:38:59 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:59 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:59 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:59 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:59 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:59 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:59 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:59 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:59 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:59 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:59 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:59 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:59 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:59 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:59 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:59 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:38:59 2023] 127.0.0.1:46136 [200]: GET /search.php?q=a&t=0&p=0
+[Fri Jun  2 05:38:59 2023] 127.0.0.1:46136 Closing
+[Fri Jun  2 05:38:59 2023] 127.0.0.1:46152 Accepted
+[Fri Jun  2 05:38:59 2023] 127.0.0.1:46156 Accepted
+[Fri Jun  2 05:38:59 2023] 127.0.0.1:46152 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:38:59 2023] 127.0.0.1:46152 Closing
+[Fri Jun  2 05:38:59 2023] 127.0.0.1:46156 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:38:59 2023] 127.0.0.1:46156 Closing
+[Fri Jun  2 05:38:59 2023] 127.0.0.1:46166 Accepted
+[Fri Jun  2 05:38:59 2023] 127.0.0.1:46166 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:38:59 2023] 127.0.0.1:46166 Closing
+[Fri Jun  2 05:38:59 2023] 127.0.0.1:46168 Accepted
+[Fri Jun  2 05:38:59 2023] 127.0.0.1:46174 Accepted
+[Fri Jun  2 05:38:59 2023] 127.0.0.1:46168 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:38:59 2023] 127.0.0.1:46176 Accepted
+[Fri Jun  2 05:38:59 2023] 127.0.0.1:46174 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:38:59 2023] 127.0.0.1:46178 Accepted
+[Fri Jun  2 05:38:59 2023] 127.0.0.1:46176 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:38:59 2023] 127.0.0.1:46168 Closing
+[Fri Jun  2 05:38:59 2023] 127.0.0.1:46178 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:38:59 2023] 127.0.0.1:46174 Closing
+[Fri Jun  2 05:38:59 2023] 127.0.0.1:46176 Closing
+[Fri Jun  2 05:38:59 2023] 127.0.0.1:46178 Closing
+[Fri Jun  2 05:39:10 2023] 127.0.0.1:59592 Accepted
+[Fri Jun  2 05:39:11 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 134
+[Fri Jun  2 05:39:11 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 143
+[Fri Jun  2 05:39:11 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:39:11 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:39:11 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:39:11 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:39:11 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:39:11 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:39:11 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:39:11 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:39:11 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:39:11 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:39:11 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:39:11 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:39:11 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:39:11 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:39:11 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:39:11 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:39:11 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 130
+[Fri Jun  2 05:39:11 2023] 127.0.0.1:59592 [200]: GET /search.php?q=a&t=0&p=0
+[Fri Jun  2 05:39:11 2023] 127.0.0.1:59592 Closing
+[Fri Jun  2 05:39:11 2023] 127.0.0.1:59602 Accepted
+[Fri Jun  2 05:39:11 2023] 127.0.0.1:59608 Accepted
+[Fri Jun  2 05:39:11 2023] 127.0.0.1:59602 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:39:11 2023] 127.0.0.1:59608 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:39:11 2023] 127.0.0.1:59602 Closing
+[Fri Jun  2 05:39:11 2023] 127.0.0.1:59608 Closing
+[Fri Jun  2 05:39:11 2023] 127.0.0.1:59610 Accepted
+[Fri Jun  2 05:39:11 2023] 127.0.0.1:59610 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:39:11 2023] 127.0.0.1:59610 Closing
+[Fri Jun  2 05:39:11 2023] 127.0.0.1:59624 Accepted
+[Fri Jun  2 05:39:11 2023] 127.0.0.1:59638 Accepted
+[Fri Jun  2 05:39:11 2023] 127.0.0.1:59624 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:39:11 2023] 127.0.0.1:59648 Accepted
+[Fri Jun  2 05:39:11 2023] 127.0.0.1:59624 Closing
+[Fri Jun  2 05:39:11 2023] 127.0.0.1:59658 Accepted
+[Fri Jun  2 05:39:11 2023] 127.0.0.1:59638 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:39:11 2023] 127.0.0.1:59648 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:39:11 2023] 127.0.0.1:59638 Closing
+[Fri Jun  2 05:39:11 2023] 127.0.0.1:59648 Closing
+[Fri Jun  2 05:39:11 2023] 127.0.0.1:59658 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:39:11 2023] 127.0.0.1:59658 Closing
+[Fri Jun  2 05:39:33 2023] 127.0.0.1:46550 Accepted
+[Fri Jun  2 05:39:35 2023] 127.0.0.1:46550 [200]: GET /search.php?q=a&t=0&p=0
+[Fri Jun  2 05:39:35 2023] 127.0.0.1:46550 Closing
+[Fri Jun  2 05:39:35 2023] 127.0.0.1:46554 Accepted
+[Fri Jun  2 05:39:35 2023] 127.0.0.1:46558 Accepted
+[Fri Jun  2 05:39:35 2023] 127.0.0.1:46554 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:39:35 2023] 127.0.0.1:46558 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:39:35 2023] 127.0.0.1:46554 Closing
+[Fri Jun  2 05:39:35 2023] 127.0.0.1:46558 Closing
+[Fri Jun  2 05:39:35 2023] 127.0.0.1:46562 Accepted
+[Fri Jun  2 05:39:35 2023] 127.0.0.1:46562 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:39:35 2023] 127.0.0.1:46562 Closing
+[Fri Jun  2 05:39:35 2023] 127.0.0.1:46572 Accepted
+[Fri Jun  2 05:39:35 2023] 127.0.0.1:46572 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:39:35 2023] 127.0.0.1:46576 Accepted
+[Fri Jun  2 05:39:35 2023] 127.0.0.1:46588 Accepted
+[Fri Jun  2 05:39:35 2023] 127.0.0.1:46600 Accepted
+[Fri Jun  2 05:39:35 2023] 127.0.0.1:46572 Closing
+[Fri Jun  2 05:39:35 2023] 127.0.0.1:46576 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:39:35 2023] 127.0.0.1:46588 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:39:35 2023] 127.0.0.1:46576 Closing
+[Fri Jun  2 05:39:35 2023] 127.0.0.1:46588 Closing
+[Fri Jun  2 05:39:35 2023] 127.0.0.1:46600 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:39:35 2023] 127.0.0.1:46600 Closing
+[Fri Jun  2 05:39:44 2023] 127.0.0.1:39848 Accepted
+[Fri Jun  2 05:39:45 2023] 127.0.0.1:39848 [200]: GET /search.php?q=a&t=0&p=0
+[Fri Jun  2 05:39:45 2023] 127.0.0.1:39848 Closing
+[Fri Jun  2 05:39:45 2023] 127.0.0.1:36032 Accepted
+[Fri Jun  2 05:39:45 2023] 127.0.0.1:36040 Accepted
+[Fri Jun  2 05:39:45 2023] 127.0.0.1:36032 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:39:45 2023] 127.0.0.1:36032 Closing
+[Fri Jun  2 05:39:45 2023] 127.0.0.1:36040 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:39:45 2023] 127.0.0.1:36040 Closing
+[Fri Jun  2 05:39:45 2023] 127.0.0.1:36054 Accepted
+[Fri Jun  2 05:39:45 2023] 127.0.0.1:36054 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:39:45 2023] 127.0.0.1:36054 Closing
+[Fri Jun  2 05:39:45 2023] 127.0.0.1:36062 Accepted
+[Fri Jun  2 05:39:45 2023] 127.0.0.1:36064 Accepted
+[Fri Jun  2 05:39:45 2023] 127.0.0.1:36062 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:39:45 2023] 127.0.0.1:36068 Accepted
+[Fri Jun  2 05:39:45 2023] 127.0.0.1:36064 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:39:45 2023] 127.0.0.1:36072 Accepted
+[Fri Jun  2 05:39:45 2023] 127.0.0.1:36068 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:39:45 2023] 127.0.0.1:36062 Closing
+[Fri Jun  2 05:39:45 2023] 127.0.0.1:36072 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:39:45 2023] 127.0.0.1:36064 Closing
+[Fri Jun  2 05:39:45 2023] 127.0.0.1:36068 Closing
+[Fri Jun  2 05:39:45 2023] 127.0.0.1:36072 Closing
+[Fri Jun  2 05:40:03 2023] 127.0.0.1:40654 Accepted
+[Fri Jun  2 05:40:05 2023] PHP Fatal error:  Uncaught Error: Object of class DOMNodeList could not be converted to string in /home/saadyah/projects/librex/engines/duckduckgo/text.php:124
+Stack trace:
+#0 /home/saadyah/projects/librex/search.php(72): get_text_results()
+#1 {main}
+  thrown in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 124
+[Fri Jun  2 05:40:05 2023] 127.0.0.1:40654 [500]: GET /search.php?q=a&t=0&p=0 - Uncaught Error: Object of class DOMNodeList could not be converted to string in /home/saadyah/projects/librex/engines/duckduckgo/text.php:124
+Stack trace:
+#0 /home/saadyah/projects/librex/search.php(72): get_text_results()
+#1 {main}
+  thrown in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 124
+[Fri Jun  2 05:40:05 2023] 127.0.0.1:40654 Closing
+[Fri Jun  2 05:40:05 2023] 127.0.0.1:40656 Accepted
+[Fri Jun  2 05:40:05 2023] 127.0.0.1:40656 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:40:05 2023] 127.0.0.1:40664 Accepted
+[Fri Jun  2 05:40:05 2023] 127.0.0.1:40656 Closing
+[Fri Jun  2 05:40:05 2023] 127.0.0.1:40664 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:40:05 2023] 127.0.0.1:40664 Closing
+[Fri Jun  2 05:40:05 2023] 127.0.0.1:40666 Accepted
+[Fri Jun  2 05:40:05 2023] 127.0.0.1:40666 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:40:05 2023] 127.0.0.1:40666 Closing
+[Fri Jun  2 05:40:05 2023] 127.0.0.1:40680 Accepted
+[Fri Jun  2 05:40:05 2023] 127.0.0.1:40680 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:40:05 2023] 127.0.0.1:40692 Accepted
+[Fri Jun  2 05:40:05 2023] 127.0.0.1:40706 Accepted
+[Fri Jun  2 05:40:05 2023] 127.0.0.1:40680 Closing
+[Fri Jun  2 05:40:05 2023] 127.0.0.1:40708 Accepted
+[Fri Jun  2 05:40:05 2023] 127.0.0.1:40708 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:40:05 2023] 127.0.0.1:40692 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:40:05 2023] 127.0.0.1:40706 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:40:05 2023] 127.0.0.1:40708 Closing
+[Fri Jun  2 05:40:05 2023] 127.0.0.1:40692 Closing
+[Fri Jun  2 05:40:05 2023] 127.0.0.1:40706 Closing
+[Fri Jun  2 05:40:55 2023] 127.0.0.1:45486 Accepted
+[Fri Jun  2 05:40:56 2023] PHP Fatal error:  Uncaught Error: Call to undefined method DOMNodeList::int() in /home/saadyah/projects/librex/engines/duckduckgo/text.php:122
+Stack trace:
+#0 /home/saadyah/projects/librex/search.php(72): get_text_results()
+#1 {main}
+  thrown in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 122
+[Fri Jun  2 05:40:56 2023] 127.0.0.1:45486 [500]: GET /search.php?q=a&t=0&p=0 - Uncaught Error: Call to undefined method DOMNodeList::int() in /home/saadyah/projects/librex/engines/duckduckgo/text.php:122
+Stack trace:
+#0 /home/saadyah/projects/librex/search.php(72): get_text_results()
+#1 {main}
+  thrown in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 122
+[Fri Jun  2 05:40:56 2023] 127.0.0.1:45486 Closing
+[Fri Jun  2 05:40:56 2023] 127.0.0.1:56896 Accepted
+[Fri Jun  2 05:40:56 2023] 127.0.0.1:56896 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:40:56 2023] 127.0.0.1:56896 Closing
+[Fri Jun  2 05:40:56 2023] 127.0.0.1:56912 Accepted
+[Fri Jun  2 05:40:56 2023] 127.0.0.1:56912 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:40:56 2023] 127.0.0.1:56912 Closing
+[Fri Jun  2 05:40:56 2023] 127.0.0.1:56918 Accepted
+[Fri Jun  2 05:40:56 2023] 127.0.0.1:56918 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:40:56 2023] 127.0.0.1:56918 Closing
+[Fri Jun  2 05:40:56 2023] 127.0.0.1:56932 Accepted
+[Fri Jun  2 05:40:56 2023] 127.0.0.1:56938 Accepted
+[Fri Jun  2 05:40:56 2023] 127.0.0.1:56932 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:40:56 2023] 127.0.0.1:56950 Accepted
+[Fri Jun  2 05:40:56 2023] 127.0.0.1:56938 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:40:56 2023] 127.0.0.1:56964 Accepted
+[Fri Jun  2 05:40:56 2023] 127.0.0.1:56950 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:40:56 2023] 127.0.0.1:56932 Closing
+[Fri Jun  2 05:40:56 2023] 127.0.0.1:56938 Closing
+[Fri Jun  2 05:40:56 2023] 127.0.0.1:56964 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:40:56 2023] 127.0.0.1:56950 Closing
+[Fri Jun  2 05:40:56 2023] 127.0.0.1:56964 Closing
+[Fri Jun  2 05:41:04 2023] 127.0.0.1:56968 Accepted
+[Fri Jun  2 05:41:06 2023] PHP Fatal error:  Uncaught Error: Call to undefined method DOMNodeList::int() in /home/saadyah/projects/librex/engines/duckduckgo/text.php:122
+Stack trace:
+#0 /home/saadyah/projects/librex/search.php(72): get_text_results()
+#1 {main}
+  thrown in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 122
+[Fri Jun  2 05:41:06 2023] 127.0.0.1:56968 [500]: GET /search.php?q=a&t=0&p=0 - Uncaught Error: Call to undefined method DOMNodeList::int() in /home/saadyah/projects/librex/engines/duckduckgo/text.php:122
+Stack trace:
+#0 /home/saadyah/projects/librex/search.php(72): get_text_results()
+#1 {main}
+  thrown in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 122
+[Fri Jun  2 05:41:06 2023] 127.0.0.1:56968 Closing
+[Fri Jun  2 05:41:06 2023] 127.0.0.1:39344 Accepted
+[Fri Jun  2 05:41:06 2023] 127.0.0.1:39344 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:41:06 2023] 127.0.0.1:39346 Accepted
+[Fri Jun  2 05:41:06 2023] 127.0.0.1:39344 Closing
+[Fri Jun  2 05:41:06 2023] 127.0.0.1:39346 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:41:06 2023] 127.0.0.1:39346 Closing
+[Fri Jun  2 05:41:06 2023] 127.0.0.1:39356 Accepted
+[Fri Jun  2 05:41:06 2023] 127.0.0.1:39356 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:41:06 2023] 127.0.0.1:39356 Closing
+[Fri Jun  2 05:41:06 2023] 127.0.0.1:39370 Accepted
+[Fri Jun  2 05:41:06 2023] 127.0.0.1:39370 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:41:06 2023] 127.0.0.1:39378 Accepted
+[Fri Jun  2 05:41:06 2023] 127.0.0.1:39388 Accepted
+[Fri Jun  2 05:41:06 2023] 127.0.0.1:39370 Closing
+[Fri Jun  2 05:41:06 2023] 127.0.0.1:39392 Accepted
+[Fri Jun  2 05:41:06 2023] 127.0.0.1:39378 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:41:06 2023] 127.0.0.1:39388 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:41:06 2023] 127.0.0.1:39392 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:41:06 2023] 127.0.0.1:39378 Closing
+[Fri Jun  2 05:41:06 2023] 127.0.0.1:39388 Closing
+[Fri Jun  2 05:41:06 2023] 127.0.0.1:39392 Closing
+[Fri Jun  2 05:42:23 2023] 127.0.0.1:49900 Accepted
+[Fri Jun  2 05:42:25 2023] PHP Fatal error:  Uncaught Error: Call to undefined method DOMNodeList::int() in /home/saadyah/projects/librex/engines/duckduckgo/text.php:122
+Stack trace:
+#0 /home/saadyah/projects/librex/search.php(72): get_text_results()
+#1 {main}
+  thrown in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 122
+[Fri Jun  2 05:42:25 2023] 127.0.0.1:49900 [500]: GET /search.php?q=a&t=0&p=0 - Uncaught Error: Call to undefined method DOMNodeList::int() in /home/saadyah/projects/librex/engines/duckduckgo/text.php:122
+Stack trace:
+#0 /home/saadyah/projects/librex/search.php(72): get_text_results()
+#1 {main}
+  thrown in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 122
+[Fri Jun  2 05:42:25 2023] 127.0.0.1:49900 Closing
+[Fri Jun  2 05:42:25 2023] 127.0.0.1:49904 Accepted
+[Fri Jun  2 05:42:25 2023] 127.0.0.1:49904 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:42:25 2023] 127.0.0.1:49904 Closing
+[Fri Jun  2 05:42:25 2023] 127.0.0.1:49920 Accepted
+[Fri Jun  2 05:42:25 2023] 127.0.0.1:49920 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:42:25 2023] 127.0.0.1:49920 Closing
+[Fri Jun  2 05:42:25 2023] 127.0.0.1:49932 Accepted
+[Fri Jun  2 05:42:25 2023] 127.0.0.1:49932 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:42:25 2023] 127.0.0.1:49932 Closing
+[Fri Jun  2 05:42:25 2023] 127.0.0.1:49938 Accepted
+[Fri Jun  2 05:42:25 2023] 127.0.0.1:49942 Accepted
+[Fri Jun  2 05:42:25 2023] 127.0.0.1:49938 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:42:25 2023] 127.0.0.1:49948 Accepted
+[Fri Jun  2 05:42:25 2023] 127.0.0.1:49942 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:42:25 2023] 127.0.0.1:49962 Accepted
+[Fri Jun  2 05:42:25 2023] 127.0.0.1:49948 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:42:25 2023] 127.0.0.1:49938 Closing
+[Fri Jun  2 05:42:25 2023] 127.0.0.1:49962 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:42:25 2023] 127.0.0.1:49942 Closing
+[Fri Jun  2 05:42:25 2023] 127.0.0.1:49948 Closing
+[Fri Jun  2 05:42:25 2023] 127.0.0.1:49962 Closing
+[Fri Jun  2 05:42:54 2023] 127.0.0.1:56788 Accepted
+[Fri Jun  2 05:42:55 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 135
+[Fri Jun  2 05:42:55 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:42:55 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:42:55 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:42:55 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:42:55 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:42:55 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:42:55 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:42:55 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:42:55 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:42:55 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:42:55 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:42:55 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:42:55 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:42:55 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:42:55 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:42:55 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:42:55 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:42:55 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:42:55 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:42:55 2023] 127.0.0.1:56788 [200]: GET /search.php?q=a&t=0&p=0
+[Fri Jun  2 05:42:55 2023] 127.0.0.1:56788 Closing
+[Fri Jun  2 05:42:55 2023] 127.0.0.1:56804 Accepted
+[Fri Jun  2 05:42:55 2023] 127.0.0.1:56818 Accepted
+[Fri Jun  2 05:42:55 2023] 127.0.0.1:56804 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:42:55 2023] 127.0.0.1:56818 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:42:55 2023] 127.0.0.1:56804 Closing
+[Fri Jun  2 05:42:55 2023] 127.0.0.1:56818 Closing
+[Fri Jun  2 05:42:55 2023] 127.0.0.1:56822 Accepted
+[Fri Jun  2 05:42:55 2023] 127.0.0.1:56822 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:42:55 2023] 127.0.0.1:56822 Closing
+[Fri Jun  2 05:42:55 2023] 127.0.0.1:56834 Accepted
+[Fri Jun  2 05:42:55 2023] 127.0.0.1:56840 Accepted
+[Fri Jun  2 05:42:55 2023] 127.0.0.1:56834 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:42:55 2023] 127.0.0.1:56848 Accepted
+[Fri Jun  2 05:42:55 2023] 127.0.0.1:56834 Closing
+[Fri Jun  2 05:42:55 2023] 127.0.0.1:56840 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:42:55 2023] 127.0.0.1:56858 Accepted
+[Fri Jun  2 05:42:55 2023] 127.0.0.1:56848 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:42:55 2023] 127.0.0.1:56840 Closing
+[Fri Jun  2 05:42:55 2023] 127.0.0.1:56848 Closing
+[Fri Jun  2 05:42:55 2023] 127.0.0.1:56858 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:42:55 2023] 127.0.0.1:56858 Closing
+[Fri Jun  2 05:44:40 2023] 127.0.0.1:33104 Accepted
+[Fri Jun  2 05:44:41 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 135
+[Fri Jun  2 05:44:41 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:44:41 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:44:41 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:41 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:41 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:41 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:41 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:41 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:41 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:41 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:41 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:41 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:41 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:41 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:41 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:41 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:41 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:41 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:41 2023] 127.0.0.1:33104 [200]: GET /search.php?q=a&t=0&p=0
+[Fri Jun  2 05:44:41 2023] 127.0.0.1:33104 Closing
+[Fri Jun  2 05:44:41 2023] 127.0.0.1:33118 Accepted
+[Fri Jun  2 05:44:41 2023] 127.0.0.1:33118 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:44:41 2023] 127.0.0.1:33134 Accepted
+[Fri Jun  2 05:44:41 2023] 127.0.0.1:33118 Closing
+[Fri Jun  2 05:44:41 2023] 127.0.0.1:33134 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:44:41 2023] 127.0.0.1:33134 Closing
+[Fri Jun  2 05:44:41 2023] 127.0.0.1:33146 Accepted
+[Fri Jun  2 05:44:41 2023] 127.0.0.1:33146 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:44:41 2023] 127.0.0.1:33146 Closing
+[Fri Jun  2 05:44:41 2023] 127.0.0.1:33156 Accepted
+[Fri Jun  2 05:44:41 2023] 127.0.0.1:33158 Accepted
+[Fri Jun  2 05:44:41 2023] 127.0.0.1:33156 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:44:41 2023] 127.0.0.1:33170 Accepted
+[Fri Jun  2 05:44:41 2023] 127.0.0.1:33156 Closing
+[Fri Jun  2 05:44:41 2023] 127.0.0.1:33186 Accepted
+[Fri Jun  2 05:44:41 2023] 127.0.0.1:33158 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:44:41 2023] 127.0.0.1:33158 Closing
+[Fri Jun  2 05:44:41 2023] 127.0.0.1:33170 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:44:41 2023] 127.0.0.1:33170 Closing
+[Fri Jun  2 05:44:41 2023] 127.0.0.1:33186 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:44:41 2023] 127.0.0.1:33186 Closing
+[Fri Jun  2 05:44:51 2023] 127.0.0.1:45638 Accepted
+[Fri Jun  2 05:44:53 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 135
+[Fri Jun  2 05:44:53 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:44:53 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:44:53 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:53 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:53 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:53 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:53 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:53 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:53 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:53 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:53 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:53 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:53 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:53 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:53 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:53 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:53 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:53 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:53 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:53 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:53 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:44:53 2023] 127.0.0.1:45638 [200]: GET /search.php?q=a&t=0&p=0
+[Fri Jun  2 05:44:53 2023] 127.0.0.1:45638 Closing
+[Fri Jun  2 05:44:53 2023] 127.0.0.1:45652 Accepted
+[Fri Jun  2 05:44:53 2023] 127.0.0.1:45652 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:44:53 2023] 127.0.0.1:45652 Closing
+[Fri Jun  2 05:44:53 2023] 127.0.0.1:45662 Accepted
+[Fri Jun  2 05:44:53 2023] 127.0.0.1:45662 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:44:53 2023] 127.0.0.1:45662 Closing
+[Fri Jun  2 05:44:53 2023] 127.0.0.1:45666 Accepted
+[Fri Jun  2 05:44:53 2023] 127.0.0.1:45666 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:44:53 2023] 127.0.0.1:45666 Closing
+[Fri Jun  2 05:44:53 2023] 127.0.0.1:45680 Accepted
+[Fri Jun  2 05:44:53 2023] 127.0.0.1:45680 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:44:53 2023] 127.0.0.1:45696 Accepted
+[Fri Jun  2 05:44:53 2023] 127.0.0.1:45680 Closing
+[Fri Jun  2 05:44:53 2023] 127.0.0.1:45700 Accepted
+[Fri Jun  2 05:44:53 2023] 127.0.0.1:45706 Accepted
+[Fri Jun  2 05:44:53 2023] 127.0.0.1:45696 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:44:53 2023] 127.0.0.1:45706 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:44:53 2023] 127.0.0.1:45700 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:44:53 2023] 127.0.0.1:45696 Closing
+[Fri Jun  2 05:44:53 2023] 127.0.0.1:45706 Closing
+[Fri Jun  2 05:44:53 2023] 127.0.0.1:45700 Closing
+[Fri Jun  2 05:45:06 2023] 127.0.0.1:42528 Accepted
+[Fri Jun  2 05:45:08 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:45:08 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:45:08 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:45:08 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:45:08 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:45:08 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:45:08 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:45:08 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:45:08 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:45:08 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:45:08 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:45:08 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:45:08 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:45:08 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:45:08 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:45:08 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:45:08 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:45:08 2023] 127.0.0.1:42528 [200]: GET /search.php?q=a&t=0&p=0
+[Fri Jun  2 05:45:08 2023] 127.0.0.1:42528 Closing
+[Fri Jun  2 05:45:08 2023] 127.0.0.1:42540 Accepted
+[Fri Jun  2 05:45:08 2023] 127.0.0.1:42540 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:45:08 2023] 127.0.0.1:42556 Accepted
+[Fri Jun  2 05:45:08 2023] 127.0.0.1:42540 Closing
+[Fri Jun  2 05:45:08 2023] 127.0.0.1:42556 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:45:08 2023] 127.0.0.1:42556 Closing
+[Fri Jun  2 05:45:08 2023] 127.0.0.1:42564 Accepted
+[Fri Jun  2 05:45:08 2023] 127.0.0.1:42564 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:45:08 2023] 127.0.0.1:42564 Closing
+[Fri Jun  2 05:45:08 2023] 127.0.0.1:42580 Accepted
+[Fri Jun  2 05:45:08 2023] 127.0.0.1:42586 Accepted
+[Fri Jun  2 05:45:08 2023] 127.0.0.1:42580 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:45:08 2023] 127.0.0.1:42600 Accepted
+[Fri Jun  2 05:45:08 2023] 127.0.0.1:42602 Accepted
+[Fri Jun  2 05:45:08 2023] 127.0.0.1:42580 Closing
+[Fri Jun  2 05:45:08 2023] 127.0.0.1:42586 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:45:08 2023] 127.0.0.1:42600 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:45:08 2023] 127.0.0.1:42602 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:45:08 2023] 127.0.0.1:42586 Closing
+[Fri Jun  2 05:45:08 2023] 127.0.0.1:42600 Closing
+[Fri Jun  2 05:45:08 2023] 127.0.0.1:42602 Closing
+[Fri Jun  2 05:46:18 2023] 127.0.0.1:45100 Accepted
+[Fri Jun  2 05:46:19 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:19 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:19 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:19 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:19 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:19 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:19 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:19 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:19 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:19 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:19 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:19 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:19 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:19 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:19 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:19 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:19 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:19 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:19 2023] 127.0.0.1:45100 [200]: GET /search.php?q=a&t=0&p=0
+[Fri Jun  2 05:46:19 2023] 127.0.0.1:45100 Closing
+[Fri Jun  2 05:46:19 2023] 127.0.0.1:45104 Accepted
+[Fri Jun  2 05:46:19 2023] 127.0.0.1:45104 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:46:19 2023] 127.0.0.1:45120 Accepted
+[Fri Jun  2 05:46:19 2023] 127.0.0.1:45104 Closing
+[Fri Jun  2 05:46:19 2023] 127.0.0.1:45120 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:46:19 2023] 127.0.0.1:45120 Closing
+[Fri Jun  2 05:46:19 2023] 127.0.0.1:45126 Accepted
+[Fri Jun  2 05:46:19 2023] 127.0.0.1:45126 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:46:19 2023] 127.0.0.1:45126 Closing
+[Fri Jun  2 05:46:19 2023] 127.0.0.1:45138 Accepted
+[Fri Jun  2 05:46:19 2023] 127.0.0.1:45154 Accepted
+[Fri Jun  2 05:46:19 2023] 127.0.0.1:45156 Accepted
+[Fri Jun  2 05:46:19 2023] 127.0.0.1:45138 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:46:19 2023] 127.0.0.1:45170 Accepted
+[Fri Jun  2 05:46:19 2023] 127.0.0.1:45138 Closing
+[Fri Jun  2 05:46:19 2023] 127.0.0.1:45156 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:46:19 2023] 127.0.0.1:45154 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:46:19 2023] 127.0.0.1:45156 Closing
+[Fri Jun  2 05:46:19 2023] 127.0.0.1:45154 Closing
+[Fri Jun  2 05:46:19 2023] 127.0.0.1:45170 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:46:19 2023] 127.0.0.1:45170 Closing
+[Fri Jun  2 05:46:37 2023] 127.0.0.1:42456 Accepted
+[Fri Jun  2 05:46:38 2023] 127.0.0.1:42456 [200]: GET /search.php?q=a&t=0&p=0
+[Fri Jun  2 05:46:38 2023] 127.0.0.1:42456 Closing
+[Fri Jun  2 05:46:38 2023] 127.0.0.1:42462 Accepted
+[Fri Jun  2 05:46:38 2023] 127.0.0.1:42462 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:46:38 2023] 127.0.0.1:42462 Closing
+[Fri Jun  2 05:46:38 2023] 127.0.0.1:42464 Accepted
+[Fri Jun  2 05:46:38 2023] 127.0.0.1:42464 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:46:38 2023] 127.0.0.1:42464 Closing
+[Fri Jun  2 05:46:38 2023] 127.0.0.1:42476 Accepted
+[Fri Jun  2 05:46:38 2023] 127.0.0.1:42476 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:46:38 2023] 127.0.0.1:42476 Closing
+[Fri Jun  2 05:46:38 2023] 127.0.0.1:42492 Accepted
+[Fri Jun  2 05:46:38 2023] 127.0.0.1:42500 Accepted
+[Fri Jun  2 05:46:38 2023] 127.0.0.1:42492 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:46:38 2023] 127.0.0.1:42492 Closing
+[Fri Jun  2 05:46:38 2023] 127.0.0.1:42508 Accepted
+[Fri Jun  2 05:46:38 2023] 127.0.0.1:42500 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:46:38 2023] 127.0.0.1:42516 Accepted
+[Fri Jun  2 05:46:38 2023] 127.0.0.1:42500 Closing
+[Fri Jun  2 05:46:38 2023] 127.0.0.1:42508 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:46:38 2023] 127.0.0.1:42508 Closing
+[Fri Jun  2 05:46:38 2023] 127.0.0.1:42516 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:46:38 2023] 127.0.0.1:42516 Closing
+[Fri Jun  2 05:46:47 2023] 127.0.0.1:59392 Accepted
+[Fri Jun  2 05:46:48 2023] 127.0.0.1:59392 [200]: GET /search.php?q=a&t=0&p=0
+[Fri Jun  2 05:46:48 2023] 127.0.0.1:59392 Closing
+[Fri Jun  2 05:46:48 2023] 127.0.0.1:59394 Accepted
+[Fri Jun  2 05:46:48 2023] 127.0.0.1:59394 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:46:48 2023] 127.0.0.1:59410 Accepted
+[Fri Jun  2 05:46:48 2023] 127.0.0.1:59394 Closing
+[Fri Jun  2 05:46:48 2023] 127.0.0.1:59410 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:46:48 2023] 127.0.0.1:59410 Closing
+[Fri Jun  2 05:46:48 2023] 127.0.0.1:59416 Accepted
+[Fri Jun  2 05:46:48 2023] 127.0.0.1:59416 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:46:48 2023] 127.0.0.1:59416 Closing
+[Fri Jun  2 05:46:48 2023] 127.0.0.1:59428 Accepted
+[Fri Jun  2 05:46:48 2023] 127.0.0.1:59428 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:46:48 2023] 127.0.0.1:59436 Accepted
+[Fri Jun  2 05:46:48 2023] 127.0.0.1:59450 Accepted
+[Fri Jun  2 05:46:48 2023] 127.0.0.1:59428 Closing
+[Fri Jun  2 05:46:48 2023] 127.0.0.1:59466 Accepted
+[Fri Jun  2 05:46:48 2023] 127.0.0.1:59436 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:46:48 2023] 127.0.0.1:59466 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:46:48 2023] 127.0.0.1:59450 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:46:48 2023] 127.0.0.1:59436 Closing
+[Fri Jun  2 05:46:48 2023] 127.0.0.1:59466 Closing
+[Fri Jun  2 05:46:48 2023] 127.0.0.1:59450 Closing
+[Fri Jun  2 05:46:54 2023] 127.0.0.1:59478 Accepted
+[Fri Jun  2 05:46:55 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:55 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:55 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:55 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:55 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:55 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:55 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:55 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:55 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:55 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:55 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:55 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:55 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:55 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:55 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:55 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:55 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:46:55 2023] 127.0.0.1:59478 [200]: GET /search.php?q=a&t=0&p=0
+[Fri Jun  2 05:46:55 2023] 127.0.0.1:59478 Closing
+[Fri Jun  2 05:46:55 2023] 127.0.0.1:59484 Accepted
+[Fri Jun  2 05:46:55 2023] 127.0.0.1:59484 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:46:55 2023] 127.0.0.1:59490 Accepted
+[Fri Jun  2 05:46:55 2023] 127.0.0.1:59490 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:46:55 2023] 127.0.0.1:59484 Closing
+[Fri Jun  2 05:46:55 2023] 127.0.0.1:59490 Closing
+[Fri Jun  2 05:46:55 2023] 127.0.0.1:59498 Accepted
+[Fri Jun  2 05:46:55 2023] 127.0.0.1:59498 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:46:55 2023] 127.0.0.1:59500 Accepted
+[Fri Jun  2 05:46:55 2023] 127.0.0.1:59498 Closing
+[Fri Jun  2 05:46:55 2023] 127.0.0.1:59502 Accepted
+[Fri Jun  2 05:46:55 2023] 127.0.0.1:59500 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:46:55 2023] 127.0.0.1:59504 Accepted
+[Fri Jun  2 05:46:55 2023] 127.0.0.1:59500 Closing
+[Fri Jun  2 05:46:55 2023] 127.0.0.1:59512 Accepted
+[Fri Jun  2 05:46:55 2023] 127.0.0.1:59502 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:46:55 2023] 127.0.0.1:59504 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:46:55 2023] 127.0.0.1:59512 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:46:55 2023] 127.0.0.1:59502 Closing
+[Fri Jun  2 05:46:55 2023] 127.0.0.1:59504 Closing
+[Fri Jun  2 05:46:55 2023] 127.0.0.1:59512 Closing
+[Fri Jun  2 05:47:55 2023] 127.0.0.1:53552 Accepted
+[Fri Jun  2 05:47:56 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:47:56 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:47:56 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:47:56 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:47:56 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:47:56 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:47:56 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:47:56 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:47:56 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:47:56 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:47:56 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:47:56 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:47:56 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:47:56 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:47:56 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:47:56 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:47:56 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:47:56 2023] 127.0.0.1:53552 [200]: GET /search.php?q=a&t=0&p=0
+[Fri Jun  2 05:47:56 2023] 127.0.0.1:53552 Closing
+[Fri Jun  2 05:47:56 2023] 127.0.0.1:37212 Accepted
+[Fri Jun  2 05:47:56 2023] 127.0.0.1:37212 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:47:56 2023] 127.0.0.1:37224 Accepted
+[Fri Jun  2 05:47:56 2023] 127.0.0.1:37212 Closing
+[Fri Jun  2 05:47:56 2023] 127.0.0.1:37224 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:47:56 2023] 127.0.0.1:37224 Closing
+[Fri Jun  2 05:47:56 2023] 127.0.0.1:37230 Accepted
+[Fri Jun  2 05:47:56 2023] 127.0.0.1:37230 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:47:56 2023] 127.0.0.1:37230 Closing
+[Fri Jun  2 05:47:56 2023] 127.0.0.1:37244 Accepted
+[Fri Jun  2 05:47:56 2023] 127.0.0.1:37252 Accepted
+[Fri Jun  2 05:47:56 2023] 127.0.0.1:37244 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:47:56 2023] 127.0.0.1:37258 Accepted
+[Fri Jun  2 05:47:56 2023] 127.0.0.1:37252 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:47:56 2023] 127.0.0.1:37262 Accepted
+[Fri Jun  2 05:47:56 2023] 127.0.0.1:37244 Closing
+[Fri Jun  2 05:47:56 2023] 127.0.0.1:37258 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:47:56 2023] 127.0.0.1:37252 Closing
+[Fri Jun  2 05:47:56 2023] 127.0.0.1:37262 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:47:56 2023] 127.0.0.1:37258 Closing
+[Fri Jun  2 05:47:56 2023] 127.0.0.1:37262 Closing
+[Fri Jun  2 05:48:56 2023] 127.0.0.1:42476 Accepted
+[Fri Jun  2 05:48:57 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:48:57 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:48:57 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:48:57 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:48:57 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:48:57 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:48:57 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:48:57 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:48:57 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:48:57 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:48:57 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:48:57 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:48:57 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:48:57 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:48:57 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:48:57 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:48:57 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:48:57 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:48:57 2023] 127.0.0.1:42476 [200]: GET /search.php?q=a&t=0&p=0
+[Fri Jun  2 05:48:57 2023] 127.0.0.1:42476 Closing
+[Fri Jun  2 05:48:58 2023] 127.0.0.1:42490 Accepted
+[Fri Jun  2 05:48:58 2023] 127.0.0.1:42490 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:48:58 2023] 127.0.0.1:42506 Accepted
+[Fri Jun  2 05:48:58 2023] 127.0.0.1:42490 Closing
+[Fri Jun  2 05:48:58 2023] 127.0.0.1:42506 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:48:58 2023] 127.0.0.1:42506 Closing
+[Fri Jun  2 05:48:58 2023] 127.0.0.1:42518 Accepted
+[Fri Jun  2 05:48:58 2023] 127.0.0.1:42518 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:48:58 2023] 127.0.0.1:42518 Closing
+[Fri Jun  2 05:48:58 2023] 127.0.0.1:42528 Accepted
+[Fri Jun  2 05:48:58 2023] 127.0.0.1:42532 Accepted
+[Fri Jun  2 05:48:58 2023] 127.0.0.1:42528 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:48:58 2023] 127.0.0.1:42528 Closing
+[Fri Jun  2 05:48:58 2023] 127.0.0.1:42532 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:48:58 2023] 127.0.0.1:42548 Accepted
+[Fri Jun  2 05:48:58 2023] 127.0.0.1:42532 Closing
+[Fri Jun  2 05:48:58 2023] 127.0.0.1:42548 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:48:58 2023] 127.0.0.1:42548 Closing
+[Fri Jun  2 05:48:58 2023] 127.0.0.1:42554 Accepted
+[Fri Jun  2 05:48:58 2023] 127.0.0.1:42554 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:48:58 2023] 127.0.0.1:42554 Closing
+[Fri Jun  2 05:49:09 2023] 127.0.0.1:42426 Accepted
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:49:11 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:49:11 2023] 127.0.0.1:42426 [200]: GET /search.php?q=a&t=0&p=0
+[Fri Jun  2 05:49:11 2023] 127.0.0.1:42426 Closing
+[Fri Jun  2 05:49:11 2023] 127.0.0.1:42442 Accepted
+[Fri Jun  2 05:49:11 2023] 127.0.0.1:42442 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:49:11 2023] 127.0.0.1:42452 Accepted
+[Fri Jun  2 05:49:11 2023] 127.0.0.1:42442 Closing
+[Fri Jun  2 05:49:11 2023] 127.0.0.1:42452 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:49:11 2023] 127.0.0.1:42452 Closing
+[Fri Jun  2 05:49:11 2023] 127.0.0.1:42468 Accepted
+[Fri Jun  2 05:49:11 2023] 127.0.0.1:42468 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:49:11 2023] 127.0.0.1:42468 Closing
+[Fri Jun  2 05:49:11 2023] 127.0.0.1:42476 Accepted
+[Fri Jun  2 05:49:11 2023] 127.0.0.1:42478 Accepted
+[Fri Jun  2 05:49:11 2023] 127.0.0.1:42476 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:49:11 2023] 127.0.0.1:42476 Closing
+[Fri Jun  2 05:49:11 2023] 127.0.0.1:42478 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:49:11 2023] 127.0.0.1:42490 Accepted
+[Fri Jun  2 05:49:11 2023] 127.0.0.1:42478 Closing
+[Fri Jun  2 05:49:11 2023] 127.0.0.1:42504 Accepted
+[Fri Jun  2 05:49:11 2023] 127.0.0.1:42490 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:49:11 2023] 127.0.0.1:42504 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:49:11 2023] 127.0.0.1:42490 Closing
+[Fri Jun  2 05:49:11 2023] 127.0.0.1:42504 Closing
+[Fri Jun  2 05:50:26 2023] 127.0.0.1:36044 Accepted
+[Fri Jun  2 05:50:27 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 135
+[Fri Jun  2 05:50:27 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:50:27 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:50:27 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:50:27 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:50:27 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:50:27 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:50:27 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:50:27 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:50:27 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:50:27 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:50:27 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:50:27 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:50:27 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:50:27 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:50:27 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:50:27 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:50:27 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:50:27 2023] PHP Warning:  Undefined property: DOMNodeList::$textContent in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 131
+[Fri Jun  2 05:50:27 2023] 127.0.0.1:36044 [200]: GET /search.php?q=a&t=0&p=0
+[Fri Jun  2 05:50:27 2023] 127.0.0.1:36044 Closing
+[Fri Jun  2 05:50:27 2023] 127.0.0.1:36056 Accepted
+[Fri Jun  2 05:50:27 2023] 127.0.0.1:36058 Accepted
+[Fri Jun  2 05:50:27 2023] 127.0.0.1:36056 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:50:27 2023] 127.0.0.1:36058 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:50:27 2023] 127.0.0.1:36056 Closing
+[Fri Jun  2 05:50:27 2023] 127.0.0.1:36058 Closing
+[Fri Jun  2 05:50:27 2023] 127.0.0.1:36070 Accepted
+[Fri Jun  2 05:50:27 2023] 127.0.0.1:36070 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:50:27 2023] 127.0.0.1:36070 Closing
+[Fri Jun  2 05:50:27 2023] 127.0.0.1:36082 Accepted
+[Fri Jun  2 05:50:27 2023] 127.0.0.1:36084 Accepted
+[Fri Jun  2 05:50:27 2023] 127.0.0.1:36082 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:50:27 2023] 127.0.0.1:36082 Closing
+[Fri Jun  2 05:50:27 2023] 127.0.0.1:36098 Accepted
+[Fri Jun  2 05:50:27 2023] 127.0.0.1:36084 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:50:27 2023] 127.0.0.1:36114 Accepted
+[Fri Jun  2 05:50:27 2023] 127.0.0.1:36084 Closing
+[Fri Jun  2 05:50:27 2023] 127.0.0.1:36098 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:50:27 2023] 127.0.0.1:36098 Closing
+[Fri Jun  2 05:50:27 2023] 127.0.0.1:36114 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:50:27 2023] 127.0.0.1:36114 Closing
+[Fri Jun  2 05:50:34 2023] 127.0.0.1:36128 Accepted
+[Fri Jun  2 05:50:36 2023] 127.0.0.1:36128 [200]: GET /search.php?q=a&t=0&p=0
+[Fri Jun  2 05:50:36 2023] 127.0.0.1:36128 Closing
+[Fri Jun  2 05:50:36 2023] 127.0.0.1:32972 Accepted
+[Fri Jun  2 05:50:36 2023] 127.0.0.1:32972 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:50:36 2023] 127.0.0.1:32972 Closing
+[Fri Jun  2 05:50:36 2023] 127.0.0.1:32976 Accepted
+[Fri Jun  2 05:50:36 2023] 127.0.0.1:32976 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:50:36 2023] 127.0.0.1:32976 Closing
+[Fri Jun  2 05:50:36 2023] 127.0.0.1:32984 Accepted
+[Fri Jun  2 05:50:36 2023] 127.0.0.1:32984 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:50:36 2023] 127.0.0.1:32984 Closing
+[Fri Jun  2 05:50:36 2023] 127.0.0.1:32990 Accepted
+[Fri Jun  2 05:50:36 2023] 127.0.0.1:33004 Accepted
+[Fri Jun  2 05:50:36 2023] 127.0.0.1:32990 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:50:36 2023] 127.0.0.1:33004 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:50:36 2023] 127.0.0.1:32990 Closing
+[Fri Jun  2 05:50:36 2023] 127.0.0.1:33004 Closing
+[Fri Jun  2 05:50:36 2023] 127.0.0.1:33014 Accepted
+[Fri Jun  2 05:50:36 2023] 127.0.0.1:33026 Accepted
+[Fri Jun  2 05:50:36 2023] 127.0.0.1:33014 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:50:36 2023] 127.0.0.1:33026 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:50:36 2023] 127.0.0.1:33014 Closing
+[Fri Jun  2 05:50:36 2023] 127.0.0.1:33026 Closing
+[Fri Jun  2 05:50:44 2023] 127.0.0.1:33034 Accepted
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:50:45 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:50:45 2023] 127.0.0.1:33034 [200]: GET /search.php?q=a&t=0&p=0
+[Fri Jun  2 05:50:45 2023] 127.0.0.1:33034 Closing
+[Fri Jun  2 05:50:45 2023] 127.0.0.1:33044 Accepted
+[Fri Jun  2 05:50:45 2023] 127.0.0.1:33044 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:50:45 2023] 127.0.0.1:33052 Accepted
+[Fri Jun  2 05:50:45 2023] 127.0.0.1:33044 Closing
+[Fri Jun  2 05:50:45 2023] 127.0.0.1:33052 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:50:45 2023] 127.0.0.1:33052 Closing
+[Fri Jun  2 05:50:45 2023] 127.0.0.1:34704 Accepted
+[Fri Jun  2 05:50:45 2023] 127.0.0.1:34704 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:50:45 2023] 127.0.0.1:34704 Closing
+[Fri Jun  2 05:50:45 2023] 127.0.0.1:34710 Accepted
+[Fri Jun  2 05:50:45 2023] 127.0.0.1:34718 Accepted
+[Fri Jun  2 05:50:45 2023] 127.0.0.1:34710 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:50:45 2023] 127.0.0.1:34728 Accepted
+[Fri Jun  2 05:50:45 2023] 127.0.0.1:34718 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:50:45 2023] 127.0.0.1:34730 Accepted
+[Fri Jun  2 05:50:45 2023] 127.0.0.1:34728 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:50:45 2023] 127.0.0.1:34710 Closing
+[Fri Jun  2 05:50:45 2023] 127.0.0.1:34730 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:50:45 2023] 127.0.0.1:34718 Closing
+[Fri Jun  2 05:50:45 2023] 127.0.0.1:34728 Closing
+[Fri Jun  2 05:50:45 2023] 127.0.0.1:34730 Closing
+[Fri Jun  2 05:51:04 2023] 127.0.0.1:37966 Accepted
+[Fri Jun  2 05:51:05 2023] PHP Fatal error:  Uncaught Error: Cannot use object of type DOMElement as array in /home/saadyah/projects/librex/engines/duckduckgo/text.php:122
+Stack trace:
+#0 /home/saadyah/projects/librex/search.php(72): get_text_results()
+#1 {main}
+  thrown in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 122
+[Fri Jun  2 05:51:05 2023] 127.0.0.1:37966 [500]: GET /search.php?q=a&t=0&p=0 - Uncaught Error: Cannot use object of type DOMElement as array in /home/saadyah/projects/librex/engines/duckduckgo/text.php:122
+Stack trace:
+#0 /home/saadyah/projects/librex/search.php(72): get_text_results()
+#1 {main}
+  thrown in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 122
+[Fri Jun  2 05:51:05 2023] 127.0.0.1:37966 Closing
+[Fri Jun  2 05:51:05 2023] 127.0.0.1:41288 Accepted
+[Fri Jun  2 05:51:05 2023] 127.0.0.1:41288 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:51:05 2023] 127.0.0.1:41298 Accepted
+[Fri Jun  2 05:51:05 2023] 127.0.0.1:41298 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:51:05 2023] 127.0.0.1:41288 Closing
+[Fri Jun  2 05:51:05 2023] 127.0.0.1:41298 Closing
+[Fri Jun  2 05:51:05 2023] 127.0.0.1:41314 Accepted
+[Fri Jun  2 05:51:05 2023] 127.0.0.1:41314 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:51:05 2023] 127.0.0.1:41314 Closing
+[Fri Jun  2 05:51:05 2023] 127.0.0.1:41324 Accepted
+[Fri Jun  2 05:51:05 2023] 127.0.0.1:41336 Accepted
+[Fri Jun  2 05:51:05 2023] 127.0.0.1:41324 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:51:05 2023] 127.0.0.1:41352 Accepted
+[Fri Jun  2 05:51:05 2023] 127.0.0.1:41324 Closing
+[Fri Jun  2 05:51:05 2023] 127.0.0.1:41336 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:51:05 2023] 127.0.0.1:41368 Accepted
+[Fri Jun  2 05:51:05 2023] 127.0.0.1:41336 Closing
+[Fri Jun  2 05:51:05 2023] 127.0.0.1:41352 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:51:05 2023] 127.0.0.1:41352 Closing
+[Fri Jun  2 05:51:05 2023] 127.0.0.1:41368 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:51:05 2023] 127.0.0.1:41368 Closing
+[Fri Jun  2 05:51:14 2023] 127.0.0.1:41378 Accepted
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:15 2023] PHP Warning:  Undefined array key 2 in /home/saadyah/projects/librex/misc/tools.php on line 5
+[Fri Jun  2 05:51:15 2023] 127.0.0.1:41378 [200]: GET /search.php?q=a&t=0&p=0
+[Fri Jun  2 05:51:15 2023] 127.0.0.1:41378 Closing
+[Fri Jun  2 05:51:15 2023] 127.0.0.1:48866 Accepted
+[Fri Jun  2 05:51:15 2023] 127.0.0.1:48870 Accepted
+[Fri Jun  2 05:51:15 2023] 127.0.0.1:48866 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:51:15 2023] 127.0.0.1:48870 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:51:15 2023] 127.0.0.1:48866 Closing
+[Fri Jun  2 05:51:15 2023] 127.0.0.1:48870 Closing
+[Fri Jun  2 05:51:15 2023] 127.0.0.1:48880 Accepted
+[Fri Jun  2 05:51:15 2023] 127.0.0.1:48888 Accepted
+[Fri Jun  2 05:51:15 2023] 127.0.0.1:48880 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:51:15 2023] 127.0.0.1:48894 Accepted
+[Fri Jun  2 05:51:15 2023] 127.0.0.1:48900 Accepted
+[Fri Jun  2 05:51:15 2023] 127.0.0.1:48904 Accepted
+[Fri Jun  2 05:51:15 2023] 127.0.0.1:48880 Closing
+[Fri Jun  2 05:51:15 2023] 127.0.0.1:48894 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:51:15 2023] 127.0.0.1:48888 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:51:15 2023] 127.0.0.1:48900 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:51:15 2023] 127.0.0.1:48894 Closing
+[Fri Jun  2 05:51:15 2023] 127.0.0.1:48904 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:51:15 2023] 127.0.0.1:48888 Closing
+[Fri Jun  2 05:51:15 2023] 127.0.0.1:48900 Closing
+[Fri Jun  2 05:51:15 2023] 127.0.0.1:48904 Closing
+[Fri Jun  2 05:51:25 2023] 127.0.0.1:55680 Accepted
+[Fri Jun  2 05:51:27 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:27 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:27 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:27 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:27 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:27 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:27 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:27 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:27 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:27 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:27 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:27 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:27 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:27 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:27 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:27 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:27 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:27 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:27 2023] PHP Warning:  Attempt to read property "textContent" on null in /home/saadyah/projects/librex/engines/duckduckgo/text.php on line 144
+[Fri Jun  2 05:51:27 2023] 127.0.0.1:55680 [200]: GET /search.php?q=a&t=0&p=0
+[Fri Jun  2 05:51:27 2023] 127.0.0.1:55680 Closing
+[Fri Jun  2 05:51:27 2023] 127.0.0.1:55690 Accepted
+[Fri Jun  2 05:51:27 2023] 127.0.0.1:55690 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:51:27 2023] 127.0.0.1:55690 Closing
+[Fri Jun  2 05:51:27 2023] 127.0.0.1:55696 Accepted
+[Fri Jun  2 05:51:27 2023] 127.0.0.1:55696 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:51:27 2023] 127.0.0.1:55696 Closing
+[Fri Jun  2 05:51:27 2023] 127.0.0.1:55712 Accepted
+[Fri Jun  2 05:51:27 2023] 127.0.0.1:55712 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:51:27 2023] 127.0.0.1:55712 Closing
+[Fri Jun  2 05:51:27 2023] 127.0.0.1:55714 Accepted
+[Fri Jun  2 05:51:27 2023] 127.0.0.1:55714 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:51:27 2023] 127.0.0.1:55718 Accepted
+[Fri Jun  2 05:51:27 2023] 127.0.0.1:55714 Closing
+[Fri Jun  2 05:51:27 2023] 127.0.0.1:55728 Accepted
+[Fri Jun  2 05:51:27 2023] 127.0.0.1:55742 Accepted
+[Fri Jun  2 05:51:27 2023] 127.0.0.1:55718 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:51:27 2023] 127.0.0.1:55728 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:51:27 2023] 127.0.0.1:55742 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:51:27 2023] 127.0.0.1:55718 Closing
+[Fri Jun  2 05:51:27 2023] 127.0.0.1:55728 Closing
+[Fri Jun  2 05:51:27 2023] 127.0.0.1:55742 Closing
+[Fri Jun  2 05:52:38 2023] 127.0.0.1:34752 Accepted
+[Fri Jun  2 05:52:39 2023] 127.0.0.1:34752 [200]: GET /search.php?q=a&t=0&p=0
+[Fri Jun  2 05:52:39 2023] 127.0.0.1:34752 Closing
+[Fri Jun  2 05:52:39 2023] 127.0.0.1:34768 Accepted
+[Fri Jun  2 05:52:39 2023] 127.0.0.1:34774 Accepted
+[Fri Jun  2 05:52:39 2023] 127.0.0.1:34768 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:52:39 2023] 127.0.0.1:34774 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:52:39 2023] 127.0.0.1:34768 Closing
+[Fri Jun  2 05:52:39 2023] 127.0.0.1:34774 Closing
+[Fri Jun  2 05:52:39 2023] 127.0.0.1:34786 Accepted
+[Fri Jun  2 05:52:39 2023] 127.0.0.1:34786 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:52:39 2023] 127.0.0.1:34786 Closing
+[Fri Jun  2 05:52:39 2023] 127.0.0.1:34788 Accepted
+[Fri Jun  2 05:52:39 2023] 127.0.0.1:34792 Accepted
+[Fri Jun  2 05:52:39 2023] 127.0.0.1:34788 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:52:39 2023] 127.0.0.1:34788 Closing
+[Fri Jun  2 05:52:39 2023] 127.0.0.1:34802 Accepted
+[Fri Jun  2 05:52:39 2023] 127.0.0.1:34792 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:52:39 2023] 127.0.0.1:34812 Accepted
+[Fri Jun  2 05:52:39 2023] 127.0.0.1:34792 Closing
+[Fri Jun  2 05:52:39 2023] 127.0.0.1:34802 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:52:39 2023] 127.0.0.1:34802 Closing
+[Fri Jun  2 05:52:39 2023] 127.0.0.1:34812 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:52:39 2023] 127.0.0.1:34812 Closing
+[Fri Jun  2 05:52:59 2023] 127.0.0.1:33898 Accepted
+[Fri Jun  2 05:53:01 2023] 127.0.0.1:33898 [200]: GET /search.php?q=a&t=0&p=0
+[Fri Jun  2 05:53:01 2023] 127.0.0.1:33898 Closing
+[Fri Jun  2 05:53:01 2023] 127.0.0.1:33910 Accepted
+[Fri Jun  2 05:53:01 2023] 127.0.0.1:33910 [200]: GET /static/css/styles.css
+[Fri Jun  2 05:53:01 2023] 127.0.0.1:33914 Accepted
+[Fri Jun  2 05:53:01 2023] 127.0.0.1:33910 Closing
+[Fri Jun  2 05:53:01 2023] 127.0.0.1:33914 [200]: GET /static/css/dark.css
+[Fri Jun  2 05:53:01 2023] 127.0.0.1:33914 Closing
+[Fri Jun  2 05:53:01 2023] 127.0.0.1:33928 Accepted
+[Fri Jun  2 05:53:01 2023] 127.0.0.1:33928 [200]: GET /static/images/general_result.png
+[Fri Jun  2 05:53:01 2023] 127.0.0.1:33928 Closing
+[Fri Jun  2 05:53:01 2023] 127.0.0.1:33930 Accepted
+[Fri Jun  2 05:53:01 2023] 127.0.0.1:33934 Accepted
+[Fri Jun  2 05:53:01 2023] 127.0.0.1:33930 [200]: GET /static/images/images_result.png
+[Fri Jun  2 05:53:01 2023] 127.0.0.1:33940 Accepted
+[Fri Jun  2 05:53:01 2023] 127.0.0.1:33930 Closing
+[Fri Jun  2 05:53:01 2023] 127.0.0.1:33934 [200]: GET /static/images/videos_result.png
+[Fri Jun  2 05:53:01 2023] 127.0.0.1:33952 Accepted
+[Fri Jun  2 05:53:01 2023] 127.0.0.1:33934 Closing
+[Fri Jun  2 05:53:01 2023] 127.0.0.1:33940 [200]: GET /static/images/torrents_result.png
+[Fri Jun  2 05:53:01 2023] 127.0.0.1:33940 Closing
+[Fri Jun  2 05:53:01 2023] 127.0.0.1:33952 [200]: GET /static/images/tor_result.png
+[Fri Jun  2 05:53:01 2023] 127.0.0.1:33952 Closing
