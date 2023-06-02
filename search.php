@@ -58,7 +58,6 @@
         <?php
 
             $page = isset($_REQUEST["p"]) ? (int) $_REQUEST["p"] : 0;
-
             $start_time = microtime(true);
             switch ($type)
             {

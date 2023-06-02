@@ -13,8 +13,7 @@
         $results_language = isset($_COOKIE["google_language_results"]) ? trim(htmlspecialchars($_COOKIE["google_language_results"])) : $config->google_language_results;
         $number_of_results = isset($_COOKIE["google_number_of_results"]) ? trim(htmlspecialchars($_COOKIE["google_number_of_results"])) : $config->google_number_of_results;
 
-        $url = "https://html.duckduckgo.$domain/html/?q=$query_encoded&kd=-1&start=$page";
-
+        $url = "https://html.duckduckgo.$domain/html/?q=$query_encoded&kd=-1&s=" . 3 * $page;
         if (3 > strlen($site_language) && 0 < strlen($site_language))
             $url .= "&hl=$site_language";
 
