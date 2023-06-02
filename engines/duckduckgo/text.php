@@ -118,7 +118,6 @@
 		
 		foreach($xpath->query('/html/body/div[1]/div[3]/div/div/div/div') as $result)
 		{
-            // $url = $xpath->evaluate(".//div[@class='result__url']//a/@href", $result)[0];
             $url = $xpath->evaluate(".//h2[@class='result__title']//a/@href", $result)[0];
 			
 			if ($url == null)
@@ -135,9 +134,8 @@
 
             $url = check_for_privacy_frontend($url);
 
-            // $title = $xpath->evaluate(".//h3", $result)[0];
             $title = $xpath->evaluate(".//h2[@class='result__title']", $result)[0];
-            $description = $xpath->evaluate(".//div[contains(@class, 'VwiC3b')]", $result)[0];
+            $description = $xpath->evaluate(".//a[@class='result__snippet']", $result)[0];
 
             array_push($results,
                 array (
