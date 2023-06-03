@@ -101,7 +101,7 @@
                     <input type="checkbox" name="disable_frontends" <?php echo isset($_COOKIE["disable_frontends"]) ? "checked"  : ""; ?> >
                 </div>
 
-                <h2>Google settings</h2>
+                <h2>Search settings</h2>
                 <div class="settings-textbox-container">
                     <div>
                         <span>Site language</span>
