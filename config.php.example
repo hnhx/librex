@@ -121,7 +121,7 @@
         ),
         
 
-        preferred_engines => array(
+        "preferred_engines" => array(
             
             /* replace with "text" => "duckduckgo" to use duckduckgo instead
             * (recommended if being ratelimited */
