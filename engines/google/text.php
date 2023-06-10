@@ -114,6 +114,12 @@
         }
 
         $xpath = get_xpath(curl_multi_getcontent($google_ch));
+        if (curl_getinfo($google_ch)['http_code'] == '302') {                                                                                               
+                $instances_json = json_decode(file_get_contents("instances.json"), true);                                                                               
+                $instances = array_map(fn($n) => $n['clearnet'], array_filter($instances_json['instances'], fn($n) => !is_null($n['clearnet'])));                           
+                header("Location: " . $instances[array_rand($instances)] . "search.php?q=$query");
+                die();                                                                                   
+        }
 
         foreach($xpath->query("//div[@id='search']//div[contains(@class, 'g')]") as $result)
         {
