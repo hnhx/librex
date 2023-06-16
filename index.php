@@ -1,3 +1,8 @@
+<?php
+  if(isset($_GET['q'])) {
+    require('search.php'); exit;
+  } else {
+?>
 <?php require "misc/header.php"; ?>
 
     <title>LibreX</title>
@@ -16,3 +21,4 @@
         </form>
 
 <?php require "misc/footer.php"; ?>
+<?php } ?>
