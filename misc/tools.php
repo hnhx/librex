@@ -212,7 +212,7 @@
 
     function print_next_page_button($text, $page, $query, $type)
     {
-        echo "<form class=\"page\" action=\"search.php\" target=\"_top\" method=\"get\" autocomplete=\"off\">";
+        echo "<form class=\"page\" action=\"/\" target=\"_top\" method=\"get\" autocomplete=\"off\">";
         echo "<input type=\"hidden\" name=\"p\" value=\"" . $page . "\" />";
         echo "<input type=\"hidden\" name=\"q\" value=\"$query\" />";
         echo "<input type=\"hidden\" name=\"t\" value=\"$type\" />";
