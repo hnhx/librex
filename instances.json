@@ -125,6 +125,12 @@
               "tor": null,
               "i2p": null,
               "country": "MX"
+          },
+          {
+              "clearnet": "https://search.sarthak.click/",
+              "tor": null,
+              "i2p": null,
+              "country": "US"
           }
     ]
 }
