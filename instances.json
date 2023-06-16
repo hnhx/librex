@@ -19,10 +19,22 @@
               "country": "IS"
           },
           {
+              "clearnet": "https://lx.vern.cc/",
+              "tor": "http://lx.vernccvbvyi5qhfzyqengccj7lkove6bjot2xhh5kajhwvidqafczrad.onion/",
+              "i2p": "http://vernziqfqvweijfaacmwazohgpdo2bt2ib2jlupt2pwwu27bhgxq.b32.i2p/",
+              "country": "US"
+          },
+          {
               "clearnet": "https://search.ahwx.org/",
               "tor": "http://cosrpybbddzdfjquer3zfmb2h5avtacnctnbu4gucwocdb42s63gcqqd.onion/",
               "i2p": null,
               "country": "NL"
+          },
+          {
+              "clearnet": "https://search.spaceint.fr/",
+              "tor": "http://6d4nqt2rndvmhogpwrbqfvj2ur6e6nm2r6dzi7ny4wj6ai3j5hnvbhyd.onion/",
+              "i2p": null,
+              "country": "FR"
           },
           {
               "clearnet": "https://search.davidovski.xyz/",
@@ -101,12 +113,6 @@
               "tor": null,
               "i2p": null,
               "country": "US"
-          },
-          {
-              "clearnet": "https://search.spaceint.fr/",
-              "tor": null,
-              "i2p": null,
-              "country": "DE"
           },
           {
               "clearnet": "https://lx.benike.monster/",
