@@ -3,7 +3,7 @@
           {
               "clearnet": "https://librex.zzls.xyz/",
               "tor": "http://librex.zzlsghu6mvvwyy75mvga6gaf4znbp3erk5xwfzedb4gg6qqh2j6rlvid.onion/",
-              "i2p": "http://7huurwog32tny663wkglrhozfoyqyqmsuxjbd7dtudccx44awjda.b32.i2p/",
+              "i2p": "http://zzlsaymhcfla7vibo3a223bybeecu3bd5z6rmw2u4y76maqeu76q.b32.i2p/",
               "country": "CL"
           },
           {
@@ -13,15 +13,15 @@
               "country": "CA"
           },
           {
+              "clearnet": "https://s.dyox.in/",
+              "tor": "http://ddhigxwjz7elcl2erm7qzzukda4qmovoy4cepcueahggpwrpu24mi6qd.onion/",
+              "i2p": "http://s.dyoxin.i2p/",
+              "country": "IS"
+          },
+          {
               "clearnet": "https://lx.vern.cc/",
               "tor": "http://lx.vernccvbvyi5qhfzyqengccj7lkove6bjot2xhh5kajhwvidqafczrad.onion/",
               "i2p": "http://vernziqfqvweijfaacmwazohgpdo2bt2ib2jlupt2pwwu27bhgxq.b32.i2p/",
-              "country": "US"
-          },
-          {
-              "clearnet": "https://librex.mikata.ru/",
-              "tor": "http://f7ssz7l3biu4fugwctfpcx4txg5yq4gqhrt473ledsuc3ivtd3omniid.onion/",
-              "i2p": null,
               "country": "US"
           },
           {
@@ -59,12 +59,6 @@
               "tor": null,
               "i2p": null,
               "country": "NZ"
-          },
-          {
-              "clearnet": "https://search.milivojevic.in.rs/",
-              "tor": null,
-              "i2p": null,
-              "country": "NL"
           },
           {
               "clearnet": "https://librex.ratakor.com/",
@@ -125,6 +119,12 @@
               "tor": null,
               "i2p": null,
               "country": "DE"
+          },
+          {
+              "clearnet": "https://librex.nohost.network/",
+              "tor": null,
+              "i2p": null,
+              "country": "MX"
           }
     ]
 }
