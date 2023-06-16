@@ -34,6 +34,7 @@
 | [librex.yogeshlamichhane.com.np](https://librex.yogeshlamichhane.com.np/) | ❌| ❌ | 🇺🇸 US |
 | [lx.benike.monster](https://lx.benike.monster/) | ❌ | ❌ | 🇩🇪 DE |
 | [librex.nohost.network](https://librex.nohost.network/) | ❌ | ❌ | 🇲🇽 MX |
+| [search.flossboxin.org.in](https://search.flossboxin.org.in/) | ❌| ❌ | 🇺🇸 IN |
 <br>
 
 ### Thanks rms
