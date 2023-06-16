@@ -33,6 +33,7 @@
 | [search.spaceint.fr](https://search.spaceint.fr/) | ❌ | ❌ | 🇩🇪 DE |
 | [lx.benike.monster](https://lx.benike.monster/) | ❌ | ❌ | 🇩🇪 DE |
 | [librex.nohost.network](https://librex.nohost.network/) | ❌ | ❌ | 🇲🇽 MX |
+| [search.sarthak.click](https://search.sarthak.click/) | ❌ | ❌ | 🇺🇸 US |
 <br>
 
 ### Thanks rms
