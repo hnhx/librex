@@ -125,6 +125,12 @@
               "tor": null,
               "i2p": null,
               "country": "MX"
+          },
+          {
+              "clearnet": "https://search.flossboxin.org.in/",
+              "tor": null,
+              "i2p": null,
+              "country": "IN"
           }
     ]
 }
