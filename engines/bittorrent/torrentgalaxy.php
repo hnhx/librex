@@ -1,5 +1,5 @@
 <?php
-    $torrentgalaxy_url = "https://torrentgalaxy.to/torrents.php?search=$query#results";
+    $torrentgalaxy_url = "https://tgx.rs/torrents.php?search=$query#results";
 
     function get_torrentgalaxy_results($response)
     {
