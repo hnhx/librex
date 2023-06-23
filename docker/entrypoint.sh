@@ -5,6 +5,6 @@
 sh "docker/php/prepare.sh"
 sh "docker/server/prepare.sh"
 
-/bin/sh -c /usr/sbin/php-fpm7
+/bin/sh -c /usr/sbin/php-fpm8
 
 exec nginx -g "daemon off;"

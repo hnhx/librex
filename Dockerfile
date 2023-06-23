@@ -1,5 +1,5 @@
 # syntax = edrevo/dockerfile-plus
-ARG VERSION="3.17"
+ARG VERSION="3.18"
 FROM alpine:${VERSION} AS librex
 WORKDIR "/var/www/html"
 
