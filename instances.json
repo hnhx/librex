@@ -125,6 +125,12 @@
               "tor": null,
               "i2p": null,
               "country": "MX"
+          },
+          {
+              "clearnet": "https://search.decentrala.org/",
+              "tor": null,
+              "i2p": null,
+              "country": "US"
           }
     ]
 }
