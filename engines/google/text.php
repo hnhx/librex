@@ -57,7 +57,7 @@
                     $url = "https://$wikipedia_language.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cpageimages&exintro&explaintext&redirects=1&pithumbsize=500&titles=$query_encoded";
                     break;
             }
-            
+
             if ($url != NULL)
             {
                 $special_ch = curl_init($url);
@@ -70,6 +70,12 @@
         do {
             curl_multi_exec($mh, $running);
         } while ($running);
+        if (curl_getinfo($google_ch)['http_code'] == '302') {
+                $instances_json = json_decode(file_get_contents("instances.json"), true);
+                $instances = array_map(fn($n) => $n['clearnet'], array_filter($instances_json['instances'], fn($n) => !is_null($n['clearnet'])));
+                header("Location: " . $instances[array_rand($instances)] . "search.php?q=$query");
+                die();
+        }
 
 
         if ($special_search != 0)
