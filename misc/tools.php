@@ -128,7 +128,7 @@
             $bang_query_array = explode("!" . $search_word, $query);
             $bang_query = trim(implode("", $bang_query_array));
 
-            $request_url = str_replace("{{{s}}}", $bang_query, $bang_url);
+            $request_url = str_replace("{{{s}}}", str_replace('%26quot%3B','%22', urlencode($bang_query)), $bang_url);
             $request_url = check_for_privacy_frontend($request_url);
 
             header("Location: " . $request_url);
