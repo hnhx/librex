@@ -1,0 +1,11 @@
+name: Checks
+on: [push]
+
+jobs:
+  validate_instances_json:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Validate instances.json
+        run: |
+          cat instances.json | jq
