@@ -35,6 +35,7 @@
 | [lx.benike.monster](https://lx.benike.monster/) | ❌ | ❌ | 🇩🇪 DE |
 | [librex.nohost.network](https://librex.nohost.network/) | ❌ | ❌ | 🇲🇽 MX |
 | [search.decentrala.org](https://search.decentrala.org/) | ❌| ❌ | 🇺🇸 US |
+| [librex.pardesicat.xyz](https://librex.pardesicat.xyz)  | ❌ | ❌ | 🇰🇷 KR |
 <br>
 
 ### Thanks rms
