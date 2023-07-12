@@ -25,6 +25,12 @@
               "country": "US"
           },
           {
+            "clearnet": "https://lx.owo.si/",
+            "tor": "http://lx.pk47sgwhncn5cgidm7bofngmh7lc7ukjdpk5bjwfemmyp27ovl25ikyd.onion/",
+            "i2p": "http://d4vi3tvfui2rfzsxr33tin4a6542heulf4mhkokdpbhbcejlg3la.b32.i2p/",
+            "country": "DE"
+          },
+          {
               "clearnet": "https://search.ahwx.org/",
               "tor": "http://cosrpybbddzdfjquer3zfmb2h5avtacnctnbu4gucwocdb42s63gcqqd.onion/",
               "i2p": null,
