@@ -7,12 +7,6 @@
               "country": "CL"
           },
           {
-              "clearnet": "https://librex.me/",
-              "tor": "http://librex.revvybrr6pvbx4n3j4475h4ghw4elqr4t5xo2vtd3gfpu2nrsnhh57id.onion/",
-              "i2p": "http://revekebotog64xrrammtsmjwtwlg3vqyzwdurzt2pu6botg4bejq.b32.i2p/",
-              "country": "CA"
-          },
-          {
               "clearnet": "https://s.dyox.in/",
               "tor": "http://ddhigxwjz7elcl2erm7qzzukda4qmovoy4cepcueahggpwrpu24mi6qd.onion/",
               "i2p": "http://s.dyoxin.i2p/",
