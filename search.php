@@ -48,7 +48,7 @@
                             continue;
                         }
 
-                        echo "<a " . (($category_index == $type) ? "class=\"active\" " : "") . "href=\"/search.php?q=" . $query . "&p=0&t=" . $category_index . "\"><img src=\"static/images/" . $category . "_result.png\" alt=\"" . $category . " result\" />" . ucfirst($category)  . "</a>";
+                        echo "<a " . (($category_index == $type) ? "class=\"active\" " : "") . "href=\"./search.php?q=" . $query . "&p=0&t=" . $category_index . "\"><img src=\"static/images/" . $category . "_result.png\" alt=\"" . $category . " result\" />" . ucfirst($category)  . "</a>";
                     }
                 ?>
             </div>
