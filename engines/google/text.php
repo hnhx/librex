@@ -8,6 +8,7 @@
         $results = array();
 
         $domain = $config->google_domain;
+        $disable_automatic_redirection = isset($_COOKIE["disable_automatic_redirection"]);
         $site_language = isset($_COOKIE["google_language_site"]) ? trim(htmlspecialchars($_COOKIE["google_language_site"])) : $config->google_language_site;
         $results_language = isset($_COOKIE["google_language_results"]) ? trim(htmlspecialchars($_COOKIE["google_language_results"])) : $config->google_language_results;
         $number_of_results = isset($_COOKIE["google_number_of_results"]) ? trim(htmlspecialchars($_COOKIE["google_number_of_results"])) : $config->google_number_of_results;
@@ -70,7 +71,10 @@
         do {
             curl_multi_exec($mh, $running);
         } while ($running);
-        if (curl_getinfo($google_ch)['http_code'] == '302') {
+
+        if (!$disabled_automatic_redirection
+            && $config->automatic_redirection
+            && curl_getinfo($google_ch)['http_code'] == '302') {
                 $instances_json = json_decode(file_get_contents("instances.json"), true);
                 $instances = array_map(fn($n) => $n['clearnet'], array_filter($instances_json['instances'], fn($n) => !is_null($n['clearnet'])));
                 header("Location: " . $instances[array_rand($instances)] . "search.php?q=$query");

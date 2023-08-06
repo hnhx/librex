@@ -103,6 +103,13 @@
 
                 <h2>Google settings</h2>
                 <div class="settings-textbox-container">
+                    <?php if ($config->automatic_redirection) : ?>
+                    <div>
+                        <label>disable automatic redirection</label>
+                        <input type="checkbox" name="disable_automatic_redirection" <?php echo isset($_COOKIE["disable_automatic_redirection"]) ? "checked"  : ""; ?> >
+                    </div>
+                    <?php endif; ?>
+
                     <div>
                         <span>Site language</span>
                         <?php
