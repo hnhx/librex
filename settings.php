@@ -1,7 +1,8 @@
 <?php
                 $config = require "config.php";
 
-                if (isset($_REQUEST["reset"]))
+                // Reset all cookies when resetting, or before saving new cookies
+                if (isset($_REQUEST["reset"]) || isset($_REQUEST["save"]))
                 {
                     if (isset($_SERVER["HTTP_COOKIE"]))
                     {
@@ -105,8 +106,8 @@
                 <div class="settings-textbox-container">
                     <?php if ($config->automatic_redirection) : ?>
                     <div>
-                        <label>disable automatic redirection</label>
-                        <input type="checkbox" name="disable_automatic_redirection" <?php echo isset($_COOKIE["disable_automatic_redirection"]) ? "checked"  : ""; ?> >
+                        <label>Redirect to other instances if this one doesn't work</label>
+                        <input type="checkbox" name="automatic_redirection" <?php echo isset($_COOKIE["automatic_redirection"]) ? "checked"  : ""; ?> >
                     </div>
                     <?php endif; ?>
 
