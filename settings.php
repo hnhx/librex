@@ -104,13 +104,6 @@
 
                 <h2>Google settings</h2>
                 <div class="settings-textbox-container">
-                    <?php if ($config->automatic_redirection) : ?>
-                    <div>
-                        <label>Redirect to other instances if this one doesn't work</label>
-                        <input type="checkbox" name="automatic_redirection" <?php echo isset($_COOKIE["automatic_redirection"]) ? "checked"  : ""; ?> >
-                    </div>
-                    <?php endif; ?>
-
                     <div>
                         <span>Site language</span>
                         <?php

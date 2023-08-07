@@ -8,7 +8,6 @@
         $results = array();
 
         $domain = $config->google_domain;
-        $automatic_redirection = isset($_COOKIE["automatic_redirection"]);
         $site_language = isset($_COOKIE["google_language_site"]) ? trim(htmlspecialchars($_COOKIE["google_language_site"])) : $config->google_language_site;
         $results_language = isset($_COOKIE["google_language_results"]) ? trim(htmlspecialchars($_COOKIE["google_language_results"])) : $config->google_language_results;
         $number_of_results = isset($_COOKIE["google_number_of_results"]) ? trim(htmlspecialchars($_COOKIE["google_number_of_results"])) : $config->google_number_of_results;
