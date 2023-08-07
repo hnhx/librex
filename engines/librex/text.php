@@ -25,7 +25,7 @@
             $code = curl_getinfo($librex_ch)["http_code"];
             $results = json_decode($response, true);
 
-        } while ( $results == null || empty($results));
+        } while ( $results == null || count($results) <= 1);
 
         return array_values($results);
     }
