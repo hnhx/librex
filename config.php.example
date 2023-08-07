@@ -20,6 +20,9 @@
 
         "disable_hidden_service_search" => false,
 
+        // Fallback to another librex instance if google search fails
+        "instance_fallback" => true,
+
         /*
             Preset privacy friendly frontends for users, these can be overwritten by users in the settings
             e.g.: Preset the invidious instance URL: "instance_url" => "https://yewtu.be",

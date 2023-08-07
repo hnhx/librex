@@ -1,7 +1,8 @@
 <?php
                 $config = require "config.php";
 
-                if (isset($_REQUEST["reset"]))
+                // Reset all cookies when resetting, or before saving new cookies
+                if (isset($_REQUEST["reset"]) || isset($_REQUEST["save"]))
                 {
                     if (isset($_SERVER["HTTP_COOKIE"]))
                     {
