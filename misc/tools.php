@@ -230,4 +230,10 @@
         echo "<button type=\"submit\">$text</button>";
         echo "</form>";
     }
+
+    function copy_cookies($curl)
+    {
+        curl_setopt( $curl, CURLOPT_COOKIE, $_SERVER['HTTP_COOKIE'] );
+    }
+
 ?>
