@@ -5,18 +5,34 @@
         global $config;
 
         if (!$config->instance_fallback) 
-        {
             return array();
-        }
 
         $instances_json = json_decode(file_get_contents("instances.json"), true);
+
+        if (empty($instances_json["instances"]))
+            return array();
+
+
         $instances = array_map(fn($n) => $n['clearnet'], array_filter($instances_json['instances'], fn($n) => !is_null($n['clearnet'])));
+        shuffle($instances);
+
         $query_encoded = urlencode($query);
 
         $results = array();
+        $tries = 0;
 
         do {
-            $instance = $instances[array_rand($instances)];
+            $tries++;
+
+            // after "too many" requests, give up
+            if ($tries > 5)
+                return array();
+
+            $instance = array_pop($instances);
+
+            if (parse_url($instance)["host"] == parse_url($_SERVER['HTTP_HOST'])["host"])
+                continue;
+
             $url = $instance . "api.php?q=$query_encoded&p=$page&t=0";
 
             $librex_ch = curl_init($url);

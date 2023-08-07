@@ -233,7 +233,8 @@
 
     function copy_cookies($curl)
     {
-        curl_setopt( $curl, CURLOPT_COOKIE, $_SERVER['HTTP_COOKIE'] );
+        if (array_key_exists("HTTP_COOKIE", $_SERVER))
+            curl_setopt( $curl, CURLOPT_COOKIE, $_SERVER['HTTP_COOKIE'] );
     }
 
 ?>
