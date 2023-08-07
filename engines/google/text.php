@@ -72,16 +72,10 @@
             curl_multi_exec($mh, $running);
         } while ($running);
 
-        if (curl_getinfo($google_ch)['http_code'] != '200') {
-            if ($automatic_redirection
-                && $config->automatic_redirection) {
-                $instances_json = json_decode(file_get_contents("instances.json"), true);
-                $instances = array_map(fn($n) => $n['clearnet'], array_filter($instances_json['instances'], fn($n) => !is_null($n['clearnet'])));
-                header("Location: " . $instances[array_rand($instances)] . "search.php?q=$query");
-                die();
-            } else {
-                return $results;
-            }
+        if (curl_getinfo($google_ch)['http_code'] != '200') 
+        {
+            require "engines/librex/text.php";
+            return get_librex_results($query, $page);
         }
 
 
