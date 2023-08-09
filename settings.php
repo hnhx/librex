@@ -19,6 +19,9 @@
                 {
                     foreach($_POST as $key=>$value)
                     {
+                        if ($key === "save")
+                            continue;
+
                         if (!empty($value))
                         {
                             setcookie($key, $value, time() + (86400 * 90), '/');
