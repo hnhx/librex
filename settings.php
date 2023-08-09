@@ -1,7 +1,8 @@
 <?php
                 $config = require "config.php";
-
-                if (isset($_REQUEST["reset"]))
+                
+                // clear all coookies on changes
+                if (isset($_REQUEST["reset"]) || isset($_REQUEST["save"]))
                 {
                     if (isset($_SERVER["HTTP_COOKIE"]))
                     {
@@ -10,33 +11,30 @@
                         {
                             $parts = explode("=", $cookie);
                             $name = trim($parts[0]);
-                            setcookie($name, "", time() - 1000);
+                            setcookie($name, "", time() - 1000, '/');
                         }
                     }
                 }
 
+                // save new cookies
                 if (isset($_REQUEST["save"]))
                 {
                     foreach($_POST as $key=>$value)
                     {
-                        if (!empty($value))
-                        {
-                            setcookie($key, $value, time() + (86400 * 90), '/');
-                        }
-                        else
-                        {
-                            setcookie($key, "", time() - 1000);
-                        }
+                        if (empty($value) || $key === "save")
+                            continue;
+
+                        setcookie($key, $value, time() + (86400 * 90), '/');
                     }
                 }
-
+                
                 if (isset($_REQUEST["save"]) || isset($_REQUEST["reset"]))
                 {
                     header("Location: ./");
                     die();
                 }
-
-                require "misc/header.php";
+                
+                require "misc/header.php";                
 ?>
 
     <title>LibreX - Settings</title>
