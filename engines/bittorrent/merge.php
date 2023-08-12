@@ -35,15 +35,12 @@
             curl_multi_add_handle($mh, $ch);    
         }
 
-        $running = null;
-        do {
-            curl_multi_exec($mh, $running);
-        } while ($running);
-
+        curl_multi_exec_to_completion($mh, $config->curl_multi_timeout);
+        
         for ($i=0; count($chs)>$i; $i++)
         {
             $response = curl_multi_getcontent($chs[$i]);
-
+           
             switch ($i)
             {
                 case 0:
@@ -67,12 +64,12 @@
                 case 6:
                     $results = array_merge($results, get_sukebei_results($response));
                     break;
-            }
+            }           
         }
         
         $seeders = array_column($results, "seeders");
         array_multisort($seeders, SORT_DESC, $results);
-
+        
         return $results; 
     }
 
