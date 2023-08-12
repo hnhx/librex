@@ -230,4 +230,35 @@
         echo "<button type=\"submit\">$text</button>";
         echo "</form>";
     }
+
+    // wraps a curl_multi_exec() in a more rubust loop to both avoid wasting cycles and offering a timeout
+    // see comments under https://www.php.net/manual/en/function.curl-multi-select.php
+    function curl_multi_exec_to_completion($multihandle, $timeout_seconds)
+    {
+        $start_time = microtime(true);
+        $max_end_time = $start_time + $timeout_seconds;
+        $active = null;
+
+        // execute first curl_multi_exec loop
+        do 
+        {
+            $mrc = curl_multi_exec($multihandle, $active);
+        } while ($mrc == CURLM_CALL_MULTI_PERFORM);
+    
+        // loop until all requrests are completed, or a timeout is reached
+        while ($active && $mrc == CURLM_OK && microtime(true) < $max_end_time) 
+        {
+            // wait for activity on any curl-connection with a small timeout
+            if (curl_multi_select($multihandle, 0.05) == -1) {
+                usleep(50000);
+            }
+    
+            // process handles
+            do 
+            {
+                $mrc = curl_multi_exec($multihandle, $active);
+            } while ($mrc == CURLM_CALL_MULTI_PERFORM);
+        }
+    }
+
 ?>

@@ -146,6 +146,9 @@
             CURLOPT_MAXREDIRS => 5,
             CURLOPT_TIMEOUT => 18,
             CURLOPT_VERBOSE => false
-        )
+        ),
+
+        // timeout while processing a curl multi handle
+        "curl_multi_timeout" => 5
     );
 ?>
