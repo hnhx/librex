@@ -131,6 +131,18 @@
               "tor": null,
               "i2p": null,
               "country": "US"
+          },
+          {
+              "clearnet": "https://xoogle.cz/",
+              "tor": null,
+              "i2p": null,
+              "country": "CZ"
+          },
+          {
+              "clearnet": "https://sk.xoogle.cz/",
+              "tor": null,
+              "i2p": null,
+              "country": "SK"
           }
     ]
 }
