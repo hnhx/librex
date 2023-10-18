@@ -35,6 +35,8 @@
 | [lx.benike.monster](https://lx.benike.monster/) | ❌ | ❌ | 🇩🇪 DE |
 | [librex.nohost.network](https://librex.nohost.network/) | ❌ | ❌ | 🇲🇽 MX |
 | [search.decentrala.org](https://search.decentrala.org/) | ❌| ❌ | 🇺🇸 US |
+| [xoogle.cz](https://xoogle.cz/) | ❌ | ❌ | 🇨🇿 CZ |
+| [sk.xoogle.cz](https://sk.xoogle.cz/) | ❌ | ❌ | 🇸🇰 SK |
 <br>
 
 ### Thanks rms
