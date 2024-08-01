@@ -131,6 +131,12 @@
               "tor": null,
               "i2p": null,
               "country": "US"
+          },
+          {
+              "clearnet": "https://librex.gorgothzilla.net/",
+              "tor": null,
+              "i2p": null,
+              "country": "FR"
           }
     ]
 }
